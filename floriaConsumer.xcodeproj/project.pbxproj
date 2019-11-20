@@ -22,17 +22,17 @@
 		042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */; };
 		0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434EECB23530E2A00D4329E /* splashViewController.swift */; };
 		043C1852237F80690003A633 /* productlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1851237F80690003A633 /* productlist.swift */; };
+		0440DD4C238375B5003061EC /* nearestvendore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440DD4B238375B5003061EC /* nearestvendore.swift */; };
 		0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441843C235D44CA0015DB4E /* fullscreen img.swift */; };
 		044238D0235DA6EE000BF740 /* viewimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044238CF235DA6EE000BF740 /* viewimg.swift */; };
 		04441DA1237BBB5F002F5691 /* shipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04441DA0237BBB5E002F5691 /* shipping.swift */; };
 		0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444939A235C8BBD00650DFD /* Assets.xcassets */; };
 		0444939D235C8EA000650DFD /* check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444939C235C8EA000650DFD /* check.swift */; };
 		04459387237A5CFE007A210E /* buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04459386237A5CFE007A210E /* buttons.swift */; };
+		044D89672382E4950051739E /* populer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D89662382E4950051739E /* populer.swift */; };
 		045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */; };
 		045B4A552381845400CCC257 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4C2381845300CCC257 /* ProductCollectionViewCell.swift */; };
-		045B4A562381845400CCC257 /* populer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4D2381845300CCC257 /* populer.swift */; };
 		045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4E2381845300CCC257 /* OffersCollectionViewCell.swift */; };
-		045B4A582381845400CCC257 /* orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4F2381845300CCC257 /* orders.swift */; };
 		045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A502381845400CCC257 /* SliderHomeCollectionViewCell.swift */; };
 		045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A512381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift */; };
 		045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A522381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift */; };
@@ -64,17 +64,17 @@
 		042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0434EECB23530E2A00D4329E /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
 		043C1851237F80690003A633 /* productlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productlist.swift; sourceTree = "<group>"; };
+		0440DD4B238375B5003061EC /* nearestvendore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = nearestvendore.swift; path = floriaConsumer/Model/home/nearestvendore.swift; sourceTree = SOURCE_ROOT; };
 		0441843C235D44CA0015DB4E /* fullscreen img.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "fullscreen img.swift"; sourceTree = "<group>"; };
 		044238CF235DA6EE000BF740 /* viewimg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewimg.swift; sourceTree = "<group>"; };
 		04441DA0237BBB5E002F5691 /* shipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shipping.swift; sourceTree = "<group>"; };
 		0444939A235C8BBD00650DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0444939C235C8EA000650DFD /* check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check.swift; sourceTree = "<group>"; };
 		04459386237A5CFE007A210E /* buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttons.swift; sourceTree = "<group>"; };
+		044D89662382E4950051739E /* populer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = populer.swift; path = floriaConsumer/model/home/populer.swift; sourceTree = SOURCE_ROOT; };
 		045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A4C2381845300CCC257 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		045B4A4D2381845300CCC257 /* populer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = populer.swift; sourceTree = "<group>"; };
 		045B4A4E2381845300CCC257 /* OffersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCell.swift; sourceTree = "<group>"; };
-		045B4A4F2381845300CCC257 /* orders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orders.swift; sourceTree = "<group>"; };
 		045B4A502381845400CCC257 /* SliderHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A512381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesGetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A522381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnrelatedProductsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +170,15 @@
 			path = "product list";
 			sourceTree = "<group>";
 		};
+		0440DD4A2383757F003061EC /* home */ = {
+			isa = PBXGroup;
+			children = (
+				044D89662382E4950051739E /* populer.swift */,
+				0440DD4B238375B5003061EC /* nearestvendore.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		04459385237A5CE3007A210E /* buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,11 +190,10 @@
 		045B4A492381842800CCC257 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0440DD4A2383757F003061EC /* home */,
 				045B4A5C2381847700CCC257 /* provider list  */,
 				045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */,
 				045B4A4E2381845300CCC257 /* OffersCollectionViewCell.swift */,
-				045B4A4F2381845300CCC257 /* orders.swift */,
-				045B4A4D2381845300CCC257 /* populer.swift */,
 				045B4A4C2381845300CCC257 /* ProductCollectionViewCell.swift */,
 				045B4A502381845400CCC257 /* SliderHomeCollectionViewCell.swift */,
 				045B4A512381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift */,
@@ -369,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				040417422353C50C0041D97C /* signup.swift in Sources */,
-				045B4A562381845400CCC257 /* populer.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
 				049958CD237CC49200FDF817 /* add-adress.swift in Sources */,
@@ -384,12 +391,13 @@
 				0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */,
 				0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */,
 				0406517123530CB30039566C /* SceneDelegate.swift in Sources */,
+				044D89672382E4950051739E /* populer.swift in Sources */,
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
 				0404173E2353B4E10041D97C /* Signin.swift in Sources */,
 				0444939D235C8EA000650DFD /* check.swift in Sources */,
 				044238D0235DA6EE000BF740 /* viewimg.swift in Sources */,
-				045B4A582381845400CCC257 /* orders.swift in Sources */,
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
+				0440DD4C238375B5003061EC /* nearestvendore.swift in Sources */,
 				0403F491235533EE001327EF /* nav.swift in Sources */,
 				04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */,
 				0424688523588BB200CE6FC6 /* homeViewController.swift in Sources */,
@@ -546,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

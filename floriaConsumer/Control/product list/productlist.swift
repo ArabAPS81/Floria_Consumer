@@ -14,19 +14,21 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Products", for: indexPath)
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Products", for: indexPath) as!  ProductCollectionViewCell
+        cell.image.layer.cornerRadius = 20
+        cell.image.clipsToBounds = true
         return cell 
     }
     
 
+    @IBAction func go(_ sender: Any) {
+        self.performSegue(withIdentifier: "proudct", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "proudct", sender: nil)
-    }
-
+   
 }
