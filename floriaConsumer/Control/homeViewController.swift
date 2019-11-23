@@ -61,6 +61,9 @@ class homeViewController: UIViewController,UICollectionViewDataSource,UICollecti
     @IBAction func readymade(_ sender: Any) {
         self.performSegue(withIdentifier: "listvendor", sender: nil)
     }
+    @IBAction func gerb(_ sender: Any) {
+        self.performSegue(withIdentifier: "listvendor", sender: nil)
+    }
     
     @IBOutlet var springSale: UIImageView!
     @IBOutlet var search: UIBarButtonItem!

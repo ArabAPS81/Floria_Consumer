@@ -14,9 +14,15 @@ class add_adress: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if UserDefaults.standard.string(forKey: "send") == "car"{
+            maintitel.text = "car decoration "
+        }else {
+           maintitel.text = "add location"
+        }
     }
     
 
+    @IBOutlet weak var maintitel: UILabel!
     /*
     // MARK: - Navigation
 
