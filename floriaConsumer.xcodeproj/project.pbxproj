@@ -287,12 +287,12 @@
 		D6E80B782389741F003A7DFF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D6203517238A962400336D0B /* Splash.storyboard */,
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
 				D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */,
 				D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */,
 				D620351323897FB000336D0B /* Product.storyboard */,
 				D6203515238A74EC00336D0B /* Vendor.storyboard */,
-				D6203517238A962400336D0B /* Splash.storyboard */,
 				D6203519238A963A00336D0B /* Search.storyboard */,
 				D620351B238A992B00336D0B /* Delivery.storyboard */,
 				D620351D238A99DA00336D0B /* Payment.storyboard */,
