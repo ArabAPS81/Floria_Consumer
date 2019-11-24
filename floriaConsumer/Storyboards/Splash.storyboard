@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BHd-Mn-ZHl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,6 +7,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ia3-Ft-vkg">
+            <objects>
+                <viewController id="BHd-Mn-ZHl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="USj-9s-DcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dK-Mk-XsH">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Fq8-qk-IFv" kind="show" id="yZo-GI-iMI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9dK-Mk-XsH" firstAttribute="centerY" secondItem="USj-9s-DcC" secondAttribute="centerY" id="9YD-N7-F8b"/>
+                            <constraint firstItem="9dK-Mk-XsH" firstAttribute="centerX" secondItem="USj-9s-DcC" secondAttribute="centerX" id="PZH-jS-WyN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ns-2Y-hKA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agh-bO-Fdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16068" y="-3338"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="QDD-Gt-R1E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="Fq8-qk-IFv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CbT-DH-NN3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pde-3u-Zar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15474" y="-3565"/>
+        </scene>
         <!--Splash View Controller-->
         <scene sceneID="n4j-pX-nDn">
             <objects>
@@ -192,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHk-uJ-90f" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15322" y="-3338"/>
+            <point key="canvasLocation" x="-14690" y="-3338"/>
         </scene>
     </scenes>
     <resources>

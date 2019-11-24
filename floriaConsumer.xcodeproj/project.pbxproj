@@ -57,6 +57,7 @@
 		D620352C238A9B0000336D0B /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352B238A9B0000336D0B /* Favorites.storyboard */; };
 		D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352D238A9B1300336D0B /* Notifications.storyboard */; };
 		D6203530238A9B3900336D0B /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352F238A9B3900336D0B /* Address.storyboard */; };
+		D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6203532238AB0CB00336D0B /* SearchViewController.swift */; };
 		D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B79238974B6003A7DFF /* Authentication.storyboard */; };
 		D6E80B7C23897C4B003A7DFF /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */; };
 		D6E80B7F23897C9D003A7DFF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */; };
@@ -117,6 +118,7 @@
 		D620352B238A9B0000336D0B /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		D620352D238A9B1300336D0B /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		D620352F238A9B3900336D0B /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
+		D6203532238AB0CB00336D0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D6E80B79238974B6003A7DFF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		0434EECA23530DFE00D4329E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				D6203531238AB09300336D0B /* Search */,
 				043C1850237F80430003A633 /* product list */,
 				049958CB237CC0AB00FDF817 /* New Group */,
 				04BF5771237B9EB200A8878A /* delivary */,
@@ -282,6 +285,14 @@
 				A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6203531238AB09300336D0B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D6203532238AB0CB00336D0B /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		D6E80B782389741F003A7DFF /* Storyboards */ = {
@@ -452,6 +463,7 @@
 				043C1852237F80690003A633 /* productlist.swift in Sources */,
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
 				045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */,
+				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
 				045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */,
 				0406516F23530CB30039566C /* AppDelegate.swift in Sources */,
 				0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */,
