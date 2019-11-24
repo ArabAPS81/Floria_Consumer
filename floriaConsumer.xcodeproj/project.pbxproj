@@ -42,7 +42,24 @@
 		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
+		D620351423897FB000336D0B /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351323897FB000336D0B /* Product.storyboard */; };
+		D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203515238A74EC00336D0B /* Vendor.storyboard */; };
+		D6203518238A962400336D0B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203517238A962400336D0B /* Splash.storyboard */; };
+		D620351A238A963A00336D0B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203519238A963A00336D0B /* Search.storyboard */; };
+		D620351C238A992B00336D0B /* Delivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351B238A992B00336D0B /* Delivery.storyboard */; };
+		D620351E238A99DA00336D0B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351D238A99DA00336D0B /* Payment.storyboard */; };
+		D6203520238A9A6B00336D0B /* CustomBouquet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351F238A9A6B00336D0B /* CustomBouquet.storyboard */; };
+		D6203522238A9A8100336D0B /* CarDecoration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203521238A9A8100336D0B /* CarDecoration.storyboard */; };
+		D6203524238A9A9300336D0B /* PotsCare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203523238A9A9300336D0B /* PotsCare.storyboard */; };
+		D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203525238A9AB000336D0B /* UserProfile.storyboard */; };
+		D6203528238A9AD900336D0B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203527238A9AD900336D0B /* Settings.storyboard */; };
+		D620352A238A9AEF00336D0B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203529238A9AEF00336D0B /* Orders.storyboard */; };
+		D620352C238A9B0000336D0B /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352B238A9B0000336D0B /* Favorites.storyboard */; };
+		D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352D238A9B1300336D0B /* Notifications.storyboard */; };
+		D6203530238A9B3900336D0B /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352F238A9B3900336D0B /* Address.storyboard */; };
 		D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B79238974B6003A7DFF /* Authentication.storyboard */; };
+		D6E80B7C23897C4B003A7DFF /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */; };
+		D6E80B7F23897C9D003A7DFF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +102,24 @@
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.release.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.release.xcconfig"; sourceTree = "<group>"; };
 		D318C85CD5C26CD04A40BA88 /* Pods-floriaConsumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.debug.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.debug.xcconfig"; sourceTree = "<group>"; };
+		D620351323897FB000336D0B /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		D6203515238A74EC00336D0B /* Vendor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
+		D6203517238A962400336D0B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		D6203519238A963A00336D0B /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		D620351B238A992B00336D0B /* Delivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delivery.storyboard; sourceTree = "<group>"; };
+		D620351D238A99DA00336D0B /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		D620351F238A9A6B00336D0B /* CustomBouquet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomBouquet.storyboard; sourceTree = "<group>"; };
+		D6203521238A9A8100336D0B /* CarDecoration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarDecoration.storyboard; sourceTree = "<group>"; };
+		D6203523238A9A9300336D0B /* PotsCare.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PotsCare.storyboard; sourceTree = "<group>"; };
+		D6203525238A9AB000336D0B /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		D6203527238A9AD900336D0B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		D6203529238A9AEF00336D0B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		D620352B238A9B0000336D0B /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		D620352D238A9B1300336D0B /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		D620352F238A9B3900336D0B /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		D6E80B79238974B6003A7DFF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +288,23 @@
 			isa = PBXGroup;
 			children = (
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
+				D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */,
+				D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */,
+				D620351323897FB000336D0B /* Product.storyboard */,
+				D6203515238A74EC00336D0B /* Vendor.storyboard */,
+				D6203517238A962400336D0B /* Splash.storyboard */,
+				D6203519238A963A00336D0B /* Search.storyboard */,
+				D620351B238A992B00336D0B /* Delivery.storyboard */,
+				D620351D238A99DA00336D0B /* Payment.storyboard */,
+				D620351F238A9A6B00336D0B /* CustomBouquet.storyboard */,
+				D6203521238A9A8100336D0B /* CarDecoration.storyboard */,
+				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
+				D6203525238A9AB000336D0B /* UserProfile.storyboard */,
+				D6203527238A9AD900336D0B /* Settings.storyboard */,
+				D6203529238A9AEF00336D0B /* Orders.storyboard */,
+				D620352B238A9B0000336D0B /* Favorites.storyboard */,
+				D620352D238A9B1300336D0B /* Notifications.storyboard */,
+				D620352F238A9B3900336D0B /* Address.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -318,10 +369,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D620351C238A992B00336D0B /* Delivery.storyboard in Resources */,
+				D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */,
+				D6203528238A9AD900336D0B /* Settings.storyboard in Resources */,
+				D620352C238A9B0000336D0B /* Favorites.storyboard in Resources */,
+				D6203522238A9A8100336D0B /* CarDecoration.storyboard in Resources */,
 				D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */,
+				D6E80B7C23897C4B003A7DFF /* SideMenu.storyboard in Resources */,
+				D6203530238A9B3900336D0B /* Address.storyboard in Resources */,
+				D6203520238A9A6B00336D0B /* CustomBouquet.storyboard in Resources */,
+				D620351E238A99DA00336D0B /* Payment.storyboard in Resources */,
 				0406517B23530CB60039566C /* LaunchScreen.storyboard in Resources */,
 				0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */,
+				D620351A238A963A00336D0B /* Search.storyboard in Resources */,
 				0406517623530CB30039566C /* Main.storyboard in Resources */,
+				D6203518238A962400336D0B /* Splash.storyboard in Resources */,
+				D6E80B7F23897C9D003A7DFF /* MainScreen.storyboard in Resources */,
+				D620352A238A9AEF00336D0B /* Orders.storyboard in Resources */,
+				D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */,
+				D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */,
+				D6203524238A9A9300336D0B /* PotsCare.storyboard in Resources */,
+				D620351423897FB000336D0B /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
