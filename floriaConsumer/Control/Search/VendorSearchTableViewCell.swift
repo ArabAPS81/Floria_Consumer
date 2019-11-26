@@ -25,6 +25,7 @@ class VendorSearchTableViewCell: UITableViewCell {
         super.layoutSubviews()
         print(shadowedView.frame)
         print(shadowedView.bounds)
+        shadowedView.dropRoundedShadowForAllSides(47)
         print("🟡")
     }
     
