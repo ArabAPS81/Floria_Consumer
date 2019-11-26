@@ -22,6 +22,7 @@
 		042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */; };
 		0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434EECB23530E2A00D4329E /* splashViewController.swift */; };
 		043C1852237F80690003A633 /* productlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1851237F80690003A633 /* productlist.swift */; };
+		043DBD2C238AFCC900B7FA31 /* carespecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBD2B238AFCC900B7FA31 /* carespecs.swift */; };
 		0440DD4C238375B5003061EC /* nearestvendore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440DD4B238375B5003061EC /* nearestvendore.swift */; };
 		0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441843C235D44CA0015DB4E /* fullscreen img.swift */; };
 		044238D0235DA6EE000BF740 /* viewimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044238CF235DA6EE000BF740 /* viewimg.swift */; };
@@ -65,6 +66,7 @@
 		042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0434EECB23530E2A00D4329E /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
 		043C1851237F80690003A633 /* productlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productlist.swift; sourceTree = "<group>"; };
+		043DBD2B238AFCC900B7FA31 /* carespecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carespecs.swift; sourceTree = "<group>"; };
 		0440DD4B238375B5003061EC /* nearestvendore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = nearestvendore.swift; path = floriaConsumer/Model/home/nearestvendore.swift; sourceTree = SOURCE_ROOT; };
 		0441843C235D44CA0015DB4E /* fullscreen img.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "fullscreen img.swift"; sourceTree = "<group>"; };
 		044238CF235DA6EE000BF740 /* viewimg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewimg.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		0434EECA23530DFE00D4329E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				044118DC238A6B2E00FB328C /* cardecoration */,
 				045FCA3123860D20007CD31E /* select flowe */,
 				043C1850237F80430003A633 /* product list */,
 				049958CB237CC0AB00FDF817 /* New Group */,
@@ -180,6 +183,14 @@
 				0440DD4B238375B5003061EC /* nearestvendore.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		044118DC238A6B2E00FB328C /* cardecoration */ = {
+			isa = PBXGroup;
+			children = (
+				043DBD2B238AFCC900B7FA31 /* carespecs.swift */,
+			);
+			path = cardecoration;
 			sourceTree = "<group>";
 		};
 		04459385237A5CE3007A210E /* buttons */ = {
@@ -411,6 +422,7 @@
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
 				0440DD4C238375B5003061EC /* nearestvendore.swift in Sources */,
 				0403F491235533EE001327EF /* nav.swift in Sources */,
+				043DBD2C238AFCC900B7FA31 /* carespecs.swift in Sources */,
 				04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */,
 				0424688523588BB200CE6FC6 /* homeViewController.swift in Sources */,
 				04459387237A5CFE007A210E /* buttons.swift in Sources */,
