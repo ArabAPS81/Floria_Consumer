@@ -58,6 +58,12 @@
 		D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352D238A9B1300336D0B /* Notifications.storyboard */; };
 		D6203530238A9B3900336D0B /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352F238A9B3900336D0B /* Address.storyboard */; };
 		D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6203532238AB0CB00336D0B /* SearchViewController.swift */; };
+		D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */; };
+		D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */; };
+		D67B30F8238BD4E60080252B /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F7238BD4E60080252B /* RateView.swift */; };
+		D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30FA238C016F0080252B /* UIViewExtension.swift */; };
+		D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */; };
+		D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */; };
 		D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B79238974B6003A7DFF /* Authentication.storyboard */; };
 		D6E80B7C23897C4B003A7DFF /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */; };
 		D6E80B7F23897C9D003A7DFF /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */; };
@@ -119,6 +125,12 @@
 		D620352D238A9B1300336D0B /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		D620352F238A9B3900336D0B /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		D6203532238AB0CB00336D0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSearchTableViewCell.swift; sourceTree = "<group>"; };
+		D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducSearchTableViewCell.swift; sourceTree = "<group>"; };
+		D67B30F7238BD4E60080252B /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
+		D67B30FA238C016F0080252B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagerController.swift; sourceTree = "<group>"; };
+		D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D6E80B79238974B6003A7DFF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
@@ -157,6 +169,8 @@
 		0406516D23530CB30039566C /* floriaConsumer */ = {
 			isa = PBXGroup;
 			children = (
+				D67B30F9238C014D0080252B /* Extensions */,
+				D67B30F6238BD4670080252B /* CustomViews */,
 				D6E80B782389741F003A7DFF /* Storyboards */,
 				045B4A492381842800CCC257 /* model */,
 				0434EECA23530DFE00D4329E /* Control */,
@@ -291,8 +305,28 @@
 			isa = PBXGroup;
 			children = (
 				D6203532238AB0CB00336D0B /* SearchViewController.swift */,
+				D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */,
+				D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */,
+				D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */,
+				D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		D67B30F6238BD4670080252B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D67B30F7238BD4E60080252B /* RateView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D67B30F9238C014D0080252B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D67B30FA238C016F0080252B /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D6E80B782389741F003A7DFF /* Storyboards */ = {
@@ -456,6 +490,7 @@
 				040417422353C50C0041D97C /* signup.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
+				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
 				049958CD237CC49200FDF817 /* add-adress.swift in Sources */,
 				042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */,
 				04441DA1237BBB5F002F5691 /* shipping.swift in Sources */,
@@ -471,7 +506,9 @@
 				0406517123530CB30039566C /* SceneDelegate.swift in Sources */,
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
 				0404173E2353B4E10041D97C /* Signin.swift in Sources */,
+				D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */,
 				0444939D235C8EA000650DFD /* check.swift in Sources */,
+				D67B30F8238BD4E60080252B /* RateView.swift in Sources */,
 				044238D0235DA6EE000BF740 /* viewimg.swift in Sources */,
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
 				0403F491235533EE001327EF /* nav.swift in Sources */,
@@ -481,10 +518,13 @@
 				0472F9A423784449008AD8BC /* providerprofile.swift in Sources */,
 				0470AD452353EB76000B1BF7 /* uinViewController.swift in Sources */,
 				04157D00237EF01100F772BE /* map.swift in Sources */,
+				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				040417402353BA310041D97C /* login.swift in Sources */,
+				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,
+				D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
