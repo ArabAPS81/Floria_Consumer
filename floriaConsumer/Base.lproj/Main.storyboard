@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mzi-0g-czZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AzL-sc-Jtw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -1237,7 +1237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-hj-MfZ">
-                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="86"/>
                                 <items>
                                     <navigationItem id="tIG-cf-Rkl">
                                         <nil key="title"/>
@@ -1259,7 +1259,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8z-ef-WKd">
-                                <rect key="frame" x="0.0" y="106" width="414" height="741"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="699"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="evt-Pm-Q1Z">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
@@ -1780,7 +1780,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-K8-YqW">
-                                <rect key="frame" x="195" y="52" width="24.5" height="46"/>
+                                <rect key="frame" x="182.5" y="52" width="49" height="88"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4068,6 +4068,39 @@
             </objects>
             <point key="canvasLocation" x="-5073.913043478261" y="-1811.3839285714284"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="4ka-X5-SiQ">
+            <objects>
+                <viewController id="AzL-sc-Jtw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fzf-A6-Dai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zi7-pI-5FR">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="A81-v0-GdA" kind="presentation" modalPresentationStyle="fullScreen" id="WAQ-mT-0To"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="sqe-vC-qKR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tM3-Rl-cFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16579" y="-3335"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="0FP-68-nhT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="A81-v0-GdA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GI8-Bp-98C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16098" y="-3338"/>
+        </scene>
         <!--Map-->
         <scene sceneID="OgM-Cd-UQP">
             <objects>
@@ -4348,7 +4381,6 @@
         <image name="shape963" width="52" height="16.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="44a-43-LRA"/>
         <segue reference="hvz-lD-IhN"/>
         <segue reference="zO2-nw-kk1"/>
         <segue reference="Fdg-iC-3so"/>
