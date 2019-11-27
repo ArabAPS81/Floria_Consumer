@@ -12,14 +12,17 @@ class viewimg: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string:UserDefaults.standard.string(forKey: "pic")!)
+       // let url = NSURL(string:UserDefaults.standard.string(forKey: "pic")!)
     
-self.backimg.kf.setImage(with: url as! URL)
+//self.backimg.kf.setImage(with: url as! URL)
         
     }
     @IBOutlet weak var backimg: UIImageView!
     
-
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

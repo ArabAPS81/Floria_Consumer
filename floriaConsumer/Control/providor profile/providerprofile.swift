@@ -41,7 +41,9 @@ class providerprofile: UIViewController,UICollectionViewDelegate,UICollectionVie
     @IBOutlet weak var three: UIButton!
     @IBOutlet weak var two: UIButton!
     @IBOutlet weak var one: UIButton!
-    
+    @IBAction func back(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "prouduct", sender: nil)
     }

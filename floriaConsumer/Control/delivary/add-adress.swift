@@ -20,8 +20,7 @@ class add_adress: UIViewController {
            maintitel.text = "add location"
         }
     }
-    
-
+  
     @IBOutlet weak var maintitel: UILabel!
     /*
     // MARK: - Navigation
@@ -32,5 +31,9 @@ class add_adress: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func back(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
+
 
 }

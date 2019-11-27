@@ -30,5 +30,8 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
         // Do any additional setup after loading the view.
     }
     
-   
+    @IBAction func back(_ sender: Any) {
+        
+    }
+    
 }

@@ -130,6 +130,10 @@ class ProductDetailsViewController: UIViewController ,UICollectionViewDelegate,U
         }
         
     }
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func butonzoom(_ sender: Any) {
         self.performSegue(withIdentifier: "zoom", sender: nil)
         

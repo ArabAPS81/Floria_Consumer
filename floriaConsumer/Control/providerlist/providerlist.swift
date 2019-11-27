@@ -38,5 +38,8 @@ class providerlist: UIViewController , UITableViewDelegate , UITableViewDataSour
         self.performSegue(withIdentifier: "proudcts", sender: nil)
     }
 
-
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
