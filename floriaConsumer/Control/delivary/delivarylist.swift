@@ -28,5 +28,8 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     @IBOutlet weak var shipping: UIButton!
-    
+    @IBAction func back(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
+
 }

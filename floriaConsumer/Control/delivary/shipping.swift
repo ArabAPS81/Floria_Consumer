@@ -18,5 +18,8 @@ class shipping: UIViewController {
     
     @IBOutlet weak var pay: UIButton!
     
+    @IBAction func back(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
 
 }

@@ -14,9 +14,14 @@ class add_adress: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if UserDefaults.standard.string(forKey: "send") == "car"{
+            maintitel.text = "car decoration "
+        }else {
+           maintitel.text = "add location"
+        }
     }
-    
-
+  
+    @IBOutlet weak var maintitel: UILabel!
     /*
     // MARK: - Navigation
 
@@ -26,5 +31,9 @@ class add_adress: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func back(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
+
 
 }

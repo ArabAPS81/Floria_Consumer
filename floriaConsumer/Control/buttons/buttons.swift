@@ -21,4 +21,8 @@ let vc = providerprofile()
     @IBOutlet weak var one: UIButton!
     @IBOutlet weak var two: UIButton!
     @IBOutlet weak var three: UIButton!
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

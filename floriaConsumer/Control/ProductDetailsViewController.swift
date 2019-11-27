@@ -130,6 +130,10 @@ class ProductDetailsViewController: UIViewController ,UICollectionViewDelegate,U
         }
         
     }
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func butonzoom(_ sender: Any) {
         self.performSegue(withIdentifier: "zoom", sender: nil)
         
@@ -149,7 +153,7 @@ class ProductDetailsViewController: UIViewController ,UICollectionViewDelegate,U
     override func viewWillAppear(_ animated: Bool)
     {
     
-        amount.layer.cornerRadius = 8
+    
         
        
         
@@ -165,13 +169,13 @@ class ProductDetailsViewController: UIViewController ,UICollectionViewDelegate,U
     {
         super.viewDidLoad()
         
-        amount.layer.cornerRadius = 20
+        
        // corner(img: colorcharacter, x: 7)
         providerpic.setImage(UIImage(named: "pro"), for: .normal)
         providerpic.layer.cornerRadius = 50
         providerpic.clipsToBounds = true
         
-        //amount.layer.cornerRadius = 15
+       amount.layer.cornerRadius = 20
         amount.clipsToBounds = true
        // print(upcomingitem[0].price,"DONE")
         
