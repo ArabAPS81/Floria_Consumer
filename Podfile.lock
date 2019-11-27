@@ -5,12 +5,14 @@ PODS:
   - Kingfisher/Core (5.8.2)
   - SideMenu (6.4.4)
   - SwiftyJSON (4.3.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher (~> 5.0)
   - SideMenu
   - SwiftyJSON (~> 4.0)
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - Kingfisher
     - SideMenu
     - SwiftyJSON
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Kingfisher: 3adc15096595f5aed800bb0d5cb757fc58b2d2dd
   SideMenu: e49a7d61d1f50e9bdaa866bbb9fc7d903c6400ed
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: af6b3b996e3a1fb5b1a619025a6e2a6cb289c7fd
+PODFILE CHECKSUM: 0d9df0dd34be91953b54c8db2da5d92fb388e828
 
 COCOAPODS: 1.8.4
