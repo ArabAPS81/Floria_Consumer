@@ -42,6 +42,8 @@
 		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
+		D604AB6F238E719400A818D2 /* populer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604AB6D238E719400A818D2 /* populer.swift */; };
+		D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604AB6E238E719400A818D2 /* nearestvendore.swift */; };
 		D620351423897FB000336D0B /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351323897FB000336D0B /* Product.storyboard */; };
 		D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203515238A74EC00336D0B /* Vendor.storyboard */; };
 		D6203518238A962400336D0B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203517238A962400336D0B /* Splash.storyboard */; };
@@ -109,6 +111,8 @@
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.release.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.release.xcconfig"; sourceTree = "<group>"; };
 		D318C85CD5C26CD04A40BA88 /* Pods-floriaConsumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.debug.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.debug.xcconfig"; sourceTree = "<group>"; };
+		D604AB6D238E719400A818D2 /* populer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = populer.swift; sourceTree = "<group>"; };
+		D604AB6E238E719400A818D2 /* nearestvendore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearestvendore.swift; sourceTree = "<group>"; };
 		D620351323897FB000336D0B /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		D6203515238A74EC00336D0B /* Vendor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
 		D6203517238A962400336D0B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		0406516D23530CB30039566C /* floriaConsumer */ = {
 			isa = PBXGroup;
 			children = (
+				D604AB6C238E719400A818D2 /* home */,
 				D67B30F9238C014D0080252B /* Extensions */,
 				D67B30F6238BD4670080252B /* CustomViews */,
 				D6E80B782389741F003A7DFF /* Storyboards */,
@@ -299,6 +304,15 @@
 				A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D604AB6C238E719400A818D2 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D604AB6D238E719400A818D2 /* populer.swift */,
+				D604AB6E238E719400A818D2 /* nearestvendore.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		D6203531238AB09300336D0B /* Search */ = {
@@ -499,6 +513,7 @@
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
 				045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */,
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
+				D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */,
 				045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */,
 				0406516F23530CB30039566C /* AppDelegate.swift in Sources */,
 				0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */,
@@ -521,6 +536,7 @@
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				040417402353BA310041D97C /* login.swift in Sources */,
+				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,

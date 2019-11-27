@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mzi-0g-czZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1237,7 +1237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTr-hj-MfZ">
-                                <rect key="frame" x="0.0" y="52" width="414" height="86"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="tIG-cf-Rkl">
                                         <nil key="title"/>
@@ -1259,7 +1259,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8z-ef-WKd">
-                                <rect key="frame" x="0.0" y="148" width="414" height="699"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="741"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="evt-Pm-Q1Z">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
@@ -1780,7 +1780,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-K8-YqW">
-                                <rect key="frame" x="182.5" y="52" width="49" height="88"/>
+                                <rect key="frame" x="195" y="52" width="24.5" height="46"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4328,8 +4328,8 @@
         <image name="goforward" catalog="system" width="60" height="64"/>
         <image name="group5" width="375" height="166.5"/>
         <image name="group5-1" width="375" height="166.5"/>
-        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="heart" width="16" height="16"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="imageUnderProduct" width="16" height="16"/>
@@ -4348,7 +4348,8 @@
         <image name="shape963" width="52" height="16.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FRk-XH-AIF"/>
+        <segue reference="44a-43-LRA"/>
+        <segue reference="hvz-lD-IhN"/>
         <segue reference="zO2-nw-kk1"/>
         <segue reference="Fdg-iC-3so"/>
         <segue reference="AjG-vb-AdI"/>
