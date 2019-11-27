@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="KRI-Nb-ttO" customClass="SearchPagerController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3e5-AH-9Gt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Uqy-Uj-9Qt"/>
@@ -31,22 +31,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-f9-faH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h91-5B-D6E">
-                                        <rect key="frame" x="106" y="33" width="97" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h91-5B-D6E">
+                                        <rect key="frame" x="55" y="0.0" width="215" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9B-8A-i9g">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="Ic7-du-rKv"/>
+                                        </constraints>
+                                        <state key="normal" image="backArrow"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Zij-2r-5jQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="b9B-8A-i9g" secondAttribute="bottom" id="6cR-cq-pnX"/>
+                                    <constraint firstItem="h91-5B-D6E" firstAttribute="width" secondItem="SdN-f9-faH" secondAttribute="width" multiplier="215/375" id="BU1-df-IGc"/>
+                                    <constraint firstItem="b9B-8A-i9g" firstAttribute="leading" secondItem="SdN-f9-faH" secondAttribute="leading" id="CU3-Ty-MWy"/>
+                                    <constraint firstAttribute="bottom" secondItem="h91-5B-D6E" secondAttribute="bottom" id="Qk2-U7-Ldb"/>
+                                    <constraint firstItem="h91-5B-D6E" firstAttribute="top" secondItem="SdN-f9-faH" secondAttribute="top" id="Y8U-Qv-Pi0"/>
+                                    <constraint firstAttribute="height" constant="44" id="Zij-2r-5jQ"/>
+                                    <constraint firstItem="b9B-8A-i9g" firstAttribute="top" secondItem="SdN-f9-faH" secondAttribute="top" id="e4Q-dG-Y61"/>
+                                    <constraint firstItem="h91-5B-D6E" firstAttribute="leading" secondItem="b9B-8A-i9g" secondAttribute="trailing" id="nSr-P0-cbq"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP8-GW-1Fu">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <connections>
                                     <segue destination="KRI-Nb-ttO" kind="embed" id="6ll-00-maf"/>
                                 </connections>
@@ -64,6 +82,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a5K-0j-frN"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="searchTF" destination="h91-5B-D6E" id="MHU-Lq-t1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W56-j5-Dxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,6 +377,7 @@
     </scenes>
     <resources>
         <image name="633107Poao80102-1" width="89" height="79"/>
+        <image name="backArrow" width="12.5" height="20.5"/>
         <image name="favorite" width="26.5" height="24"/>
         <image name="shape952" width="10" height="10"/>
         <image name="vendorAvatar" width="80" height="80"/>
