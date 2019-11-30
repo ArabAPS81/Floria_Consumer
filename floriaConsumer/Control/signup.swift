@@ -30,15 +30,34 @@ class signup: UIViewController {
       
         
     }
-        @IBAction func sho(_ sender: Any) {
-            
-       }
+   
+    @IBOutlet weak var checkbox: UIButton!
     
+    let full = UIImage(systemName: "rectangle.fill")
+    let blanck = UIImage(systemName: "rectangle")
+    @IBAction func terms(_ sender: Any) {
+        checkbox.setImage(full, for: .normal)
+    }
     
+    @IBAction func conditions(_ sender: Any) {
+    }
     @IBAction func skip(_ sender: Any) {
         self.performSegue(withIdentifier: "done", sender: nil)
         
     }
-    
+    @IBAction func sho(_ sender: Any) {
+              if  pass.isSecureTextEntry == true
+              {
+                 
+                  pass.isSecureTextEntry=false
+                  confirm.isSecureTextEntry=false
+              }
+              else
+              {
+                  
+                  pass.isSecureTextEntry=true
+                  confirm.isSecureTextEntry=true
+              }
+          }
    
 }
