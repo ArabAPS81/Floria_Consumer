@@ -18,6 +18,7 @@ class homeViewController: UIViewController {
     
     
     
+    @IBOutlet var homeButtonsCollction: [UIButton]!
     
     
     @IBOutlet var springSale: UIImageView!
@@ -40,12 +41,15 @@ class homeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readymade.layer.cornerRadius = 23
-        assemd.layer.cornerRadius = 23
-        home.layer.cornerRadius = 23
-        car.layer.cornerRadius = 23
-        gerb.layer.cornerRadius = 23
         registerCells()
+        setupViews()
+    }
+    
+    func setupViews() {
+        homeButtonsCollction.forEach { (button) in
+            button.layer.cornerRadius = button.bounds.height / 2
+        }
+        (SliderHome.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,11 +76,11 @@ class homeViewController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == SliderHome
         {
-            let colWidth=SliderHome.frame.width
+            let colWidth=SliderHome.bounds.width
             
             let itemwidth=(colWidth)
             
-            return CGSize(width: itemwidth, height:self.SliderHome.frame.size.height)
+            return CGSize(width: itemwidth, height:self.SliderHome.bounds.size.height)
         }
         else if collectionView != Products
         {
@@ -110,7 +114,6 @@ extension homeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
     }
-    
     
 }
 
