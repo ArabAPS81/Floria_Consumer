@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BHd-Mn-ZHl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-16068" y="-3338"/>
         </scene>
-        <!--Search-->
+        <!--Authentication-->
         <scene sceneID="QDD-Gt-R1E">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="Fq8-qk-IFv" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Authentication" id="Fq8-qk-IFv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="CbT-DH-NN3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pde-3u-Zar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
