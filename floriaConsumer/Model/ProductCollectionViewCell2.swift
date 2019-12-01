@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductCollectionViewCell: UICollectionViewCell
+class ProductCollectionViewCell2: UICollectionViewCell
 {
     @IBOutlet var viewOfProductsImags: UIView!
     @IBOutlet var image: UIImageView!

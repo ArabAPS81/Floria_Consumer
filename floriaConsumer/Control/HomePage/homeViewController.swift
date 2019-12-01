@@ -66,10 +66,10 @@ class homeViewController: UIViewController {
     
     
     @IBAction func readymade(_ sender: Any) {
-        self.performSegue(withIdentifier: "listvendor", sender: nil)
+        //self.performSegue(withIdentifier: "listvendor", sender: nil)
     }
     @IBAction func gerb(_ sender: Any) {
-        self.performSegue(withIdentifier: "listvendor", sender: nil)
+        //self.performSegue(withIdentifier: "listvendor", sender: nil)
     }
     
     
