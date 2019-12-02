@@ -721,7 +721,6 @@
         <image name="rectangle" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ti-S9-OjD"/>
         <segue reference="sRg-3v-heO"/>
     </inferredMetricsTieBreakers>
 </document>
