@@ -1,20 +1,19 @@
 //
-//  HomeProductCollectionViewCell.swift
+//  ExtrasCollectionViewCell.swift
 //  floriaConsumer
 //
-//  Created by arabpas on 11/27/19.
+//  Created by arabpas on 12/1/19.
 //  Copyright © 2019 Obida. All rights reserved.
 //
 
 import UIKit
 
-class HomeProductCollectionViewCell: UICollectionViewCell {
-    
-    
+class ExtrasCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var shadowedView: UIView!
     
     
-    static let reuseId = "HomeProductCollectionViewCell"
+    static let reuseId = "ExtrasCollectionViewCell"
     
     static func registerNIBinView(collection: UICollectionView) {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
@@ -23,7 +22,7 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.shadowedView.dropRoundedShadowForAllSides(5)
         }
     }
@@ -31,7 +30,12 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         shadowedView.layer.cornerRadius = 5
+        
+        
     }
     
+    @IBAction func selectButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
 
 }

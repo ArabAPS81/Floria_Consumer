@@ -8,7 +8,7 @@
 
 import UIKit
 
-class productlist: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class productlist: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,18 +24,22 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as!  ProductCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseId, for: indexPath) as!  ProductCollectionViewCell
         
         return cell 
     }
     
-
-    @IBAction func go(_ sender: Any) {
-        self.performSegue(withIdentifier: "proudct", sender: nil)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let iphone8SizeWidth: CGFloat = 375
+        let iphone8Height: CGFloat = 250
+        let iphone8Width: CGFloat = 180
+        let scale: CGFloat = UIScreen.main.bounds.width / iphone8SizeWidth
+        let size = CGSize.init(width: iphone8Width * scale, height: iphone8Height * scale)
+        return size
     }
     
-    @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ProductDetails", sender: nil)
     }
     
 }
