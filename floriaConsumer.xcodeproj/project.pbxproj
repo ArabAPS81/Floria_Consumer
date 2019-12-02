@@ -25,7 +25,6 @@
 		043F73712393ED0500843A1C /* popupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F73702393ED0400843A1C /* popupVC.swift */; };
 		0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441843C235D44CA0015DB4E /* fullscreen img.swift */; };
 		044238D0235DA6EE000BF740 /* viewimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044238CF235DA6EE000BF740 /* viewimg.swift */; };
-		0443B0B82393B19E00D4206E /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B0B72393B19E00D4206E /* locationcell.swift */; };
 		04441DA1237BBB5F002F5691 /* shipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04441DA0237BBB5E002F5691 /* shipping.swift */; };
 		0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444939A235C8BBD00650DFD /* Assets.xcassets */; };
 		0444939D235C8EA000650DFD /* check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444939C235C8EA000650DFD /* check.swift */; };
@@ -48,6 +47,7 @@
 		D6036EA7238EC45300044EFF /* HomeVendorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6036EA5238EC45300044EFF /* HomeVendorCollectionViewCell.xib */; };
 		D604AB6F238E719400A818D2 /* populer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604AB6D238E719400A818D2 /* populer.swift */; };
 		D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604AB6E238E719400A818D2 /* nearestvendore.swift */; };
+		D61E865C23950B4900CC0287 /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B0B72393B19E00D4206E /* locationcell.swift */; };
 		D620351423897FB000336D0B /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351323897FB000336D0B /* Product.storyboard */; };
 		D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203515238A74EC00336D0B /* Vendor.storyboard */; };
 		D6203518238A962400336D0B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203517238A962400336D0B /* Splash.storyboard */; };
@@ -631,6 +631,7 @@
 				0470AD452353EB76000B1BF7 /* uinViewController.swift in Sources */,
 				D697FB8E2393FB6400956652 /* ExtrasCollectionViewCell.swift in Sources */,
 				04157D00237EF01100F772BE /* map.swift in Sources */,
+				D61E865C23950B4900CC0287 /* locationcell.swift in Sources */,
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,
