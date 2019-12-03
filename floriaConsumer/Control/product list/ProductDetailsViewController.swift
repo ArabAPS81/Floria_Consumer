@@ -50,11 +50,17 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             return 3
         }
         else{
-            return 4
+            return 12
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if collectionView == imageSliderCollectioView {
+            self.performSegue(withIdentifier: "zoom", sender: nil)
+        }
+        
+        
         
         let alert = UIAlertController(title: "Done", message: "your new item displayed", preferredStyle: UIAlertController.Style.actionSheet)
         
@@ -64,6 +70,8 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             // your code with delay
             alert.dismiss(animated: true, completion: nil)
         }
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
