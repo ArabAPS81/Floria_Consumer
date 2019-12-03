@@ -16,4 +16,5 @@ class locationcell: UITableViewCell {
           openProfileActionadd?()
       }
 
+    @IBOutlet weak var SelectionButtonalyout: UIButton!
 }

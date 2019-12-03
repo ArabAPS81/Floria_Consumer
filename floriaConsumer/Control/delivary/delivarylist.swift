@@ -15,33 +15,24 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! locationcell
+    
         
-//
+        cell.SelectionButtonalyout.layer.cornerRadius = 20
+        cell.SelectionButtonalyout.clipsToBounds = true
+        cell.SelectionButtonalyout.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.SelectionButtonalyout.layer.shadowColor = UIColor.black.cgColor
+        cell.SelectionButtonalyout.layer.shadowOpacity = 0.23
+        cell.SelectionButtonalyout.layer.shadowRadius = 4
+
 //        cell.openProfileActionadd = {
 //
-//            cell.icone.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            cell.SelectionButtonalyout.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 //
 //
 //        }
              return cell
     }
-    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        let cell  = tableView.cellForRow(at: indexPath as IndexPath) as! locationcell
-        cell.contentView.backgroundColor = .red
-    }
-
-    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
-         let cell  = tableView.cellForRow(at: indexPath as IndexPath) as! locationcell
-        cell.contentView.backgroundColor = .clear
-    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! locationcell
-//        cell.contentView.backgroundColor = .cyan
-//        print(indexPath.row)
-//        cell.icone.image = nil
-//        tableView.reloadData()
-//    }
-    
+  
     
     @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
