@@ -429,7 +429,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="QOc-Zd-9ZM" firstAttribute="top" secondItem="Kcp-2J-A6B" secondAttribute="top" constant="20" id="PpR-7y-aVS"/>
                             <constraint firstItem="4Dj-me-m7R" firstAttribute="leading" secondItem="Kcp-2J-A6B" secondAttribute="leading" id="W7W-AE-HsY"/>

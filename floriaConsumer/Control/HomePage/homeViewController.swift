@@ -50,6 +50,9 @@ class homeViewController: UIViewController {
             button.layer.cornerRadius = button.bounds.height / 2
         }
         (SliderHome.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
