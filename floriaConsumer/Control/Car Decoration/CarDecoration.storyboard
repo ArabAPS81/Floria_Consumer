@@ -499,7 +499,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-VX-FVh">
                                                 <rect key="frame" x="0.0" y="428" width="414" height="57"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Color List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9O-YZ-w9c">
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Color List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9O-YZ-w9c">
                                                         <rect key="frame" x="65" y="21" width="284" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="5de-mI-2lt"/>
