@@ -33,7 +33,7 @@ extension UIView {
         backgroundView.layer.masksToBounds = false
         self.layer.masksToBounds = true
         backgroundView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        backgroundView.layer.shadowRadius = 4
+        backgroundView.layer.shadowRadius = 2
         backgroundView.layer.shadowOpacity = 0.2
 
         let path = UIBezierPath()
