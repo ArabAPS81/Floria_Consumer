@@ -13,9 +13,12 @@ class buttons: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 let vc = providerprofile()
-        vc.corner(bu: one, by: 10)
-        vc.corner(bu: two, by: 10)
-        vc.corner(bu: three, by: 10)
+        vc.corner(bu: one, by: 25)
+        vc.corner(bu: two, by: 25)
+        vc.corner(bu: three, by: 25)
+        Shadoow(bu: one)
+        Shadoow(bu: two)
+        Shadoow(bu: three)
     }
 
     @IBOutlet weak var one: UIButton!
@@ -24,5 +27,22 @@ let vc = providerprofile()
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    func Shadoow(bu: UIButton ){
+        bu.layer.shadowColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+           bu.layer.shadowOffset = CGSize(width: 0.1, height: 3.0)
+        bu.layer.shadowOpacity = 1
+    }
 
+    @IBAction func ME(_ sender: Any) {
+        
+        performSegue(withIdentifier: "shiping", sender: nil)
+    }
+    @IBAction func somewhere(_ sender: Any) {
+        
+        performSegue(withIdentifier: "shiping", sender: nil)
+    }
+    @IBAction func vendor(_ sender: Any) {
+     performSegue(withIdentifier: "shiping", sender: nil)
+        
+    }
 }
