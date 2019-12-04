@@ -9,9 +9,6 @@
 import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var shadowedView: UIView!
-    
     
     static let reuseId = "ProductCollectionViewCell"
     
@@ -19,10 +16,16 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
         collection.register(nib, forCellWithReuseIdentifier: reuseId)
     }
+    
+    
+    
 
+    @IBOutlet weak var shadowedView: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.shadowedView.dropRoundedShadowForAllSides(5)
         }
     }
@@ -33,5 +36,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         
         
     }
+    
+    
     
 }

@@ -25,16 +25,11 @@ class VendorTableViewCell: UITableViewCell {
         print(shadowedView.frame)
         print(shadowedView.bounds)
         shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
+        NotificationCenter.default.addObserver(self, selector: #selector(addShadow(_:)), name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
-    
-    var didSetShadow: Bool = false
-    
-    
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-            shadowedView.dropRoundedShadowForAllSides(47)
+    @objc func addShadow(_ notification: NSNotification) {
+        shadowedView.dropRoundedShadowForAllSides(47)
     }
     
 }

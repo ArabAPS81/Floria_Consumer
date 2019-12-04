@@ -19,6 +19,12 @@ class VendorsListViewController: UIViewController {
         VendorTableViewCell.registerNIBinView(tableView: self.tableView)
         self.title = "Select Vendor"
         tableView.separatorStyle = .none
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
     
@@ -31,6 +37,7 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: VendorTableViewCell.reuseId) as! VendorTableViewCell
+        cell.selectionStyle = .none
         return cell
     }
     

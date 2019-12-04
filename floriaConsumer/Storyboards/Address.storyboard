@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="shipping" destination="9wR-2B-7WW" id="4d5-iq-kO8"/>
                         <outlet property="table" destination="2cc-kQ-yWn" id="2Bf-g9-r7M"/>
+                        <segue destination="kyQ-Ds-HIX" kind="show" identifier="shipping" id="JPT-vt-wvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3H-gA-44q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -502,6 +503,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evp-Ip-iYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6004.347826086957" y="-2672.5446428571427"/>
+        </scene>
+        <!--shipping-->
+        <scene sceneID="J50-Mh-tUr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Delivery" referencedIdentifier="shipping" id="kyQ-Ds-HIX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BJD-d9-jie"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwo-xJ-XkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4789" y="-3856"/>
         </scene>
         <!--Map-->
         <scene sceneID="g6C-bY-bfm">

@@ -76,16 +76,27 @@
                         <outlet property="three" destination="PMX-r5-hY1" id="hZL-Fo-cfQ"/>
                         <outlet property="two" destination="LfF-Fx-GOU" id="cfW-Lo-f4l"/>
                         <segue destination="aQv-Ul-deo" kind="presentation" identifier="shiping" modalPresentationStyle="fullScreen" id="sjs-ok-cMy"/>
+                        <segue destination="ZXK-PP-qe4" kind="show" identifier="addresses" id="icc-3Q-8RT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxX-DZ-EGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5923.188405797102" y="-3435.2678571428569"/>
+            <point key="canvasLocation" x="-5525" y="-3435"/>
+        </scene>
+        <!--delivary-->
+        <scene sceneID="iF1-31-J9s">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Address" referencedIdentifier="delivary" id="ZXK-PP-qe4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="30V-yN-uRf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8q-eL-hm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4832" y="-3487"/>
         </scene>
         <!--Shipping-->
         <scene sceneID="rwQ-7Y-Yeu">
             <objects>
-                <viewController id="aQv-Ul-deo" customClass="shipping" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shipping" id="aQv-Ul-deo" customClass="shipping" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k3o-jy-rlW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -103,6 +103,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="223" height="205"/>
             <connections>
+                <outlet property="selectionButton" destination="dNT-Se-m11" id="KKb-wJ-eJ5"/>
                 <outlet property="shadowedView" destination="kol-Zi-mzl" id="O6l-0n-Kkw"/>
             </connections>
             <point key="canvasLocation" x="190.57971014492756" y="107.8125"/>

@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-1p-o1m">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="681.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select car type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOt-FD-wud">
                                                 <rect key="frame" x="140.5" y="10" width="133.5" height="40"/>
@@ -886,6 +886,9 @@
                         <outletCollection property="shadowedViews" destination="6yd-aW-BxT" collectionClass="NSMutableArray" id="1KH-gG-x4a"/>
                         <outletCollection property="shadowedViews" destination="alM-Vk-3TK" collectionClass="NSMutableArray" id="yfJ-mJ-A1W"/>
                         <outletCollection property="shadowedViews" destination="cqb-TX-AYw" collectionClass="NSMutableArray" id="R5T-Bx-hQM"/>
+                        <outletCollection property="decorationTypeButtons" destination="rsP-d1-hPq" collectionClass="NSMutableArray" id="E7D-cy-Nec"/>
+                        <outletCollection property="decorationTypeButtons" destination="rIb-hM-D9U" collectionClass="NSMutableArray" id="BZT-4B-L5N"/>
+                        <outletCollection property="decorationTypeButtons" destination="CS3-98-rmQ" collectionClass="NSMutableArray" id="1UP-4f-bIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVX-V3-JuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

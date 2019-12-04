@@ -11,6 +11,7 @@ import UIKit
 class CarDecorationViewController: UIViewController {
     
     @IBOutlet var carButtons: [UIButton]!
+    @IBOutlet var decorationTypeButtons: [UIButton]!
     @IBOutlet var shadowedViews: [UIView]!
 
 
@@ -51,7 +52,10 @@ class CarDecorationViewController: UIViewController {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+        decorationTypeButtons.forEach { (button) in
+            button.isSelected = false
+        }
+        sender.isSelected = true
     }
 
 }

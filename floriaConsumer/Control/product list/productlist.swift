@@ -16,7 +16,11 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
         super.viewDidLoad()
         ProductCollectionViewCell.registerNIBinView(collection: collectionView)
     }
-  
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

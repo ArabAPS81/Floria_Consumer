@@ -11,7 +11,7 @@ import UIKit
 class ExtrasCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var shadowedView: UIView!
-    
+    @IBOutlet weak var selectionButton: UIButton!
     
     static let reuseId = "ExtrasCollectionViewCell"
     

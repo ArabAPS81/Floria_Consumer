@@ -15,7 +15,7 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! locationcell
-    
+        
         
         cell.SelectionButtonalyout.layer.cornerRadius = 20
         cell.SelectionButtonalyout.clipsToBounds = true
@@ -23,16 +23,13 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
         cell.SelectionButtonalyout.layer.shadowColor = UIColor.black.cgColor
         cell.SelectionButtonalyout.layer.shadowOpacity = 0.23
         cell.SelectionButtonalyout.layer.shadowRadius = 4
-
-//        cell.openProfileActionadd = {
-//
-//            cell.SelectionButtonalyout.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//
-//
-//        }
-             return cell
+        return cell
     }
-  
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "shipping", sender: nil)
+    }
+    
     
     @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
@@ -41,10 +38,10 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-  
+    
     @IBOutlet weak var shipping: UIButton!
     @IBAction func back(_ sender: Any) {
-           self.dismiss(animated: true, completion: nil)
-       }
-
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

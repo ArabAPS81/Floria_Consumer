@@ -378,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="-7010.3999999999996" y="-3443.0284857571219"/>
         </scene>
-        <!--Address-->
+        <!--delivary-->
         <scene sceneID="fdU-A4-ZFY">
             <objects>
-                <viewControllerPlaceholder storyboardName="Address" id="54Q-cA-Bvr" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Delivery" referencedIdentifier="delivary" id="54Q-cA-Bvr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DNS-ka-2rj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGu-8s-wDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
