@@ -21,29 +21,27 @@ class SearchTableViewController: UIViewController {
     
     enum TableType {
         case vendors,products
-        
         func getName() -> String {
             switch self {
             case .vendors:
-                return ""
+                return "Vendors"
             case .products:
-                return ""
-            }
-        }
-        func getff() -> String {
-            switch self {
-            case .vendors:
-                return ""
-            case .products:
-                return ""
+                return "Products"
             }
         }
     }
     
     var tableType: TableType = .products
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        VendorTableViewCell.registerNIBinView(tableView: tableView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
 
@@ -55,7 +53,13 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
         case .products:
             return 5
         case .vendors:
-            return 6
+            return 12
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath == tableView.indexPathsForVisibleRows?.last {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
         }
     }
     
@@ -87,8 +91,14 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
 
 extension SearchTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        let indInfo = IndicatorInfo.init(title: "productstitle")
-        return indInfo
+        switch tableType {
+        case .products:
+            let indInfo = IndicatorInfo.init(title: "Products")
+            return indInfo
+        case .vendors:
+            let indInfo = IndicatorInfo.init(title: "Vendors")
+            return indInfo
+        }
     }
     
     

@@ -50,6 +50,8 @@
 		D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604AB6E238E719400A818D2 /* nearestvendore.swift */; };
 		D60B9155239671EC002669B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B9154239671EC002669B0 /* Constants.swift */; };
 		D60B915723969B74002669B0 /* CarDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915623969B74002669B0 /* CarDecorationViewController.swift */; };
+		D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */; };
+		D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */; };
 		D61E865C23950B4900CC0287 /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B0B72393B19E00D4206E /* locationcell.swift */; };
 		D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */; };
 		D61E866323952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E866123952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift */; };
@@ -141,6 +143,8 @@
 		D604AB6E238E719400A818D2 /* nearestvendore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearestvendore.swift; sourceTree = "<group>"; };
 		D60B9154239671EC002669B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D60B915623969B74002669B0 /* CarDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecorationViewController.swift; sourceTree = "<group>"; };
+		D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPopupViewController.swift; sourceTree = "<group>"; };
+		D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
 		D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetViewController.swift; sourceTree = "<group>"; };
 		D61E866123952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetCollectionViewCell.swift; sourceTree = "<group>"; };
 		D61E866223952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBouquetCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 			children = (
 				D6203521238A9A8100336D0B /* CarDecoration.storyboard */,
 				D60B915623969B74002669B0 /* CarDecorationViewController.swift */,
+				D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */,
+				D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */,
 			);
 			path = "Car Decoration";
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 		D6203531238AB09300336D0B /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D6203519238A963A00336D0B /* Search.storyboard */,
 				D6203532238AB0CB00336D0B /* SearchViewController.swift */,
 				D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */,
 				D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */,
@@ -488,7 +495,6 @@
 				D6203517238A962400336D0B /* Splash.storyboard */,
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
 				D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */,
-				D6203519238A963A00336D0B /* Search.storyboard */,
 				D620351B238A992B00336D0B /* Delivery.storyboard */,
 				D620351D238A99DA00336D0B /* Payment.storyboard */,
 				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
@@ -644,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040417422353C50C0041D97C /* signup.swift in Sources */,
+				D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
 				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
@@ -659,6 +666,7 @@
 				043F73712393ED0500843A1C /* popupVC.swift in Sources */,
 				045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */,
 				D61E866323952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift in Sources */,
+				D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */,
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
 				D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */,
 				D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */,

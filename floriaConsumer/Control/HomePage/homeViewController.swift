@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+import SideMenu
 
 import Foundation
 
@@ -21,13 +20,10 @@ class homeViewController: UIViewController {
     @IBOutlet var homeButtonsCollction: [UIButton]!
     
     
-    @IBOutlet var springSale: UIImageView!
+
     @IBOutlet var search: UIBarButtonItem!
     @IBOutlet var sideMenu: UIBarButtonItem!
-    var arrOfServiceImages :[UIImage]!
-    var arrOfServiceNames :[String]!
-    var arrofimagesinslideer : [UIImage]!
-    var arrOfServiceNamesArabic:[String]!
+    
     @IBOutlet var Offers: UICollectionView!
     @IBOutlet var Products: UICollectionView!
     @IBOutlet var SliderHome: UICollectionView!
@@ -43,6 +39,15 @@ class homeViewController: UIViewController {
         super.viewDidLoad()
         registerCells()
         setupViews()
+        setupSideMenu()
+    }
+    
+    private func setupSideMenu() {
+        
+        SideMenuManager.default.menuPresentMode = .viewSlideOut
+        SideMenuPresentationStyle.menuSlideIn.backgroundColor = .clear
+        SideMenuPresentationStyle.menuDissolveIn.backgroundColor = .clear
+        SideMenuPresentationStyle.viewSlideOutMenuIn.backgroundColor = .clear
     }
     
     func setupViews() {
@@ -68,8 +73,13 @@ class homeViewController: UIViewController {
     }
     
     
-    @IBAction func readymade(_ sender: Any) {
-        //self.performSegue(withIdentifier: "listvendor", sender: nil)
+    @IBAction func showSideMenu(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "SideMenu", bundle: nil)
+        let menu = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! SideMenuNavigationController
+        menu.presentationStyle = .menuSlideIn
+        menu.menuWidth = UIScreen.main.bounds.size.width * 0.8
+        menu.statusBarEndAlpha = 0
+        present(menu, animated: true, completion: nil)
     }
     @IBAction func gerb(_ sender: Any) {
         //self.performSegue(withIdentifier: "listvendor", sender: nil)

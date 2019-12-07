@@ -38,9 +38,6 @@ class CarDecorationViewController: UIViewController {
             view.dropRoundedShadowForAllSides(5)
         }
     }
-
-    
-    
     
     @IBAction func carButtonTapped(_ sender: UIButton) {
         carButtons.forEach { (button) in
@@ -50,12 +47,16 @@ class CarDecorationViewController: UIViewController {
         sender.backgroundColor = Constants.pincColor
         sender.tintColor = .white
     }
-    
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         decorationTypeButtons.forEach { (button) in
             button.isSelected = false
         }
         sender.isSelected = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
     }
 
 }

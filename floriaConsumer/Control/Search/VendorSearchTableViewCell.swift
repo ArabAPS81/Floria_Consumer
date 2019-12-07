@@ -18,25 +18,22 @@ class VendorSearchTableViewCell: UITableViewCell {
         super.awakeFromNib()
         print(shadowedView.frame)
         print(shadowedView.bounds)
-        print("🔴")
+        let frame = shadowedView.frame
+        shadowedView.frame = CGRect.init(x: frame.origin.x, y: frame.origin.y, width: UIScreen.main.bounds.width - 34, height: frame.height)
+        
     }
     
+    var shadowAdded = false
     override func layoutSubviews() {
         super.layoutSubviews()
-        print(shadowedView.frame)
-        print(shadowedView.bounds)
-        shadowedView.dropRoundedShadowForAllSides(47)
-        print("🟡")
+        if !shadowAdded{
+            shadowedView.dropRoundedShadowForAllSides(47)
+            shadowAdded = true
+        }
     }
     
     override func setNeedsLayout() {
         super.setNeedsLayout()
-        if let v = shadowedView {
-            //v.dropRoundedShadowForAllSides(47)
-            print(shadowedView.frame)
-            print(shadowedView.bounds)
-            print("🟢")
-        }
     }
     
     
@@ -44,6 +41,7 @@ class VendorSearchTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        selectedBackgroundView = UIView()
 
     }
 
