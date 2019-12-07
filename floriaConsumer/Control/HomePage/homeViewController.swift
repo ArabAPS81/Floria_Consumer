@@ -44,7 +44,7 @@ class homeViewController: UIViewController {
     
     private func setupSideMenu() {
         
-        SideMenuManager.default.menuPresentMode = .viewSlideOut
+        
         SideMenuPresentationStyle.menuSlideIn.backgroundColor = .clear
         SideMenuPresentationStyle.menuDissolveIn.backgroundColor = .clear
         SideMenuPresentationStyle.viewSlideOutMenuIn.backgroundColor = .clear

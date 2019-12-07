@@ -4069,10 +4069,10 @@
             </objects>
             <point key="canvasLocation" x="-15669.565217391306" y="-3335.4910714285711"/>
         </scene>
-        <!--VendorProfile-->
+        <!--MainScreen-->
         <scene sceneID="0FP-68-nhT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="VendorProfile" id="A81-v0-GdA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="MainScreen" id="A81-v0-GdA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Tof-CT-Hqq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GI8-Bp-98C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4357,8 +4357,8 @@
         <image name="goforward" catalog="system" width="60" height="64"/>
         <image name="group5" width="375" height="166.5"/>
         <image name="group5-1" width="375" height="166.5"/>
-        <image name="heart" width="16" height="16"/>
         <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="heart" width="16" height="16"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="imageUnderProduct" width="16" height="16"/>

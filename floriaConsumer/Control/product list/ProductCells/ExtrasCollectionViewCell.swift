@@ -35,7 +35,17 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+       // sender.isSelected = !sender.isSelected
     }
+    
+    func setSelected(_ selected: Bool) {
+        if selected {
+            selectionButton.isSelected = true
+        }else {
+            selectionButton.isSelected = false
+        }
+    }
+    
+    
 
 }

@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq6-gd-3Oi">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq6-gd-3Oi">
                                                     <rect key="frame" x="0.0" y="10" width="374" height="92"/>
                                                     <color key="backgroundColor" red="0.91898384513893594" green="0.92317159484500511" blue="0.93573484396321249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <connections>
