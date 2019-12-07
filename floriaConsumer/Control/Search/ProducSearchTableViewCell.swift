@@ -16,17 +16,24 @@ class ProducSearchTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        let frame = shadowedView.frame
+        shadowedView.frame = CGRect.init(x: frame.origin.x, y: frame.origin.y, width: UIScreen.main.bounds.width - 34, height: frame.height)
     }
     
+    var shadowAdded = false
     override func layoutSubviews() {
         super.layoutSubviews()
-        shadowedView.dropRoundedShadowForAllSides(1)
+        if !shadowAdded{
+            shadowedView.dropRoundedShadowForAllSides(5)
+            shadowAdded = true
+        }
     }
     
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+        selectedBackgroundView = UIView()
+
     }
 
 }
