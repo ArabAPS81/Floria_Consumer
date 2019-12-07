@@ -11,4 +11,5 @@ class ExtraProductsCollectionViewCell: UICollectionViewCell
 {
     @IBOutlet var viewOfProductsImags: UIView!
     @IBOutlet var image: UIImageView!
+    
 }

@@ -1,10 +1,8 @@
-//
 //  providerprofile.swift
 //  floriaConsumer
-//
 //  Created by mac on 11/10/2562 BE.
 //  Copyright © 2562 BE Obida. All rights reserved.
-//
+
 
 import UIKit
 
@@ -18,9 +16,10 @@ class providerprofile: UIViewController,UICollectionViewDelegate,UICollectionVie
         cell.viewOfProductsImags.layer.cornerRadius = 20
         cell.viewOfProductsImags.clipsToBounds = true
         cell.viewOfProductsImags.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-           cell.viewOfProductsImags.layer.shadowOffset = .zero
-        
-           cell.viewOfProductsImags.layer.shadowOpacity = 1
+        cell.viewOfProductsImags.layer.shadowOffset = .zero
+        cell.viewOfProductsImags.layer.shadowOpacity = 1
+        cell.image.layer.cornerRadius = 40
+    
         return cell
     }
     
@@ -32,31 +31,41 @@ class providerprofile: UIViewController,UICollectionViewDelegate,UICollectionVie
         corner(bu: three, by:10)
         corner(bu: two, by: 10)
         corner(bu: one, by: 10)
-        // Do any additional setup after loading the view.
-    }
+        ViewAsCell.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        ViewAsCell.layer.shadowOffset = CGSize(width: 0.1, height: 3.0)
+        ViewAsCell.layer.shadowOpacity = 1
+        ViewAsCell.layer.cornerRadius = 40
+        picofvendor.layer.cornerRadius = 25
+        
+        }
     
-
+    
+    @IBOutlet weak var ViewAsCell: UIView!
+    @IBOutlet weak var picofvendor: UIImageView!
     @IBOutlet weak var five: UIButton!
     @IBOutlet weak var four: UIButton!
     @IBOutlet weak var three: UIButton!
     @IBOutlet weak var two: UIButton!
     @IBOutlet weak var one: UIButton!
+    
+    
     @IBAction func back(_ sender: Any) {
-           self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
        }
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "prouduct", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
+    
+    
     func corner(bu: UIButton , by : Float){
         bu.layer.cornerRadius = CGFloat(by)
     }
+
+    
+    
+
 }

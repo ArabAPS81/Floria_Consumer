@@ -40,6 +40,7 @@
 		0470AD452353EB76000B1BF7 /* uinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AD442353EB76000B1BF7 /* uinViewController.swift */; };
 		0472F9A423784449008AD8BC /* providerprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472F9A323784449008AD8BC /* providerprofile.swift */; };
 		049958CD237CC49200FDF817 /* add-adress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049958CC237CC49200FDF817 /* add-adress.swift */; };
+		04AA479A2399F25100DAD09A /* VendorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA47992399F25100DAD09A /* VendorProfile.storyboard */; };
 		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
@@ -128,6 +129,7 @@
 		0470AD442353EB76000B1BF7 /* uinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uinViewController.swift; sourceTree = "<group>"; };
 		0472F9A323784449008AD8BC /* providerprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerprofile.swift; sourceTree = "<group>"; };
 		049958CC237CC49200FDF817 /* add-adress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add-adress.swift"; sourceTree = "<group>"; };
+		04AA47992399F25100DAD09A /* VendorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VendorProfile.storyboard; sourceTree = "<group>"; };
 		04BF5772237B9EEC00A8878A /* delivarylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delivarylist.swift; sourceTree = "<group>"; };
 		04E1139723764BF100D15FAC /* providerlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerlist.swift; sourceTree = "<group>"; };
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,6 +498,7 @@
 				D620352B238A9B0000336D0B /* Favorites.storyboard */,
 				D620352D238A9B1300336D0B /* Notifications.storyboard */,
 				D620352F238A9B3900336D0B /* Address.storyboard */,
+				04AA47992399F25100DAD09A /* VendorProfile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */,
 				D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */,
 				D6203524238A9A9300336D0B /* PotsCare.storyboard in Resources */,
+				04AA479A2399F25100DAD09A /* VendorProfile.storyboard in Resources */,
 				D620351423897FB000336D0B /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

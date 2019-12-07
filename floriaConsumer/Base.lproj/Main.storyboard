@@ -2436,17 +2436,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4yp-Tu-Ean">
                                                 <rect key="frame" x="71" y="0.0" width="70" height="89.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KC-ag-Iyv">
-                                                        <rect key="frame" x="4.5" y="0.0" width="61" height="61"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="61" id="J9x-1V-NWG"/>
-                                                            <constraint firstAttribute="width" constant="61" id="ukv-cd-hIv"/>
-                                                        </constraints>
-                                                        <state key="normal" image="CarWedding"/>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Decoration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-eh-J7C">
-                                                        <rect key="frame" x="0.0" y="62" width="70" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="89.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="TG7-Ns-3r0"/>
                                                         </constraints>
@@ -2750,7 +2741,6 @@
                         <outlet property="four" destination="CiU-el-ZMm" id="zAL-u9-Ieh"/>
                         <outlet property="one" destination="gbT-8D-keC" id="cR5-8j-QhC"/>
                         <outlet property="three" destination="Xfi-WS-aev" id="58A-Mw-yCx"/>
-                        <outlet property="two" destination="6KC-ag-Iyv" id="CvA-XS-lk4"/>
                         <segue destination="mzi-0g-czZ" kind="presentation" identifier="prouduct" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="Y5d-Fn-QBc"/>
                     </connections>
                 </viewController>
@@ -4079,10 +4069,10 @@
             </objects>
             <point key="canvasLocation" x="-15669.565217391306" y="-3335.4910714285711"/>
         </scene>
-        <!--MainScreen-->
+        <!--VendorProfile-->
         <scene sceneID="0FP-68-nhT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="MainScreen" id="A81-v0-GdA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="VendorProfile" id="A81-v0-GdA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Tof-CT-Hqq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GI8-Bp-98C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
