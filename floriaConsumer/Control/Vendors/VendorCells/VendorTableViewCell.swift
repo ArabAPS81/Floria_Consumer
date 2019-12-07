@@ -28,6 +28,10 @@ class VendorTableViewCell: UITableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(addShadow(_:)), name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
     @objc func addShadow(_ notification: NSNotification) {
         shadowedView.dropRoundedShadowForAllSides(47)
     }

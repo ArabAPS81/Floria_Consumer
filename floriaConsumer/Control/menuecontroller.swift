@@ -13,7 +13,7 @@ class menuecontroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "userid") == nil {
-            logout.isHidden = true
+           
         }
         // Do any additional setup after loading the view.
     }

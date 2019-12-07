@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTF: UITextField!
+    @IBOutlet weak var searchView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,10 @@ class SearchViewController: UIViewController {
     }
     
     func setupViews() {
-        searchTF.clipsToBounds = true
-        searchTF.layer.borderWidth = 2
-        searchTF.layer.borderColor = #colorLiteral(red: 0.9529411765, green: 0.7450980392, blue: 0.1254901961, alpha: 1)
+        searchView.clipsToBounds = true
+        searchView.layer.borderWidth = 2
+        searchView.layer.cornerRadius = 17
+        searchView.layer.borderColor = #colorLiteral(red: 0.9529411765, green: 0.7450980392, blue: 0.1254901961, alpha: 1)
     }
 
 }

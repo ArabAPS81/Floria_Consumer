@@ -39,7 +39,9 @@ class CustomBouquetCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func selectNewFlower(_ sender: UIButton) {
-        flowersNum = flowersNum + 1
+        if flowersNum < 10 {
+            flowersNum = flowersNum + 1
+        }
     }
     
     @IBAction func deselectFlower(_ sender: UIButton) {

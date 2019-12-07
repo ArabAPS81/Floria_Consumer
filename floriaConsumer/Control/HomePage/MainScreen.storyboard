@@ -7,6 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SideMenu-->
+        <scene sceneID="F9P-QE-rbd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SideMenu" id="MiG-cu-WbP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDT-II-Ezu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10783" y="-3773"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="ehl-Pv-Iag">
             <objects>
@@ -79,7 +87,6 @@
                                                                 </constraints>
                                                                 <state key="normal" image="FlowerBoket"/>
                                                                 <connections>
-                                                                    <action selector="readymade:" destination="Fso-8p-WFu" eventType="touchUpInside" id="jNK-Dv-OHg"/>
                                                                     <segue destination="8qG-27-baO" kind="show" identifier="" id="1sz-lQ-RYL"/>
                                                                 </connections>
                                                             </button>
@@ -123,9 +130,6 @@
                                                                     <constraint firstAttribute="width" secondItem="cAp-eg-AgC" secondAttribute="height" multiplier="1:1" id="rMI-fG-jIt"/>
                                                                 </constraints>
                                                                 <state key="normal" image="BoketWard"/>
-                                                                <connections>
-                                                                    <action selector="gerb:" destination="Fso-8p-WFu" eventType="touchUpInside" id="N0y-15-ROG"/>
-                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTl-5t-kQd">
                                                                 <rect key="frame" x="0.0" y="72" width="70" height="26.5"/>
@@ -396,6 +400,9 @@
                         <leftBarButtonItems>
                             <barButtonItem title="Item" image="side-menu-icon" id="mgZ-43-aVt">
                                 <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="showSideMenu:" destination="Fso-8p-WFu" id="SUE-1v-YWR"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="fU6-7c-D5F">
                                 <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -420,7 +427,7 @@
                         <outlet property="home" destination="vpq-Wd-B7a" id="IEy-tJ-g6p"/>
                         <outlet property="readymade" destination="dun-Rk-i1S" id="Bkz-GL-fE7"/>
                         <outlet property="search" destination="fU6-7c-D5F" id="Yys-80-wdE"/>
-                        <outlet property="sideMenu" destination="mgZ-43-aVt" id="6Jl-J3-S90"/>
+                        <outlet property="sideMenu" destination="mgZ-43-aVt" id="Aku-rw-jjb"/>
                         <outletCollection property="homeButtonsCollction" destination="Lik-iE-JuO" collectionClass="NSMutableArray" id="fne-E2-WFt"/>
                         <outletCollection property="homeButtonsCollction" destination="dun-Rk-i1S" collectionClass="NSMutableArray" id="Pab-ZO-GFZ"/>
                         <outletCollection property="homeButtonsCollction" destination="cAp-eg-AgC" collectionClass="NSMutableArray" id="vn3-E4-kCw"/>
