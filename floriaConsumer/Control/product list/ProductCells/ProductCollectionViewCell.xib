@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKW-Ok-2m9">
                         <rect key="frame" x="4" y="8" width="144" height="174"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tst2" translatesAutoresizingMaskIntoConstraints="NO" id="Oai-Ia-41K">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="511922Pi4Xy7429" translatesAutoresizingMaskIntoConstraints="NO" id="Oai-Ia-41K">
                                 <rect key="frame" x="0.0" y="0.0" width="144" height="130"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-Wd-4RT">
@@ -137,7 +137,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="511922Pi4Xy7429" width="133" height="131.5"/>
         <image name="shape952" width="10" height="10"/>
-        <image name="tst2" width="3918" height="4000"/>
     </resources>
 </document>

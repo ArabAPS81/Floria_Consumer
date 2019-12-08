@@ -19,7 +19,7 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
         ProductCollectionViewCell.registerNIBinView(collection: collectionView)
         
         for i in 1...10 {
-            imgs.append(UIImage.init(named: "tst\(i)")!)
+           // imgs.append(UIImage.init(named: "tst\(i)")!)
         }
         
     }
@@ -31,12 +31,12 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imgs.count
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseId, for: indexPath) as!  ProductCollectionViewCell
-        cell.productImage.image = imgs[indexPath.row]
+        
         return cell 
     }
     

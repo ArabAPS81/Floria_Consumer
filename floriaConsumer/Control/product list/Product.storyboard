@@ -44,7 +44,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="331.33333333333331"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tst5" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-Vr-GfS">
+                                                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="552736Pk366H319" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-Vr-GfS">
                                                                             <rect key="frame" x="3" y="0.0" width="371" height="332"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </imageView>
@@ -524,13 +524,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="552736Pk366H319" width="375" height="300"/>
         <image name="minusIcon" width="20" height="20"/>
         <image name="plusIcon" width="20" height="20"/>
         <image name="shape954" width="20.5" height="20.5"/>
         <image name="shareIcon" width="20" height="17.5"/>
         <image name="sortingicon" width="20.5" height="19.5"/>
         <image name="tst2" width="3918" height="4000"/>
-        <image name="tst5" width="3380" height="5882"/>
     </resources>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

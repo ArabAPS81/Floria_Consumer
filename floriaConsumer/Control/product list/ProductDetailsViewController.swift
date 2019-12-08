@@ -25,7 +25,7 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         for i in 1...10 {
-            imgs.append(UIImage.init(named: "tst\(i)")!)
+           // imgs.append(UIImage.init(named: "tst\(i)")!)
         }
         
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
@@ -51,7 +51,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == imageSliderCollectioView {
-            return imgs.count
+            return 3
         }
         else{
             return 12
@@ -95,7 +95,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
         if collectionView == imageSliderCollectioView
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath)
-            (cell.viewWithTag(100) as! UIImageView).image = imgs[indexPath.row]
+            
             return cell;
         }
             
