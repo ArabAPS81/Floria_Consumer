@@ -20,10 +20,14 @@ class ProductDetailsViewController: UIViewController {
     var extra = 0
     var idofpro = ""
     var  x = 1
-    
+    var imgs = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for i in 1...10 {
+            imgs.append(UIImage.init(named: "tst\(i)")!)
+        }
+        
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
     }
@@ -47,7 +51,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == imageSliderCollectioView {
-            return 3
+            return imgs.count
         }
         else{
             return 12
@@ -60,8 +64,6 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             self.performSegue(withIdentifier: "zoom", sender: nil)
         }
         
-        
-        
         let alert = UIAlertController(title: "Done", message: "your new item displayed", preferredStyle: UIAlertController.Style.actionSheet)
         
         self.present(alert, animated: true, completion: nil)
@@ -70,8 +72,6 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             // your code with delay
             alert.dismiss(animated: true, completion: nil)
         }
-        
-        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -95,6 +95,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
         if collectionView == imageSliderCollectioView
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath)
+            (cell.viewWithTag(100) as! UIImageView).image = imgs[indexPath.row]
             return cell;
         }
             

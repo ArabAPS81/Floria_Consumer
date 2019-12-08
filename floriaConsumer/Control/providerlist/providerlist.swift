@@ -28,10 +28,13 @@ class providerlist: UIViewController , UITableViewDelegate , UITableViewDataSour
         
     }
  
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print(indexPath.row)

@@ -45,5 +45,4 @@ class RateView: UIStackView {
         return imageView
     }
     
-    
 }

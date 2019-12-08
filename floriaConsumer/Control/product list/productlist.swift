@@ -12,9 +12,16 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var imgs = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ProductCollectionViewCell.registerNIBinView(collection: collectionView)
+        
+        for i in 1...10 {
+            imgs.append(UIImage.init(named: "tst\(i)")!)
+        }
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -24,12 +31,12 @@ class productlist: UIViewController, UICollectionViewDataSource, UICollectionVie
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return imgs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseId, for: indexPath) as!  ProductCollectionViewCell
-        
+        cell.productImage.image = imgs[indexPath.row]
         return cell 
     }
     

@@ -17,11 +17,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
         collection.register(nib, forCellWithReuseIdentifier: reuseId)
     }
     
-    
-    
-
     @IBOutlet weak var shadowedView: UIView!
     
+    @IBOutlet weak var productImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
