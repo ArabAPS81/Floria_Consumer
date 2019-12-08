@@ -73,6 +73,11 @@
 		D6203530238A9B3900336D0B /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352F238A9B3900336D0B /* Address.storyboard */; };
 		D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6203532238AB0CB00336D0B /* SearchViewController.swift */; };
 		D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475F8239D0845008EB755 /* CarDecorationReviewController.swift */; };
+		D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475FD239D22D2008EB755 /* JSONResponseDecoder.swift */; };
+		D6347603239D22D2008EB755 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475FF239D22D2008EB755 /* ProductService.swift */; };
+		D6347604239D22D2008EB755 /* WebserviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6347600239D22D2008EB755 /* WebserviceHelper.swift */; };
+		D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6347601239D22D2008EB755 /* NetworkConstants.swift */; };
+		D6347608239D2B10008EB755 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6347607239D2B10008EB755 /* AuthenticationService.swift */; };
 		D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */; };
 		D638E2612393B040001A840C /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D638E25F2393B040001A840C /* ProductCollectionViewCell.xib */; };
 		D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */; };
@@ -166,6 +171,11 @@
 		D620352F238A9B3900336D0B /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		D6203532238AB0CB00336D0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D63475F8239D0845008EB755 /* CarDecorationReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecorationReviewController.swift; sourceTree = "<group>"; };
+		D63475FD239D22D2008EB755 /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
+		D63475FF239D22D2008EB755 /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		D6347600239D22D2008EB755 /* WebserviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceHelper.swift; sourceTree = "<group>"; };
+		D6347601239D22D2008EB755 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		D6347607239D2B10008EB755 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D638E25F2393B040001A840C /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -221,7 +231,7 @@
 		0406516D23530CB30039566C /* floriaConsumer */ = {
 			isa = PBXGroup;
 			children = (
-				D604AB6C238E719400A818D2 /* home */,
+				D63475FA239D209F008EB755 /* Managers */,
 				D67B30F9238C014D0080252B /* Extensions */,
 				D67B30F6238BD4670080252B /* CustomViews */,
 				D6E80B782389741F003A7DFF /* Storyboards */,
@@ -297,6 +307,7 @@
 		045B4A492381842800CCC257 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D604AB6C238E719400A818D2 /* home */,
 				0443B0B62393B11400D4206E /* cells */,
 				045B4A5C2381847700CCC257 /* provider list  */,
 				045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */,
@@ -368,7 +379,8 @@
 				D604AB6D238E719400A818D2 /* populer.swift */,
 				D604AB6E238E719400A818D2 /* nearestvendore.swift */,
 			);
-			path = home;
+			name = home;
+			path = ../home;
 			sourceTree = "<group>";
 		};
 		D60B915323966795002669B0 /* Car Decoration */ = {
@@ -415,6 +427,58 @@
 				D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		D63475FA239D209F008EB755 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D6347609239D2B20008EB755 /* LocationManager */,
+				D63475FB239D22D2008EB755 /* NetworkLayer */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D63475FB239D22D2008EB755 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D63475FC239D22D2008EB755 /* ResponseDecoder */,
+				D6347606239D2AD6008EB755 /* Authentication */,
+				D63475FE239D22D2008EB755 /* ProductServices */,
+				D6347600239D22D2008EB755 /* WebserviceHelper.swift */,
+				D6347601239D22D2008EB755 /* NetworkConstants.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		D63475FC239D22D2008EB755 /* ResponseDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				D63475FD239D22D2008EB755 /* JSONResponseDecoder.swift */,
+			);
+			path = ResponseDecoder;
+			sourceTree = "<group>";
+		};
+		D63475FE239D22D2008EB755 /* ProductServices */ = {
+			isa = PBXGroup;
+			children = (
+				D63475FF239D22D2008EB755 /* ProductService.swift */,
+			);
+			path = ProductServices;
+			sourceTree = "<group>";
+		};
+		D6347606239D2AD6008EB755 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D6347607239D2B10008EB755 /* AuthenticationService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D6347609239D2B20008EB755 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		D638E25B2393AF60001A840C /* ProductCells */ = {
@@ -677,8 +741,10 @@
 				045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */,
 				0406516F23530CB30039566C /* AppDelegate.swift in Sources */,
 				0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */,
+				D6347608239D2B10008EB755 /* AuthenticationService.swift in Sources */,
 				0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */,
 				0406517123530CB30039566C /* SceneDelegate.swift in Sources */,
+				D6347603239D22D2008EB755 /* ProductService.swift in Sources */,
 				D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */,
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
 				0404173E2353B4E10041D97C /* Signin.swift in Sources */,
@@ -700,12 +766,15 @@
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,
+				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,
 				D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */,
 				040417402353BA310041D97C /* login.swift in Sources */,
 				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
+				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
+				D6347604239D22D2008EB755 /* WebserviceHelper.swift in Sources */,
 				D60B9155239671EC002669B0 /* Constants.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,
 				D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */,
