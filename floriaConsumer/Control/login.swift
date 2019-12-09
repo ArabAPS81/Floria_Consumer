@@ -13,6 +13,7 @@ class login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sign.layer.cornerRadius = 20
+        disshow.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -28,16 +29,19 @@ class login: UIViewController {
         self.performSegue(withIdentifier: "loged", sender: nil)
     }
     @IBOutlet weak var sign: UIButton!
+    
+    @IBOutlet weak var disshow: UIButton!
     @IBAction func sho(_ sender: Any) {
            if  pass.isSecureTextEntry == true
            {
               
                pass.isSecureTextEntry=false
+            disshow.isHidden = false
             
            }
            else
            {
-               
+                disshow.isHidden = true
                pass.isSecureTextEntry=true
                
            }
