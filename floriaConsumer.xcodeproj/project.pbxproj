@@ -52,6 +52,8 @@
 		D60B915723969B74002669B0 /* CarDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915623969B74002669B0 /* CarDecorationViewController.swift */; };
 		D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */; };
 		D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */; };
+		D618A796239E5BF400C61AEB /* PotsCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A795239E5BF400C61AEB /* PotsCareViewController.swift */; };
+		D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */; };
 		D61E865C23950B4900CC0287 /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B0B72393B19E00D4206E /* locationcell.swift */; };
 		D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */; };
 		D61E866323952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E866123952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift */; };
@@ -152,6 +154,8 @@
 		D60B915623969B74002669B0 /* CarDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecorationViewController.swift; sourceTree = "<group>"; };
 		D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPopupViewController.swift; sourceTree = "<group>"; };
 		D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
+		D618A795239E5BF400C61AEB /* PotsCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareViewController.swift; sourceTree = "<group>"; };
+		D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareReviewViewController.swift; sourceTree = "<group>"; };
 		D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetViewController.swift; sourceTree = "<group>"; };
 		D61E866123952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetCollectionViewCell.swift; sourceTree = "<group>"; };
 		D61E866223952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBouquetCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -489,6 +493,8 @@
 			isa = PBXGroup;
 			children = (
 				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
+				D618A795239E5BF400C61AEB /* PotsCareViewController.swift */,
+				D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */,
 			);
 			path = "Pots Care";
 			sourceTree = "<group>";
@@ -750,6 +756,7 @@
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
 				D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */,
 				D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */,
+				D618A796239E5BF400C61AEB /* PotsCareViewController.swift in Sources */,
 				045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */,
 				0406516F23530CB30039566C /* AppDelegate.swift in Sources */,
 				0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */,
@@ -776,6 +783,7 @@
 				04157D00237EF01100F772BE /* map.swift in Sources */,
 				D61E865C23950B4900CC0287 /* locationcell.swift in Sources */,
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
+				D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,
 				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,

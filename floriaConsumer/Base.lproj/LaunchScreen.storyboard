@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,35 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VZR-os-DpJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenleaves" translatesAutoresizingMaskIntoConstraints="NO" id="wsw-MP-jxK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenlogo" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-hz-9YK">
+                                <rect key="frame" x="99" y="307" width="216" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GlZ-hz-9YK" secondAttribute="height" multiplier="196:255" id="Bca-BG-QYR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VZR-os-DpJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1P3-ni-ldy"/>
+                            <constraint firstItem="GlZ-hz-9YK" firstAttribute="width" secondItem="VZR-os-DpJ" secondAttribute="width" multiplier="0.522667" id="6a6-6W-siZ"/>
+                            <constraint firstItem="wsw-MP-jxK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="B65-Ad-quy"/>
+                            <constraint firstItem="GlZ-hz-9YK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ClJ-Ui-JsN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wsw-MP-jxK" secondAttribute="trailing" id="WQ8-yC-ZDz"/>
+                            <constraint firstItem="wsw-MP-jxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dlP-8o-8ea"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZR-os-DpJ" secondAttribute="trailing" id="mvh-Wa-rYB"/>
+                            <constraint firstItem="GlZ-hz-9YK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nRW-Uq-Gse"/>
+                            <constraint firstItem="VZR-os-DpJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r1L-wC-Q2x"/>
+                            <constraint firstAttribute="bottom" secondItem="VZR-os-DpJ" secondAttribute="bottom" id="wCx-YT-aTO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +49,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchScreenBackground" width="375" height="812"/>
+        <image name="launchScreenleaves" width="375" height="183"/>
+        <image name="launchScreenlogo" width="218.5" height="290.5"/>
+    </resources>
 </document>
