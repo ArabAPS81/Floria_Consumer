@@ -260,6 +260,7 @@
 				043C1850237F80430003A633 /* product list */,
 				D61E865D2395274400CC0287 /* CustomBouquet */,
 				D60B915323966795002669B0 /* Car Decoration */,
+				D634760C239D428F008EB755 /* Pots Care */,
 				04BF5771237B9EB200A8878A /* delivary */,
 				04459385237A5CE3007A210E /* buttons */,
 				0472F9A223784426008AD8BC /* providor profile */,
@@ -484,6 +485,14 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
+		D634760C239D428F008EB755 /* Pots Care */ = {
+			isa = PBXGroup;
+			children = (
+				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
+			);
+			path = "Pots Care";
+			sourceTree = "<group>";
+		};
 		D638E25B2393AF60001A840C /* ProductCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,7 +576,6 @@
 				D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */,
 				D620351B238A992B00336D0B /* Delivery.storyboard */,
 				D620351D238A99DA00336D0B /* Payment.storyboard */,
-				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
 				D6203525238A9AB000336D0B /* UserProfile.storyboard */,
 				D6203527238A9AD900336D0B /* Settings.storyboard */,
 				D6203529238A9AEF00336D0B /* Orders.storyboard */,
