@@ -39,24 +39,27 @@ class signup: UIViewController {
         checkbox.setImage(full, for: .normal)
     }
     
+    @IBOutlet weak var disshow: UIButton!
     @IBAction func conditions(_ sender: Any) {
     }
     @IBAction func skip(_ sender: Any) {
         self.performSegue(withIdentifier: "done", sender: nil)
         
     }
+
     @IBAction func sho(_ sender: Any) {
               if  pass.isSecureTextEntry == true
               {
                  
                   pass.isSecureTextEntry=false
-                  confirm.isSecureTextEntry=false
+                disshow.isHidden = false
+                
               }
               else
               {
                   
                   pass.isSecureTextEntry=true
-                  confirm.isSecureTextEntry=true
+                   disshow.isHidden = true
               }
           }
    
