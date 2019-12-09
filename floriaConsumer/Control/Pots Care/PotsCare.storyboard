@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zJ5-4n-9S5">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="zJ5-4n-9S5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jqh-ZV-xJX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wZQ-UK-rkc">
@@ -173,7 +173,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="16A-0u-Cjb"/>
                     </view>
-<<<<<<< HEAD:floriaConsumer/Storyboards/PotsCare.storyboard
                     <navigationItem key="navigationItem" id="gmT-vU-d40">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yJD-Mg-ZTE">
@@ -207,29 +206,10 @@
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrr-xH-uad">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-=======
-                    <navigationItem key="navigationItem" id="4qz-pL-Kol">
-                        <nil key="title"/>
-                    </navigationItem>
-                    <size key="freeformSize" width="375" height="780"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ac-Df-3kj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="996" y="85.457271364317847"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="T4e-ah-rT5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MzD-1G-92n" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0D-oF-Ee2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
->>>>>>> master:floriaConsumer/Control/Pots Care/PotsCare.storyboard
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-<<<<<<< HEAD:floriaConsumer/Storyboards/PotsCare.storyboard
                         <segue destination="zJ5-4n-9S5" kind="relationship" relationship="rootViewController" id="a93-t8-J3w"/>
                     </connections>
                 </navigationController>
@@ -802,14 +782,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7y-fV-K8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2051" y="86"/>
-=======
-                        <segue destination="zJ5-4n-9S5" kind="relationship" relationship="rootViewController" id="YpU-e8-HZe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0aC-np-6Vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="56.799999999999997" y="85.907046476761622"/>
->>>>>>> master:floriaConsumer/Control/Pots Care/PotsCare.storyboard
         </scene>
     </scenes>
     <resources>

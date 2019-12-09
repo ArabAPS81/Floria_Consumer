@@ -12,14 +12,8 @@ class providerprofile: UIViewController,UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product", for: indexPath) as! ProductCollectionViewCell
-//        cell.viewOfProductsImags.layer.cornerRadius = 20
-//        cell.viewOfProductsImags.clipsToBounds = true
-//        cell.viewOfProductsImags.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        cell.viewOfProductsImags.layer.shadowOffset = .zero
-//        cell.viewOfProductsImags.layer.shadowOpacity = 1
-//        cell.image.layer.cornerRadius = 40
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseId, for: indexPath) as! ProductCollectionViewCell
+
         return cell
     }
     
