@@ -12,16 +12,9 @@ class add_adress: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addlayout.layer.cornerRadius = 15
-        // Do any additional setup after loading the view.
-        if UserDefaults.standard.string(forKey: "send") == "car"{
-            maintitel.text = "car decoration "
-        }else {
-           //maintitel.text = "add location"
-        }
     }
   
-    @IBOutlet weak var addlayout: UIButton!
+    
     
     @IBAction func ADD(_ sender: Any) {
         let vc = popupVC()
@@ -29,19 +22,6 @@ class add_adress: UIViewController {
         self.dismiss(animated: true, completion: nil)
 
     }
-    @IBOutlet weak var maintitel: UILabel!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func back(_ sender: Any) {
-           self.dismiss(animated: true, completion: nil)
-       }
 
 
 }
