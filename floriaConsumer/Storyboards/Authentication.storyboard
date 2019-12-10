@@ -727,8 +727,8 @@
         <image name="logo" width="24.5" height="44"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="rectangle" catalog="system" width="64" height="46"/>
-        <image name="shape5" width="12" height="19"/>
-        <image name="shape6" width="20" height="20"/>
+        <image name="shape5" width="12.5" height="20"/>
+        <image name="shape6" width="20" height="20.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Sl5-5B-QbL"/>
