@@ -87,7 +87,7 @@
                                                                 </constraints>
                                                                 <state key="normal" image="FlowerBoket"/>
                                                                 <connections>
-                                                                    <segue destination="8qG-27-baO" kind="show" identifier="" id="1sz-lQ-RYL"/>
+                                                                    <action selector="readyMadeButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="jPI-mj-pWT"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready-made Bouquet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LI-jT-nLU">
@@ -109,7 +109,7 @@
                                                                 </constraints>
                                                                 <state key="normal" image="FlowerZohria"/>
                                                                 <connections>
-                                                                    <segue destination="tur-uM-cDv" kind="show" id="3ab-DO-4xk"/>
+                                                                    <action selector="customBouquetButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="4cB-Lg-EuQ"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Bouquet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOR-Wo-NS6">
@@ -130,6 +130,9 @@
                                                                     <constraint firstAttribute="width" secondItem="cAp-eg-AgC" secondAttribute="height" multiplier="1:1" id="rMI-fG-jIt"/>
                                                                 </constraints>
                                                                 <state key="normal" image="BoketWard"/>
+                                                                <connections>
+                                                                    <action selector="gerbButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="wcR-dT-S38"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTl-5t-kQd">
                                                                 <rect key="frame" x="0.0" y="72" width="70" height="26.5"/>
@@ -158,7 +161,7 @@
                                                                 </constraints>
                                                                 <state key="normal" image="CarWedding"/>
                                                                 <connections>
-                                                                    <segue destination="kzQ-tD-N3H" kind="show" id="uUs-LB-Qtf"/>
+                                                                    <action selector="carDecorationButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="CUh-0m-pZF"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Decoration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfp-tz-FeY">
@@ -184,7 +187,7 @@
                                                                 </constraints>
                                                                 <state key="normal" image="HomeFlowers"/>
                                                                 <connections>
-                                                                    <segue destination="sfc-o7-O3l" kind="show" id="4D6-Se-CAk"/>
+                                                                    <action selector="potsCareButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="K4w-AI-amc"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pots Care" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYk-oz-nkC">
@@ -439,16 +442,6 @@
             </objects>
             <point key="canvasLocation" x="-10502.898550724638" y="-3372.65625"/>
         </scene>
-        <!--CustomBouquet-->
-        <scene sceneID="Ibi-Ye-2TF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CustomBouquet" id="tur-uM-cDv" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Pvn-ci-rHA"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7wm-0i-ZOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-9834.7826086956538" y="-3373.6607142857142"/>
-        </scene>
         <!--Search-->
         <scene sceneID="W4m-5F-fRh">
             <objects>
@@ -458,16 +451,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCN-ze-ejq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-9926.8115942028999" y="-3669.6428571428569"/>
-        </scene>
-        <!--Vendor-->
-        <scene sceneID="gIL-Ey-VlF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Vendor" id="8qG-27-baO" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="CZg-uU-I6A"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4FZ-q3-Cxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-9871.0144927536239" y="-3446.6517857142858"/>
         </scene>
         <!--CarDecoration-->
         <scene sceneID="RgK-NS-9nb">

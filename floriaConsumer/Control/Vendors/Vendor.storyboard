@@ -7,16 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Product-->
-        <scene sceneID="Jjm-MB-NnD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Product" id="XPq-bE-IJd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0cp-yz-pXU"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqv-p9-jAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7191" y="-2562"/>
-        </scene>
         <!--Providerprofile-->
         <scene sceneID="hQe-l9-eWy">
             <objects>
@@ -456,7 +446,7 @@
         <!--Vendors List View Controller-->
         <scene sceneID="BQv-LZ-GgE">
             <objects>
-                <viewController id="MkK-tJ-S4Z" customClass="VendorsListViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VendorsListViewController" id="MkK-tJ-S4Z" customClass="VendorsListViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ll7-qj-lyM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +497,6 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Gc9-ps-zCx" id="yvM-gX-wNV"/>
-                        <segue destination="XPq-bE-IJd" kind="show" identifier="ProductsSegue" id="0G8-Ob-2UP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXN-Ex-d2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

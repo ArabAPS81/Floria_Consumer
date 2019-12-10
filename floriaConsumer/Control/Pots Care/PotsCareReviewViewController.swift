@@ -10,6 +10,12 @@ import UIKit
 
 class PotsCareReviewViewController: UIViewController {
     
+    static func newInstance() -> PotsCareReviewViewController {
+        let storyboard = UIStoryboard.init(name: "PotsCare", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "PotsCareReviewViewController") as! PotsCareReviewViewController
+        return vc
+    }
+    
     @IBOutlet weak var priceView: UIView?
     @IBOutlet var shadowedView: [UIView]?
 

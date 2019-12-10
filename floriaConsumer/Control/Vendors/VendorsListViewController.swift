@@ -9,9 +9,16 @@
 import UIKit
 
 class VendorsListViewController: UIViewController {
+    
+    static func newInstance() -> VendorsListViewController {
+        let storyboard = UIStoryboard.init(name: "Vendor", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "VendorsListViewController") as! VendorsListViewController
+        return vc
+    }
+    
   
     @IBOutlet weak var tableView: UITableView!
-    
+    var serviceType: ServiceType?
     let productsListSegueId = ""
 
     override func viewDidLoad() {
@@ -43,7 +50,7 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        performSegue(withIdentifier: "ProductsSegue", sender: nil)
+        self.navigationController?.pushViewController((serviceType?.associatedViewController())!, animated: true)
     }
     
     

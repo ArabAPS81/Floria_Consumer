@@ -8,20 +8,24 @@
 
 import UIKit
 
-class productlist: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
+class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var productListType = ProductListType.readyMade
+    enum ProductListType {
+        case gerb,readyMade
+    }
     
-    var imgs = [UIImage]()
+    static func newInstance(listType: ProductListType) -> ProductListViewController {
+        let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ProductListViewController") as! ProductListViewController
+        vc.productListType = listType
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ProductCollectionViewCell.registerNIBinView(collection: collectionView)
-        
-        for i in 1...10 {
-           // imgs.append(UIImage.init(named: "tst\(i)")!)
-        }
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {

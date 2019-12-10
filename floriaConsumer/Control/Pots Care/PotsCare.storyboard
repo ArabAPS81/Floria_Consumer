@@ -10,7 +10,7 @@
         <!--Pots Care View Controller-->
         <scene sceneID="A5y-od-jou">
             <objects>
-                <viewController id="zJ5-4n-9S5" customClass="PotsCareViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PotsCareViewController" id="zJ5-4n-9S5" customClass="PotsCareViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jqh-ZV-xJX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="1Hc-Yi-ANe" kind="show" id="xU0-o6-9YQ"/>
+                                    <action selector="chooseLocationButtonTapped:" destination="zJ5-4n-9S5" eventType="touchUpInside" id="0YF-r1-r5k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,16 +189,6 @@
             </objects>
             <point key="canvasLocation" x="968.11594202898561" y="85.714285714285708"/>
         </scene>
-        <!--Address-->
-        <scene sceneID="5xy-pn-hgz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Address" id="1iN-tt-kdj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="xZj-0a-2vD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvv-ow-Fqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1549" y="36"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rlQ-MY-XV5">
             <objects>
@@ -220,13 +210,13 @@
         <!--Pots Care Review View Controller-->
         <scene sceneID="0xd-PB-5vQ">
             <objects>
-                <viewController id="1Hc-Yi-ANe" customClass="PotsCareReviewViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PotsCareReviewViewController" id="1Hc-Yi-ANe" customClass="PotsCareReviewViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UU7-KD-sez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mo7-Qk-MSk">
-                                <rect key="frame" x="0.0" y="88" width="414" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-rT-BBa">
                                         <rect key="frame" x="0.0" y="15" width="414" height="35"/>
@@ -660,6 +650,7 @@
                     <navigationItem key="navigationItem" id="aGd-nb-JDW">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nib-rG-zsb">
+                            <rect key="frame" x="160.5" y="3" width="93" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <state key="normal" title="Pots Care">

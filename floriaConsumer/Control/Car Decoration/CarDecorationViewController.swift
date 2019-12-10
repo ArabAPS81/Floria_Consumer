@@ -10,6 +10,14 @@ import UIKit
 
 class CarDecorationViewController: UIViewController {
     
+    
+    static func newInstance() -> CarDecorationViewController {
+        let storyboard = UIStoryboard.init(name: "CarDecoration", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CarDecorationViewController") as! CarDecorationViewController
+        return vc
+    }
+    
+    
     @IBOutlet var carButtons: [UIButton]!
     @IBOutlet var decorationTypeButtons: [UIButton]!
     @IBOutlet var shadowedViews: [UIView]!

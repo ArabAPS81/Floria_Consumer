@@ -11,6 +11,12 @@ import UIKit
 class CustomBouquetViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    static func newInstance() -> CustomBouquetViewController {
+        let storyboard = UIStoryboard.init(name: "CustomBouquet", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CustomBouquetViewController") as! CustomBouquetViewController
+        return vc
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

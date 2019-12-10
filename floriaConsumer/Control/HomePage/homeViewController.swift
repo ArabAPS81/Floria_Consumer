@@ -15,12 +15,7 @@ import Foundation
 class homeViewController: UIViewController {
     
     
-    
-    
     @IBOutlet var homeButtonsCollction: [UIButton]!
-    
-    
-
     @IBOutlet var search: UIBarButtonItem!
     @IBOutlet var sideMenu: UIBarButtonItem!
     
@@ -43,8 +38,6 @@ class homeViewController: UIViewController {
     }
     
     private func setupSideMenu() {
-        
-        
         SideMenuPresentationStyle.menuSlideIn.backgroundColor = .clear
         SideMenuPresentationStyle.menuDissolveIn.backgroundColor = .clear
         SideMenuPresentationStyle.viewSlideOutMenuIn.backgroundColor = .clear
@@ -72,6 +65,33 @@ class homeViewController: UIViewController {
         Offers.register(nib2, forCellWithReuseIdentifier: "HomeVendorCollectionViewCell")
     }
     
+    @IBAction func gerbButtonTapped(_ sender: UIButton) {
+        let vc = VendorsListViewController.newInstance()
+        vc.serviceType = .gerb
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    @IBAction func customBouquetButtonTapped(_ sender: UIButton) {
+        let vc = VendorsListViewController.newInstance()
+        vc.serviceType = .customBouquet
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func readyMadeButtonTapped(_ sender: UIButton) {
+        let vc = VendorsListViewController.newInstance()
+        vc.serviceType = .readyMade
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func carDecorationButtonTapped(_ sender: UIButton) {
+        let vc = AddressesListViewController.newInstance(serviceType: .carDecoration)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    @IBAction func potsCareButtonTapped(_ sender: UIButton) {
+        let vc = PotsCareViewController.newInstance()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func showSideMenu(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "SideMenu", bundle: nil)
@@ -81,11 +101,7 @@ class homeViewController: UIViewController {
         menu.statusBarEndAlpha = 0
         present(menu, animated: true, completion: nil)
     }
-    @IBAction func gerb(_ sender: Any) {
-        //self.performSegue(withIdentifier: "listvendor", sender: nil)
-    }
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == SliderHome
         {
@@ -118,6 +134,10 @@ class homeViewController: UIViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeVendorCollectionViewCell", for: indexPath) as? HomeVendorCollectionViewCell
             return cell!;
         }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     

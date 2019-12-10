@@ -8,7 +8,30 @@
 
 import UIKit
 
-class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class AddressesListViewController: UIViewController {
+    
+    @IBOutlet weak var table: UITableView!
+    var serviceType: ServiceType = .gerb
+    
+    static func newInstance(serviceType: ServiceType) -> AddressesListViewController {
+        let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AddressesListViewController") as! AddressesListViewController
+        vc.serviceType = serviceType
+        return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBOutlet weak var shipping: UIButton!
+    
+}
+
+extension AddressesListViewController: UITableViewDataSource,UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -19,17 +42,6 @@ class delivarylist: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "shipping", sender: nil)
+        self.navigationController?.pushViewController(serviceType.afterAddressViewController(), animated: true)
     }
-    
-    
-    @IBOutlet weak var table: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBOutlet weak var shipping: UIButton!
-    
 }

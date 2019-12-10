@@ -9,6 +9,15 @@
 import UIKit
 
 class shipping: UIViewController {
+    
+    
+    
+    static func newInstance(serviceType: ServiceType) -> shipping {
+        let storyboard = UIStoryboard.init(name: "Delivery", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "shipping") as! shipping
+        return vc
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
