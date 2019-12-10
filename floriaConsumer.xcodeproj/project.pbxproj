@@ -10,7 +10,7 @@
 		0403F491235533EE001327EF /* nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403F490235533EE001327EF /* nav.swift */; };
 		0404173E2353B4E10041D97C /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404173D2353B4E10041D97C /* Signin.swift */; };
 		040417402353BA310041D97C /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404173F2353BA310041D97C /* login.swift */; };
-		040417422353C50C0041D97C /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040417412353C50C0041D97C /* signup.swift */; };
+		040417422353C50C0041D97C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040417412353C50C0041D97C /* SignupViewController.swift */; };
 		0406516F23530CB30039566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406516E23530CB30039566C /* AppDelegate.swift */; };
 		0406517123530CB30039566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406517023530CB30039566C /* SceneDelegate.swift */; };
 		0406517323530CB30039566C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406517223530CB30039566C /* ViewController.swift */; };
@@ -107,7 +107,7 @@
 		0403F490235533EE001327EF /* nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav.swift; sourceTree = "<group>"; };
 		0404173D2353B4E10041D97C /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		0404173F2353BA310041D97C /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
-		040417412353C50C0041D97C /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
+		040417412353C50C0041D97C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0406516B23530CB30039566C /* floriaConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = floriaConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406516E23530CB30039566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0406517023530CB30039566C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +258,7 @@
 		0434EECA23530DFE00D4329E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				D6C8A0E8239F95540041F720 /* Authentication */,
 				D64CBF4C238EA58800DEE040 /* HomePage */,
 				D6203531238AB09300336D0B /* Search */,
 				D6C1A7FD2392A93500379508 /* Vendors */,
@@ -270,9 +271,6 @@
 				0472F9A223784426008AD8BC /* providor profile */,
 				04E1139623764BA500D15FAC /* providerlist */,
 				0434EECB23530E2A00D4329E /* splashViewController.swift */,
-				0404173D2353B4E10041D97C /* Signin.swift */,
-				0404173F2353BA310041D97C /* login.swift */,
-				040417412353C50C0041D97C /* signup.swift */,
 				0470AD422353E80E000B1BF7 /* sViewController.swift */,
 				0470AD442353EB76000B1BF7 /* uinViewController.swift */,
 				0403F490235533EE001327EF /* nav.swift */,
@@ -574,11 +572,21 @@
 			path = VendorCells;
 			sourceTree = "<group>";
 		};
+		D6C8A0E8239F95540041F720 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
+				0404173D2353B4E10041D97C /* Signin.swift */,
+				0404173F2353BA310041D97C /* login.swift */,
+				040417412353C50C0041D97C /* SignupViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		D6E80B782389741F003A7DFF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				D6203517238A962400336D0B /* Splash.storyboard */,
-				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
 				D6E80B7B23897C4B003A7DFF /* SideMenu.storyboard */,
 				D620351B238A992B00336D0B /* Delivery.storyboard */,
 				D620351D238A99DA00336D0B /* Payment.storyboard */,
@@ -733,7 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040417422353C50C0041D97C /* signup.swift in Sources */,
+				040417422353C50C0041D97C /* SignupViewController.swift in Sources */,
 				D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
