@@ -91,8 +91,8 @@ class signup: UIViewController {
                             return }
                          print(data,"???????????????")
                        
-                         let token = data["access_token"]?.string
-                             UserDefaults.standard.set(token, forKey: "tocken")
+                         let token = jsoncode["data"]["access_token"].string
+                             UserDefaults.standard.set(token, forKey: "token")
                           
                              
                          }
