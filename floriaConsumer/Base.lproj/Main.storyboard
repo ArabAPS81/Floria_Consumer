@@ -4069,10 +4069,10 @@
             </objects>
             <point key="canvasLocation" x="-15669.565217391306" y="-3335.4910714285711"/>
         </scene>
-        <!--MainScreen-->
+        <!--Authentication-->
         <scene sceneID="0FP-68-nhT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="MainScreen" id="A81-v0-GdA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="authentication" storyboardName="Authentication" id="A81-v0-GdA" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Tof-CT-Hqq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GI8-Bp-98C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
