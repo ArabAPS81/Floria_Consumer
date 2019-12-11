@@ -12,8 +12,12 @@ import UIKit
 class signup: UIViewController {
 
     override func viewDidLoad() {
+        if UserDefaults.standard.string(forKey: "register") == "1"{
+            self.alertt(header: "Alert ", body: "please check your data  ")
+        }
         super.viewDidLoad()
         bu.layer.cornerRadius = 10
+        UserDefaults.standard.removeObject(forKey: "register")
         // Do any additional setup after loading the view.
     }
   

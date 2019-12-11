@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0403F491235533EE001327EF /* nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403F490235533EE001327EF /* nav.swift */; };
-		0404173E2353B4E10041D97C /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404173D2353B4E10041D97C /* Signin.swift */; };
 		040417402353BA310041D97C /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404173F2353BA310041D97C /* login.swift */; };
 		040417422353C50C0041D97C /* signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040417412353C50C0041D97C /* signup.swift */; };
 		0406516F23530CB30039566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406516E23530CB30039566C /* AppDelegate.swift */; };
@@ -107,7 +106,6 @@
 
 /* Begin PBXFileReference section */
 		0403F490235533EE001327EF /* nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav.swift; sourceTree = "<group>"; };
-		0404173D2353B4E10041D97C /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		0404173F2353BA310041D97C /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		040417412353C50C0041D97C /* signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signup.swift; sourceTree = "<group>"; };
 		0406516B23530CB30039566C /* floriaConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = floriaConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,7 +273,6 @@
 				0472F9A223784426008AD8BC /* providor profile */,
 				04E1139623764BA500D15FAC /* providerlist */,
 				0434EECB23530E2A00D4329E /* splashViewController.swift */,
-				0404173D2353B4E10041D97C /* Signin.swift */,
 				0404173F2353BA310041D97C /* login.swift */,
 				040417412353C50C0041D97C /* signup.swift */,
 				0470AD422353E80E000B1BF7 /* sViewController.swift */,
@@ -781,7 +778,6 @@
 				D6347603239D22D2008EB755 /* ProductService.swift in Sources */,
 				D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */,
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
-				0404173E2353B4E10041D97C /* Signin.swift in Sources */,
 				D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */,
 				0444939D235C8EA000650DFD /* check.swift in Sources */,
 				D67B30F8238BD4E60080252B /* RateView.swift in Sources */,

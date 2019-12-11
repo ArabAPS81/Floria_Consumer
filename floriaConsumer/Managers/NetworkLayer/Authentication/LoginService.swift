@@ -15,7 +15,9 @@ class LoginService: NSObject {
     let vc = CustomAlert()
     func sign( name : String ,email : String, password : String , ext : String){
              let url = "http://api2.floriaapp.com/api/v1/"+ext
-                 let parameter : Parameters =
+                 
+        
+        let parameter : Parameters =
                      [
                       
                          "name" : name,
@@ -40,7 +42,7 @@ class LoginService: NSObject {
                             self.vc.alertt(header: "Alert ", body: "please check your data  ", view: login())
                             }
                             else{
-                               self.vc.alertt(header: "Alert ", body: "please check your data  ", view: signup())
+                                UserDefaults.standard.set("1", forKey: "register")
                             }
                             return }
                          print(data,"???????????????")
