@@ -23,7 +23,8 @@ class login: UIViewController {
   
     @IBOutlet weak var pass: UITextField!
     @IBAction func signin(_ sender: Any) {
-        
+        let vc = LoginService()
+        vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
     }
     
     
@@ -50,44 +51,7 @@ class login: UIViewController {
        }
     
  
-   let url = "http://api2.floriaapp.com/api/v1/register"
-       func sign(name:String , email : String, password : String){
-                  
-                    let parameter : Parameters =
-                        [
-                         
-                            "name" : name,
-                            "mobile" : email,
-                            "check_privacy" : "1",
-                            "password": password
-                    ]
-                    
-                    
-                    print(parameter,"909090900900009099090")
-                    Alamofire.request(self.url,method: .post, parameters: parameter, encoding: URLEncoding.default, headers: nil).responseJSON { re in
-                        switch re.result
-                        {
-                        case .failure(let erro):
-                            print("********////",erro)
-                        case .success(let value):
-                            var jsoncode = JSON(value)
-                            print(jsoncode,"00000000000000000")
-                    
-                            guard let data = jsoncode["data"].dictionary else  {self.alertt(header: "Alert ", body: "please check your data  ")
-                               return }
-                            print(data,"???????????????")
-                          
-                            let token = data["access_token"]?.string
-                                UserDefaults.standard.set(token, forKey: "tocken")
-                             
-                                
-                            }
-                            
-                        }
-                        
-                        
-                    }
-            
+   
             
             /*
             // MARK: - Navigation
@@ -98,16 +62,7 @@ class login: UIViewController {
                 // Pass the selected object to the new view controller.
             }
             */
-            func alertt(header:String,body:String ) {
-                   let alert = UIAlertController(title: header, message: body , preferredStyle: UIAlertController.Style.actionSheet)
-                                     
-                                     self.present(alert, animated: true, completion: nil)
-                                 let when = DispatchTime.now() + 2
-                                 DispatchQueue.main.asyncAfter(deadline: when){
-                                   // your code with delay
-                                   alert.dismiss(animated: true, completion: nil)
-                                 }
-   }
+       
     
     
     
