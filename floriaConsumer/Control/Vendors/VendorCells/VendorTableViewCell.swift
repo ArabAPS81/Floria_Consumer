@@ -19,11 +19,22 @@ class VendorTableViewCell: UITableViewCell {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: reuseId)
     }
+    
+    @IBOutlet weak var vendorImageView: UIImageView!
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    @IBOutlet weak var vendorAddressLabel: UILabel!
+    @IBOutlet weak var ratingView: RateView!
+    
+    func cofigure(vendor: VendorModel.Vendor) {
+        vendorNameLabel.text = vendor.name
+        vendorAddressLabel.text = vendor.address ?? vendor.district?.name
+        vendorImageView.imageFromUrl(url: vendor.image, placeholder: nil)
+        ratingView.setRate(rate: 5)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(shadowedView.frame)
-        print(shadowedView.bounds)
+        self.selectedBackgroundView = UIView()
         shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
         NotificationCenter.default.addObserver(self, selector: #selector(addShadow(_:)), name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
@@ -32,8 +43,13 @@ class VendorTableViewCell: UITableViewCell {
         super.layoutSubviews()
     }
     
+    var shadowAdded = false
     @objc func addShadow(_ notification: NSNotification) {
-        shadowedView.dropRoundedShadowForAllSides(47)
+        
+        if !shadowAdded{
+            shadowedView.dropRoundedShadowForAllSides(47)
+            shadowAdded = true
+        }
     }
     
 }

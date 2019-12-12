@@ -80,4 +80,24 @@ extension UIView {
 
     }
 }
+import Alamofire
 
+extension UIImageView {
+    
+    func imageFromUrl(url:String?,placeholder: UIImage?) {
+        self.image = placeholder
+        guard let url = url else {return}
+        guard let urls = URL.init(string: url) else {return}
+        var request = URLRequest.init(url: urls)
+        request.cachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
+        Alamofire.request(request).responseData { (response) in
+            switch response.result {
+            case .success(let date):
+                self.image = UIImage.init(data: date)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
+}

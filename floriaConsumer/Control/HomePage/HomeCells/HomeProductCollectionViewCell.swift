@@ -10,17 +10,29 @@ import UIKit
 
 class HomeProductCollectionViewCell: UICollectionViewCell {
     
-    
-    @IBOutlet weak var shadowedView: UIView!
-    
-    
     static let reuseId = "HomeProductCollectionViewCell"
-    
     static func registerNIBinView(collection: UICollectionView) {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
         collection.register(nib, forCellWithReuseIdentifier: reuseId)
     }
-
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var ratingView: RateView!
+    @IBOutlet weak var shadowedView: UIView!
+    
+    func cofigure(product: ProductsModel.Product) {
+        nameLabel.text = product.name
+        priceLabel.text = product.price
+        vendorNameLabel.text = product.provider?.name
+        imageView.imageFromUrl(url:  "https://cdn.idsitnetwork.net/wp-content/uploads/sites/42/2019/01/flower-shop-fields-of-romance-148245.jpg", placeholder: nil)
+        ratingView.setRate(rate: 3)
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -32,6 +44,4 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         shadowedView.layer.cornerRadius = 5
     }
-    
-
 }

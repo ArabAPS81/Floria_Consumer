@@ -27,12 +27,27 @@ enum ServiceType {
         }
     }
     
+    func serviceId() -> String {
+        switch self {
+        case .readyMade:
+            return "1"
+        case .gerb:
+            return "3"
+        case .customBouquet:
+            return "2"
+        case .carDecoration:
+            return "4"
+        case .potsCare:
+            return "5"
+        }
+    }
+    
     func associatedViewController() -> UIViewController {
         switch self {
         case .readyMade:
-            return ProductListViewController.newInstance(listType: ProductListViewController.ProductListType.readyMade)
+            return ProductListViewController.newInstance(listType: ServiceType.readyMade)
         case .gerb:
-            return ProductListViewController.newInstance(listType: ProductListViewController.ProductListType.gerb)
+            return ProductListViewController.newInstance(listType: ServiceType.gerb)
         case .customBouquet:
             return CustomBouquetViewController.newInstance()
         case .carDecoration:
@@ -53,8 +68,7 @@ enum ServiceType {
         case .carDecoration:
             return CarDecorationViewController.newInstance()
         case .potsCare:
-            let vc = VendorsListViewController.newInstance()
-            vc.serviceType = .potsCare
+            let vc = VendorsListViewController.newInstance(service: self)
             return vc
         }
     }
@@ -62,7 +76,6 @@ enum ServiceType {
     private func getTitle2() {
         switch self {
         case .readyMade:
-            
             break
         case .gerb:
             break

@@ -117,7 +117,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="ratingView" destination="Xwe-Di-wp8" id="pg8-px-Oka"/>
                 <outlet property="shadowedView" destination="UiN-tq-uMO" id="plF-HM-2AU"/>
+                <outlet property="vendorAddressLabel" destination="Vcl-ge-aQZ" id="qho-tE-zE0"/>
+                <outlet property="vendorImageView" destination="kbi-1F-zxA" id="H8Z-Fh-mqn"/>
+                <outlet property="vendorNameLabel" destination="RHE-0h-zc8" id="wOD-VY-dfs"/>
             </connections>
             <point key="canvasLocation" x="163.04347826086959" y="152.00892857142856"/>
         </tableViewCell>

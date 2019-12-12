@@ -18,7 +18,7 @@
         <!--Home View Controller-->
         <scene sceneID="ehl-Pv-Iag">
             <objects>
-                <viewController id="Fso-8p-WFu" customClass="homeViewController" customModule="floriaConsumer" sceneMemberID="viewController">
+                <viewController id="Fso-8p-WFu" customClass="HomeViewController" customModule="floriaConsumer" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jjp-43-Hy7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="947"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,11 +424,6 @@
                         <outlet property="Offers" destination="ike-vU-jD5" id="EYa-bV-o6q"/>
                         <outlet property="Products" destination="ztW-CQ-hhc" id="yCr-IP-6Yh"/>
                         <outlet property="SliderHome" destination="cHy-Pt-YJf" id="jXd-IE-sgj"/>
-                        <outlet property="assemd" destination="Lik-iE-JuO" id="EHK-sH-5Fi"/>
-                        <outlet property="car" destination="Ppd-0O-mjp" id="oNz-aL-PYM"/>
-                        <outlet property="gerb" destination="cAp-eg-AgC" id="ibp-xa-XVe"/>
-                        <outlet property="home" destination="vpq-Wd-B7a" id="IEy-tJ-g6p"/>
-                        <outlet property="readymade" destination="dun-Rk-i1S" id="Bkz-GL-fE7"/>
                         <outlet property="search" destination="fU6-7c-D5F" id="Yys-80-wdE"/>
                         <outlet property="sideMenu" destination="mgZ-43-aVt" id="Aku-rw-jjb"/>
                         <outletCollection property="homeButtonsCollction" destination="Lik-iE-JuO" collectionClass="NSMutableArray" id="fne-E2-WFt"/>
@@ -489,7 +484,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJD-Gc-7Fl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11413.04347826087" y="-3372.9910714285711"/>
+            <point key="canvasLocation" x="-11212" y="-3373"/>
         </scene>
     </scenes>
     <resources>
