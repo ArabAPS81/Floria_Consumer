@@ -8,24 +8,31 @@
 
 import UIKit
 
+protocol ProductsListView: class {
+    func didReceiveData(data: Codable)
+    func didFailToReceiveData(error: Error)
+}
+
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    var productListType = ProductListType.readyMade
-    enum ProductListType {
-        case gerb,readyMade
-    }
     
-    static func newInstance(listType: ProductListType) -> ProductListViewController {
+    static func newInstance(listType: ServiceType) -> ProductListViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProductListViewController") as! ProductListViewController
         vc.productListType = listType
         return vc
     }
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    var productsList = [ProductsModel.Product]()
+    var productListType = ServiceType.readyMade
+    var presenter: ProductsListPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProductCollectionViewCell.registerNIBinView(collection: collectionView)
+        HomeProductCollectionViewCell.registerNIBinView(collection: collectionView)
+        presenter = ProductsListPresenter.init(view: self)
+        presenter?.getVendorProducts(vendorId: 1, forService: productListType)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -35,12 +42,12 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 13
+        return productsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.reuseId, for: indexPath) as!  ProductCollectionViewCell
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeProductCollectionViewCell.reuseId, for: indexPath) as!  HomeProductCollectionViewCell
+        cell.cofigure(product: productsList[indexPath.row])
         return cell 
     }
     
@@ -56,5 +63,20 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "ProductDetails", sender: nil)
     }
+    
+}
+
+extension ProductListViewController: ProductsListView {
+    func didReceiveData(data: Codable) {
+        if let data = data as? ProductsModel {
+            productsList = data.products!
+            collectionView.reloadData()
+        }
+    }
+    
+    func didFailToReceiveData(error: Error) {
+        
+    }
+    
     
 }

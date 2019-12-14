@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,22 +20,19 @@
                         <rect key="frame" x="4" y="5" width="144" height="180"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="511922Pi4Xy7429" translatesAutoresizingMaskIntoConstraints="NO" id="duB-4d-JLI">
-                                <rect key="frame" x="0.0" y="0.0" width="144" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="duB-4d-JLI" secondAttribute="height" multiplier="31:28" id="JFn-70-9iX"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="135"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-9V-7XP">
-                                <rect key="frame" x="8" y="130" width="94" height="50"/>
+                                <rect key="frame" x="8" y="135" width="94" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-GV-9Kj">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xct-Qr-u69">
-                                        <rect key="frame" x="0.0" y="33" width="94" height="9"/>
+                                        <rect key="frame" x="0.0" y="28" width="94" height="9"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayA-hR-lht">
                                                 <rect key="frame" x="12" y="0.0" width="82" height="9"/>
@@ -75,10 +72,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A17-DI-dqr">
-                                <rect key="frame" x="102" y="130" width="34" height="50"/>
+                                <rect key="frame" x="102" y="135" width="34" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awp-Mc-VCa">
-                                        <rect key="frame" x="0.0" y="16" width="34" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="awp-Mc-VCa">
+                                        <rect key="frame" x="0.0" y="16" width="34" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -96,15 +93,27 @@
                                     <constraint firstItem="2nb-VD-bFD" firstAttribute="leading" secondItem="A17-DI-dqr" secondAttribute="leading" id="QVw-EB-i6b"/>
                                     <constraint firstAttribute="bottom" secondItem="awp-Mc-VCa" secondAttribute="bottom" id="R7V-V0-F15"/>
                                     <constraint firstItem="awp-Mc-VCa" firstAttribute="leading" secondItem="A17-DI-dqr" secondAttribute="leading" id="UMc-Az-gwF"/>
+                                    <constraint firstAttribute="height" constant="45" id="lJT-bS-B0z"/>
                                     <constraint firstAttribute="trailing" secondItem="awp-Mc-VCa" secondAttribute="trailing" id="o4h-en-hqW"/>
                                     <constraint firstItem="2nb-VD-bFD" firstAttribute="top" secondItem="A17-DI-dqr" secondAttribute="top" constant="10" id="qsg-gz-dnt"/>
                                     <constraint firstAttribute="width" constant="34" id="vWH-uS-0Sh"/>
                                     <constraint firstAttribute="trailing" secondItem="2nb-VD-bFD" secondAttribute="trailing" id="xbi-u0-a4U"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-Bt-8XX">
+                                <rect key="frame" x="107.5" y="10" width="26.5" height="24"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.10025149828767123" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="1ur-RB-JdC"/>
+                                    <constraint firstAttribute="width" constant="26.5" id="DFM-tX-SW8"/>
+                                </constraints>
+                                <state key="normal" image="unfavorite"/>
+                                <state key="selected" image="favorite"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pEn-Bt-8XX" firstAttribute="top" secondItem="4We-eQ-Ypy" secondAttribute="top" constant="10" id="HZy-iZ-U0q"/>
                             <constraint firstAttribute="bottom" secondItem="A17-DI-dqr" secondAttribute="bottom" id="J2F-qy-jB5"/>
                             <constraint firstAttribute="trailing" secondItem="duB-4d-JLI" secondAttribute="trailing" id="MsC-37-lFb"/>
                             <constraint firstItem="duB-4d-JLI" firstAttribute="top" secondItem="4We-eQ-Ypy" secondAttribute="top" id="PeP-YF-8Gy"/>
@@ -115,6 +124,7 @@
                             <constraint firstAttribute="trailing" secondItem="A17-DI-dqr" secondAttribute="trailing" constant="8" id="YLe-1Z-vA4"/>
                             <constraint firstItem="duB-4d-JLI" firstAttribute="leading" secondItem="4We-eQ-Ypy" secondAttribute="leading" id="e8D-rr-OXl"/>
                             <constraint firstItem="3O3-9V-7XP" firstAttribute="leading" secondItem="4We-eQ-Ypy" secondAttribute="leading" constant="8" id="pmb-9q-u0g"/>
+                            <constraint firstAttribute="trailing" secondItem="pEn-Bt-8XX" secondAttribute="trailing" constant="10" id="sg8-r2-aRH"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -127,13 +137,20 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imageView" destination="duB-4d-JLI" id="zCm-4c-d72"/>
+                <outlet property="nameLabel" destination="CNp-GV-9Kj" id="rCf-gK-z9N"/>
+                <outlet property="priceLabel" destination="awp-Mc-VCa" id="otf-aW-18e"/>
+                <outlet property="ratingView" destination="2nb-VD-bFD" id="ieJ-9v-g0E"/>
                 <outlet property="shadowedView" destination="4We-eQ-Ypy" id="kEY-Wo-M10"/>
+                <outlet property="vendorNameLabel" destination="ayA-hR-lht" id="lsZ-37-YK8"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="511922Pi4Xy7429" width="133" height="131.5"/>
+        <image name="favorite" width="26.5" height="24"/>
         <image name="shape952" width="10" height="10"/>
+        <image name="unfavorite" width="20" height="18.5"/>
     </resources>
 </document>

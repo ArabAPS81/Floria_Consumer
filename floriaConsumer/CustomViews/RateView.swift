@@ -12,26 +12,38 @@ class RateView: UIStackView {
     
     init(frame: CGRect,rate: Int) {
         super.init(frame: frame)
-        commonInit(rate: rate)
+        setRate(rate: rate)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setRate(rate: 0)
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit(rate: 3)
+        setRate(rate: 0)
     }
     
-    
-    private func commonInit(rate: Int) {
+    func setRate(rate: Int) {
+        var rate = rate
+        if rate > 5 || rate < 0 {
+            rate = 0
+        }
         
-        for _ in 1...rate {
+        reset()
+        
+        for _ in 0..<rate {
             self.addArrangedSubview(getStarImage())
         }
-        for _ in (rate + 1)...5 {
+        for _ in (rate)..<5 {
             self.addArrangedSubview(getDimStarImage())
+        }
+    }
+    
+    private func reset() {
+        self.arrangedSubviews.forEach { (view) in
+            view.removeFromSuperview()
         }
     }
     

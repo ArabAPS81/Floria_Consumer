@@ -11,6 +11,18 @@ import UIKit
 class HomeVendorCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var shadowedView: UIView!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    @IBOutlet weak var vendorDistrictLabel: UILabel!
+    @IBOutlet weak var ratingView: RateView!
+    
+    func cofigure(vendor: VendorModel.Vendor) {
+        vendorNameLabel.text = vendor.name
+        vendorDistrictLabel.text = vendor.district?.name
+        imageView.imageFromUrl(url: vendor.image, placeholder: nil)
+        ratingView.setRate(rate: 5)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,13 +7,15 @@
 
 import UIKit
 import SideMenu
+import Alamofire
 
-import Foundation
+protocol HomeView: class{
+    func didReceiveData(data: Codable)
+    func didFailToReceiveData(error: Error)
+}
 
 
-
-class homeViewController: UIViewController {
-    
+class HomeViewController: UIViewController {
     
     @IBOutlet var homeButtonsCollction: [UIButton]!
     @IBOutlet var search: UIBarButtonItem!
@@ -23,18 +25,18 @@ class homeViewController: UIViewController {
     @IBOutlet var Products: UICollectionView!
     @IBOutlet var SliderHome: UICollectionView!
     
-    @IBOutlet weak var readymade: UIButton!
-    @IBOutlet weak var assemd: UIButton!
-    @IBOutlet weak var home: UIButton!
-    @IBOutlet weak var car: UIButton!
-    @IBOutlet weak var gerb: UIButton!
-    
+    var presenter: HomePresenter!
+    var vendorsList = [VendorModel.Vendor]()
+    var productsList = [ProductsModel.Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
         setupViews()
         setupSideMenu()
+        presenter = HomePresenter.init(view: self)
+        presenter.getNearestVendor()
+        presenter.getFeaturedProducts()
     }
     
     private func setupSideMenu() {
@@ -66,19 +68,16 @@ class homeViewController: UIViewController {
     }
     
     @IBAction func gerbButtonTapped(_ sender: UIButton) {
-        let vc = VendorsListViewController.newInstance()
-        vc.serviceType = .gerb
+        let vc = VendorsListViewController.newInstance(service: .gerb)
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     @IBAction func customBouquetButtonTapped(_ sender: UIButton) {
-        let vc = VendorsListViewController.newInstance()
-        vc.serviceType = .customBouquet
+        let vc = VendorsListViewController.newInstance(service: .customBouquet)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func readyMadeButtonTapped(_ sender: UIButton) {
-        let vc = VendorsListViewController.newInstance()
-        vc.serviceType = .readyMade
+        let vc = VendorsListViewController.newInstance(service: .readyMade)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -101,52 +100,70 @@ class homeViewController: UIViewController {
         menu.statusBarEndAlpha = 0
         present(menu, animated: true, completion: nil)
     }
+}
 
+extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case Offers:
+            return vendorsList.count
+            case Products:
+                return vendorsList.count
+            case SliderHome:
+            return 3
+        default:
+            return 0
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == SliderHome
-        {
+        if collectionView == SliderHome {
             let colWidth=SliderHome.bounds.width
-            
             let itemwidth=(colWidth)
-            
             return CGSize(width: itemwidth, height:self.SliderHome.bounds.size.height)
-        }
-        else if collectionView != Products
-        {
+        }else if collectionView != Products {
             return CGSize(width:150,height:190)
-        }
-        else
-        {
+        }else {
             return CGSize(width:150,height:190)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if collectionView == SliderHome
-        {
+        if collectionView == SliderHome {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath) as! SliderHomeCollectionViewCell
             return cell;
         } else if collectionView == Products {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeProductCollectionViewCell", for: indexPath) as? HomeProductCollectionViewCell
-            return cell!;
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeProductCollectionViewCell", for: indexPath) as! HomeProductCollectionViewCell
+            cell.cofigure(product: productsList[indexPath.row])
+            return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeVendorCollectionViewCell", for: indexPath) as? HomeVendorCollectionViewCell
-            return cell!;
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeVendorCollectionViewCell", for: indexPath) as! HomeVendorCollectionViewCell
+            cell.cofigure(vendor: vendorsList[indexPath.row])
+            return cell
         }
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     
 }
 
-extension homeViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+extension HomeViewController: HomeView {
+    func didReceiveData(data: Codable) {
+        if let data = data as? VendorModel {
+            vendorsList = data.vendors!
+            Offers.reloadData()
+        }
+        if let data = data as? ProductsModel {
+            productsList = data.products!
+            Products.reloadData()
+        }
     }
+    
+    func didFailToReceiveData(error: Error) {
+        
+    }
+    
     
 }
 

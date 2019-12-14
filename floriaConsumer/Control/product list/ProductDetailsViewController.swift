@@ -17,17 +17,14 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var extra = 0
+    var product: ProductsModel.Product!
+    
     var idofpro = ""
     var  x = 1
     var imgs = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...10 {
-           // imgs.append(UIImage.init(named: "tst\(i)")!)
-        }
-        
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
     }
@@ -51,10 +48,10 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == imageSliderCollectioView {
-            return 3
+            return 1
         }
         else{
-            return 12
+            return 4
         }
     }
     
@@ -73,8 +70,8 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             alert.dismiss(animated: true, completion: nil)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         if collectionView == imageSliderCollectioView {
             let iphone8SizeWidth: CGFloat = 375
             let iphone8Height: CGFloat = 300
@@ -89,18 +86,13 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == imageSliderCollectioView
-        {
+        if collectionView == imageSliderCollectioView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath)
             
             return cell;
-        }
-            
-        else
-        {
+        }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
             return cell
             

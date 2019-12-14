@@ -10,7 +10,6 @@ import Foundation
 
 class NetworkConstants {
     
-    static let baseUrl = "http://api2.floriaapp.com/api/"
-    static let featuredProducts = "PopularProduct"
+    static let baseUrl = "http://api2.floriaapp.com/api/v1/"
     static let sfv = ""
 }
