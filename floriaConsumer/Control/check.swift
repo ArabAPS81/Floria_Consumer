@@ -10,12 +10,13 @@ import UIKit
 
 class check: UIViewController {
     override func viewDidLoad() {
-         VIEW.layer.cornerRadius = 20
-               okkkk.layer.cornerRadius = 10
+        VIEW.layer.cornerRadius = 20
+        okkkk.layer.cornerRadius = 10
+        vc = LoginService(delegate: self)
     }
     @IBOutlet weak var phon: UITextField!
     @IBOutlet weak var okkkk: UIButton!
-    let vc = LoginService()
+    var vc: LoginService!
     @IBOutlet weak var VIEW: UIView!
     @IBAction func ok(_ sender: Any) {
         
@@ -32,5 +33,17 @@ class check: UIViewController {
     }
     
    
+    
+}
+
+extension check: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
     
 }

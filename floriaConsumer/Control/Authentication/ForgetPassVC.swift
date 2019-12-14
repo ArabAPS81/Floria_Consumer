@@ -12,10 +12,11 @@ class ForgetPassVC: UIViewController {
      override func viewDidLoad() {
           VIEW.layer.cornerRadius = 20
                 okkkk.layer.cornerRadius = 10
+        vc = LoginService.init(delegate: self)
      }
      @IBOutlet weak var phon: UITextField!
      @IBOutlet weak var okkkk: UIButton!
-     let vc = LoginService()
+    var vc: LoginService!
      @IBOutlet weak var VIEW: UIView!
      @IBAction func ok(_ sender: Any) {
          UserDefaults.standard.set(phon.text!, forKey: "mobile")
@@ -24,8 +25,19 @@ class ForgetPassVC: UIViewController {
      }
      @IBAction func close(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
-        
      }
     
 
+}
+
+extension ForgetPassVC: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
+    
 }

@@ -614,7 +614,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="A81-v0-GdA" kind="show" id="WAQ-mT-0To"/>
+                                    <segue destination="A81-v0-GdA" kind="presentation" modalPresentationStyle="fullScreen" id="WAQ-mT-0To"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -635,7 +635,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GI8-Bp-98C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15188.40579710145" y="-3338.1696428571427"/>
+            <point key="canvasLocation" x="-15097" y="-3338"/>
         </scene>
         <!--Map-->
         <scene sceneID="OgM-Cd-UQP">

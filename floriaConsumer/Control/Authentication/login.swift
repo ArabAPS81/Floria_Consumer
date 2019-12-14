@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class login: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sign.layer.cornerRadius = 20
@@ -20,10 +20,10 @@ class login: UIViewController {
     }
     
     @IBOutlet weak var name: UITextField!
-  
+    
     @IBOutlet weak var pass: UITextField!
     @IBAction func signin(_ sender: Any) {
-        let vc = LoginService()
+        let vc = LoginService(delegate: self)
         vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
     }
     
@@ -35,57 +35,36 @@ class login: UIViewController {
     
     @IBOutlet weak var disshow: UIButton!
     @IBAction func sho(_ sender: Any) {
-           if  pass.isSecureTextEntry == true
-           {
-              
-               pass.isSecureTextEntry=false
-            disshow.isHidden = false
+        if  pass.isSecureTextEntry == true
+        {
             
-           }
-           else
-           {
-                disshow.isHidden = true
-               pass.isSecureTextEntry=true
-               
-           }
-       }
-    
- 
-    @IBAction func forgetpass(_ sender: Any) {
-        let vc = LoginService()
-        let mob = 
-        vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
+            pass.isSecureTextEntry=false
+            disshow.isHidden = false
+        }
+        else
+        {
+            disshow.isHidden = true
+            pass.isSecureTextEntry=true
+        }
     }
     
-            
-            /*
-            // MARK: - Navigation
-
-            // In a storyboard-based application, you will often want to do a little preparation before navigation
-            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                // Get the new view controller using segue.destination.
-                // Pass the selected object to the new view controller.
-            }
-            */
-       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            }
-       
+    @IBAction func forgetpass(_ sender: Any) {
+        let vc = LoginService(delegate: self)
+            vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
+    }
    
+}
+       
+extension login: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
+    
+}
     
 

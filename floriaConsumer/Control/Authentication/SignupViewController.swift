@@ -31,7 +31,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var bu: UIButton!
     
     @IBAction func signup(_ sender: Any) {
-      let vc = LoginService()
+        let vc = LoginService(delegate: self)
       vc.sign(name: name.text!, email: mobile.text!, password: pass.text!, ext: "register")
        
     }
@@ -88,4 +88,16 @@ class SignupViewController: UIViewController {
                                 alert.dismiss(animated: true, completion: nil)
                               }
 }
+}
+
+extension SignupViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
+    
 }

@@ -198,6 +198,9 @@
                                     <action selector="skip:" destination="cEa-uG-Dcx" eventType="touchUpInside" id="Hgs-ZE-tYT"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="dkA-Sb-bXd" kind="presentation" identifier="loged" modalPresentationStyle="fullScreen" id="bQL-ez-ozT"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -210,6 +213,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gle-YM-4s3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-12887.200000000001" y="-3338.6806596701654"/>
+        </scene>
+        <!--MainScreen-->
+        <scene sceneID="9S2-Bk-Orb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainScreen" id="dkA-Sb-bXd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xh8-qE-s54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12354" y="-3815"/>
         </scene>
         <!--registration-->
         <scene sceneID="Tdh-IV-6rx">
