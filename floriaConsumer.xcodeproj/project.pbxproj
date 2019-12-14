@@ -17,7 +17,6 @@
 		0406517B23530CB60039566C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0406517923530CB60039566C /* LaunchScreen.storyboard */; };
 		0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041514692357EB4200797A33 /* menuecontroller.swift */; };
 		04157D00237EF01100F772BE /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157CFF237EF01100F772BE /* map.swift */; };
-		0424688523588BB200CE6FC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424688423588BB200CE6FC6 /* HomeViewController.swift */; };
 		042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */; };
 		0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434EECB23530E2A00D4329E /* splashViewController.swift */; };
 		043C1852237F80690003A633 /* productlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1851237F80690003A633 /* productlist.swift */; };
@@ -85,6 +84,7 @@
 		D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */; };
 		D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */; };
 		D64CBF53238EA8A300DEE040 /* HomeProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64CBF51238EA8A300DEE040 /* HomeProductCollectionViewCell.xib */; };
+		D670270723A4EF1B00CBBD63 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670270623A4EF1B00CBBD63 /* HomeViewController.swift */; };
 		D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */; };
 		D67B30F8238BD4E60080252B /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F7238BD4E60080252B /* RateView.swift */; };
 		D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30FA238C016F0080252B /* UIViewExtension.swift */; };
@@ -124,7 +124,6 @@
 		0406517C23530CB60039566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041514692357EB4200797A33 /* menuecontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuecontroller.swift; sourceTree = "<group>"; };
 		04157CFF237EF01100F772BE /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
-		0424688423588BB200CE6FC6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0434EECB23530E2A00D4329E /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
 		043C1851237F80690003A633 /* productlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productlist.swift; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 		D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D64CBF51238EA8A300DEE040 /* HomeProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		D670270623A4EF1B00CBBD63 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D67B30F7238BD4E60080252B /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		D67B30FA238C016F0080252B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -536,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C1A8002392A9D900379508 /* HomeCells */,
-				0424688423588BB200CE6FC6 /* HomeViewController.swift */,
+				D670270623A4EF1B00CBBD63 /* HomeViewController.swift */,
 				D696C2B623A0F2F200E3A56A /* HomePresenter.swift */,
 				D6E80B7E23897C9D003A7DFF /* MainScreen.storyboard */,
 			);
@@ -845,10 +845,10 @@
 				04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */,
 				D696C2BA23A0F42700E3A56A /* VendorServices.swift in Sources */,
 				D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */,
-				0424688523588BB200CE6FC6 /* HomeViewController.swift in Sources */,
 				04459387237A5CFE007A210E /* buttons.swift in Sources */,
 				0472F9A423784449008AD8BC /* providerprofile.swift in Sources */,
 				0470AD452353EB76000B1BF7 /* uinViewController.swift in Sources */,
+				D670270723A4EF1B00CBBD63 /* HomeViewController.swift in Sources */,
 				D697FB8E2393FB6400956652 /* ExtrasCollectionViewCell.swift in Sources */,
 				D696C2B723A0F2F200E3A56A /* HomePresenter.swift in Sources */,
 				04157D00237EF01100F772BE /* map.swift in Sources */,
