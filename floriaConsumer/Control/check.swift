@@ -15,16 +15,21 @@ class check: UIViewController {
     }
     @IBOutlet weak var phon: UITextField!
     @IBOutlet weak var okkkk: UIButton!
-    
+    let vc = LoginService()
     @IBOutlet weak var VIEW: UIView!
     @IBAction func ok(_ sender: Any) {
-       
+        
+        vc.sign(name: phon.text!, email: "", password: "", ext: "verify")
     }
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
        
     }
    
+    @IBAction func resend(_ sender: Any) {
+        vc.sign(name: phon.text!, email: "", password: "", ext: "resend")
+
+    }
     
    
     

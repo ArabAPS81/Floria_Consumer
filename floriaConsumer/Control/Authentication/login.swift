@@ -51,7 +51,12 @@ class login: UIViewController {
        }
     
  
-   
+    @IBAction func forgetpass(_ sender: Any) {
+        let vc = LoginService()
+        let mob = 
+        vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
+    }
+    
             
             /*
             // MARK: - Navigation

@@ -35,9 +35,12 @@
 		045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A512381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift */; };
 		045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A522381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift */; };
 		045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A5D2381848100CCC257 /* providerlistcellmodel.swift */; };
+		045F234223A3CA6E00E8B60D /* ValidationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F234123A3CA6E00E8B60D /* ValidationCodeVC.swift */; };
 		0470AD432353E80E000B1BF7 /* sViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AD422353E80E000B1BF7 /* sViewController.swift */; };
 		0470AD452353EB76000B1BF7 /* uinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470AD442353EB76000B1BF7 /* uinViewController.swift */; };
 		0472F9A423784449008AD8BC /* providerprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472F9A323784449008AD8BC /* providerprofile.swift */; };
+		0480B27423A478100079253B /* resetpasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B27323A478100079253B /* resetpasswordVC.swift */; };
+		0480B27623A4790A0079253B /* ForgetPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B27523A4790A0079253B /* ForgetPassVC.swift */; };
 		049958CD237CC49200FDF817 /* add-adress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049958CC237CC49200FDF817 /* add-adress.swift */; };
 		04AA479A2399F25100DAD09A /* VendorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA47992399F25100DAD09A /* VendorProfile.storyboard */; };
 		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
@@ -137,9 +140,12 @@
 		045B4A512381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesGetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A522381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnrelatedProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A5D2381848100CCC257 /* providerlistcellmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = providerlistcellmodel.swift; sourceTree = "<group>"; };
+		045F234123A3CA6E00E8B60D /* ValidationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCodeVC.swift; sourceTree = "<group>"; };
 		0470AD422353E80E000B1BF7 /* sViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sViewController.swift; sourceTree = "<group>"; };
 		0470AD442353EB76000B1BF7 /* uinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uinViewController.swift; sourceTree = "<group>"; };
 		0472F9A323784449008AD8BC /* providerprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerprofile.swift; sourceTree = "<group>"; };
+		0480B27323A478100079253B /* resetpasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpasswordVC.swift; sourceTree = "<group>"; };
+		0480B27523A4790A0079253B /* ForgetPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassVC.swift; sourceTree = "<group>"; };
 		049958CC237CC49200FDF817 /* add-adress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add-adress.swift"; sourceTree = "<group>"; };
 		04AA47992399F25100DAD09A /* VendorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VendorProfile.storyboard; sourceTree = "<group>"; };
 		04BF5772237B9EEC00A8878A /* delivarylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delivarylist.swift; sourceTree = "<group>"; };
@@ -484,6 +490,7 @@
 			children = (
 				D6347607239D2B10008EB755 /* AuthenticationService.swift */,
 				D696C2B123A0E70800E3A56A /* LoginService.swift */,
+				045F234123A3CA6E00E8B60D /* ValidationCodeVC.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -595,6 +602,8 @@
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
 				0404173F2353BA310041D97C /* login.swift */,
 				040417412353C50C0041D97C /* SignupViewController.swift */,
+				0480B27323A478100079253B /* resetpasswordVC.swift */,
+				0480B27523A4790A0079253B /* ForgetPassVC.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -773,6 +782,7 @@
 				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
 				049958CD237CC49200FDF817 /* add-adress.swift in Sources */,
 				D6C1A7FF2392A99300379508 /* VendorsListViewController.swift in Sources */,
+				0480B27423A478100079253B /* resetpasswordVC.swift in Sources */,
 				042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */,
 				D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */,
 				D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */,
@@ -825,12 +835,14 @@
 				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
 				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
+				045F234223A3CA6E00E8B60D /* ValidationCodeVC.swift in Sources */,
 				D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */,
 				D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
 				D6347604239D22D2008EB755 /* WebserviceHelper.swift in Sources */,
 				D60B9155239671EC002669B0 /* Constants.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,
+				0480B27623A4790A0079253B /* ForgetPassVC.swift in Sources */,
 				D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

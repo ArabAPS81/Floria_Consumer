@@ -33,8 +33,7 @@ class SignupViewController: UIViewController {
     @IBAction func signup(_ sender: Any) {
       let vc = LoginService()
       vc.sign(name: name.text!, email: mobile.text!, password: pass.text!, ext: "register")
-        
-        
+       
     }
    
     @IBOutlet weak var checkbox: UIButton!
