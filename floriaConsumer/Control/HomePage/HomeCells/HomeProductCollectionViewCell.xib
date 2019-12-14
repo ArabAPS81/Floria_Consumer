@@ -100,9 +100,20 @@
                                     <constraint firstAttribute="trailing" secondItem="2nb-VD-bFD" secondAttribute="trailing" id="xbi-u0-a4U"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-Bt-8XX">
+                                <rect key="frame" x="107.5" y="10" width="26.5" height="24"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.10025149828767123" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="1ur-RB-JdC"/>
+                                    <constraint firstAttribute="width" constant="26.5" id="DFM-tX-SW8"/>
+                                </constraints>
+                                <state key="normal" image="unfavorite"/>
+                                <state key="selected" image="favorite"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="pEn-Bt-8XX" firstAttribute="top" secondItem="4We-eQ-Ypy" secondAttribute="top" constant="10" id="HZy-iZ-U0q"/>
                             <constraint firstAttribute="bottom" secondItem="A17-DI-dqr" secondAttribute="bottom" id="J2F-qy-jB5"/>
                             <constraint firstAttribute="trailing" secondItem="duB-4d-JLI" secondAttribute="trailing" id="MsC-37-lFb"/>
                             <constraint firstItem="duB-4d-JLI" firstAttribute="top" secondItem="4We-eQ-Ypy" secondAttribute="top" id="PeP-YF-8Gy"/>
@@ -113,6 +124,7 @@
                             <constraint firstAttribute="trailing" secondItem="A17-DI-dqr" secondAttribute="trailing" constant="8" id="YLe-1Z-vA4"/>
                             <constraint firstItem="duB-4d-JLI" firstAttribute="leading" secondItem="4We-eQ-Ypy" secondAttribute="leading" id="e8D-rr-OXl"/>
                             <constraint firstItem="3O3-9V-7XP" firstAttribute="leading" secondItem="4We-eQ-Ypy" secondAttribute="leading" constant="8" id="pmb-9q-u0g"/>
+                            <constraint firstAttribute="trailing" secondItem="pEn-Bt-8XX" secondAttribute="trailing" constant="10" id="sg8-r2-aRH"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -137,6 +149,8 @@
     </objects>
     <resources>
         <image name="511922Pi4Xy7429" width="133" height="131.5"/>
+        <image name="favorite" width="26.5" height="24"/>
         <image name="shape952" width="10" height="10"/>
+        <image name="unfavorite" width="20" height="18.5"/>
     </resources>
 </document>

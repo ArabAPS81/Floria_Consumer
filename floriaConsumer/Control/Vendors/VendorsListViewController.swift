@@ -57,7 +57,7 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: VendorTableViewCell.reuseId) as! VendorTableViewCell
-        //cell.cofigure(vendor: vendorsList[indexPath.row])
+        cell.cofigure(vendor: vendorsList[indexPath.row])
         return cell
     }
     
@@ -71,6 +71,7 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     
+    
 }
 
 extension VendorsListViewController: VendorsListView {
@@ -78,6 +79,9 @@ extension VendorsListViewController: VendorsListView {
         if let data = data as? VendorModel {
             vendorsList = data.vendors!
             self.tableView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
+            }
         }
     }
     

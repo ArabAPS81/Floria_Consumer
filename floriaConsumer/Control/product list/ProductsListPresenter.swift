@@ -16,9 +16,9 @@ class ProductsListPresenter {
         self.view = view
     }
     
-    func getVendorProducts(vendor: Int) {
+    func getVendorProducts(vendorId: Int, forService serviceType: ServiceType) {
         let service = ProductService.init(delegate: self)
-        service.getVendorsProducts(vendorId: vendor)
+        service.getVendorsProducts(vendorId: vendorId, forService: serviceType)
     }
 }
 

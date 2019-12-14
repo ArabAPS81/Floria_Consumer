@@ -74,6 +74,44 @@ class ProductService {
         }
     }
     
+    func getVendorsProducts(vendorId: Int, forService service: ServiceType) {
+        
+        let baseUrl = (NetworkConstants.baseUrl + "services/" + "\(service.serviceId())" + "/providers/" + "\(vendorId)" + "/products")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: ProductsModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
+    func getProduct(productId: Int) {
+        
+        let baseUrl = (NetworkConstants.baseUrl + "products/" + "\(productId)")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: ProductsModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
     func searchInProducts(model: SearchProductsQueryModel) {
         
         guard let urlString = (NetworkConstants.baseUrl + "ShowOneProduct" + "" ).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}

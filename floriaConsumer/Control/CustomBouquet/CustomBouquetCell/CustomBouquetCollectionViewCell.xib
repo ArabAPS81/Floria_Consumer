@@ -34,19 +34,19 @@
                                     <constraint firstAttribute="bottom" secondItem="edm-vu-Acb" secondAttribute="bottom" id="er7-lW-ctd"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rX1-bl-ipV">
-                                <rect key="frame" x="8" y="172" width="137" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rX1-bl-ipV">
+                                <rect key="frame" x="4" y="172" width="145" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name is here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mq7-YR-a4Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name is here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mq7-YR-a4Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="128" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziz-73-gQg">
-                                        <rect key="frame" x="116" y="0.0" width="21" height="30"/>
+                                        <rect key="frame" x="124" y="0.0" width="21" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -106,9 +106,9 @@
                             <constraint firstItem="rTL-F3-tq4" firstAttribute="top" secondItem="rX1-bl-ipV" secondAttribute="bottom" id="Jvy-Qq-lK1"/>
                             <constraint firstItem="4GV-te-dfg" firstAttribute="top" secondItem="KYg-m9-1Uu" secondAttribute="top" id="K8e-Tg-txr"/>
                             <constraint firstAttribute="trailing" secondItem="4GV-te-dfg" secondAttribute="trailing" id="MS6-jA-YNh"/>
-                            <constraint firstAttribute="trailing" secondItem="rX1-bl-ipV" secondAttribute="trailing" constant="8" id="P1b-WT-FWH"/>
+                            <constraint firstAttribute="trailing" secondItem="rX1-bl-ipV" secondAttribute="trailing" constant="4" id="P1b-WT-FWH"/>
                             <constraint firstItem="rX1-bl-ipV" firstAttribute="top" secondItem="4GV-te-dfg" secondAttribute="bottom" id="Vdf-si-yri"/>
-                            <constraint firstItem="rX1-bl-ipV" firstAttribute="leading" secondItem="KYg-m9-1Uu" secondAttribute="leading" constant="8" id="cUT-gc-dU3"/>
+                            <constraint firstItem="rX1-bl-ipV" firstAttribute="leading" secondItem="KYg-m9-1Uu" secondAttribute="leading" constant="4" id="cUT-gc-dU3"/>
                             <constraint firstItem="rTL-F3-tq4" firstAttribute="leading" secondItem="KYg-m9-1Uu" secondAttribute="leading" id="ild-df-S1U"/>
                             <constraint firstItem="4GV-te-dfg" firstAttribute="leading" secondItem="KYg-m9-1Uu" secondAttribute="leading" id="lms-OK-UHn"/>
                             <constraint firstAttribute="bottom" secondItem="rTL-F3-tq4" secondAttribute="bottom" constant="8" id="vAH-cd-5Pq"/>
@@ -129,7 +129,7 @@
                 <outlet property="flowersNumLabel" destination="rsS-Aj-ajn" id="iEv-bR-G66"/>
                 <outlet property="shadowedView" destination="KYg-m9-1Uu" id="tYN-wE-3mp"/>
             </connections>
-            <point key="canvasLocation" x="234.78260869565219" y="148.32589285714286"/>
+            <point key="canvasLocation" x="234.05797101449278" y="147.99107142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
