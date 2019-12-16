@@ -152,7 +152,9 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             let vc = ProductDetailsViewController.newInstance(product: productsList[indexPath.row])
             self.navigationController?.pushViewController(vc, animated: true)
         } else if collectionView == Offers {
-           // providerprofile.newInstance(product: productsList[indexPath.row])
+            let vendor = vendorsList[indexPath.row]
+            let vc = VendorDetailsViewController.newInstance(vendor: vendor)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

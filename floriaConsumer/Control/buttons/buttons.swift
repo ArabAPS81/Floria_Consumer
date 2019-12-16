@@ -12,10 +12,6 @@ class buttons: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-let vc = providerprofile()
-        vc.corner(bu: one, by: 25)
-        vc.corner(bu: two, by: 25)
-        vc.corner(bu: three, by: 25)
         Shadoow(bu: one)
         Shadoow(bu: two)
         Shadoow(bu: three)

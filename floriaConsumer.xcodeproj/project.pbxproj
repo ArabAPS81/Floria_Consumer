@@ -366,7 +366,6 @@
 		0472F9A223784426008AD8BC /* providor profile */ = {
 			isa = PBXGroup;
 			children = (
-				0472F9A323784449008AD8BC /* providerprofile.swift */,
 			);
 			path = "providor profile";
 			sourceTree = "<group>";
@@ -607,6 +606,7 @@
 			children = (
 				D6C1A7FE2392A99300379508 /* VendorsListViewController.swift */,
 				D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */,
+				0472F9A323784449008AD8BC /* providerprofile.swift */,
 				D6203515238A74EC00336D0B /* Vendor.storyboard */,
 				D6C1A8012392AA0500379508 /* VendorCells */,
 			);

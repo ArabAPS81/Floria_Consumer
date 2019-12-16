@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MkK-tJ-S4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MkK-tJ-S4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,11 +27,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-4u-T5M">
-                                        <rect key="frame" x="16" y="0.0" width="21" height="44"/>
+                                        <rect key="frame" x="16" y="0.0" width="41" height="44"/>
                                         <state key="normal" image="shape954"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deF-1c-Xw6">
-                                        <rect key="frame" x="377.5" y="0.0" width="20.5" height="44"/>
+                                        <rect key="frame" x="357" y="0.0" width="41" height="44"/>
                                         <state key="normal" image="sortingicon"/>
                                     </button>
                                 </subviews>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="-7717.3913043478269" y="-2562.0535714285711"/>
         </scene>
-        <!--Providerprofile-->
+        <!--Vendor Details View Controller-->
         <scene sceneID="JBf-B0-rn8">
             <objects>
-                <viewController id="FqI-v5-SEQ" customClass="providerprofile" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VendorDetailsViewController" id="FqI-v5-SEQ" customClass="VendorDetailsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8SR-DO-bNw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,14 +395,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wfr-aB-mxn"/>
                     <connections>
-                        <outlet property="ViewAsCell" destination="ysI-GN-zda" id="nWJ-P2-JFF"/>
-                        <outlet property="five" destination="Qe6-Zs-uUr" id="kaG-NL-zsO"/>
-                        <outlet property="four" destination="UxT-m3-LHZ" id="TJz-13-p0n"/>
-                        <outlet property="one" destination="pjH-qQ-Txf" id="1Y9-dL-MyU"/>
+                        <outlet property="carDecorationBtn" destination="85q-0k-Zjm" id="E6c-3n-Uyu"/>
+                        <outlet property="customBoguetBtn" destination="Qe6-Zs-uUr" id="kaG-NL-zsO"/>
+                        <outlet property="gardeningBtn" destination="pjH-qQ-Txf" id="1Y9-dL-MyU"/>
+                        <outlet property="gerbBtn" destination="exa-hm-Ijv" id="a2H-aB-B0a"/>
                         <outlet property="picofvendor" destination="qtM-Uh-XiB" id="y38-sE-3pn"/>
-                        <outlet property="three" destination="exa-hm-Ijv" id="a2H-aB-B0a"/>
-                        <outlet property="two" destination="85q-0k-Zjm" id="E6c-3n-Uyu"/>
-                        <outlet property="viewofcells" destination="rvT-hh-WPd" id="f3R-X2-KJS"/>
+                        <outlet property="providerCard" destination="ysI-GN-zda" id="nWJ-P2-JFF"/>
+                        <outlet property="readyMadeBtn" destination="UxT-m3-LHZ" id="TJz-13-p0n"/>
+                        <outlet property="recentProductCollectionView" destination="rvT-hh-WPd" id="f3R-X2-KJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omb-SV-UMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
