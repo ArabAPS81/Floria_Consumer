@@ -63,7 +63,7 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        self.navigationController?.pushViewController((serviceType?.associatedViewController())!, animated: true)
+        self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -127,6 +127,9 @@
             <size key="customSize" width="270" height="369"/>
             <connections>
                 <outlet property="flowersNumLabel" destination="rsS-Aj-ajn" id="iEv-bR-G66"/>
+                <outlet property="imageView" destination="edm-vu-Acb" id="XCx-rg-rTx"/>
+                <outlet property="nameLabel" destination="mq7-YR-a4Q" id="xl3-T3-1SL"/>
+                <outlet property="priceLabel" destination="ziz-73-gQg" id="gJG-De-35L"/>
                 <outlet property="shadowedView" destination="KYg-m9-1Uu" id="tYN-wE-3mp"/>
             </connections>
             <point key="canvasLocation" x="234.05797101449278" y="147.99107142857142"/>

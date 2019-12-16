@@ -75,6 +75,7 @@
 		D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352D238A9B1300336D0B /* Notifications.storyboard */; };
 		D6203530238A9B3900336D0B /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352F238A9B3900336D0B /* Address.storyboard */; };
 		D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6203532238AB0CB00336D0B /* SearchViewController.swift */; };
+		D62A6CD523A672DD00931B08 /* CustomBouquetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62A6CD423A672DD00931B08 /* CustomBouquetPresenter.swift */; };
 		D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475F8239D0845008EB755 /* CarDecorationReviewController.swift */; };
 		D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475FD239D22D2008EB755 /* JSONResponseDecoder.swift */; };
 		D6347603239D22D2008EB755 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63475FF239D22D2008EB755 /* ProductService.swift */; };
@@ -187,6 +188,7 @@
 		D620352D238A9B1300336D0B /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		D620352F238A9B3900336D0B /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		D6203532238AB0CB00336D0B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D62A6CD423A672DD00931B08 /* CustomBouquetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetPresenter.swift; sourceTree = "<group>"; };
 		D63475F8239D0845008EB755 /* CarDecorationReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecorationReviewController.swift; sourceTree = "<group>"; };
 		D63475FD239D22D2008EB755 /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
 		D63475FF239D22D2008EB755 /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				D61E866023952ABD00CC0287 /* CustomBouquetCell */,
 				D620351F238A9A6B00336D0B /* CustomBouquet.storyboard */,
 				D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */,
+				D62A6CD423A672DD00931B08 /* CustomBouquetPresenter.swift */,
 				D6EC55F623954ADC00C31DB3 /* PakingViewController.swift */,
 				D6EC55F823955BED00C31DB3 /* CustomBouquetReviewController.swift */,
 			);
@@ -831,6 +834,7 @@
 				D634760B239D324F008EB755 /* LocationManager.swift in Sources */,
 				D61E866323952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift in Sources */,
 				D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */,
+				D62A6CD523A672DD00931B08 /* CustomBouquetPresenter.swift in Sources */,
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
 				D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */,
 				D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */,

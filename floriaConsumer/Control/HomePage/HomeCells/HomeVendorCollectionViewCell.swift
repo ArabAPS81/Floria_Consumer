@@ -21,7 +21,7 @@ class HomeVendorCollectionViewCell: UICollectionViewCell {
         vendorNameLabel.text = vendor.name
         vendorDistrictLabel.text = vendor.district?.name
         imageView.imageFromUrl(url: vendor.image, placeholder: nil)
-        ratingView.setRate(rate: 5)
+        ratingView.setRate(rate: vendor.rate)
     }
 
     override func awakeFromNib() {

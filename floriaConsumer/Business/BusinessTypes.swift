@@ -42,14 +42,14 @@ enum ServiceType {
         }
     }
     
-    func associatedViewController() -> UIViewController {
+    func associatedViewController(_ vendorId: Int? = 1) -> UIViewController {
         switch self {
         case .readyMade:
             return ProductListViewController.newInstance(listType: ServiceType.readyMade)
         case .gerb:
             return ProductListViewController.newInstance(listType: ServiceType.gerb)
         case .customBouquet:
-            return CustomBouquetViewController.newInstance()
+            return CustomBouquetViewController.newInstance(vendorID: vendorId ?? 1)
         case .carDecoration:
             return CarDecorationViewController.newInstance()
         case .potsCare:

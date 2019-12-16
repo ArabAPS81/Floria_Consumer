@@ -21,12 +21,26 @@ class ProductDetailsViewController: UIViewController {
     
     var idofpro = ""
     var  x = 1
-    var imgs = [UIImage]()
+    
+    static func newInstance(product: ProductsModel.Product) -> ProductDetailsViewController {
+        let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        vc.product = product
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
+    }
+    
+    func setupViews() {
+        vendorNameLabel.text = product.provider?.name ?? ""
+        descriptionLabel.text = product.descriptionField
+        priceLabel.text = product.price ?? ""
+        
     }
     
     @IBAction func minase(_ sender: Any) {
@@ -89,8 +103,8 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == imageSliderCollectioView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath)
-            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath) as! SliderHomeCollectionViewCell
+            cell.configure(url: product.image ?? "")
             return cell;
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
