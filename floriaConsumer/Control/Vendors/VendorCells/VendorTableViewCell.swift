@@ -29,7 +29,7 @@ class VendorTableViewCell: UITableViewCell {
         vendorNameLabel.text = vendor.name
         vendorAddressLabel.text = vendor.address ?? vendor.district?.name
         vendorImageView.imageFromUrl(url: vendor.image, placeholder: nil)
-        ratingView.setRate(rate: 5)
+        ratingView.setRate(rate: vendor.rate)
     }
 
     override func awakeFromNib() {

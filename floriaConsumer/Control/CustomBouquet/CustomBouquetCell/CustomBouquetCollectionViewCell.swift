@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomBouquetCellDelegate: class {
+    func addItem(id:Int, count: Int)
+}
+
 class CustomBouquetCollectionViewCell: UICollectionViewCell {
     
     static let reuseId = "CustomBouquetCollectionViewCell"
@@ -17,13 +21,27 @@ class CustomBouquetCollectionViewCell: UICollectionViewCell {
         collection.register(nib, forCellWithReuseIdentifier: reuseId)
     }
     
-    @IBOutlet weak var shadowedView: UIView!
-    @IBOutlet weak var flowersNumLabel: UILabel!
+    @IBOutlet private weak var shadowedView: UIView!
+    @IBOutlet private weak var flowersNumLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    weak var delegate: CustomBouquetCellDelegate?
+    private var productId: Int!
     
-    var flowersNum: Int = 0{
+    private var flowersNum: Int = 0{
         didSet{
             flowersNumLabel.text = "\(flowersNum)"
+            
+            delegate?.addItem(id: self.productId, count: flowersNum)
         }
+    }
+    
+    func cofigure(product: ProductsModel.Product) {
+        nameLabel.text = product.name
+        priceLabel.text = product.price
+        imageView.imageFromUrl(url:  "https://cdn.idsitnetwork.net/wp-content/uploads/sites/42/2019/01/flower-shop-fields-of-romance-148245.jpg", placeholder: nil)
+        productId = product.id
     }
     
     override func awakeFromNib() {
@@ -38,13 +56,13 @@ class CustomBouquetCollectionViewCell: UICollectionViewCell {
         shadowedView.layer.cornerRadius = 5
     }
     
-    @IBAction func selectNewFlower(_ sender: UIButton) {
+    @IBAction private func selectNewFlower(_ sender: UIButton) {
         if flowersNum < 10 {
             flowersNum = flowersNum + 1
         }
     }
     
-    @IBAction func deselectFlower(_ sender: UIButton) {
+    @IBAction private func deselectFlower(_ sender: UIButton) {
         if flowersNum > 0 {
             flowersNum = flowersNum - 1
         }

@@ -31,6 +31,8 @@ struct VendorModel: Codable {
         let mobile : String?
         let name : String?
         let services : [Service]?
+        let isFavorited: Bool
+        let rate: Int
 
         enum CodingKeys: String, CodingKey {
             case address = "address"
@@ -44,6 +46,8 @@ struct VendorModel: Codable {
             case mobile = "mobile"
             case name = "name"
             case services = "services"
+            case isFavorited
+            case rate
         }
     }
     

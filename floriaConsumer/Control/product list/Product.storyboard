@@ -10,7 +10,7 @@
         <!--Product Details View Controller-->
         <scene sceneID="izi-hJ-1hE">
             <objects>
-                <viewController id="NbY-dP-Emq" customClass="ProductDetailsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailsViewController" id="NbY-dP-Emq" customClass="ProductDetailsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6y-Be-gEK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,8 +44,8 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="331.33333333333331"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="552736Pk366H319" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-Vr-GfS">
-                                                                            <rect key="frame" x="3" y="0.0" width="371" height="332"/>
+                                                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="552736Pk366H319" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-Vr-GfS">
+                                                                            <rect key="frame" x="3" y="0.0" width="411" height="331.5"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </imageView>
                                                                     </subviews>

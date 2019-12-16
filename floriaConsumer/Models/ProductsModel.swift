@@ -26,6 +26,8 @@ struct ProductsModel : Codable {
         let price : Double?
         let provider : Provider?
         let service : Service?
+        let isFavorited: Bool
+        let rate: Int
 
 
         enum CodingKeys: String, CodingKey {
@@ -36,6 +38,8 @@ struct ProductsModel : Codable {
             case price = "price"
             case provider
             case service
+            case isFavorited
+            case rate
         }
         
         struct Provider : Codable {
@@ -51,7 +55,7 @@ struct ProductsModel : Codable {
             let mobile : String?
             let name : String?
             let services : [Service]?
-
+            
 
             enum CodingKeys: String, CodingKey {
                 case address = "address"
@@ -71,16 +75,12 @@ struct ProductsModel : Codable {
 
                 let id : Int?
                 let name : String?
-
-
+                
                 enum CodingKeys: String, CodingKey {
                     case id = "id"
                     case name = "name"
                 }
             }
-            
-
-
         }
         
         struct Service : Codable {
@@ -88,7 +88,6 @@ struct ProductsModel : Codable {
             let id : Int?
             let image : String?
             let name : String?
-
 
             enum CodingKeys: String, CodingKey {
                 case id = "id"

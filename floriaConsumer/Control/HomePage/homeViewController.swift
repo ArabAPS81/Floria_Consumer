@@ -143,7 +143,17 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.cofigure(vendor: vendorsList[indexPath.row])
             return cell
         }
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == SliderHome {
+            
+        } else if collectionView == Products {
+            let vc = ProductDetailsViewController.newInstance(product: productsList[indexPath.row])
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if collectionView == Offers {
+           // providerprofile.newInstance(product: productsList[indexPath.row])
+        }
     }
     
 }

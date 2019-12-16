@@ -27,6 +27,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     var productsList = [ProductsModel.Product]()
     var productListType = ServiceType.readyMade
     var presenter: ProductsListPresenter?
+    var vendorId: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +62,9 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ProductDetails", sender: nil)
+        let vc = ProductDetailsViewController.newInstance(product: productsList[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }
