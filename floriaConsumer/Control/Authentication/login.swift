@@ -16,6 +16,7 @@ class login: UIViewController {
         super.viewDidLoad()
         sign.layer.cornerRadius = 20
         disshow.isHidden = true
+        face.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
@@ -53,6 +54,7 @@ class login: UIViewController {
             vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
     }
    
+    @IBOutlet weak var face: UIButton!
 }
        
 extension login: WebServiceDelegate {

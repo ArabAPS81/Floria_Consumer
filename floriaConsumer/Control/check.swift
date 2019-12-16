@@ -11,7 +11,7 @@ import UIKit
 class check: UIViewController {
     override func viewDidLoad() {
         VIEW.layer.cornerRadius = 20
-        okkkk.layer.cornerRadius = 10
+        okkkk.layer.cornerRadius = 30
         vc = LoginService(delegate: self)
     }
     @IBOutlet weak var phon: UITextField!
