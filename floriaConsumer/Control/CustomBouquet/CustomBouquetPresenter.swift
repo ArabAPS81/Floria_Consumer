@@ -12,7 +12,7 @@ class CustomBouquetPresenter {
     
     private weak var view: CustomBouquetView?
     private var productsList = [ProductsModel.Product]()
-    private var selectedProducts = SubmittOrderQueryModel()
+    private var selectedProducts = SubmittOrderQueryModel(products: [])
     
     init(view: CustomBouquetView) {
         self.view = view
@@ -30,6 +30,10 @@ class CustomBouquetPresenter {
         let service = ProductService.init(delegate: self)
         service.getProductsForVendor(vendorId, forService: serviceType)
     }
+    
+    func submittOrder() {
+        print(selectedProducts)
+    }
 }
 
 extension CustomBouquetPresenter: WebServiceDelegate {
@@ -46,17 +50,19 @@ extension CustomBouquetPresenter: WebServiceDelegate {
 
 extension CustomBouquetPresenter: CustomBouquetCellDelegate {
     func addItem(id: Int, count: Int) {
-        if count > 0 {
-            if var item = selectedProducts.products!.filter({ (item) -> Bool in
-                return item.id == id
-            }).first {
-                item.quantity = count
-            } else {
-                
-                }
-            }
-        }
+        
+        selectedProducts.products.removeAll(where: { (product) -> Bool in
+            return product.id == id
+        })
+        
+        let price = productsList.filter { (product) -> Bool in
+            return product.id == id
+        }.first?.price ?? 0.0
+        
+        selectedProducts.products.append(SubmittOrderQueryModel.Product.init(id: id, quantity: count, price: price))
+        
     }
+}
     
 
 

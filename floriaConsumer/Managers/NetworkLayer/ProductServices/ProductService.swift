@@ -21,11 +21,11 @@ struct  SearchProductsQueryModel {
 }
 
 struct  SubmittOrderQueryModel {
-    var products: [Product]?
+    var products: [Product]
     struct Product {
-        var id: Int?
-        var quantity: Int?
-        var price: Double?
+        var id: Int
+        var quantity: Int
+        var price: Double
     }
     
 }

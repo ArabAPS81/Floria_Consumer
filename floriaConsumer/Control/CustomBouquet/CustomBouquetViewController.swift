@@ -26,15 +26,17 @@ class CustomBouquetViewController: UIViewController {
         vc.vendorID = vendorID
         return vc
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         CustomBouquetCollectionViewCell.registerNIBinView(collection: collectionView)
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 8
         presenter = CustomBouquetPresenter.init(view: self)
         presenter.getVendorProducts(vendorId: vendorID, forService: self.serviceType)
-        view.isUserInteractionEnabled = false
         
+    }
+    
+    @IBAction func selectPackingTapped(_ sender: UIButton){
+        presenter.submittOrder()
     }
 
 }
@@ -47,6 +49,7 @@ extension CustomBouquetViewController: UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomBouquetCollectionViewCell.reuseId, for: indexPath) as! CustomBouquetCollectionViewCell
         cell.cofigure(product: presenter.dataForCellAt(indexPath: indexPath))
+        cell.delegate = self.presenter
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

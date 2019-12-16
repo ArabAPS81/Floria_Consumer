@@ -39,7 +39,7 @@ class ProductDetailsViewController: UIViewController {
     func setupViews() {
         vendorNameLabel.text = product.provider?.name ?? ""
         descriptionLabel.text = product.descriptionField
-        priceLabel.text = product.price ?? ""
+        priceLabel.text = "\(product?.price ?? 0)"
         
     }
     

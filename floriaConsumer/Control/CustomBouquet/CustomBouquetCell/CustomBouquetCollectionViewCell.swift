@@ -39,7 +39,7 @@ class CustomBouquetCollectionViewCell: UICollectionViewCell {
     
     func cofigure(product: ProductsModel.Product) {
         nameLabel.text = product.name
-        priceLabel.text = product.price
+        priceLabel.text = "\(product.price ?? 0)"
         imageView.imageFromUrl(url:  "https://cdn.idsitnetwork.net/wp-content/uploads/sites/42/2019/01/flower-shop-fields-of-romance-148245.jpg", placeholder: nil)
         productId = product.id
     }
