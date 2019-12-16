@@ -26,7 +26,7 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
     
     func cofigure(product: ProductsModel.Product) {
         nameLabel.text = product.name
-        priceLabel.text = product.price
+        priceLabel.text = "\(product.price ?? 0)"
         vendorNameLabel.text = product.provider?.name
         imageView.imageFromUrl(url:  "https://cdn.idsitnetwork.net/wp-content/uploads/sites/42/2019/01/flower-shop-fields-of-romance-148245.jpg", placeholder: nil)
         ratingView.setRate(rate: 3)

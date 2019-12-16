@@ -23,7 +23,7 @@ struct ProductsModel : Codable {
         let id : Int?
         let image : String?
         let name : String?
-        let price : String?
+        let price : Double?
         let provider : Provider?
         let service : Service?
 

@@ -50,6 +50,7 @@ class LoginService {
             case .success(let value):
                 JSONResponseDecoder.decodeFrom(value, returningModelType: LoginModel.self) { (object, error) in
                     if error == nil {
+                        print("🟢 \(object!)")
                         self.delegate?.didRecieveData(data: object)
                     }
                 }

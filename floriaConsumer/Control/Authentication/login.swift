@@ -50,8 +50,7 @@ class login: UIViewController {
     }
     
     @IBAction func forgetpass(_ sender: Any) {
-        let vc = LoginService(delegate: self)
-            vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
+        
     }
    
     @IBOutlet weak var face: UIButton!
