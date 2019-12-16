@@ -58,8 +58,9 @@ extension CustomBouquetPresenter: CustomBouquetCellDelegate {
         let price = productsList.filter { (product) -> Bool in
             return product.id == id
         }.first?.price ?? 0.0
-        
-        selectedProducts.products.append(SubmittOrderQueryModel.Product.init(id: id, quantity: count, price: price))
+        if count > 0 {
+            selectedProducts.products.append(SubmittOrderQueryModel.Product.init(id: id, quantity: count, price: price))
+        }
         
     }
 }
