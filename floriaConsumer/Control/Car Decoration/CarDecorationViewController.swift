@@ -59,17 +59,17 @@ class CarDecorationViewController: UIViewController {
         decorationTypeButtons.forEach { (button) in
             button.isSelected = false
         }
-        print(sender.frame)
-        print(sender.bounds)
-        sender.isSelected = true
-        let iview = UIView.init(frame: self.view.frame)
-        iview.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
-        let subView = TipView.newInstance()
-        let vframe = sender.convert(sender.frame, to: iview)
-        print(vframe)
-        subView.bounds = vframe
-        iview.addSubview(subView)
-        self.view.addSubview(iview)
-        //self.view.bringSubviewToFront(view)
+//        print(sender.frame)
+//        print(sender.bounds)
+//        sender.isSelected = true
+//        let iview = UIView.init(frame: self.view.frame)
+//        iview.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
+//        let subView = TipView.newInstance()
+//        let vframe = sender.convert(sender.frame, to: iview)
+//        print(vframe)
+//        subView.bounds = vframe
+//        iview.addSubview(subView)
+//        self.view.addSubview(iview)
+//        //self.view.bringSubviewToFront(view)
     }
 }

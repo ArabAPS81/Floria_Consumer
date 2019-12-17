@@ -109,6 +109,8 @@
 		D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1A8022392AA3600379508 /* VendorTableViewCell.swift */; };
 		D6C1A8052392AA3600379508 /* VendorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C1A8032392AA3600379508 /* VendorTableViewCell.xib */; };
 		D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8A0EA239FA70F0041F720 /* BusinessTypes.swift */; };
+		D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56C23A8E4520008CACB /* AddressServices.swift */; };
+		D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56E23A8E9610008CACB /* AddressModel.swift */; };
 		D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */; };
 		D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */; };
 		D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B79238974B6003A7DFF /* Authentication.storyboard */; };
@@ -226,6 +228,8 @@
 		D6C1A8032392AA3600379508 /* VendorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VendorTableViewCell.xib; sourceTree = "<group>"; };
 		D6C8A0EA239FA70F0041F720 /* BusinessTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypes.swift; sourceTree = "<group>"; };
 		D6C8A0EC239FE46E0041F720 /* floriaConsumer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = floriaConsumer.entitlements; sourceTree = "<group>"; };
+		D6CFA56C23A8E4520008CACB /* AddressServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServices.swift; sourceTree = "<group>"; };
+		D6CFA56E23A8E9610008CACB /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorListPresenter.swift; sourceTree = "<group>"; };
 		D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenter.swift; sourceTree = "<group>"; };
 		D6E80B79238974B6003A7DFF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 		0434EECA23530DFE00D4329E /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				D66199AC23A8F16D0019BD96 /* Address */,
 				D696C2AE23A0E6EE00E3A56A /* alert */,
 				D6C8A0E8239F95540041F720 /* Authentication */,
 				D64CBF4C238EA58800DEE040 /* HomePage */,
@@ -380,9 +385,7 @@
 		04BF5771237B9EB200A8878A /* delivary */ = {
 			isa = PBXGroup;
 			children = (
-				04BF5772237B9EEC00A8878A /* delivarylist.swift */,
 				04441DA0237BBB5E002F5691 /* shipping.swift */,
-				049958CC237CC49200FDF817 /* add-adress.swift */,
 				04157CFF237EF01100F772BE /* map.swift */,
 				043F73702393ED0400843A1C /* popupVC.swift */,
 			);
@@ -483,6 +486,7 @@
 		D63475FB239D22D2008EB755 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D6CFA56B23A8E4280008CACB /* AddressService */,
 				D63475FE239D22D2008EB755 /* ProductServices */,
 				D696C2B823A0F40800E3A56A /* VendorServices */,
 				D63475FC239D22D2008EB755 /* ResponseDecoder */,
@@ -567,6 +571,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D66199AC23A8F16D0019BD96 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				D620352F238A9B3900336D0B /* Address.storyboard */,
+				04BF5772237B9EEC00A8878A /* delivarylist.swift */,
+				049958CC237CC49200FDF817 /* add-adress.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		D67B30F6238BD4670080252B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +613,7 @@
 			children = (
 				D696C2B423A0ED5900E3A56A /* VendorModel.swift */,
 				D696C2BB23A12C5500E3A56A /* ProductsModel.swift */,
+				D6CFA56E23A8E9610008CACB /* AddressModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -662,6 +677,14 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
+		D6CFA56B23A8E4280008CACB /* AddressService */ = {
+			isa = PBXGroup;
+			children = (
+				D6CFA56C23A8E4520008CACB /* AddressServices.swift */,
+			);
+			path = AddressService;
+			sourceTree = "<group>";
+		};
 		D6E80B782389741F003A7DFF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,7 +697,6 @@
 				D6203529238A9AEF00336D0B /* Orders.storyboard */,
 				D620352B238A9B0000336D0B /* Favorites.storyboard */,
 				D620352D238A9B1300336D0B /* Notifications.storyboard */,
-				D620352F238A9B3900336D0B /* Address.storyboard */,
 				04AA47992399F25100DAD09A /* VendorProfile.storyboard */,
 			);
 			path = Storyboards;
@@ -862,6 +884,7 @@
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
 				D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */,
 				0444939D235C8EA000650DFD /* check.swift in Sources */,
+				D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */,
 				D67B30F8238BD4E60080252B /* RateView.swift in Sources */,
 				044238D0235DA6EE000BF740 /* viewimg.swift in Sources */,
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
@@ -879,6 +902,7 @@
 				04157D00237EF01100F772BE /* map.swift in Sources */,
 				0467DA7323A85BEF0074CB60 /* resetpasswordAPI.swift in Sources */,
 				D61E865C23950B4900CC0287 /* locationcell.swift in Sources */,
+				D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */,
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				D696C2B223A0E70800E3A56A /* LoginService.swift in Sources */,
 				D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */,
