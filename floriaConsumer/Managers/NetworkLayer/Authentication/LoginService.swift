@@ -43,12 +43,12 @@ class LoginService {
         ]
         
         print(parameter,"909090900900009099090")
-        Alamofire.request(url,method: .post, parameters: parameter, encoding: URLEncoding.default, headers: header).responseData { re in
+        Alamofire.request(url,method: .post, parameters: parameter, encoding: URLEncoding.default, headers: header).responseJSON { re in
             switch re.result {
             case .failure(let erro):
                 print("********////",erro.localizedDescription)
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: LoginModel.self) { (object, error) in
+                JSONResponseDecoder.decodeFrom(re.data!, returningModelType: LoginModel.self) { (object, error) in
                     if error == nil {
                         print("🟢 \(object!)")
                         self.delegate?.didRecieveData(data: object)
@@ -62,12 +62,12 @@ class LoginService {
 
 struct LoginModel: Codable {
     
-    let data : Data?
+    let user : User?
     let httpCode : Int?
     let message : String?
     
     enum CodingKeys: String, CodingKey {
-        case data = "data"
+        case user = "data"
         case httpCode = "http_code"
         case message = "message"
     }
