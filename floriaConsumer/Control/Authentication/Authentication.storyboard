@@ -231,34 +231,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lNx-48-kAy">
-                                <rect key="frame" x="35" y="225.5" width="305" height="205"/>
+                                <rect key="frame" x="45" y="225.5" width="285" height="205"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="kBN-BD-6MX">
-                                        <rect key="frame" x="0.0" y="5.5" width="40" height="194"/>
+                                        <rect key="frame" x="0.0" y="5.5" width="20" height="194"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-bX-Tsi">
-                                                <rect key="frame" x="0.0" y="1.5" width="40" height="17"/>
+                                                <rect key="frame" x="0.0" y="1.5" width="20" height="17"/>
                                                 <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="CYN-Ik-nCa"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape6" translatesAutoresizingMaskIntoConstraints="NO" id="HSE-lD-ov6">
-                                                <rect key="frame" x="0.0" y="58" width="40" height="20"/>
+                                                <rect key="frame" x="0.0" y="58" width="20" height="20"/>
                                                 <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="d2h-Mp-771"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape5" translatesAutoresizingMaskIntoConstraints="NO" id="Xxu-mq-Fv3">
-                                                <rect key="frame" x="0.0" y="116" width="40" height="20"/>
+                                                <rect key="frame" x="0.0" y="116" width="20" height="20"/>
                                                 <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="0EZ-Fb-DA8"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape5" translatesAutoresizingMaskIntoConstraints="NO" id="7eW-FY-RZR">
-                                                <rect key="frame" x="0.0" y="174" width="40" height="20"/>
+                                                <rect key="frame" x="0.0" y="174" width="20" height="20"/>
                                                 <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dVX-gc-OtH"/>
@@ -268,7 +268,7 @@
                                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="8Ml-M5-Quo">
-                                        <rect key="frame" x="55" y="0.0" width="250" height="205"/>
+                                        <rect key="frame" x="35" y="0.0" width="250" height="205"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OJC-r8-gAP">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -802,10 +802,10 @@
             </objects>
             <point key="canvasLocation" x="-12302" y="-1411"/>
         </scene>
-        <!--forget password-->
+        <!--reset password-->
         <scene sceneID="Xao-6e-9wD">
             <objects>
-                <viewController id="net-6V-mIH" customClass="ForgetPassVC" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="net-6V-mIH" customClass="resetpasswordVC" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0n-9m-zIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -822,7 +822,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9lg-AY-PkJ">
                                                 <rect key="frame" x="17.5" y="0.0" width="278" height="20"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape6" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-vo-fYU">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape5" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-vo-fYU">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -830,7 +830,7 @@
                                                             <constraint firstAttribute="width" constant="20" id="rMo-Wi-iEb"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-jH-H3h">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-jH-H3h">
                                                         <rect key="frame" x="35" y="0.0" width="243" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="BX1-Id-LJa"/>
@@ -858,7 +858,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UiK-N7-yIC">
                                                 <rect key="frame" x="17.5" y="0.0" width="278" height="20"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape6" translatesAutoresizingMaskIntoConstraints="NO" id="OQy-or-zs6">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape5" translatesAutoresizingMaskIntoConstraints="NO" id="OQy-or-zs6">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -866,7 +866,7 @@
                                                             <constraint firstAttribute="width" constant="20" id="GEu-OC-X7y"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25X-Qz-Sjo">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25X-Qz-Sjo">
                                                         <rect key="frame" x="35" y="0.0" width="243" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="243" id="7ft-pB-qHf"/>
@@ -919,10 +919,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqw-mO-inA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="forget password" id="0N2-Zm-ca1"/>
+                    <navigationItem key="navigationItem" title="reset password" id="0N2-Zm-ca1"/>
                     <connections>
+                        <outlet property="confirm" destination="25X-Qz-Sjo" id="cVN-1H-f89"/>
                         <outlet property="okkkk" destination="KTH-tM-w32" id="rgk-fd-cDG"/>
-                        <outlet property="phon" destination="lO9-jH-H3h" id="aKE-hl-2Bq"/>
+                        <outlet property="phon" destination="lO9-jH-H3h" id="ygF-BM-xrN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYw-Pf-s0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -934,7 +935,7 @@
         <image name="eye.fill" catalog="system" width="64" height="38"/>
         <image name="group17" width="341" height="270.5"/>
         <image name="group5-2" width="46.5" height="46.5"/>
-        <image name="layer1" width="18" height="17"/>
+        <image name="layer1" width="18.5" height="18"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="rectangle" catalog="system" width="64" height="46"/>
         <image name="shape5" width="12.5" height="20"/>
