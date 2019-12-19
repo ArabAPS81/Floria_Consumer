@@ -12,6 +12,7 @@ class AddressesListViewController: UIViewController {
     
     @IBOutlet weak var table: UITableView!
     var serviceType: ServiceType = .gerb
+    var addressesList = [AddressModel.Address]()
     
     static func newInstance(serviceType: ServiceType) -> AddressesListViewController {
         let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
@@ -22,7 +23,12 @@ class AddressesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let service = AddressService.init(delegate: self)
+        service.getListOfAddresses()
     }
     
     
@@ -33,15 +39,29 @@ class AddressesListViewController: UIViewController {
 extension AddressesListViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return addressesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! locationcell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AddressTableViewCell
+        cell.configure(address: addressesList[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(serviceType.afterAddressViewController(), animated: true)
+    }
+}
+
+extension AddressesListViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let data = data as? AddressModel {
+            addressesList = data.addresses ?? []
+            table.reloadData()
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
     }
 }

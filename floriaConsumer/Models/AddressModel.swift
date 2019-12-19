@@ -58,3 +58,38 @@ struct AddressModel : Codable {
         }
     }
 }
+
+
+struct AddAddressResponseModel : Codable {
+
+    let error : Errors?
+    let httpCode : Int?
+    let address: AddressModel.Address?
+
+
+    enum CodingKeys: String, CodingKey {
+        case error
+        case httpCode = "http_code"
+        case address = "data"
+    }
+    
+    struct Errors : Codable {
+
+        let message : Message?
+
+        enum CodingKeys: String, CodingKey {
+            case message
+        }
+        
+        struct Message : Codable {
+
+            let mobile : [String]?
+            let streetName : [String]?
+
+            enum CodingKeys: String, CodingKey {
+                case mobile = "mobile"
+                case streetName = "street_name"
+            }
+        }
+    }
+}

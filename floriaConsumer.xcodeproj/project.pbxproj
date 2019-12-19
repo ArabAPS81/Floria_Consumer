@@ -41,9 +41,9 @@
 		0472F9A423784449008AD8BC /* providerprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472F9A323784449008AD8BC /* providerprofile.swift */; };
 		0480B27423A478100079253B /* resetpasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B27323A478100079253B /* resetpasswordVC.swift */; };
 		0480B27623A4790A0079253B /* ForgetPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B27523A4790A0079253B /* ForgetPassVC.swift */; };
-		049958CD237CC49200FDF817 /* add-adress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049958CC237CC49200FDF817 /* add-adress.swift */; };
+		049958CD237CC49200FDF817 /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049958CC237CC49200FDF817 /* AddAddressViewController.swift */; };
 		04AA479A2399F25100DAD09A /* VendorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA47992399F25100DAD09A /* VendorProfile.storyboard */; };
-		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
+		04BF5773237B9EEC00A8878A /* AddressesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
 		D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6036EA4238EC45300044EFF /* HomeVendorCollectionViewCell.swift */; };
@@ -158,9 +158,9 @@
 		0472F9A323784449008AD8BC /* providerprofile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerprofile.swift; sourceTree = "<group>"; };
 		0480B27323A478100079253B /* resetpasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetpasswordVC.swift; sourceTree = "<group>"; };
 		0480B27523A4790A0079253B /* ForgetPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassVC.swift; sourceTree = "<group>"; };
-		049958CC237CC49200FDF817 /* add-adress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add-adress.swift"; sourceTree = "<group>"; };
+		049958CC237CC49200FDF817 /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		04AA47992399F25100DAD09A /* VendorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VendorProfile.storyboard; sourceTree = "<group>"; };
-		04BF5772237B9EEC00A8878A /* delivarylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delivarylist.swift; sourceTree = "<group>"; };
+		04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesListViewController.swift; sourceTree = "<group>"; };
 		04E1139723764BF100D15FAC /* providerlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerlist.swift; sourceTree = "<group>"; };
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.release.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.release.xcconfig"; sourceTree = "<group>"; };
@@ -575,8 +575,8 @@
 			isa = PBXGroup;
 			children = (
 				D620352F238A9B3900336D0B /* Address.storyboard */,
-				04BF5772237B9EEC00A8878A /* delivarylist.swift */,
-				049958CC237CC49200FDF817 /* add-adress.swift */,
+				04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */,
+				049958CC237CC49200FDF817 /* AddAddressViewController.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -849,7 +849,7 @@
 				D696C2B023A0E6EE00E3A56A /* CustomAlert.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
 				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
-				049958CD237CC49200FDF817 /* add-adress.swift in Sources */,
+				049958CD237CC49200FDF817 /* AddAddressViewController.swift in Sources */,
 				D696C2B523A0ED5900E3A56A /* VendorModel.swift in Sources */,
 				D6C1A7FF2392A99300379508 /* VendorsListViewController.swift in Sources */,
 				0480B27423A478100079253B /* resetpasswordVC.swift in Sources */,
@@ -890,7 +890,7 @@
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
 				0403F491235533EE001327EF /* nav.swift in Sources */,
 				D60B915723969B74002669B0 /* CarDecorationViewController.swift in Sources */,
-				04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */,
+				04BF5773237B9EEC00A8878A /* AddressesListViewController.swift in Sources */,
 				D696C2BA23A0F42700E3A56A /* VendorServices.swift in Sources */,
 				D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */,
 				04459387237A5CFE007A210E /* buttons.swift in Sources */,

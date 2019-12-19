@@ -8,16 +8,28 @@
 
 import UIKit
 
-class locationcell: UITableViewCell {
+class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var shadowedView: UIView!
-    @IBOutlet weak var icone: UIImageView!
-    var openProfileActionadd : (()->())?
+    @IBOutlet weak var addressIcon: UIImageView!
+    
+    @IBOutlet weak var buildingLabel: UILabel!
+    @IBOutlet weak var phoneNum: UILabel!
+    @IBOutlet weak var districtLabel: UILabel!
+    @IBOutlet weak var addressNameLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var fullAddressLabel: UILabel!
     
     
-      @IBAction func penProfileActionadd(_ sender: UIButton) {
-          openProfileActionadd?()
-      }
+    func configure(address: AddressModel.Address) {
+        addressNameLabel.text = address.name ?? ""
+        buildingLabel.text = address.buildingNumber ?? ""
+        phoneNum.text = address.mobile ?? ""
+        districtLabel.text = address.district?.name ?? ""
+        notesLabel.text = address.notes ?? ""
+        fullAddressLabel.text = address.streetName ?? ""
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,10 +54,10 @@ class locationcell: UITableViewCell {
         
         if selected {
             shadowedView.backgroundColor = Constants.pincColor
-            icone.tintColor = .white
+            addressIcon.tintColor = .white
         }else {
             shadowedView.backgroundColor = UIColor.init(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
-            icone.tintColor = Constants.pincColor
+            addressIcon.tintColor = Constants.pincColor
         }
         
         

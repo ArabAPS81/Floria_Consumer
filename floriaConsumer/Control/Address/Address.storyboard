@@ -22,7 +22,7 @@
                                 <color key="sectionIndexColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0q6-Bc-Sqi" customClass="locationcell" customModule="floriaConsumer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0q6-Bc-Sqi" customClass="AddressTableViewCell" customModule="floriaConsumer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0q6-Bc-Sqi" id="9Py-xo-hFT">
@@ -129,8 +129,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="icone" destination="SrS-LP-YnX" id="AEY-Vo-SFe"/>
-                                            <outlet property="shadowedView" destination="qey-YK-KuG" id="nOy-h0-jwR"/>
+                                            <outlet property="addressIcon" destination="SrS-LP-YnX" id="U6k-01-EQc"/>
+                                            <outlet property="addressNameLabel" destination="I4b-xD-5KO" id="D9e-Bm-epU"/>
+                                            <outlet property="buildingLabel" destination="14u-ce-E0p" id="3fp-mQ-oUV"/>
+                                            <outlet property="districtLabel" destination="1TO-Nd-Vja" id="RmD-ME-nTl"/>
+                                            <outlet property="fullAddressLabel" destination="kPe-kY-ejd" id="EZf-ww-EH4"/>
+                                            <outlet property="notesLabel" destination="qgQ-Ew-kWN" id="iAX-bM-yQU"/>
+                                            <outlet property="phoneNum" destination="Lpz-Gl-emP" id="tIy-Ra-eJo"/>
+                                            <outlet property="shadowedView" destination="qey-YK-KuG" id="ZaI-0Z-cXT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="-4323.188405797102" y="-3436.6071428571427"/>
         </scene>
-        <!--Add adress-->
+        <!--Add Address View Controller-->
         <scene sceneID="r1h-uN-T7E">
             <objects>
-                <viewController id="yrj-9H-G1v" customClass="add_adress" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAddressViewController" id="yrj-9H-G1v" customClass="AddAddressViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67m-bN-Wcb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +478,7 @@
                                     <constraint firstAttribute="width" constant="220" id="us2-Jo-o4k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <state key="normal" title="Checkout">
+                                <state key="normal" title="Add address">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -481,7 +487,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ADD:" destination="yrj-9H-G1v" eventType="touchUpInside" id="7qC-yo-B7M"/>
+                                    <action selector="addAddressTapped:" destination="yrj-9H-G1v" eventType="touchUpInside" id="XIM-ab-CqE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -496,6 +502,17 @@
                         <viewLayoutGuide key="safeArea" id="iow-Oq-u4g"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addressTitleTF" destination="Ek6-Dg-C9y" id="Ots-zg-gIh"/>
+                        <outlet property="buildingNumTF" destination="aRo-oA-dcD" id="dgy-dc-Sxc"/>
+                        <outlet property="contactNameTF" destination="014-sA-R45" id="v9k-Sr-evD"/>
+                        <outlet property="contactPhoneTF" destination="Z7g-Ge-XaM" id="b4O-M6-Jje"/>
+                        <outlet property="districtButton" destination="1LD-OD-Be5" id="skM-2G-kht"/>
+                        <outlet property="governorateNameButton" destination="OWV-T1-E4I" id="JG9-dy-n8q"/>
+                        <outlet property="notesTF" destination="reo-u6-mCB" id="2uG-DW-gnF"/>
+                        <outlet property="onMapLocationButton" destination="t0y-3u-LS1" id="tbt-Fu-ENc"/>
+                        <outlet property="streetNameTF" destination="BFK-s6-SSF" id="emu-Jj-7nH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjV-Ir-M5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
