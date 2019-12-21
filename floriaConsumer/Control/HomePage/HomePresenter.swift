@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class HomePresenter {
     
     private weak var view: HomeView?

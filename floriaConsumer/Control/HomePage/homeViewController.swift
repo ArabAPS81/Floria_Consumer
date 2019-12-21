@@ -17,6 +17,11 @@ protocol HomeView: class{
 
 class HomeViewController: UIViewController {
     
+    var presenter: HomePresenter!
+    var vendorsList = [VendorModel.Vendor]()
+    var productsList = [ProductsModel.Product]()
+    
+    
     @IBOutlet var homeButtonsCollction: [UIButton]!
     @IBOutlet var search: UIBarButtonItem!
     @IBOutlet var sideMenu: UIBarButtonItem!
@@ -25,9 +30,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var Products: UICollectionView!
     @IBOutlet var SliderHome: UICollectionView!
     
-    var presenter: HomePresenter!
-    var vendorsList = [VendorModel.Vendor]()
-    var productsList = [ProductsModel.Product]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,6 +156,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             self.navigationController?.pushViewController(vc, animated: true)
         } else if collectionView == Offers {
             let vendor = vendorsList[indexPath.row]
+            
             let vc = VendorDetailsViewController.newInstance(vendor: vendor)
             self.navigationController?.pushViewController(vc, animated: true)
         }

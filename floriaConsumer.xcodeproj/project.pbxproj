@@ -44,6 +44,9 @@
 		04AA479A2399F25100DAD09A /* VendorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA47992399F25100DAD09A /* VendorProfile.storyboard */; };
 		04BF5773237B9EEC00A8878A /* delivarylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* delivarylist.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
+		9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */; };
+		9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */; };
+		9C1D4E3E23AD007D00A7BACF /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
 		D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6036EA4238EC45300044EFF /* HomeVendorCollectionViewCell.swift */; };
 		D6036EA7238EC45300044EFF /* HomeVendorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6036EA5238EC45300044EFF /* HomeVendorCollectionViewCell.xib */; };
@@ -157,6 +160,9 @@
 		04BF5772237B9EEC00A8878A /* delivarylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delivarylist.swift; sourceTree = "<group>"; };
 		04E1139723764BF100D15FAC /* providerlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerlist.swift; sourceTree = "<group>"; };
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailsPresenter.swift; sourceTree = "<group>"; };
+		9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionDataSource.swift; sourceTree = "<group>"; };
+		9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.release.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.release.xcconfig"; sourceTree = "<group>"; };
 		D318C85CD5C26CD04A40BA88 /* Pods-floriaConsumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.debug.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.debug.xcconfig"; sourceTree = "<group>"; };
 		D6036EA4238EC45300044EFF /* HomeVendorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVendorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -606,7 +612,10 @@
 			children = (
 				D6C1A7FE2392A99300379508 /* VendorsListViewController.swift */,
 				D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */,
+				9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */,
+				9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */,
 				0472F9A323784449008AD8BC /* providerprofile.swift */,
+				9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */,
 				D6203515238A74EC00336D0B /* Vendor.storyboard */,
 				D6C1A8012392AA0500379508 /* VendorCells */,
 			);
@@ -816,6 +825,7 @@
 				045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */,
 				D696C2B023A0E6EE00E3A56A /* CustomAlert.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
+				9C1D4E3E23AD007D00A7BACF /* ServicesCollectionViewCell.swift in Sources */,
 				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
 				049958CD237CC49200FDF817 /* add-adress.swift in Sources */,
 				D696C2B523A0ED5900E3A56A /* VendorModel.swift in Sources */,
@@ -829,6 +839,7 @@
 				043C1852237F80690003A633 /* productlist.swift in Sources */,
 				D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */,
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
+				9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */,
 				043F73712393ED0500843A1C /* popupVC.swift in Sources */,
 				045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */,
 				D634760B239D324F008EB755 /* LocationManager.swift in Sources */,
@@ -887,6 +898,7 @@
 				D60B9155239671EC002669B0 /* Constants.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,
 				0480B27623A4790A0079253B /* ForgetPassVC.swift in Sources */,
+				9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */,
 				D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

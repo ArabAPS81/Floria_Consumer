@@ -20,7 +20,16 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shadowedView: UIView!
     
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var price: UILabel!
     
+    @IBOutlet weak var rate: RateView!
+    func configure(product: ProductsModel.Product){
+        productImage.imageFromUrl(url: product.image, placeholder: nil)
+        name.text = product.name
+        price.text = "\(product.price ?? 0.0)"
+        rate.setRate(rate: product.rate)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
