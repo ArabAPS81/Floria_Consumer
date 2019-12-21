@@ -103,6 +103,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="223" height="205"/>
             <connections>
+                <outlet property="image" destination="2zh-Wx-IiD" id="1wq-Xa-qAT"/>
+                <outlet property="nameLabel" destination="CZd-9g-fJu" id="RIY-yJ-abh"/>
+                <outlet property="priceLabel" destination="Nfc-x5-qIc" id="BnK-WD-NCT"/>
                 <outlet property="selectionButton" destination="dNT-Se-m11" id="KKb-wJ-eJ5"/>
                 <outlet property="shadowedView" destination="kol-Zi-mzl" id="O6l-0n-Kkw"/>
             </connections>

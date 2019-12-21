@@ -12,7 +12,7 @@ class CustomBouquetPresenter {
     
     private weak var view: CustomBouquetView?
     private var productsList = [ProductsModel.Product]()
-    private var selectedProducts = SubmittOrderQueryModel(products: [])
+    private var selectedProducts = SubmittOrderQueryModel.submittOrderQueryModel
     
     init(view: CustomBouquetView) {
         self.view = view
@@ -59,7 +59,7 @@ extension CustomBouquetPresenter: CustomBouquetCellDelegate {
             return product.id == id
         }.first?.price ?? 0.0
         if count > 0 {
-            selectedProducts.products.append(SubmittOrderQueryModel.Product.init(id: id, quantity: count, price: price))
+            selectedProducts.products.append(SubmittOrderQueryModel.OrderProducts.init(id: id, quantity: count, price: price))
         }
         
     }

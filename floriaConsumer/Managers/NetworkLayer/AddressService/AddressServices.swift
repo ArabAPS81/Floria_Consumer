@@ -74,10 +74,10 @@ class AddressService {
         let jsonData = (try? JSONEncoder().encode(address)) ?? Data()
         let json = try? JSONSerialization.jsonObject(with: jsonData, options:[]) as? [String:Any]
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
-        Alamofire.request(baseUrl, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        Alamofire.request(baseUrl, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(response.data!, returningModelType: AddAddressResponseModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(value, returningModelType: AddAddressResponseModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }

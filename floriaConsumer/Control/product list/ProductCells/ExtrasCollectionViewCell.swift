@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ExtrasCollectionViewCell: UICollectionViewCell {
+protocol ExtrasCollectionViewCellDelegate: class {
+    func deselectPacking(packing: ProductPackingModel.ProductPacking)
+    func selectPacking(packing: ProductPackingModel.ProductPacking)
+}
 
-    @IBOutlet weak var shadowedView: UIView!
-    @IBOutlet weak var selectionButton: UIButton!
+class ExtrasCollectionViewCell: UICollectionViewCell {
     
     static let reuseId = "ExtrasCollectionViewCell"
     
@@ -20,11 +22,26 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
         collection.register(nib, forCellWithReuseIdentifier: reuseId)
     }
 
+    @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var selectionButton: UIButton!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    var productPacking: ProductPackingModel.ProductPacking!
+    weak var delegate: ExtrasCollectionViewCellDelegate?
+    
+    func configure(packing:ProductPackingModel.ProductPacking) {
+        image.imageFromUrl(url: packing.image, placeholder: #imageLiteral(resourceName: "4039"))
+        priceLabel.text = "\(packing.price ?? 0)"
+        nameLabel.text = packing.name ?? ""
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.shadowedView.dropRoundedShadowForAllSides(5)
         }
+        selectionButton.isUserInteractionEnabled = false
     }
     
     override func layoutSubviews() {
@@ -35,14 +52,16 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-       // sender.isSelected = !sender.isSelected
     }
     
     func setSelected(_ selected: Bool) {
+        
         if selected {
             selectionButton.isSelected = true
+            delegate?.selectPacking(packing: self.productPacking)
         }else {
             selectionButton.isSelected = false
+            delegate?.deselectPacking(packing: self.productPacking)
         }
     }
     

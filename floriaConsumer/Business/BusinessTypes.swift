@@ -9,7 +9,8 @@
 import UIKit
 
 
-enum ServiceType {
+enum ServiceType: String, Codable {
+    
     case readyMade,gerb,customBouquet,carDecoration,potsCare
     
     func getTitle() -> String {

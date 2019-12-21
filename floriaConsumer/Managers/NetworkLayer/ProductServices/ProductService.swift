@@ -10,7 +10,6 @@ import Foundation
 import CoreLocation
 import Alamofire
 
-
 struct  FeaturedProductsQueryModel {
     var location: CLLocationCoordinate2D
 }
@@ -19,23 +18,6 @@ struct  SearchProductsQueryModel {
     var id: Int
     var Location: CLLocationCoordinate2D
 }
-
-struct  SubmittOrderQueryModel {
-    var products: [Product]
-    struct Product {
-        var id: Int
-        var quantity: Int
-        var price: Double
-    }
-    
-}
-
-protocol WebServiceDelegate: class {
-    
-    func didRecieveData(data:Codable)
-    func didFailToReceiveDataWithError(error: Error)
-}
-
 
 class ProductService {
     
@@ -104,6 +86,25 @@ class ProductService {
     }
     
     func getProduct(productId: Int) {
+        
+        let baseUrl = (NetworkConstants.baseUrl + "products/" + "\(productId)")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: ProductsModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
+    func getVendorPackings(productId: Int) {
         
         let baseUrl = (NetworkConstants.baseUrl + "products/" + "\(productId)")
         guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
