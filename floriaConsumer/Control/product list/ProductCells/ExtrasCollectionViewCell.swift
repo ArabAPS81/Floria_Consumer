@@ -30,10 +30,12 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
     var productPacking: ProductPackingModel.ProductPacking!
     weak var delegate: ExtrasCollectionViewCellDelegate?
     
+    
     func configure(packing:ProductPackingModel.ProductPacking) {
         image.imageFromUrl(url: packing.image, placeholder: #imageLiteral(resourceName: "4039"))
         priceLabel.text = "\(packing.price ?? 0)"
         nameLabel.text = packing.name ?? ""
+        self.productPacking = packing
     }
 
     override func awakeFromNib() {
@@ -47,22 +49,26 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         shadowedView.layer.cornerRadius = 5
-        
-        
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
     }
-    
+    var cellSelected = false
     func setSelected(_ selected: Bool) {
-        
-        if selected {
-            selectionButton.isSelected = true
-            delegate?.selectPacking(packing: self.productPacking)
-        }else {
+        if cellSelected {
             selectionButton.isSelected = false
-            delegate?.deselectPacking(packing: self.productPacking)
+            delegate?.deselectPacking(packing: productPacking)
+        }else {
+            selectionButton.isSelected = true
+            delegate?.selectPacking(packing: productPacking)
         }
+        cellSelected = !cellSelected
+    }
+    
+    func setDeselected(_ selected: Bool) {
+        cellSelected = false
+        selectionButton.isSelected = false
+        delegate?.deselectPacking(packing: self.productPacking)
     }
     
     
