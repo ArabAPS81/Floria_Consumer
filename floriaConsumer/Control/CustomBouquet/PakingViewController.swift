@@ -24,9 +24,9 @@ class PakingViewController: UIViewController {
         ExtrasCollectionViewCell.registerNIBinView(collection: baseCollectionView)
         ExtrasCollectionViewCell.registerNIBinView(collection: cardCollectionView)
         
-        packingCollectionView.allowsMultipleSelection = true
-        baseCollectionView.allowsMultipleSelection = true
-        cardCollectionView.allowsMultipleSelection = true
+        //packingCollectionView.allowsMultipleSelection = true
+        //baseCollectionView.allowsMultipleSelection = true
+        //cardCollectionView.allowsMultipleSelection = true
         
         
         let service = VendorServices.init(delegate: self)
@@ -39,7 +39,12 @@ class PakingViewController: UIViewController {
 extension PakingViewController: UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return packings.count
+        switch collectionView {
+        case packingCollectionView: return packings.count
+        case baseCollectionView: return bases.count
+        case cardCollectionView: return cards.count
+        default : return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -51,26 +56,30 @@ extension PakingViewController: UICollectionViewDelegate,UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
-        cell.configure(packing: packings[indexPath.row])
+        switch collectionView {
+        case packingCollectionView:
+            cell.configure(packing: packings[indexPath.row])
+        case baseCollectionView:
+            cell.configure(packing: bases[indexPath.row])
+        case cardCollectionView:
+            cell.configure(packing: cards[indexPath.row])
+        default : break
+        }
+        cell.delegate = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        collectionView.visibleCells.forEach { (cell) in
-            if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
-                cell.setSelected(false)
-            }
-        }
-        
+       
         if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
             cell.setSelected(true)
         }
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+       
         if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
-            cell.setSelected(false)
+            cell.setDeselected(true)
         }
     }
 }
@@ -93,8 +102,10 @@ extension PakingViewController: WebServiceDelegate {
 extension PakingViewController: ExtrasCollectionViewCellDelegate {
     func deselectPacking(packing: ProductPackingModel.ProductPacking) {
         let packingId = packing.id
-        SubmittOrderQueryModel.submittOrderQueryModel.packings.removeAll { (packing) -> Bool in
-            return packing.id == packingId
+        SubmittOrderQueryModel.submittOrderQueryModel.packings.removeAll { (item) -> Bool in
+            let delete = item.id == packingId
+            print("\(item.id)*** \(delete)")
+            return delete
         }
     }
     
@@ -102,7 +113,5 @@ extension PakingViewController: ExtrasCollectionViewCellDelegate {
         let packing = SubmittOrderQueryModel.OrderPackings.init(id: packing.id!, quantity: 1, price: packing.price!, packingTypeId: 1)
         SubmittOrderQueryModel.submittOrderQueryModel.packings.append(packing)
     }
-    
-    
 }
 

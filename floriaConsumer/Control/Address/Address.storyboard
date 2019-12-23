@@ -561,10 +561,10 @@
             </objects>
             <point key="canvasLocation" x="-6004.347826086957" y="-2672.5446428571427"/>
         </scene>
-        <!--shipping-->
+        <!--ShippingViewController-->
         <scene sceneID="J50-Mh-tUr">
             <objects>
-                <viewControllerPlaceholder storyboardName="Delivery" referencedIdentifier="shipping" id="kyQ-Ds-HIX" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Delivery" referencedIdentifier="ShippingViewController" id="kyQ-Ds-HIX" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BJD-d9-jie"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwo-xJ-XkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

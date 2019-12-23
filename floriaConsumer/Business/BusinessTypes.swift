@@ -61,11 +61,11 @@ enum ServiceType: String, Codable {
     func afterAddressViewController() -> UIViewController{
         switch self {
         case .readyMade:
-            return shipping.newInstance(serviceType: .readyMade)
+            return ShippingViewController.newInstance(serviceType: .readyMade)
         case .gerb:
-            return shipping.newInstance(serviceType: .gerb)
+            return ShippingViewController.newInstance(serviceType: .gerb)
         case .customBouquet:
-            return shipping.newInstance(serviceType: .customBouquet)
+            return ShippingViewController.newInstance(serviceType: .customBouquet)
         case .carDecoration:
             return CarDecorationViewController.newInstance()
         case .potsCare:
