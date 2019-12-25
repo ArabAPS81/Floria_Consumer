@@ -23,14 +23,9 @@ class PakingViewController: UIViewController {
         ExtrasCollectionViewCell.registerNIBinView(collection: packingCollectionView)
         ExtrasCollectionViewCell.registerNIBinView(collection: baseCollectionView)
         ExtrasCollectionViewCell.registerNIBinView(collection: cardCollectionView)
-        
-        //packingCollectionView.allowsMultipleSelection = true
-        //baseCollectionView.allowsMultipleSelection = true
-        //cardCollectionView.allowsMultipleSelection = true
-        
-        
         let service = VendorServices.init(delegate: self)
         service.getProductPackingsFor(vendor: 1)
+        SubmittOrderQueryModel.submittOrderQueryModel.packings = []
     }
     
 

@@ -46,9 +46,9 @@ enum ServiceType: String, Codable {
     func associatedViewController(_ vendorId: Int? = 1) -> UIViewController {
         switch self {
         case .readyMade:
-            return ProductListViewController.newInstance(listType: ServiceType.readyMade)
+            return ProductListViewController.newInstance(listType: ServiceType.readyMade, vendorId: vendorId ?? 0)
         case .gerb:
-            return ProductListViewController.newInstance(listType: ServiceType.gerb)
+            return ProductListViewController.newInstance(listType: ServiceType.gerb, vendorId: vendorId ?? 0)
         case .customBouquet:
             return CustomBouquetViewController.newInstance(vendorID: vendorId ?? 1)
         case .carDecoration:
