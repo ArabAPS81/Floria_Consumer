@@ -52,7 +52,7 @@ enum ServiceType: String, Codable {
         case .customBouquet:
             return CustomBouquetViewController.newInstance(vendorID: vendorId ?? 1)
         case .carDecoration:
-            return CarDecorationViewController.newInstance()
+            return VendorsListViewController.newInstance(service: self)
         case .potsCare:
             return PotsCareReviewViewController.newInstance()
         }

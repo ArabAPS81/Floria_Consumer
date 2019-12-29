@@ -68,8 +68,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="NextButtonTapped:" destination="OCQ-KI-TS8" eventType="touchUpInside" id="bpE-SU-Dmv"/>
                                     <action selector="selectPackingTapped:" destination="OCQ-KI-TS8" eventType="touchUpInside" id="frP-zY-ybc"/>
-                                    <segue destination="H7J-aU-Zwz" kind="show" id="KN3-hw-bI1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +90,7 @@
                     <navigationItem key="navigationItem" id="5mt-kg-MlT"/>
                     <connections>
                         <outlet property="collectionView" destination="Y7F-eZ-6Oq" id="IBL-iv-Jx5"/>
+                        <segue destination="H7J-aU-Zwz" kind="show" identifier="PackingSegue" id="dkM-PZ-7OH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiR-O7-URS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

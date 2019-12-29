@@ -22,6 +22,9 @@ class SubmittOrderQueryModel: Codable {
     var serviceId: Int?
     var requiredAt : String?
     var providerId: Int?
+    var carTypeId: Int?
+    var colorId: Int?
+    var decorationTypeId: Int?
     
     enum CodingKeys: String, CodingKey {
         case products
@@ -32,6 +35,9 @@ class SubmittOrderQueryModel: Codable {
         case serviceId = "service_id"
         case providerId = "provider_id"
         case requiredAt = "required_at"
+        case carTypeId = "car_type_id"
+        case colorId = "color_id"
+        case decorationTypeId = "decoration_type_id"
     }
     
     
@@ -167,6 +173,4 @@ struct OrderSubmittResponseModel : Codable {
             case id = "id"
         }
     }
-
-
 }

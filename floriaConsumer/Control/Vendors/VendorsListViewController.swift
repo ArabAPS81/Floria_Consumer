@@ -22,7 +22,6 @@ class VendorsListViewController: UIViewController {
         return vc
     }
     
-  
     @IBOutlet weak var tableView: UITableView!
     var serviceType: ServiceType!
     var vendorsList = [VendorModel.Vendor]()
@@ -63,8 +62,12 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        SubmittOrderQueryModel.submittOrderQueryModel.providerId = vendorsList[indexPath.row].id ?? 0
-        self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
+        if serviceType == ServiceType.carDecoration {
+            self.navigationController?.pushViewController(CarDecorationReviewController.newInstance(vendor: vendorsList[indexPath.row]), animated: true)
+        }else {
+            SubmittOrderQueryModel.submittOrderQueryModel.providerId = vendorsList[indexPath.row].id ?? 0
+            self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

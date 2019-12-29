@@ -8,40 +8,47 @@
 
 import UIKit
 
+protocol ColorsViewDelegate: class {
+    func didSelectColor(_ color:CarColors)
+}
+
 class ColorsPopupViewController: UIViewController {
     
+    weak var delegate: ColorsViewDelegate?
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var colors: [CarColors]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 8
+        setColors()
+    }
+    
+    func setColors() {
+        colors = Constants.carColors
     }
     
 }
-
 extension ColorsPopupViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    
-    
-   
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return colors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.viewWithTag(100)?.backgroundColor = UIColor.init(red: randomInt()/256.0, green: randomInt()/256.0, blue: randomInt()/256.0, alpha: 1)
+        cell.viewWithTag(100)?.backgroundColor = UIColor.init(hexString: colors[indexPath.row].code)
+        cell.viewWithTag(100)?.dropRoundedShadowForAllSides(35)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            cell.viewWithTag(100)?.dropRoundedShadowForAllSides(35)
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectColor(colors[indexPath.row])
         self.dismiss(animated: true)
     }
-    
-    func randomInt() -> CGFloat {
-        return CGFloat(Int.random(in: 0 ..< 255))
-    }
-    
-  
 }
