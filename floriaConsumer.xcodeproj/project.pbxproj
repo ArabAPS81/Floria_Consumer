@@ -25,7 +25,6 @@
 		044238D0235DA6EE000BF740 /* viewimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044238CF235DA6EE000BF740 /* viewimg.swift */; };
 		04441DA1237BBB5F002F5691 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04441DA0237BBB5E002F5691 /* ShippingViewController.swift */; };
 		0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444939A235C8BBD00650DFD /* Assets.xcassets */; };
-		0444939D235C8EA000650DFD /* check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444939C235C8EA000650DFD /* check.swift */; };
 		04459387237A5CFE007A210E /* buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04459386237A5CFE007A210E /* buttons.swift */; };
 		045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */; };
 		045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B4A4C2381845300CCC257 /* ProductCollectionViewCell2.swift */; };
@@ -52,6 +51,9 @@
 		9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */; };
 		9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */; };
 		9C1D4E3E23AD007D00A7BACF /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */; };
+		9C9B039623B8C1AE00AD6EE4 /* UserDefults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */; };
+		9C9B039823B8C92300AD6EE4 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */; };
+		9C9B039A23B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B039923B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift */; };
 		B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */; };
 		D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6036EA4238EC45300044EFF /* HomeVendorCollectionViewCell.swift */; };
 		D6036EA7238EC45300044EFF /* HomeVendorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6036EA5238EC45300044EFF /* HomeVendorCollectionViewCell.xib */; };
@@ -154,7 +156,6 @@
 		0443B0B72393B19E00D4206E /* locationcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locationcell.swift; path = floriaConsumer/Model/cells/locationcell.swift; sourceTree = SOURCE_ROOT; };
 		04441DA0237BBB5E002F5691 /* ShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
 		0444939A235C8BBD00650DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0444939C235C8EA000650DFD /* check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = check.swift; sourceTree = "<group>"; };
 		04459386237A5CFE007A210E /* buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttons.swift; sourceTree = "<group>"; };
 		045B4A4B2381845300CCC257 /* ExtraProductsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		045B4A4C2381845300CCC257 /* ProductCollectionViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell2.swift; sourceTree = "<group>"; };
@@ -182,6 +183,9 @@
 		9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailsPresenter.swift; sourceTree = "<group>"; };
 		9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionDataSource.swift; sourceTree = "<group>"; };
 		9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefults.swift; sourceTree = "<group>"; };
+		9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		9C9B039923B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeViewController.swift; sourceTree = "<group>"; };
 		A27829A14DD4A7FD4A8DB015 /* Pods-floriaConsumer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.release.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.release.xcconfig"; sourceTree = "<group>"; };
 		D318C85CD5C26CD04A40BA88 /* Pods-floriaConsumer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-floriaConsumer.debug.xcconfig"; path = "Target Support Files/Pods-floriaConsumer/Pods-floriaConsumer.debug.xcconfig"; sourceTree = "<group>"; };
 		D6036EA4238EC45300044EFF /* HomeVendorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVendorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -340,7 +344,6 @@
 				0470AD442353EB76000B1BF7 /* uinViewController.swift */,
 				0403F490235533EE001327EF /* nav.swift */,
 				041514692357EB4200797A33 /* menuecontroller.swift */,
-				0444939C235C8EA000650DFD /* check.swift */,
 				0441843C235D44CA0015DB4E /* fullscreen img.swift */,
 				044238CF235DA6EE000BF740 /* viewimg.swift */,
 			);
@@ -662,6 +665,8 @@
 				D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */,
 				9C113EC723B78D3200C537D8 /* Constant.swift */,
 				9C113EC923B78F9E00C537D8 /* Extension.swift */,
+				9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */,
+				9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				0480B27523A4790A0079253B /* ForgetPassVC.swift */,
 				9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */,
 				9C113EC523B78CA000C537D8 /* TermsViewController.swift */,
+				9C9B039923B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -896,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040417422353C50C0041D97C /* SignupViewController.swift in Sources */,
+				9C9B039823B8C92300AD6EE4 /* AuthenticationModel.swift in Sources */,
 				D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */,
 				D696C2B023A0E6EE00E3A56A /* CustomAlert.swift in Sources */,
@@ -909,6 +916,7 @@
 				042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */,
 				D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */,
 				D635C25323ADF69200A0DC73 /* OrderServices.swift in Sources */,
+				9C9B039623B8C1AE00AD6EE4 /* UserDefults.swift in Sources */,
 				D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */,
 				04441DA1237BBB5F002F5691 /* ShippingViewController.swift in Sources */,
 				D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */,
@@ -927,6 +935,7 @@
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,
 				D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */,
 				D604AB70238E719400A818D2 /* nearestvendore.swift in Sources */,
+				9C9B039A23B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift in Sources */,
 				D618A796239E5BF400C61AEB /* PotsCareViewController.swift in Sources */,
 				045B4A542381845400CCC257 /* ExtraProductsCollectionViewCell.swift in Sources */,
 				0406516F23530CB30039566C /* AppDelegate.swift in Sources */,
@@ -939,7 +948,6 @@
 				D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */,
 				045B4A592381845400CCC257 /* SliderHomeCollectionViewCell.swift in Sources */,
 				D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */,
-				0444939D235C8EA000650DFD /* check.swift in Sources */,
 				D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */,
 				D67B30F8238BD4E60080252B /* RateView.swift in Sources */,
 				044238D0235DA6EE000BF740 /* viewimg.swift in Sources */,

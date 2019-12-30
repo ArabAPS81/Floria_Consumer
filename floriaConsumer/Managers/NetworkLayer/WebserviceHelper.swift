@@ -15,11 +15,11 @@ class WebServiceConfigure {
         return headers
     }
     static func getHeadersForUnauthenticatedState() -> [String:String] {
-        let headers: [String: String] = ["Content-Type":"application/json",
+        let headers: [String: String] = [
                        "Accept": "application/json",
-                       "Accept-Language": "en"]
+                       "Accept-Language": "ar"]
         return headers
     }
                         
 }
-
+//"Content-Type":"application/json",

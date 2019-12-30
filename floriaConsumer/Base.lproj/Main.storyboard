@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4TW-J1-csa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4TW-J1-csa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -492,9 +492,6 @@
                                                     <state key="normal" title="close">
                                                         <color key="titleColor" red="0.87998175619999996" green="0.14502075310000001" blue="0.43529951569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="close:" destination="o2O-bx-Zvx" eventType="touchUpInside" id="dV6-0t-Fm7"/>
-                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-rW-TJT">
                                                     <rect key="frame" x="4" y="118" width="246" height="2"/>
@@ -539,7 +536,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="ok:" destination="o2O-bx-Zvx" eventType="touchUpInside" id="PrW-Wf-VsD"/>
-                                                        <action selector="resend:" destination="o2O-bx-Zvx" eventType="touchUpInside" id="7L7-g6-DbD"/>
+                                                        <action selector="resendTapped:" destination="o2O-bx-Zvx" eventType="touchUpInside" id="7L7-g6-DbD"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

@@ -15,11 +15,9 @@ import SwiftyJSON
 class LoginService {
     
     weak var delegate: WebServiceDelegate?
-    
     init(delegate: WebServiceDelegate) {
         self.delegate = delegate
     }
-    
     let vc = CustomAlert()
     var parameter : Parameters = [:]
     func sign( name : String ,email : String, password : String , ext : String){
@@ -27,7 +25,6 @@ class LoginService {
         if ext == "verify"{
             parameter = ["verification_code" : name ]
         }else if ext == "forget-password" {
-            
             parameter = ["mobile" : name ]
             
         }else{
@@ -48,7 +45,7 @@ class LoginService {
             case .failure(let erro):
                 print("********////",erro.localizedDescription)
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(re.data!, returningModelType: LoginModel.self) { (object, error) in
+                JSONResponseDecoder.decodeFrom(re.data!, returningModelType: AuthenticationModel.self) { (object, error) in
                     if error == nil {
                         print("🟢 \(object!)")
                         self.delegate?.didRecieveData(data: object)
@@ -60,41 +57,3 @@ class LoginService {
 }
 
 
-struct LoginModel: Codable {
-    
-    let user : User?
-    let httpCode : Int?
-    let message : String?
-    
-    enum CodingKeys: String, CodingKey {
-        case user = "data"
-        case httpCode = "http_code"
-        case message = "message"
-    }
-    
-    struct User : Codable {
-        
-        let accessToken : String?
-        let createdAt : String?
-        let email : String?
-        let expiresAt : String?
-        let id : Int?
-        let mobile : String?
-        let name : String?
-        let tokenType : String?
-        let verified : Bool?
-        
-        
-        enum CodingKeys: String, CodingKey {
-            case accessToken = "access_token"
-            case createdAt = "created_at"
-            case email = "email"
-            case expiresAt = "expires_at"
-            case id = "id"
-            case mobile = "mobile"
-            case name = "name"
-            case tokenType = "token_type"
-            case verified = "verified"
-        }
-    }
-}

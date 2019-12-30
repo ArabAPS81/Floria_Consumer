@@ -19,7 +19,6 @@ class sViewController: UIViewController {
     
     }
     
-
     /*
     // MARK: - Navigation
 

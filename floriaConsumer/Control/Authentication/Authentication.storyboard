@@ -10,7 +10,7 @@
         <!--Sign in-->
         <scene sceneID="PmL-5j-Gg8">
             <objects>
-                <viewController storyboardIdentifier="a" id="cEa-uG-Dcx" customClass="login" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="cEa-uG-Dcx" customClass="login" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BEO-MB-CPK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -691,7 +691,6 @@
                     <connections>
                         <outlet property="okkkk" destination="gwS-az-q8r" id="ue8-Ew-PI3"/>
                         <outlet property="phon" destination="H8A-Re-gJK" id="9FG-Y9-xDV"/>
-                        <segue destination="gd2-S1-q83" kind="show" id="q0I-ee-KXd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGq-Ib-Mv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -701,16 +700,16 @@
         <!--Virification code-->
         <scene sceneID="ctV-xr-Z75">
             <objects>
-                <viewController id="gd2-S1-q83" customClass="check" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confirmCodeVC" id="gd2-S1-q83" customClass="ConfirmationCodeViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRr-Q3-dtO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group17" translatesAutoresizingMaskIntoConstraints="NO" id="3sI-eG-6X3">
-                                <rect key="frame" x="36.5" y="108" width="341" height="269.5"/>
+                                <rect key="frame" x="36.5" y="64" width="341" height="291.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFI-6w-fj1">
-                                <rect key="frame" x="35" y="474" width="344" height="2"/>
+                                <rect key="frame" x="35" y="452" width="344" height="2"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Rde-pq-cmM"/>
@@ -718,7 +717,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9c8-fD-Ti3">
-                                <rect key="frame" x="68" y="445.5" width="278" height="20"/>
+                                <rect key="frame" x="68" y="423.5" width="278" height="20"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layer1" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-rv-odK">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -741,60 +740,67 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyp-q6-mfK">
-                                <rect key="frame" x="84" y="783" width="246" height="54"/>
+                                <rect key="frame" x="84" y="777" width="246" height="60"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="8Fd-Z8-KYj"/>
+                                    <constraint firstAttribute="height" constant="60" id="8Fd-Z8-KYj"/>
                                     <constraint firstAttribute="width" constant="246" id="qjZ-J9-Hxi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Change password">
+                                <state key="normal" title="Confirm">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ok:" destination="gd2-S1-q83" eventType="touchUpInside" id="1v2-sa-Nt9"/>
+                                    <action selector="confirmTapped:" destination="gd2-S1-q83" eventType="touchUpInside" id="qA1-4m-bri"/>
                                     <action selector="signup:" destination="ceU-af-KWW" eventType="touchUpInside" id="A2W-bs-HmS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjx-uq-iSg">
-                                <rect key="frame" x="117" y="699" width="180" height="54"/>
+                                <rect key="frame" x="117" y="697" width="180" height="30"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="GDh-ju-EvL"/>
-                                    <constraint firstAttribute="height" constant="54" id="YW3-fO-Cec"/>
+                                    <constraint firstAttribute="height" constant="30" id="YW3-fO-Cec"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Resend  Code">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ok:" destination="gd2-S1-q83" eventType="touchUpInside" id="baC-cI-PT1"/>
-                                    <action selector="resend:" destination="gd2-S1-q83" eventType="touchUpInside" id="mLC-OW-Gh1"/>
                                     <action selector="signup:" destination="ceU-af-KWW" eventType="touchUpInside" id="f5k-09-TiH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-zk-86A">
+                                <rect key="frame" x="179.5" y="474" width="55" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ATz-zk-86A" firstAttribute="top" secondItem="tFI-6w-fj1" secondAttribute="bottom" constant="20" id="0PO-Wz-CBK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tFI-6w-fj1" secondAttribute="trailing" constant="15" id="3PB-WM-fA6"/>
                             <constraint firstItem="eyp-q6-mfK" firstAttribute="centerX" secondItem="PpZ-TJ-l4V" secondAttribute="centerX" id="7M0-X3-BzF"/>
                             <constraint firstItem="tFI-6w-fj1" firstAttribute="centerY" secondItem="PpZ-TJ-l4V" secondAttribute="centerY" id="Ezz-M0-R10"/>
                             <constraint firstItem="9c8-fD-Ti3" firstAttribute="centerX" secondItem="tFI-6w-fj1" secondAttribute="centerX" id="K21-6j-9bU"/>
                             <constraint firstItem="PpZ-TJ-l4V" firstAttribute="bottom" secondItem="eyp-q6-mfK" secondAttribute="bottom" constant="25" id="L2w-UY-rWN"/>
+                            <constraint firstItem="ATz-zk-86A" firstAttribute="centerX" secondItem="PpZ-TJ-l4V" secondAttribute="centerX" id="Mem-vY-Y91"/>
                             <constraint firstItem="Wjx-uq-iSg" firstAttribute="centerX" secondItem="PpZ-TJ-l4V" secondAttribute="centerX" id="Whl-6D-EXt"/>
                             <constraint firstItem="9c8-fD-Ti3" firstAttribute="top" secondItem="3sI-eG-6X3" secondAttribute="bottom" constant="68" id="lW8-wW-6RF"/>
                             <constraint firstItem="tFI-6w-fj1" firstAttribute="centerX" secondItem="PpZ-TJ-l4V" secondAttribute="centerX" id="mvY-iM-dw2"/>
                             <constraint firstItem="tFI-6w-fj1" firstAttribute="top" secondItem="9c8-fD-Ti3" secondAttribute="bottom" constant="8.5" id="s7T-7O-oRZ"/>
                             <constraint firstItem="3sI-eG-6X3" firstAttribute="top" secondItem="PpZ-TJ-l4V" secondAttribute="top" constant="20" id="vxn-kZ-EuJ"/>
                             <constraint firstItem="3sI-eG-6X3" firstAttribute="centerX" secondItem="PpZ-TJ-l4V" secondAttribute="centerX" id="xcV-3F-RfF"/>
-                            <constraint firstItem="eyp-q6-mfK" firstAttribute="top" secondItem="Wjx-uq-iSg" secondAttribute="bottom" constant="30" id="zyw-th-eiI"/>
+                            <constraint firstItem="eyp-q6-mfK" firstAttribute="top" secondItem="Wjx-uq-iSg" secondAttribute="bottom" constant="50" id="zyw-th-eiI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PpZ-TJ-l4V"/>
                     </view>
                     <navigationItem key="navigationItem" title="Virification code" id="Xac-zN-9nX"/>
                     <connections>
-                        <outlet property="okkkk" destination="eyp-q6-mfK" id="eD8-kL-obK"/>
-                        <outlet property="phon" destination="Nhs-xY-MiB" id="kFb-ml-lvx"/>
+                        <outlet property="chagePassBtn" destination="eyp-q6-mfK" id="HTq-wM-EXU"/>
+                        <outlet property="resendBtn" destination="Wjx-uq-iSg" id="eMI-G3-K5F"/>
+                        <outlet property="timerLable" destination="ATz-zk-86A" id="mxZ-wL-HIa"/>
                         <segue destination="net-6V-mIH" kind="show" id="hZO-V6-FiP"/>
                     </connections>
                 </viewController>
@@ -807,14 +813,14 @@
             <objects>
                 <viewController id="net-6V-mIH" customClass="resetpasswordVC" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0n-9m-zIl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group17" translatesAutoresizingMaskIntoConstraints="NO" id="IMN-iC-dYz">
-                                <rect key="frame" x="36.5" y="108" width="341" height="321"/>
+                                <rect key="frame" x="36.5" y="20" width="341" height="338"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="5el-iH-6dD">
-                                <rect key="frame" x="50.5" y="434" width="313" height="82"/>
+                                <rect key="frame" x="50.5" y="363" width="313" height="82"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kS8-8v-TyT">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="30"/>
@@ -891,7 +897,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-tM-w32">
-                                <rect key="frame" x="84" y="783" width="246" height="54"/>
+                                <rect key="frame" x="84" y="729" width="246" height="54"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="3TZ-bU-CGM"/>
@@ -933,7 +939,7 @@
         <!--Registeration View Controller-->
         <scene sceneID="vi6-EB-oyv">
             <objects>
-                <viewController storyboardIdentifier="registrationVC" id="hfz-2z-MSe" customClass="RegisterationViewController" customModule="Homy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationVC" id="hfz-2z-MSe" customClass="RegisterationViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7UB-FZ-7Ge">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1067,6 +1073,7 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmK-pU-NcT">
                                                 <rect key="frame" x="265" y="0.0" width="66" height="49"/>
+                                                <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="ShowPass"/>
                                                 <connections>
                                                     <action selector="showPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="dAP-ax-MIA"/>
@@ -1120,7 +1127,7 @@
                                                 <rect key="frame" x="66" y="0.0" width="265" height="50"/>
                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                         <color key="value" red="0.32748359440000002" green="0.71343415980000002" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1176,6 +1183,7 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-4s-KVV">
                                                 <rect key="frame" x="265" y="0.0" width="66" height="49"/>
+                                                <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="ShowPass"/>
                                                 <connections>
                                                     <action selector="showConfrirmPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="BWd-LF-vka"/>
@@ -1237,8 +1245,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="PDj-Yn-Fwu"/>
                                                 </constraints>
+                                                <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title=" "/>
-                                                <state key="selected" image="checkIcon"/>
+                                                <state key="selected" image="checkmark" catalog="system"/>
                                                 <connections>
                                                     <action selector="termsTappped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="AYk-V3-TbI"/>
                                                 </connections>
@@ -1341,7 +1350,7 @@
         <!--Terms View Controller-->
         <scene sceneID="zJG-bY-K14">
             <objects>
-                <viewController storyboardIdentifier="termsVC" id="CrJ-r2-eND" customClass="TermsViewController" customModule="Homy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="termsVC" id="CrJ-r2-eND" customClass="TermsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qR2-qM-QXv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1406,8 +1415,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
         </scene>
     </scenes>
     <resources>
-        <image name="ShowPass" width="16" height="16"/>
-        <image name="checkIcon" width="16" height="16"/>
+        <image name="ShowPass" width="23" height="18.5"/>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="envelope.open" catalog="system" width="64" height="60"/>
         <image name="eye.fill" catalog="system" width="64" height="38"/>
         <image name="group17" width="341" height="270.5"/>
@@ -1422,7 +1431,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
         <image name="shape6" width="20" height="20.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sRg-3v-heO"/>
+        <segue reference="8Ti-S9-OjD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
