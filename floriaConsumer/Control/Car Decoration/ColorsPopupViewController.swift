@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ColorsViewDelegate: class {
-    func didSelectColor(_ color:CarColors)
+    func didSelectColor(_ color:CarColor)
 }
 
 class ColorsPopupViewController: UIViewController {
@@ -18,7 +18,7 @@ class ColorsPopupViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var colors: [CarColors]!
+    var colors: [CarColor]!
 
     override func viewDidLoad() {
         super.viewDidLoad()

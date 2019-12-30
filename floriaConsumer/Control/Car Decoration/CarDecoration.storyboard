@@ -420,7 +420,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="yid-SL-K0G">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS3-98-rmQ">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS3-98-rmQ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                         <state key="selected" image="selectedExtra"/>
                                                                         <connections>
@@ -490,7 +490,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Jy-PG9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-hM-D9U">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-hM-D9U">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                         <state key="selected" image="selectedExtra"/>
                                                                         <connections>
@@ -560,7 +560,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-Ri-JNF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-d1-hPq">
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-d1-hPq">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                         <state key="selected" image="selectedExtra"/>
                                                                         <connections>
@@ -1388,6 +1388,9 @@
                                         <integer key="value" value="23"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="lOi-4v-Dbk" kind="show" id="9Hp-J2-rvz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1402,11 +1405,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="63B-qU-Q9C"/>
                     <connections>
+                        <outlet property="carTypeImage" destination="WKz-dV-t0N" id="9gZ-rX-9vL"/>
                         <outlet property="carTypeLabel" destination="TuD-yP-6DY" id="5em-3s-HfN"/>
                         <outlet property="colorNameLabel" destination="864-Zf-9vO" id="bh5-Wc-dAd"/>
                         <outlet property="colorView" destination="MRv-nU-xny" id="HVU-Qn-K15"/>
+                        <outlet property="decorationTypeImage" destination="UgX-VA-XKb" id="ymU-cZ-JZc"/>
+                        <outlet property="decorationTypeLabel" destination="MEG-x9-CMm" id="IQO-J2-VN9"/>
                         <outlet property="priceLabel" destination="q58-xG-L6x" id="SLr-lW-H5V"/>
                         <outlet property="priceView" destination="XAy-2e-GkE" id="qOK-UU-d78"/>
+                        <outlet property="vendorAddressLabel" destination="QME-A1-gm8" id="nOz-9d-FRA"/>
+                        <outlet property="vendorImageLabel" destination="ljS-7N-Zu1" id="Aqd-lU-KWl"/>
+                        <outlet property="vendorNameLabel" destination="xbB-jK-kkp" id="x2Q-gD-a3r"/>
                         <outletCollection property="shadowedView" destination="9PI-6Q-eCu" collectionClass="NSMutableArray" id="5qi-c2-smT"/>
                         <outletCollection property="shadowedView" destination="Aj2-Wq-K8s" collectionClass="NSMutableArray" id="RJJ-ft-X8a"/>
                     </connections>
@@ -1414,6 +1423,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSP-u1-DgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3288.4057971014495" y="-1811.3839285714284"/>
+        </scene>
+        <!--ShippingViewController-->
+        <scene sceneID="BJ6-WO-qfS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Delivery" referencedIdentifier="ShippingViewController" id="lOi-4v-Dbk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CEq-bL-71X"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iui-oD-SOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2695" y="-1811"/>
         </scene>
     </scenes>
     <resources>
