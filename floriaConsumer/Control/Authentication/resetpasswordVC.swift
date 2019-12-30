@@ -18,13 +18,9 @@ class resetpasswordVC: UIViewController {
     
     @IBOutlet weak var confirm: UITextField!
     @IBOutlet weak var okkkk: UIButton!
-    var vc: resetpasswordAPI!
  
     @IBAction func ok(_ sender: Any) {
-        UserDefaults.standard.set(phon.text!, forKey: "mobile")
-        vc = resetpasswordAPI(delegate: self)
-        let extention = "reset-password/" + UserDefaults.standard.string(forKey: "phone")! 
-        vc.sign(pass: phon.text!, confirm: confirm.text!, ext: extention)
+       
     }
    
 }

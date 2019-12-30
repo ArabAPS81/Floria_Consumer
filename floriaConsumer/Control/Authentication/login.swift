@@ -24,8 +24,8 @@ class login: UIViewController {
     
     @IBOutlet weak var pass: UITextField!
     @IBAction func signin(_ sender: Any) {
-        let vc = LoginService(delegate: self)
-        vc.sign(name: "", email: name.text!, password: pass.text!, ext: "login")
+        let service = AuthenticationService.init(delegate: self)
+        service.loginWith(phoneNumber: "01220028001", password: "12345678")
     }
     
     
@@ -58,7 +58,13 @@ class login: UIViewController {
        
 extension login: WebServiceDelegate {
     func didRecieveData(data: Codable) {
-        
+        if let model = data as? AuthenticationModel {
+            print(model)
+            if model.httpCode == 200{
+                Defults.init().saveUserToken(token : model.user?.accessToken ?? "")
+                performSegue(withIdentifier: "loged", sender: nil)
+            }
+        }
     }
     
     func didFailToReceiveDataWithError(error: Error) {
