@@ -10,12 +10,21 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         LocationManager.sharedManager.initializeLocationManager()
+        let userId = Defults.init().getUserId()
+        if userId != 0{
+            print(userId)
+            
+            let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
+            let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
+            window?.rootViewController = homeVC
+        }
+        
         return true
     }
 
