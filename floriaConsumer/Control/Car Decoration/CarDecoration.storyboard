@@ -847,7 +847,7 @@
         <!--Car Decoration Review Controller-->
         <scene sceneID="e53-1h-Jcv">
             <objects>
-                <viewController id="in2-Nl-Ixg" customClass="CarDecorationReviewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarDecorationReviewController" id="in2-Nl-Ixg" customClass="CarDecorationReviewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8k-AP-i9q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

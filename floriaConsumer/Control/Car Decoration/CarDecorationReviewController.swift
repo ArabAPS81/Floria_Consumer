@@ -37,6 +37,8 @@ class CarDecorationReviewController: UIViewController {
         shadowedView?.forEach({ (view) in
             view.dropRoundedShadowForAllSides(view.layer.cornerRadius)
         })
+        priceLabel.text = "\(vendor.decorationTypes![1].price ?? 0)"
+        //SubmittOrderQueryModel.submittOrderQueryModel.decorationTypeId - 1
     }
     
 }
