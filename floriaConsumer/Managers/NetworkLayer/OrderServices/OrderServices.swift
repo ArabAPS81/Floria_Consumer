@@ -12,7 +12,7 @@ import Alamofire
 
 class SubmittOrderQueryModel: Codable {
     
-    static let submittOrderQueryModel = SubmittOrderQueryModel.init()
+    static var submittOrderQueryModel = SubmittOrderQueryModel.init()
     
     var products: [OrderProducts] = []
     var packings: [OrderPackings] = []
@@ -22,6 +22,9 @@ class SubmittOrderQueryModel: Codable {
     var serviceId: Int?
     var requiredAt : String?
     var providerId: Int?
+    var carTypeId: Int?
+    var colorId: Int?
+    var decorationTypeId: Int?
     
     enum CodingKeys: String, CodingKey {
         case products
@@ -32,6 +35,9 @@ class SubmittOrderQueryModel: Codable {
         case serviceId = "service_id"
         case providerId = "provider_id"
         case requiredAt = "required_at"
+        case carTypeId = "car_type_id"
+        case colorId = "color_id"
+        case decorationTypeId = "decoration_type_id"
     }
     
     
@@ -107,7 +113,7 @@ class OrderServices {
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: OrderSummaryResponceModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(value, returningModelType: OrderSubmittResponseModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }
@@ -144,6 +150,27 @@ struct OrderSummaryResponceModel : Codable {
             case subtotal = "subtotal"
             case total = "total"
             case totalTax = "total_tax"
+        }
+    }
+}
+
+
+struct OrderSubmittResponseModel : Codable {
+
+    let data : Data?
+    let httpCode : Int?
+    let message : String?
+
+    enum CodingKeys: String, CodingKey {
+        case data
+        case httpCode = "http_code"
+        case message = "message"
+    }
+    struct Data : Codable {
+
+        let id : Int?
+        enum CodingKeys: String, CodingKey {
+            case id = "id"
         }
     }
 }

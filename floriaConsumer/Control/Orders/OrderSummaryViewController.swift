@@ -28,6 +28,35 @@ class OrderSummaryViewController: UIViewController {
         VatLabel.text = "\(summaryModel?.summary?.totalTax ?? 0)"
         bankLabel.text = "\(0.0)"
     }
+    
+    @IBAction func payButtonTapped(_ sender: UIButton) {
+        let order = SubmittOrderQueryModel.submittOrderQueryModel
+        let service = OrderServices.init(delegate: self)
+        service.submitOrder(order: order)
+        
+    }
+    
+    func showAlert(_ message: String?) {
+        let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+}
+
+extension OrderSummaryViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let data = data as? OrderSubmittResponseModel {
+            if data.httpCode == 201 {
+                showAlert("\(data.message ?? "") \(data.data?.id ?? 0)")
+            }
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+    }
 }
 
 

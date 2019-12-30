@@ -23,7 +23,7 @@ class AddressTableViewCell: UITableViewCell {
     
     func configure(address: AddressModel.Address) {
         addressNameLabel.text = address.name ?? ""
-        buildingLabel.text = address.buildingNumber ?? ""
+        buildingLabel.text = "\(address.buildingNumber ?? "")"
         phoneNum.text = address.mobile ?? ""
         districtLabel.text = address.district?.name ?? ""
         notesLabel.text = address.notes ?? ""

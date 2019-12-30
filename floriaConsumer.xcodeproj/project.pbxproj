@@ -125,6 +125,7 @@
 		D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8A0EA239FA70F0041F720 /* BusinessTypes.swift */; };
 		D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56C23A8E4520008CACB /* AddressServices.swift */; };
 		D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56E23A8E9610008CACB /* AddressModel.swift */; };
+		D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */; };
 		D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */; };
 		D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */; };
 		D6E80B7A238974B6003A7DFF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E80B79238974B6003A7DFF /* Authentication.storyboard */; };
@@ -258,6 +259,7 @@
 		D6C8A0EC239FE46E0041F720 /* floriaConsumer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = floriaConsumer.entitlements; sourceTree = "<group>"; };
 		D6CFA56C23A8E4520008CACB /* AddressServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServices.swift; sourceTree = "<group>"; };
 		D6CFA56E23A8E9610008CACB /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorListPresenter.swift; sourceTree = "<group>"; };
 		D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenter.swift; sourceTree = "<group>"; };
 		D6E80B79238974B6003A7DFF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 			children = (
 				D67B30FA238C016F0080252B /* UIViewExtension.swift */,
 				D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */,
+				D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -982,6 +985,7 @@
 				D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */,
 				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
+				D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */,
 				045F234223A3CA6E00E8B60D /* ValidationCodeVC.swift in Sources */,
 				9C113EC823B78D3200C537D8 /* Constant.swift in Sources */,
 				D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */,

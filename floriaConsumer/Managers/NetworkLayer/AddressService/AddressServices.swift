@@ -52,7 +52,6 @@ class AddressService {
     }
     
     func getListOfAddresses() {
-        
         guard let baseUrl = (NetworkConstants.baseUrl + "addresses?").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(baseUrl, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

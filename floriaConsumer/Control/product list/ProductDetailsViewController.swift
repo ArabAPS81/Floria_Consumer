@@ -44,7 +44,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     @IBAction func minase(_ sender: Any) {
-        if x >= 1{
+        if x > 1{
             x-=1
             amountLabel.text = String(x)
         }
@@ -55,6 +55,11 @@ class ProductDetailsViewController: UIViewController {
         amountLabel.text = String(x)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product.id!, quantity: x, price: product.price ?? 0)
+        SubmittOrderQueryModel.submittOrderQueryModel.products = [selectedProduct]
+    }
 }
 
 extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

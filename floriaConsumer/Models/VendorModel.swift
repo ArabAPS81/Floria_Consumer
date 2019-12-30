@@ -21,6 +21,7 @@ struct VendorModel: Codable {
     struct Vendor: Codable {
 
         let address : String?
+        let decorationTypes : [DecorationType]?
         let district : District?
         let email : String?
         let facebookUrl : String?
@@ -36,6 +37,7 @@ struct VendorModel: Codable {
 
         enum CodingKeys: String, CodingKey {
             case address = "address"
+            case decorationTypes = "decorationTypes"
             case district
             case email = "email"
             case facebookUrl = "facebook_url"
@@ -72,6 +74,23 @@ struct VendorModel: Codable {
         enum CodingKeys: String, CodingKey {
             case id = "id"
             case name = "name"
+        }
+    }
+    
+    struct DecorationType : Codable {
+
+        let descriptionField : String?
+        let id : Int?
+        let image : String?
+        let name : String?
+        let price : Int?
+
+        enum CodingKeys: String, CodingKey {
+            case descriptionField = "description"
+            case id = "id"
+            case image = "image"
+            case name = "name"
+            case price = "price"
         }
     }
 

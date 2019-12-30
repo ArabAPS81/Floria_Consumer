@@ -16,10 +16,11 @@ protocol ProductsListView: class {
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout  {
     
     
-    static func newInstance(listType: ServiceType) -> ProductListViewController {
+    static func newInstance(listType: ServiceType, vendorId: Int) -> ProductListViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProductListViewController") as! ProductListViewController
         vc.productListType = listType
+        vc.vendorId = vendorId
         return vc
     }
     
@@ -33,7 +34,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         super.viewDidLoad()
         HomeProductCollectionViewCell.registerNIBinView(collection: collectionView)
         presenter = ProductsListPresenter.init(view: self)
-        presenter?.getVendorProducts(vendorId: 1, forService: productListType)
+        presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -38,6 +38,26 @@ class CustomBouquetViewController: UIViewController {
     @IBAction func selectPackingTapped(_ sender: UIButton){
         presenter.submittOrder()
     }
+    
+    @IBAction func NextButtonTapped( _ sender: UIButton) {
+        if validation() {
+            self.performSegue(withIdentifier: "PackingSegue", sender: nil)
+        }
+    }
+    
+    func validation() -> Bool {
+        if SubmittOrderQueryModel.submittOrderQueryModel.products.isEmpty {
+            alertWithMessage("No products selected")
+            return false
+        }
+        return true
+    }
+    
+    func  alertWithMessage(_ message: String) {
+        let alert = UIAlertController.init(title: "", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 
