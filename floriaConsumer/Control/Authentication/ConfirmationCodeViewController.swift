@@ -9,10 +9,19 @@
 import UIKit
 
 class ConfirmationCodeViewController: UIViewController {
+    var mobile : String!
+    
+    static func newInstance(mobile : String) -> ConfirmationCodeViewController {
+        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let confirmCodeVC = storyboard.instantiateViewController(withIdentifier: "confirmCodeVC") as! ConfirmationCodeViewController
+        confirmCodeVC.mobile = mobile
+        return confirmCodeVC
+
+    }
+    
     @IBOutlet weak var timerLable: UILabel!
-    
     @IBOutlet weak var resendBtn: UIButton!
-    
+    @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var chagePassBtn: UIButton!
     
     var seconds = 60
@@ -27,7 +36,14 @@ class ConfirmationCodeViewController: UIViewController {
     }
     
     @IBAction func confirmTapped(_ sender: Any) {
-        
+        guard let code = codeTF.text?.trimmed , !code.isEmpty else {return}
+        let service = AuthenticationService.init(delegate: self)
+        service.confirm(code: code)
+    }
+    
+    @IBAction func resendTapped(_ sender: Any) {
+        let service = AuthenticationService.init(delegate: self)
+        service.resend(mobile: mobile)
     }
     
     func setUpViewsShapes(){
@@ -49,6 +65,24 @@ class ConfirmationCodeViewController: UIViewController {
             resendBtn.isHidden = false
             print("\(seconds)")
         }
+    }
+}
+
+extension ConfirmationCodeViewController : WebServiceDelegate{
+    func didRecieveData(data: Codable) {
+        if let model = data as? AuthenticationModel {
+            if model.httpCode == 200{
+                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+                let homeNav = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
+                self.navigationController?.pushViewController(homeNav, animated: true)
+                self.present(homeNav, animated: true)
+            }
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
         
     }
+    
+    
 }
