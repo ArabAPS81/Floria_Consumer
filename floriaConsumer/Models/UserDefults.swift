@@ -37,5 +37,17 @@ struct Defults {
         return def.string(forKey: "token")
     }
     
+    func saveAuthenToken(authenToken : String){
+        let def = UserDefaults.standard
+        def.set(authenToken, forKey: "authenToken")
+        def.synchronize()
+        print(authenToken)
+    }
+    
+    func getAuthenToken()-> String? {
+        let def = UserDefaults.standard
+        return def.string(forKey: "authenToken")
+    }
+    
     
 }

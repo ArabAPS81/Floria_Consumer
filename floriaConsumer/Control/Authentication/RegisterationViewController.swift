@@ -80,8 +80,7 @@ class RegisterationViewController: UIViewController {
         guard let confirmPass = confirmPassTF.text?.trimmed , !confirmPass.isEmpty else {return}
         guard password == confirmPass else{return}
         
-        let service = RegistrationService.init(delegate: self)
-        service.delegate = self
+        let service = AuthenticationService.init(delegate: self)
         service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: 1)
         
     }
@@ -145,10 +144,9 @@ extension RegisterationViewController : WebServiceDelegate{
         if let model = data as? AuthenticationModel {
             print(model)
             if model.httpCode == 201{
-                Defults.init().saveUserToken(token : model.user?.accessToken ?? "")
-                                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-                                let confirmationCodeVC = storyboard.instantiateViewController(withIdentifier: "confirmCodeVC") as! ConfirmationCodeViewController
-                                self.navigationController?.pushViewController(confirmationCodeVC, animated: true)
+                Defults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
+                let vc = ConfirmationCodeViewController.newInstance(mobile: model.user?.mobile ?? "")
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
