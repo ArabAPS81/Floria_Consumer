@@ -16,17 +16,38 @@ class Constants {
     static let grayColor = UIColor.darkGray
     
     
-    static let carColors = [CarColors.init(id: 1, name: "White", code: "FFFFFF"),
-              CarColors.init(id: 2, name: "Black", code: "000000"),
-              CarColors.init(id: 3, name: "Red", code: "FF0000"),
-              CarColors.init(id: 4, name: "Yellow", code: "FFFF00"),
-              CarColors.init(id: 5, name: "Green", code: "008000"),
-              CarColors.init(id: 6, name: "Blue", code: "0000FF"),
+    static let carColors = [CarColor.init(id: 1, name: "White", code: "FFFFFF"),
+              CarColor.init(id: 2, name: "Black", code: "000000"),
+              CarColor.init(id: 3, name: "Red", code: "FF0000"),
+              CarColor.init(id: 4, name: "Yellow", code: "FFFF00"),
+              CarColor.init(id: 5, name: "Green", code: "008000"),
+              CarColor.init(id: 6, name: "Blue", code: "0000FF"),
     ]
+    
+    private static let carTypes = [CarType.init(id: 1, name: "Sedan", image: UIImage.init(named: "sedanicon")),
+                                   CarType.init(id: 2, name: "Cabriolet", image: UIImage.init(named: "cabrioleticon")),
+                                   CarType.init(id: 3, name: "Hatchback", image: UIImage.init(named: "hatchbackicon")),
+                                   CarType.init(id: 4, name: "Coupe", image: UIImage.init(named: "coupeicon")),
+                                   CarType.init(id: 5, name: "Sport car", image: UIImage.init(named: "sportcaricon")),
+                                   CarType.init(id: 6, name: "SUV", image: UIImage.init(named: "suvicon"))]
+    
+    static func carForId(_ id: Int) -> CarType {
+        return carTypes.filter { (car) -> Bool in
+            return car.id == id
+        }.first!
+    }
+    
 }
 
-struct CarColors {
+struct CarColor {
     var id: Int
     var name: String
     var code : String
 }
+
+struct CarType {
+    var id: Int
+    var name: String
+    var image: UIImage?
+}
+
