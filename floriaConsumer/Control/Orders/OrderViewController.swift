@@ -2,7 +2,7 @@
 //  OrderViewController.swift
 //  floriaConsumer
 //
-//  Created by Andela on 31/12/19.
+//  Created by Symsym on 31/12/19.
 //  Copyright © 2019 Obida. All rights reserved.
 //
 

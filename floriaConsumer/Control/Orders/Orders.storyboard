@@ -218,10 +218,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-Eb-n7U">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="olJ-at-Z6B" detailTextLabel="w2h-za-YTe" style="IBUITableViewCellStyleSubtitle" id="7rv-A5-mU4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCell" textLabel="olJ-at-Z6B" detailTextLabel="w2h-za-YTe" style="IBUITableViewCellStyleSubtitle" id="7rv-A5-mU4">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7rv-A5-mU4" id="ffS-2a-tpT">
@@ -246,17 +246,24 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pbr-61-Ojs" id="STj-ib-7y2"/>
+                                    <outlet property="delegate" destination="Pbr-61-Ojs" id="MzS-ja-n6u"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5qh-Eb-n7U" firstAttribute="top" secondItem="DlG-rL-V60" secondAttribute="top" constant="20" id="2AB-bq-M6d"/>
                             <constraint firstItem="5qh-Eb-n7U" firstAttribute="bottom" secondItem="DlG-rL-V60" secondAttribute="bottom" id="6Qk-gK-Mt4"/>
                             <constraint firstItem="5qh-Eb-n7U" firstAttribute="leading" secondItem="DlG-rL-V60" secondAttribute="leading" id="6v5-Oh-Nhq"/>
+                            <constraint firstItem="5qh-Eb-n7U" firstAttribute="top" secondItem="DlG-rL-V60" secondAttribute="top" id="7yK-GK-u9y"/>
                             <constraint firstItem="5qh-Eb-n7U" firstAttribute="trailing" secondItem="DlG-rL-V60" secondAttribute="trailing" id="GCV-bc-G07"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DlG-rL-V60"/>
                     </view>
+                    <connections>
+                        <outlet property="tvOrders" destination="5qh-Eb-n7U" id="qh4-9J-AWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4x-aS-obJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

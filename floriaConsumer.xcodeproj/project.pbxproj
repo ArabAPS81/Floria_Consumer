@@ -46,6 +46,7 @@
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		1FE934FA23BB5F5900AEEA1E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */; };
 		1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */; };
+		1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */; };
 		54A2B69223BA32420076BA0D /* HomeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2B69123BA32420076BA0D /* HomeNav.swift */; };
 		54A2B69423BA3C9B0076BA0D /* ResendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2B69323BA3C9B0076BA0D /* ResendModel.swift */; };
 		9C113EC423B78A4200C537D8 /* RegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */; };
@@ -182,6 +183,7 @@
 		04E1139723764BF100D15FAC /* providerlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerlist.swift; sourceTree = "<group>"; };
 		1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServices.swift; sourceTree = "<group>"; };
 		54A2B69123BA32420076BA0D /* HomeNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNav.swift; sourceTree = "<group>"; };
 		54A2B69323BA3C9B0076BA0D /* ResendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendModel.swift; sourceTree = "<group>"; };
 		90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_floriaConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -484,6 +486,7 @@
 				D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */,
 				1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */,
 				1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */,
+				1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,
 				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,
 				D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */,
+				1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */,
 				040417402353BA310041D97C /* login.swift in Sources */,
 				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
 				D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */,
