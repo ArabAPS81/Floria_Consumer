@@ -39,6 +39,4 @@ extension NewPassViewController: WebServiceDelegate {
     func didFailToReceiveDataWithError(error: Error) {
         
     }
-    
-    
 }

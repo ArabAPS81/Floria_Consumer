@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
+  - IQKeyboardManagerSwift (6.5.4)
   - Kingfisher (5.8.2):
     - Kingfisher/Core (= 5.8.2)
   - Kingfisher/Core (5.8.2)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - Kingfisher (~> 5.0)
   - SideMenu
   - SwiftyJSON (~> 4.0)
@@ -17,6 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManagerSwift
     - Kingfisher
     - SideMenu
     - SwiftyJSON
@@ -24,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   Kingfisher: 3adc15096595f5aed800bb0d5cb757fc58b2d2dd
   SideMenu: e49a7d61d1f50e9bdaa866bbb9fc7d903c6400ed
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 92e81fa7c47f01020e8720f45529edae2a9c72c4
+PODFILE CHECKSUM: 535dc5e815837a8af502d0ae44e803e08915a629
 
 COCOAPODS: 1.8.4

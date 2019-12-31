@@ -10,7 +10,9 @@ target 'floriaConsumer' do
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'Kingfisher', '~> 5.0'
 	pod 'SideMenu'
- 	 pod 'XLPagerTabStrip'
+  pod 'XLPagerTabStrip'
+  pod 'IQKeyboardManagerSwift'
+   
 
 
 end
