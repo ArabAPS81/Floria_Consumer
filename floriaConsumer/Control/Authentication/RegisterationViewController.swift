@@ -42,7 +42,7 @@ class RegisterationViewController: UIViewController {
     }
     @IBAction func haveAccountTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-        let signInVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! login
+        let signInVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.navigationController?.pushViewController(signInVC, animated: true)
     }
     @IBAction func showConfrirmPassTapped(_ sender: Any) {
@@ -145,7 +145,7 @@ extension RegisterationViewController : WebServiceDelegate{
             print(model)
             if model.httpCode == 201{
                 Defults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
-                let vc = ConfirmationCodeViewController.newInstance(mobile: model.user?.mobile ?? "")
+                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: model.user?.mobile ?? "")
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

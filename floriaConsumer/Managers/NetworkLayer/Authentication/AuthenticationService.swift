@@ -16,6 +16,45 @@ class AuthenticationService {
         self.delegate = delegate
     }
     
+    func loginWith(phoneNumber: String, password: String) {
+        let url = "http://api2.floriaapp.com/api/v1/login"
+        
+        let params: [String:String] = ["mobile": phoneNumber,
+                                       "password":password]
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .post, parameters: params, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
+                self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func forgetPass(phone : String) {
+        let url = "http://api2.floriaapp.com/api/v1/forget-password"
+        let parameters = ["mobile" : phone]
+        
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let data = try! JSONDecoder().decode(ForgetPassModel.self, from: response.data!)
+                self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int) {
         let url = "http://api2.floriaapp.com/api/v1/register"
         let parameters = [
@@ -24,7 +63,7 @@ class AuthenticationService {
             "mobile" : phone,
             "password" : password,
             "check_privacy" : checkPrivecy
-        ] as [String : Any]
+            ] as [String : Any]
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
@@ -45,7 +84,7 @@ class AuthenticationService {
         let url = "http://api2.floriaapp.com/api/v1/verify"
         let parameters = [
             "verification_code" : code
-        ] as [String : Any]
+            ] as [String : Any]
         
         let headers = WebServiceConfigure.getHeadersForAuthentication()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
@@ -80,23 +119,4 @@ class AuthenticationService {
         }
     }
     
-    func loginWith(phoneNumber: String, password: String) {
-        let url = "http://api2.floriaapp.com/api/v1/login"
-        
-        let params: [String:String] = ["mobile": phoneNumber,
-                                       "password":password]
-        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
-        Alamofire.request(url, method: .post, parameters: params, headers: headers).responseJSON{ (response) in
-            switch response.result {
-            case .success(let value):
-                print(value)
-                let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
-                self.delegate?.didRecieveData(data: data)
-                break
-                
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
 }
