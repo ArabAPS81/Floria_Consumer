@@ -16,6 +16,25 @@ class AuthenticationService {
         self.delegate = delegate
     }
     
+    func forgetPass(phone : String) {
+        let url = "http://api2.floriaapp.com/api/v1/forget-password"
+        let parameters = ["mobile" : phone]
+        
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let data = try! JSONDecoder().decode(ForgetPassModel.self, from: response.data!)
+                self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int) {
         let url = NetworkConstants.baseUrl + "register"
         let parameters = [
