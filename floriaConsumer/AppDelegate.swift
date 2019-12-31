@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
             let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
             window?.rootViewController = homeVC
+        }else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let homeVC = storyboard.instantiateInitialViewController()
+            window?.rootViewController = homeVC
         }
-        
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

@@ -17,7 +17,7 @@ class AuthenticationService {
     }
     
     func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int) {
-        let url = "http://api2.floriaapp.com/api/v1/register"
+        let url = NetworkConstants.baseUrl + "register"
         let parameters = [
             "name" : name,
             "email" : email,
@@ -42,7 +42,7 @@ class AuthenticationService {
     }
     
     func confirm(code : String) {
-        let url = "http://api2.floriaapp.com/api/v1/verify"
+        let url = NetworkConstants.baseUrl + "verify"
         let parameters = [
             "verification_code" : code
         ] as [String : Any]
@@ -63,7 +63,7 @@ class AuthenticationService {
     }
     
     func resend(mobile : String) {
-        let url = "http://api2.floriaapp.com/api/v1/verify\(mobile)"
+        let url = NetworkConstants.baseUrl + "verify\(mobile)"
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: [:], headers: headers).responseJSON{ (response) in
@@ -81,7 +81,7 @@ class AuthenticationService {
     }
     
     func loginWith(phoneNumber: String, password: String) {
-        let url = "http://api2.floriaapp.com/api/v1/login"
+        let url = NetworkConstants.baseUrl + "login"
         
         let params: [String:String] = ["mobile": phoneNumber,
                                        "password":password]

@@ -17,7 +17,6 @@ class login: UIViewController {
         sign.layer.cornerRadius = 20
         disshow.isHidden = true
         face.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var name: UITextField!
@@ -25,7 +24,11 @@ class login: UIViewController {
     @IBOutlet weak var pass: UITextField!
     @IBAction func signin(_ sender: Any) {
         let service = AuthenticationService.init(delegate: self)
-        service.loginWith(phoneNumber: "01220028001", password: "12345678")
+        let ph = name.text ?? ""
+        let pas = pass.text ?? ""
+        
+        
+        service.loginWith(phoneNumber: ph, password: pas)
     }
     
     

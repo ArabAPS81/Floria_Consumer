@@ -33,6 +33,4 @@ extension resetpasswordVC: WebServiceDelegate {
     func didFailToReceiveDataWithError(error: Error) {
         
     }
-    
-    
 }
