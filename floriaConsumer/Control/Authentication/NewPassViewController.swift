@@ -8,15 +8,21 @@
 
 import UIKit
 
-class resetpasswordVC: UIViewController {
+class NewPassViewController: UIViewController {
     
+    
+    static func newInstance() -> NewPassViewController {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let newPassVC = storyboard.instantiateViewController(withIdentifier: "newPassVC") as! NewPassViewController
+            
+            return newPassVC
+    
+        }
     override func viewDidLoad() {
         
         okkkk.layer.cornerRadius = 20
     }
-    @IBOutlet weak var phon: UITextField!
     
-    @IBOutlet weak var confirm: UITextField!
     @IBOutlet weak var okkkk: UIButton!
  
     @IBAction func ok(_ sender: Any) {
@@ -25,7 +31,7 @@ class resetpasswordVC: UIViewController {
    
 }
 
-extension resetpasswordVC: WebServiceDelegate {
+extension NewPassViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         
     }

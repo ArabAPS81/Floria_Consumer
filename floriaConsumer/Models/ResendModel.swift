@@ -18,3 +18,26 @@ struct ResendModel : Codable {
         case message = "message"
     }
 }
+
+
+struct ForgetPassModel : Codable {
+    let data : Data?
+    let httpCode : Int?
+    let message : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case data
+        case httpCode = "http_code"
+        case message = "message"
+    }
+    
+    struct Data : Codable {
+
+        let mobile : String
+        enum CodingKeys: String, CodingKey {
+            case mobile = "mobile"
+        }
+
+    }
+}
+

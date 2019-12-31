@@ -1,0 +1,94 @@
+//
+//  login.swift
+//  floriaConsumer
+//
+//  Created by mac on 14/02/1441 AH.
+//  Copyright © 1441 Obida. All rights reserved.
+//
+
+import UIKit
+import Alamofire
+import SwiftyJSON
+
+class LoginViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpViewsShapes()
+        self.title = "Login"
+        failureLable.isHidden = true
+        phoneTF.addTarget(self, action: #selector(handlePhoneChange), for: .editingDidEnd)
+        hideKeyboardWhenTappedAround()
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var passTF: UITextField!
+    @IBOutlet weak var failureLable: UILabel!
+    @IBOutlet weak var showPassBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    @IBAction func showPassTapped(_ sender: Any) {
+        if (passTF.isSecureTextEntry == true){
+            passTF.isSecureTextEntry = false
+            showPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
+        }else{
+            showPassBtn.setImage(UIImage(named: "ShowPass"), for: .normal)
+            passTF.isSecureTextEntry = true
+        }
+    }
+    @IBAction func signin(_ sender: Any) {
+        guard let Phone = phoneTF.text , !Phone.isEmpty else{return}
+        guard let password = passTF.text , !password.isEmpty else{return}
+        let service = AuthenticationService.init(delegate: self)
+        service.loginWith(phoneNumber: Phone, password: password)
+    }
+    
+    @IBAction func skip(_ sender: Any) {
+        self.performSegue(withIdentifier: "loged", sender: nil)
+    }
+    
+    @IBAction func forgetpass(_ sender: Any) {
+        
+        
+    }
+    
+    func setUpViewsShapes() {
+        loginBtn.layer.cornerRadius = 30
+        loginBtn.clipsToBounds = true
+    }
+    @ objc func handlePhoneChange(){
+        guard let text = phoneTF.text else{return}
+        if text.isValid(.phone){
+            print("Valid Text")
+            failureLable.isHidden = true
+        }else{
+            failureLable.text = "Not a Valid Mobile"
+            failureLable.isHidden = false
+        }
+    }
+   
+}
+       
+extension LoginViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let data = data as? AuthenticationModel {
+            if data.httpCode == 200{
+                Defults.init().saveUserId(userId: data.user?.id ?? 0)
+                Defults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                let vc = HomeNav.newInstance()
+                self.present(vc, animated: true)
+            }else if data.httpCode == 401{
+                failureLable.text = "Unauthorized"
+            }
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
+    
+}
+    
+

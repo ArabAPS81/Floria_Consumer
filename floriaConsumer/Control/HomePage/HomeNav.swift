@@ -9,6 +9,13 @@
 import UIKit
 
 class HomeNav: UINavigationController {
+    
+    static func newInstance() -> HomeNav {
+        let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
+        let homeNav = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
+        return homeNav
+
+    }
 
     /*
     // Only override draw() if you perform custom drawing.

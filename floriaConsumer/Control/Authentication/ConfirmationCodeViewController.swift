@@ -9,14 +9,16 @@
 import UIKit
 
 class ConfirmationCodeViewController: UIViewController {
-    var mobile : String!
     
-    static func newInstance(mobile : String) -> ConfirmationCodeViewController {
+    var mobile : String!
+    var comingFromVC : String!
+    
+    static func newInstance(comingFromVC : String ,mobile : String) -> ConfirmationCodeViewController {
         let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
         let confirmCodeVC = storyboard.instantiateViewController(withIdentifier: "confirmCodeVC") as! ConfirmationCodeViewController
         confirmCodeVC.mobile = mobile
+        confirmCodeVC.comingFromVC = comingFromVC
         return confirmCodeVC
-
     }
     
     @IBOutlet weak var timerLable: UILabel!
@@ -72,17 +74,22 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
     func didRecieveData(data: Codable) {
         if let model = data as? AuthenticationModel {
             if model.httpCode == 200{
-                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-                let homeNav = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
-                self.navigationController?.pushViewController(homeNav, animated: true)
-                self.present(homeNav, animated: true)
+                if comingFromVC == "registration"{
+                    let vc = HomeNav.newInstance()
+                    self.present(vc, animated: true)
+                }
+                else if comingFromVC == "forgetPass"{
+                    let vc = NewPassViewController.newInstance()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
+            
         }
-    }
-    
-    func didFailToReceiveDataWithError(error: Error) {
         
     }
     
     
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
 }
