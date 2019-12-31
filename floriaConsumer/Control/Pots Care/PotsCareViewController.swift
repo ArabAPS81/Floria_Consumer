@@ -16,11 +16,26 @@ class PotsCareViewController: UIViewController {
         return vc
     }
     
+    @IBOutlet weak var numOfPotsTF: UITextField!
+    @IBOutlet weak var potSizeTF: UITextField!
+    @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var timeTF: UITextField!
+    
+    var potSizePickerView = UIPickerView()
+    
+    private var potsSizes = [(1,"Less than 12.5 square meters"),(2,"Between 12.5 to 16 square meters"),(3,"Greater than 16 square meters")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        potSizePickerView.delegate = self
+        potSizePickerView.dataSource = self
+        let imgView = UIImageView.init(frame: CGRect.init(x: 5, y: 5, width: 35, height: 35))
+        imgView.image = UIImage.init(named: "downArrow")
+        imgView.contentMode = .scaleAspectFit
+        numOfPotsTF.rightView = imgView
+        potSizeTF.inputView = potSizePickerView
+        
     }
     
     @IBAction func chooseLocationButtonTapped(_ sender: UIButton) {
@@ -29,4 +44,24 @@ class PotsCareViewController: UIViewController {
     }
     
 
+}
+
+extension PotsCareViewController:UIPickerViewDelegate,UIPickerViewDataSource {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return potsSizes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return potsSizes[row].1
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        potSizeTF.text = potsSizes[row].1
+        SubmittOrderQueryModel.submittOrderQueryModel.potSizeId = potsSizes[row].0
+    }
+    
 }

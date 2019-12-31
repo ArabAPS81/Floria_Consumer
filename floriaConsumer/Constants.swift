@@ -37,17 +37,32 @@ class Constants {
         }.first!
     }
     
+    private static let carDecorationTypes = [CarDecorationType.init(id: 1, name: "Lite", image: UIImage.init(named: "carlauxe")),
+                                      CarDecorationType.init(id: 2, name: "Lauxe", image: UIImage.init(named: "carlauxe")),
+                                      CarDecorationType.init(id: 3, name: "Super lauxe", image: UIImage.init(named: "carlauxe"))]
+    static func decorationType(id:Int) -> CarDecorationType {
+        return carDecorationTypes.filter { (car) -> Bool in
+            return car.id == id
+        }.first!
+    }
+    
 }
 
 struct CarColor {
-    var id: Int
-    var name: String
-    var code : String
+    let id: Int
+    let name: String
+    let code : String
 }
 
 struct CarType {
-    var id: Int
-    var name: String
-    var image: UIImage?
+    let id: Int
+    let name: String
+    let image: UIImage?
+}
+
+struct CarDecorationType {
+    let id: Int
+    let name: String
+    let image: UIImage?
 }
 

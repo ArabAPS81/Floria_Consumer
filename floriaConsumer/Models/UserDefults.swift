@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct Defults {
+class Defaults {
+    
     
     
     func saveUserData(userId : Int , userName : String , phone : String){
@@ -23,6 +24,14 @@ struct Defults {
     func getUserId()-> Int? {
         let def = UserDefaults.standard
         return def.integer(forKey: "userId")
+    }
+    
+    var isUserLogged: Bool {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "logged")
+        } get {
+            return UserDefaults.standard.bool(forKey: "logged")
+        }
     }
     
     func saveUserToken(token : String){
