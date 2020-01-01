@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0403F491235533EE001327EF /* nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403F490235533EE001327EF /* nav.swift */; };
-		040417402353BA310041D97C /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404173F2353BA310041D97C /* login.swift */; };
 		040417422353C50C0041D97C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040417412353C50C0041D97C /* SignupViewController.swift */; };
 		0406516F23530CB30039566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406516E23530CB30039566C /* AppDelegate.swift */; };
 		0406517123530CB30039566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406517023530CB30039566C /* SceneDelegate.swift */; };
@@ -142,7 +141,6 @@
 
 /* Begin PBXFileReference section */
 		0403F490235533EE001327EF /* nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav.swift; sourceTree = "<group>"; };
-		0404173F2353BA310041D97C /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		040417412353C50C0041D97C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0406516B23530CB30039566C /* floriaConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = floriaConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406516E23530CB30039566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -736,7 +734,6 @@
 			isa = PBXGroup;
 			children = (
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
-				0404173F2353BA310041D97C /* login.swift */,
 				040417412353C50C0041D97C /* SignupViewController.swift */,
 				0480B27323A478100079253B /* resetpasswordVC.swift */,
 				0480B27523A4790A0079253B /* ForgetPassVC.swift */,
@@ -1000,7 +997,6 @@
 				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,
 				D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */,
 				1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */,
-				040417402353BA310041D97C /* login.swift in Sources */,
 				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
 				D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */,
 				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
