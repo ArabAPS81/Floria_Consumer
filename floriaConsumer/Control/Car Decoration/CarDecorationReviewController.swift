@@ -44,18 +44,18 @@ class CarDecorationReviewController: UIViewController {
         shadowedView?.forEach({ (view) in
             view.dropRoundedShadowForAllSides(view.layer.cornerRadius)
         })
-        let id = (SubmittOrderQueryModel.submittOrderQueryModel.decorationTypeId ?? 1) - 1
+        let order = SubmittOrderQueryModel.submittOrderQueryModel
+        let id = (order.decorationTypeId ?? 1) - 1
         priceLabel.text = "\(vendor.decorationTypes?[id].price ?? 0)"
-        colorNameLabel.text = Constants.carColors[SubmittOrderQueryModel.submittOrderQueryModel.colorId! - 1].name
-        colorView.backgroundColor = UIColor.init(hexString: Constants.carColors[SubmittOrderQueryModel.submittOrderQueryModel.colorId! - 1].code)
+        colorNameLabel.text = Constants.carColors[order.colorId! - 1].name
+        colorView.backgroundColor = UIColor.init(hexString: Constants.carColors[order.colorId! - 1].code)
         vendorNameLabel.text = vendor.name
         vendorAddressLabel.text = "\(vendor.address ?? "") \(vendor.district?.name ?? "")"
         vendorImageLabel.imageFromUrl(url: vendor.image, placeholder: nil)
-        carTypeLabel.text = Constants.carForId(SubmittOrderQueryModel.submittOrderQueryModel.carTypeId ?? 0).name
-//        decorationTypeLabel
-//        decorationTypeImage
-        carTypeImage.image = Constants.carForId(SubmittOrderQueryModel.submittOrderQueryModel.carTypeId ?? 0).image
-        
+        carTypeLabel.text = Constants.carForId(order.carTypeId ?? 0).name
+        decorationTypeLabel.text = Constants.decorationType(id: order.decorationTypeId ?? 1).name
+        decorationTypeImage.image = Constants.decorationType(id: order.decorationTypeId ?? 1).image
+        carTypeImage.image = Constants.carForId(order.carTypeId ?? 0).image
     }
     
     

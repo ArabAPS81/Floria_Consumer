@@ -52,13 +52,6 @@ class CustomBouquetViewController: UIViewController {
         }
         return true
     }
-    
-    func  alertWithMessage(_ message: String) {
-        let alert = UIAlertController.init(title: "", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-
 }
 
 extension CustomBouquetViewController: UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {

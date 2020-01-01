@@ -25,6 +25,8 @@ class SubmittOrderQueryModel: Codable {
     var carTypeId: Int?
     var colorId: Int?
     var decorationTypeId: Int?
+    var potSizeId: Int?
+    var numOfPots: Int?
     
     enum CodingKeys: String, CodingKey {
         case products
@@ -38,6 +40,8 @@ class SubmittOrderQueryModel: Codable {
         case carTypeId = "car_type_id"
         case colorId = "color_id"
         case decorationTypeId = "decoration_type_id"
+        case potSizeId = "pot_size_id"
+        case numOfPots = "number_of_pots"
     }
     
     

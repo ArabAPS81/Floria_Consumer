@@ -17,10 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         LocationManager.sharedManager.initializeLocationManager()
-        let userId = Defults.init().getUserId()
-        if userId != 0{
-            print(userId)
-            
+        if Defaults.init().isUserLogged{
             let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
             let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
             window?.rootViewController = homeVC
@@ -30,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = homeVC
         }
         IQKeyboardManager.shared.enable = true
+        
+        
+        
         return true
     }
 
