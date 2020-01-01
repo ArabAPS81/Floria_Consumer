@@ -10,6 +10,14 @@ import UIKit
 
 class PotsCareReviewViewController: UIViewController {
     
+    
+    @IBOutlet weak var numOfPotsLabel: UILabel!
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    
+    @IBOutlet weak var vendorAddressLabel: UILabel!
+    @IBOutlet weak var potsSizeLabel: UILabel!
+    @IBOutlet weak var vendorRating: RateView!
+    @IBOutlet weak var vendorImage: UIImageView!
     static func newInstance() -> PotsCareReviewViewController {
         let storyboard = UIStoryboard.init(name: "PotsCare", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "PotsCareReviewViewController") as! PotsCareReviewViewController
@@ -22,7 +30,6 @@ class PotsCareReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
     }
     
     func setupView() {
@@ -30,6 +37,8 @@ class PotsCareReviewViewController: UIViewController {
         shadowedView?.forEach({ (view) in
             view.dropRoundedShadowForAllSides(view.layer.cornerRadius)
         })
+        
+        
     }
 
 }

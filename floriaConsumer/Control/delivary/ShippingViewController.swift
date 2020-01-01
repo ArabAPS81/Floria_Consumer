@@ -48,7 +48,7 @@ class ShippingViewController: UIViewController {
             if let dt = date {
                 self.selectedDate = dt
                 let formatter = DateFormatter()
-                formatter.dateFormat = "yyyy-MM-dd"
+                formatter.dateFormat = "yyyy/MM/dd"
                 self.deliveryDateLabel.text = formatter.string(from: dt)
             }
         }
@@ -96,13 +96,6 @@ class ShippingViewController: UIViewController {
         }
         return true
     }
-    
-    func  alertWithMessage(_ message: String) {
-        let alert = UIAlertController.init(title: "", message: message, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? OrderSummaryViewController{

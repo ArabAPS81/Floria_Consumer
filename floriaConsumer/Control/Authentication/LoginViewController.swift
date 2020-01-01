@@ -74,8 +74,8 @@ extension LoginViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? AuthenticationModel {
             if data.httpCode == 200{
-                Defults.init().saveUserId(userId: data.user?.id ?? 0)
-                Defults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                Defaults.init().saveUserId(userId: data.user?.id ?? 0)
+                Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
                 let vc = HomeNav.newInstance()
                 self.present(vc, animated: true)
             }else if data.httpCode == 401{

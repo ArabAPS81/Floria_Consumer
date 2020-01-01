@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = homeVC
         }
         IQKeyboardManager.shared.enable = true
+        
+        
+        
         return true
     }
 

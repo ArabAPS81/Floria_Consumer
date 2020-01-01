@@ -18,12 +18,9 @@ class PotsCareViewController: UIViewController {
     
     @IBOutlet weak var numOfPotsTF: UITextField!
     @IBOutlet weak var potSizeTF: UITextField!
-    @IBOutlet weak var dateTF: UITextField!
-    @IBOutlet weak var timeTF: UITextField!
     
     var potSizePickerView = UIPickerView()
     
-    private var potsSizes = [(1,"Less than 12.5 square meters"),(2,"Between 12.5 to 16 square meters"),(3,"Greater than 16 square meters")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +32,30 @@ class PotsCareViewController: UIViewController {
         imgView.contentMode = .scaleAspectFit
         numOfPotsTF.rightView = imgView
         potSizeTF.inputView = potSizePickerView
+        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 5
         
     }
     
     @IBAction func chooseLocationButtonTapped(_ sender: UIButton) {
-        let vc = AddressesListViewController.newInstance(serviceType: .potsCare)
-        self.navigationController?.pushViewController(vc, animated: true)
+        if validation() {
+            SubmittOrderQueryModel.submittOrderQueryModel.numOfPots = Int(numOfPotsTF.text ?? "1") ?? 1
+            let vc = AddressesListViewController.newInstance(serviceType: .potsCare)
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
-
+    func validation() -> Bool{
+        if numOfPotsTF.text!.isEmpty || Int(numOfPotsTF.text ?? "0") ?? 0 <= 0 {
+            alertWithMessage("Number of pots is requires")
+            return false
+        }
+        if potSizeTF.text!.isEmpty {
+            alertWithMessage("Select pots size")
+            return false
+        }
+        return true
+    }
 }
 
 extension PotsCareViewController:UIPickerViewDelegate,UIPickerViewDataSource {
@@ -53,15 +65,15 @@ extension PotsCareViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return potsSizes.count
+        return Constants.potsSizes.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return potsSizes[row].1
+        return Constants.potsSizes[row].1
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        potSizeTF.text = potsSizes[row].1
-        SubmittOrderQueryModel.submittOrderQueryModel.potSizeId = potsSizes[row].0
+        potSizeTF.text = Constants.potsSizes[row].1
+        SubmittOrderQueryModel.submittOrderQueryModel.potSizeId = Constants.potsSizes[row].0
     }
     
 }

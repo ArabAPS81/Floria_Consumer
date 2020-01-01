@@ -46,6 +46,9 @@ class Constants {
         }.first!
     }
     
+    static let potsSizes = [(1,"Less than 12.5 square meters"),(2,"Between 12.5 to 16 square meters"),(3,"Greater than 16 square meters")]
+    
+    
 }
 
 struct CarColor {
