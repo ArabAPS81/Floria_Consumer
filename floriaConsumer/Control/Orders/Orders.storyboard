@@ -345,6 +345,7 @@
                     </view>
                     <connections>
                         <outlet property="tvOrders" destination="5qh-Eb-n7U" id="qh4-9J-AWi"/>
+                        <segue destination="Oqf-8A-FXb" kind="show" identifier="Segue2Order" id="CmZ-Af-xKG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4x-aS-obJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -356,15 +357,16 @@
             <objects>
                 <viewController storyboardIdentifier="OrderViewControllerStoryboard" id="Oqf-8A-FXb" customClass="OrderViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4d-ZG-agf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="c58-07-vWM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tpY-hP-8MJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm9-1I-fcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="867"/>
+            <point key="canvasLocation" x="1799" y="45"/>
         </scene>
     </scenes>
     <resources>

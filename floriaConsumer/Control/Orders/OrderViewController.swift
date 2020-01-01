@@ -10,10 +10,16 @@ import UIKit
 
 class OrderViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    var order: Order!
+
+    // MARK: - UIViewController
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "#\(order.id)"
     }
     
 

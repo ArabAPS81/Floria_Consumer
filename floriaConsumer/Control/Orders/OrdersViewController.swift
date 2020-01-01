@@ -9,7 +9,7 @@
 import UIKit
 
 class OrdersViewController: UIViewController {
-
+    
     // MARK: - Properties
     
     @IBOutlet weak var tvOrders: UITableView!
@@ -17,6 +17,11 @@ class OrdersViewController: UIViewController {
     var orders: Orders? {
         didSet {
             tvOrders.reloadData()
+        }
+    }
+    var selectedOrder: Order? {
+        didSet {
+            performSegue(withIdentifier: "Segue2Order", sender: self)
         }
     }
     
@@ -29,15 +34,14 @@ class OrdersViewController: UIViewController {
         requestOrders()
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? OrderViewController {
+            destination.order = self.selectedOrder
+        }
+    }
     
     // MARK: - Minions
     
@@ -54,7 +58,7 @@ extension OrdersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCustomCell", for: indexPath) as! OrderTableViewCell
-                
+        
         if let order = orders?.orders[indexPath.row] {
             cell.configure(order: order)
         }
@@ -65,6 +69,11 @@ extension OrdersViewController: UITableViewDataSource {
 }
 
 extension OrdersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let order = orders?.orders[indexPath.row] {
+            self.selectedOrder = order
+        }
+    }
 }
 
 extension OrdersViewController: WebServiceDelegate {
