@@ -29,7 +29,6 @@ class OrdersViewController: UIViewController {
         requestOrders()
     }
     
-    
     /*
      // MARK: - Navigation
      
@@ -55,12 +54,9 @@ extension OrdersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCustomCell", for: indexPath) as! OrderTableViewCell
-        
+                
         if let order = orders?.orders[indexPath.row] {
-            cell.lblOrderNumber.text = "#\(order.id)"
-            cell.lblOrderDate.text = order.requiredAt
-            cell.lblOrderPrice.text = ("\(order.total) EGP")
-            cell.lblOrderStatus.text = order.status.name
+            cell.configure(order: order)
         }
         
         return cell

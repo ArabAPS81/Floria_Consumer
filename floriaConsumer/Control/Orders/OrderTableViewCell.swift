@@ -12,6 +12,7 @@ class OrderTableViewCell: UITableViewCell {
 
     // MARK: - Properties
 
+    @IBOutlet weak var shadowedView: UIView!
     @IBOutlet weak var ivAvatar: UIImageView!
     @IBOutlet weak var lblOrderNumber: UILabel!
     @IBOutlet weak var lblOrderDate: UILabel!
@@ -23,13 +24,24 @@ class OrderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.selectedBackgroundView = UIView()
+        shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    /*override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+    }*/
+    
+    // MARK: - Minions
 
+    func configure(order: Order) {
+        self.ivAvatar.imageFromUrl(url: order.provider.image, placeholder: #imageLiteral(resourceName: "pro"))
+        self.lblOrderNumber.text = "#\(order.id)"
+        self.lblOrderDate.text = order.requiredAt
+        self.lblOrderPrice.text = ("\(order.total) EGP")
+        self.lblOrderStatus.text = order.status.name
+    }    
 }
