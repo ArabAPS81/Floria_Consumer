@@ -12,6 +12,15 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
+    
+    static func newInstance() -> LoginViewController {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            
+            return loginVC
+    
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewsShapes()
