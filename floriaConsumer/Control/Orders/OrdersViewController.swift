@@ -59,6 +59,7 @@ extension OrdersViewController: UITableViewDataSource {
         if let order = orders?.orders[indexPath.row] {
             cell.lblOrderNumber.text = "#\(order.id)"
             cell.lblOrderDate.text = order.requiredAt
+            cell.lblOrderPrice.text = ("\(order.total) EGP")
             cell.lblOrderStatus.text = order.status.name
         }
         
