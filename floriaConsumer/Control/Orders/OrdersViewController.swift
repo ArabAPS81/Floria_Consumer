@@ -9,6 +9,7 @@
 import UIKit
 
 class OrdersViewController: UIViewController {
+
     // MARK: - Properties
     
     @IBOutlet weak var tvOrders: UITableView!
@@ -53,11 +54,12 @@ extension OrdersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCustomCell", for: indexPath) as! OrderTableViewCell
         
         if let order = orders?.orders[indexPath.row] {
-            cell.textLabel?.text = "Order number \(order.id)"
-            cell.detailTextLabel?.text = order.address[0].district.name
+            cell.lblOrderNumber.text = "#\(order.id)"
+            cell.lblOrderDate.text = order.requiredAt
+            cell.lblOrderStatus.text = order.status.name
         }
         
         return cell
