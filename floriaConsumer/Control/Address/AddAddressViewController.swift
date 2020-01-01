@@ -28,10 +28,10 @@ class AddAddressViewController: UIViewController {
     @IBAction func addAddressTapped(_ sender: UIButton) {
         var address = SubmittAddressQueryModel.init()
         //address.contactName = "gb"
-        address.streetName = "bnabgsdgb"
-        address.name = "etenbg"
+        address.streetName = streetNameTF.text
+        address.name = addressTitleTF.text
         address.districtId = 3
-        address.phoneNum = "01165454327"
+        address.phoneNum = contactNameTF.text
         let service = AddressService.init(delegate: self)
         service.addAddress(address: address)
     }
@@ -40,8 +40,15 @@ class AddAddressViewController: UIViewController {
 
 extension AddAddressViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
-        print(data)
-        self.dismiss(animated: true, completion: nil)
+        if let data = data as? AddAddressResponseModel {
+            
+            if data.httpCode == 201 || data.httpCode == 200 {
+                self.dismiss(animated: true, completion: nil)
+            }else {
+                
+            }
+        }
+        
     }
     
     func didFailToReceiveDataWithError(error: Error) {

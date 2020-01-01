@@ -42,7 +42,7 @@ class RegisterationViewController: UIViewController {
     }
     @IBAction func haveAccountTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-        let signInVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! login
+        let signInVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.navigationController?.pushViewController(signInVC, animated: true)
     }
     @IBAction func showConfrirmPassTapped(_ sender: Any) {
@@ -81,7 +81,7 @@ class RegisterationViewController: UIViewController {
         guard password == confirmPass else{return}
         
         let service = AuthenticationService.init(delegate: self)
-        service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: 1)
+        service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
         
     }
     override func viewDidLoad() {
@@ -144,8 +144,8 @@ extension RegisterationViewController : WebServiceDelegate{
         if let model = data as? AuthenticationModel {
             print(model)
             if model.httpCode == 201{
-                Defults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
-                let vc = ConfirmationCodeViewController.newInstance(mobile: model.user?.mobile ?? "")
+                Defaults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
+                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: model.user?.mobile ?? "")
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

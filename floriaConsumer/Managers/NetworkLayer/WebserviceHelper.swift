@@ -9,7 +9,7 @@
 class WebServiceConfigure {
     
     static func getHeadersForAuthentication() -> [String:String] {
-        let token = Defults.init().getAuthenToken()
+        let token = Defaults.init().getAuthenToken()
         let headers: [String: String] = [//"Content-Type":"application/json",
                       // "Accept": "application/json",
                        "Authorization":"Bearer " + (token ?? "")]
@@ -17,7 +17,7 @@ class WebServiceConfigure {
     }
     
     static func getHeadersForAuthenticatedState() -> [String:String] {
-        let token = Defults.init().getUserToken()
+        let token = Defaults.init().getUserToken()
         let headers: [String: String] = [//"Content-Type":"application/json",
                       // "Accept": "application/json",
                        "Authorization":"Bearer " + (token ?? "")]
@@ -26,7 +26,7 @@ class WebServiceConfigure {
     static func getHeadersForUnauthenticatedState() -> [String:String] {
         let headers: [String: String] = [
                        "Accept": "application/json",
-                       "Accept-Language": "ar"]
+                       "Accept-Language": "en"]
         return headers
     }
 }

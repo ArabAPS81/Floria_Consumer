@@ -1,3 +1,4 @@
 *.xcworkspace
+floriaConsumer.xcodeproj/xcuserdata
 Podfile.lock
 /Pods

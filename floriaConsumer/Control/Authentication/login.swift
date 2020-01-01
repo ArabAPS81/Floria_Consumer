@@ -64,7 +64,8 @@ extension login: WebServiceDelegate {
         if let model = data as? AuthenticationModel {
             print(model)
             if model.httpCode == 200{
-                Defults.init().saveUserToken(token : model.user?.accessToken ?? "")
+                Defaults.init().saveUserToken(token : model.user?.accessToken ?? "")
+                Defaults.init().isUserLogged = true
                 performSegue(withIdentifier: "loged", sender: nil)
             }
         }
