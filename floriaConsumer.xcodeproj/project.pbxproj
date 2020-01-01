@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0403F491235533EE001327EF /* nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403F490235533EE001327EF /* nav.swift */; };
-		040417422353C50C0041D97C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040417412353C50C0041D97C /* SignupViewController.swift */; };
 		0406516F23530CB30039566C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406516E23530CB30039566C /* AppDelegate.swift */; };
 		0406517123530CB30039566C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406517023530CB30039566C /* SceneDelegate.swift */; };
 		0406517323530CB30039566C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406517223530CB30039566C /* ViewController.swift */; };
@@ -109,6 +108,7 @@
 		D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */; };
 		D67B30F8238BD4E60080252B /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F7238BD4E60080252B /* RateView.swift */; };
 		D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30FA238C016F0080252B /* UIViewExtension.swift */; };
+		D68D740123BCC58C000E64E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D740023BCC58C000E64E1 /* LoginViewController.swift */; };
 		D696C2B023A0E6EE00E3A56A /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696C2AF23A0E6EE00E3A56A /* CustomAlert.swift */; };
 		D696C2B523A0ED5900E3A56A /* VendorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696C2B423A0ED5900E3A56A /* VendorModel.swift */; };
 		D696C2B723A0F2F200E3A56A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696C2B623A0F2F200E3A56A /* HomePresenter.swift */; };
@@ -138,8 +138,6 @@
 
 /* Begin PBXFileReference section */
 		0403F490235533EE001327EF /* nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav.swift; sourceTree = "<group>"; };
-		0404173F2353BA310041D97C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		040417412353C50C0041D97C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		0406516B23530CB30039566C /* floriaConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = floriaConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406516E23530CB30039566C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0406517023530CB30039566C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +242,7 @@
 		D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D67B30F7238BD4E60080252B /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		D67B30FA238C016F0080252B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D68D740023BCC58C000E64E1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D696C2AF23A0E6EE00E3A56A /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		D696C2B423A0ED5900E3A56A /* VendorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorModel.swift; sourceTree = "<group>"; };
 		D696C2B623A0F2F200E3A56A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -726,9 +725,9 @@
 			isa = PBXGroup;
 			children = (
 				D6E80B79238974B6003A7DFF /* Authentication.storyboard */,
-				040417412353C50C0041D97C /* SignupViewController.swift */,
-				0480B27323A478100079253B /* resetpasswordVC.swift */,
-				0480B27523A4790A0079253B /* ForgetPassVC.swift */,
+				D68D740023BCC58C000E64E1 /* LoginViewController.swift */,
+				0480B27323A478100079253B /* NewPassViewController.swift */,
+				0480B27523A4790A0079253B /* ForgetPassViewController.swift */,
 				9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */,
 				9C113EC523B78CA000C537D8 /* TermsViewController.swift */,
 				9C9B039923B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift */,
@@ -1001,6 +1000,7 @@
 				9C113EC423B78A4200C537D8 /* RegisterationViewController.swift in Sources */,
 				045B4A5E2381848100CCC257 /* providerlistcellmodel.swift in Sources */,
 				D635C25523AE001F00A0DC73 /* WebServiceDelegate.swift in Sources */,
+				D68D740123BCC58C000E64E1 /* LoginViewController.swift in Sources */,
 				0480B27623A4790A0079253B /* ForgetPassViewController.swift in Sources */,
 				9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */,
 				D67B30FB238C016F0080252B /* UIViewExtension.swift in Sources */,
