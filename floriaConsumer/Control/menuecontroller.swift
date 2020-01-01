@@ -33,4 +33,10 @@ class menuecontroller: UIViewController {
     }
     */
 
+    // MARK: - Actions
+    
+    @IBAction func onOrdersClick(_ sender: UIButton) {
+        //print("😉 onOrdersClick")
+        performSegue(withIdentifier: "Segue2Orders", sender: self)
+    }
 }
