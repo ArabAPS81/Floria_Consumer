@@ -81,7 +81,7 @@ class RegisterationViewController: UIViewController {
         guard password == confirmPass else{return}
         
         let service = AuthenticationService.init(delegate: self)
-        service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: 1)
+        service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
         
     }
     override func viewDidLoad() {

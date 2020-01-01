@@ -17,7 +17,7 @@ class AuthenticationService {
     }
     
     func forgetPass(phone : String) {
-        let url = "http://api2.floriaapp.com/api/v1/forget-password"
+        let url = NetworkConstants.baseUrl + "forget-password"
         let parameters = ["mobile" : phone]
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
@@ -26,6 +26,27 @@ class AuthenticationService {
             case .success(let value):
                 print(value)
                 let data = try! JSONDecoder().decode(ForgetPassModel.self, from: response.data!)
+                self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func confirmUser(mobile : String, code : String) {
+        let url = NetworkConstants.baseUrl + "verify/\(mobile)"
+        let parameters = [
+            "verification_code" : code
+        ] as [String : Any]
+        
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
                 self.delegate?.didRecieveData(data: data)
                 break
                 
@@ -60,7 +81,7 @@ class AuthenticationService {
         }
     }
     
-    func confirm(code : String) {
+    func confirmNewUser(code : String) {
         let url = NetworkConstants.baseUrl + "verify"
         let parameters = [
             "verification_code" : code
@@ -81,8 +102,9 @@ class AuthenticationService {
         }
     }
     
+    
     func resend(mobile : String) {
-        let url = NetworkConstants.baseUrl + "verify\(mobile)"
+        let url = NetworkConstants.baseUrl + "resend/\(mobile)"
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: [:], headers: headers).responseJSON{ (response) in

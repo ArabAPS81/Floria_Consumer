@@ -39,8 +39,15 @@ class ConfirmationCodeViewController: UIViewController {
     
     @IBAction func confirmTapped(_ sender: Any) {
         guard let code = codeTF.text?.trimmed , !code.isEmpty else {return}
-        let service = AuthenticationService.init(delegate: self)
-        service.confirm(code: code)
+        if comingFromVC == "registration"{
+            let service = AuthenticationService.init(delegate: self)
+            service.confirmNewUser(code: code)
+        }
+        else if comingFromVC == "forgetPass"{
+            let service = AuthenticationService.init(delegate: self)
+            service.confirmUser(mobile: mobile, code: code)
+        }
+        
     }
     
     @IBAction func resendTapped(_ sender: Any) {
@@ -53,8 +60,8 @@ class ConfirmationCodeViewController: UIViewController {
         resendBtn.layer.cornerRadius = 15
         resendBtn.clipsToBounds = true
         
-        resendBtn.layer.cornerRadius = 30
-        resendBtn.clipsToBounds = true
+        chagePassBtn.layer.cornerRadius = 30
+        chagePassBtn.clipsToBounds = true
         
     }
     
@@ -85,7 +92,6 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
             }
             
         }
-        
     }
     
     
