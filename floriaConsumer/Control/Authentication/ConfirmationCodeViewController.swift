@@ -86,7 +86,7 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
                     self.present(vc, animated: true)
                 }
                 else if comingFromVC == "forgetPass"{
-                    let vc = NewPassViewController.newInstance()
+                    let vc = NewPassViewController.newInstance(mobile: mobile)
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }

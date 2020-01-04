@@ -732,8 +732,8 @@
 				0480B27323A478100079253B /* NewPassViewController.swift */,
 				0480B27523A4790A0079253B /* ForgetPassViewController.swift */,
 				9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */,
-				9C113EC523B78CA000C537D8 /* TermsViewController.swift */,
 				9C9B039923B8CE7600AD6EE4 /* ConfirmationCodeViewController.swift */,
+				9C113EC523B78CA000C537D8 /* TermsViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
