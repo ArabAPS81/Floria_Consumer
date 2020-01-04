@@ -76,7 +76,6 @@ class LoginViewController: UIViewController {
             failureLable.isHidden = false
         }
     }
-   
 }
        
 extension LoginViewController: WebServiceDelegate {

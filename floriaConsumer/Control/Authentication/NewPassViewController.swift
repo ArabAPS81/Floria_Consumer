@@ -53,6 +53,11 @@ class NewPassViewController: UIViewController {
         guard let password = passwordTF.text , !password.isEmpty else{return}
         guard let confirmPassword = confirmPassTF.text , !confirmPassword.isEmpty else{return}
         
+        guard password == confirmPassword else {
+            alertWithMessage("Passwords dont match")
+            return
+        }
+        
         let service = AuthenticationService.init(delegate: self)
         service.changePass(mobile: mobile, pass: password, confirmPass: confirmPassword)
     }
@@ -60,6 +65,7 @@ class NewPassViewController: UIViewController {
     override func viewDidLoad() {
         
     }
+    
 }
 
 extension NewPassViewController: WebServiceDelegate {

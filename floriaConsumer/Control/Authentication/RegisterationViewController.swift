@@ -78,7 +78,10 @@ class RegisterationViewController: UIViewController {
         guard let mobile = mobileTF.text?.trimmed , !mobile.isEmpty else {return}
         guard let password = passwordTF.text?.trimmed , !password.isEmpty else {return}
         guard let confirmPass = confirmPassTF.text?.trimmed , !confirmPass.isEmpty else {return}
-        guard password == confirmPass else{return}
+        guard password == confirmPass else {
+            alertWithMessage("Passwords dont match")
+            return
+        }
         
         let service = AuthenticationService.init(delegate: self)
         service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
@@ -153,6 +156,4 @@ extension RegisterationViewController : WebServiceDelegate{
     func didFailToReceiveDataWithError(error: Error) {
         
     }
-    
-    
 }
