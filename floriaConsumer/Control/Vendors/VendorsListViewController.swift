@@ -51,7 +51,18 @@ class VendorsListViewController: UIViewController {
 
 extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vendorsList.count
+        
+        if vendorsList.count > 0{
+            tableView.backgroundView  = nil
+            return vendorsList.count
+        }else {
+            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text          = "No data available"
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+            tableView.backgroundView  = noDataLabel
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,6 +104,5 @@ extension VendorsListViewController: VendorsListView {
     func didFailToReceiveData(error: Error) {
         
     }
-    
     
 }

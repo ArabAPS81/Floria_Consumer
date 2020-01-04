@@ -18,6 +18,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var amountLabel: UILabel!
     
     var product: ProductsModel.Product!
+    var extras = [ProductPackingModel.ProductPacking]()
     
     var idofpro = ""
     var  x = 1
@@ -40,7 +41,8 @@ class ProductDetailsViewController: UIViewController {
         vendorNameLabel.text = product.provider?.name ?? ""
         descriptionLabel.text = product.descriptionField
         priceLabel.text = "\(product?.price ?? 0)"
-        
+        let service = VendorServices.init(delegate: self)
+        service.getProductExtrasFor(vendor: (product.provider?.id)!)
     }
     
     @IBAction func minase(_ sender: Any) {
@@ -70,7 +72,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             return 1
         }
         else{
-            return 4
+            return extras.count
         }
     }
     
@@ -85,7 +87,6 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
         self.present(alert, animated: true, completion: nil)
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when){
-            // your code with delay
             alert.dismiss(animated: true, completion: nil)
         }
     }
@@ -113,11 +114,37 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             return cell;
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
+            cell.configure(packing: extras[indexPath.row])
             return cell
-            
         }
+    }
+}
+
+extension ProductDetailsViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let data = data as? ProductPackingModel {
+            extras = data.packings ?? []
+            extrasCollectionView.reloadData()
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
         
     }
 }
 
-
+extension ProductDetailsViewController: ExtrasCollectionViewCellDelegate {
+    func deselectPacking(packing: ProductPackingModel.ProductPacking) {
+        let packingId = packing.id
+        SubmittOrderQueryModel.submittOrderQueryModel.packings.removeAll { (item) -> Bool in
+            let delete = item.id == packingId
+            print("\(item.id)*** \(delete)")
+            return delete
+        }
+    }
+    
+    func selectPacking(packing: ProductPackingModel.ProductPacking) {
+        let packing = SubmittOrderQueryModel.OrderPackings.init(id: packing.id!, quantity: 1, price: packing.price!, packingTypeId: 1)
+        SubmittOrderQueryModel.submittOrderQueryModel.packings.append(packing)
+    }
+}

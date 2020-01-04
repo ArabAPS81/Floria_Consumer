@@ -44,7 +44,17 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productsList.count
+        if productsList.count > 0{
+            collectionView.backgroundView  = nil
+            return productsList.count
+        }else {
+            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
+            noDataLabel.text          = "No data available"
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+            collectionView.backgroundView  = noDataLabel
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,7 +75,6 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = ProductDetailsViewController.newInstance(product: productsList[indexPath.row])
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
 }

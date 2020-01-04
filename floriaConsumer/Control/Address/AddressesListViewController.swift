@@ -23,6 +23,14 @@ class AddressesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Defaults().isUserLogged {
+            
+        } else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

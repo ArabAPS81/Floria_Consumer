@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2b-R0-Q3R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2b-R0-Q3R">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV5-qE-CJv">
                                 <rect key="frame" x="184" y="658" width="46" height="46"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="DhM-hh-Q3n"/>
                                     <constraint firstAttribute="width" constant="46" id="Z9l-Ap-c6x"/>
@@ -261,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="-13797.101449275364" y="-3338.1696428571427"/>
         </scene>
-        <!--forget password-->
+        <!--Forget password-->
         <scene sceneID="ehv-GZ-TC6">
             <objects>
                 <viewController id="0wb-35-2Z8" customClass="ForgetPassViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
@@ -334,7 +334,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bim-z5-73q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="forget password" id="2eO-bK-naF"/>
+                    <navigationItem key="navigationItem" title="Forget password" id="2eO-bK-naF"/>
                     <connections>
                         <outlet property="mobileTF" destination="H8A-Re-gJK" id="9FG-Y9-xDV"/>
                         <outlet property="sendCodeBtn" destination="gwS-az-q8r" id="ue8-Ew-PI3"/>
@@ -1108,5 +1108,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="phoneIcon" width="20" height="20.5"/>
     </resources>
-    <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

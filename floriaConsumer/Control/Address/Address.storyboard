@@ -160,7 +160,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="fmM-nS-B46">
                             <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="yrj-9H-G1v" kind="presentation" modalPresentationStyle="fullScreen" id="qgk-Af-syn"/>
+                                <segue destination="yrj-9H-G1v" kind="presentation" id="qgk-Af-syn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -179,11 +179,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddAddressViewController" id="yrj-9H-G1v" customClass="AddAddressViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67m-bN-Wcb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-Bv-eab">
-                                <rect key="frame" x="20" y="108" width="374" height="522"/>
+                                <rect key="frame" x="20" y="76" width="374" height="522"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJc-rM-cRe">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
@@ -471,7 +471,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjf-ve-WMk">
-                                <rect key="frame" x="97" y="806" width="220" height="46"/>
+                                <rect key="frame" x="97" y="752" width="220" height="46"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="GP8-3f-J4i"/>

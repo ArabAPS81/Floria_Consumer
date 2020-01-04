@@ -77,6 +77,7 @@ extension LoginViewController: WebServiceDelegate {
                 Defaults.init().saveUserId(userId: data.user?.id ?? 0)
                 Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
                 let vc = HomeNav.newInstance()
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
             }else if data.httpCode == 401{
                 failureLable.text = "Unauthorized"

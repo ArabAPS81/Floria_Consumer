@@ -17,7 +17,7 @@
 		04157D00237EF01100F772BE /* map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04157CFF237EF01100F772BE /* map.swift */; };
 		042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */; };
 		0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0434EECB23530E2A00D4329E /* splashViewController.swift */; };
-		043C1852237F80690003A633 /* productlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1851237F80690003A633 /* productlist.swift */; };
+		043C1852237F80690003A633 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1851237F80690003A633 /* ProductListViewController.swift */; };
 		043F73712393ED0500843A1C /* popupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F73702393ED0400843A1C /* popupVC.swift */; };
 		0441843D235D44CA0015DB4E /* fullscreen img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441843C235D44CA0015DB4E /* fullscreen img.swift */; };
 		044238D0235DA6EE000BF740 /* viewimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044238CF235DA6EE000BF740 /* viewimg.swift */; };
@@ -149,7 +149,7 @@
 		04157CFF237EF01100F772BE /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
 		042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0434EECB23530E2A00D4329E /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
-		043C1851237F80690003A633 /* productlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productlist.swift; sourceTree = "<group>"; };
+		043C1851237F80690003A633 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		043F73702393ED0400843A1C /* popupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupVC.swift; sourceTree = "<group>"; };
 		0441843C235D44CA0015DB4E /* fullscreen img.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "fullscreen img.swift"; sourceTree = "<group>"; };
 		044238CF235DA6EE000BF740 /* viewimg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewimg.swift; sourceTree = "<group>"; };
@@ -358,7 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				D638E25B2393AF60001A840C /* ProductCells */,
-				043C1851237F80690003A633 /* productlist.swift */,
+				043C1851237F80690003A633 /* ProductListViewController.swift */,
 				D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */,
 				042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */,
 				D620351323897FB000336D0B /* Product.storyboard */,
@@ -926,7 +926,7 @@
 				04441DA1237BBB5F002F5691 /* ShippingViewController.swift in Sources */,
 				D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */,
 				04E1139823764BF100D15FAC /* providerlist.swift in Sources */,
-				043C1852237F80690003A633 /* productlist.swift in Sources */,
+				043C1852237F80690003A633 /* ProductListViewController.swift in Sources */,
 				D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */,
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
 				9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */,
@@ -1150,14 +1150,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = floriaConsumer.arabaps.com;
+				PRODUCT_BUNDLE_IDENTIFIER = arabaps.floriaConsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1171,14 +1171,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = floriaConsumer.arabaps.com;
+				PRODUCT_BUNDLE_IDENTIFIER = arabaps.floriaConsumer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

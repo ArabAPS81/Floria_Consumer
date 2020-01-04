@@ -36,6 +36,9 @@ class AddAddressViewController: UIViewController {
         service.addAddress(address: address)
     }
     
+    func validation() -> Bool {
+        return true
+    }
 }
 
 extension AddAddressViewController: WebServiceDelegate {
@@ -44,8 +47,9 @@ extension AddAddressViewController: WebServiceDelegate {
             
             if data.httpCode == 201 || data.httpCode == 200 {
                 self.dismiss(animated: true, completion: nil)
+                alertWithMessage("", title: "Succesfully added")
             }else {
-                
+                // handele error
             }
         }
         
