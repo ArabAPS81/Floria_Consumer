@@ -87,7 +87,7 @@ extension LoginViewController: WebServiceDelegate {
                 let vc = HomeNav.newInstance()
                 self.present(vc, animated: true)
             }else if data.httpCode == 401{
-                failureLable.text = "Unauthorized"
+                failureLable.text = "Your phone or password maybe wrong"
             }
         }
     }

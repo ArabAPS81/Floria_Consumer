@@ -45,6 +45,7 @@ class RegisterationViewController: UIViewController {
         let signInVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
         self.navigationController?.pushViewController(signInVC, animated: true)
     }
+    
     @IBAction func showConfrirmPassTapped(_ sender: Any) {
         if (confirmPassTF.isSecureTextEntry == true){
             confirmPassTF.isSecureTextEntry = false
@@ -110,32 +111,38 @@ class RegisterationViewController: UIViewController {
     }
     
     @ objc func handleEmailChange(){
-        guard let text = emailTF.text else{return}
+        guard let text = emailTF.text, !text.isEmpty else{ emailErrorLable.isHidden = false
+            emailErrorLable.text = "This field is required"
+            return}
         if text.isValid(.email){
             print("Valid Text")
             emailErrorLable.isHidden = true
-        }else{
+        }else if !text.isEmpty{
             emailErrorLable.text = "Not A Valid Email"
             emailErrorLable.isHidden = false
         }
     }
     
     @ objc func handleNameChange(){
-        guard let text = nameTF.text else{return}
+        guard let text = nameTF.text , !text.isEmpty else{  nameErrorLable.isHidden = false
+            nameErrorLable.text = "This field is required"
+            return}
         if text.isValid(.name){
             nameErrorLable.isHidden = true
-        }else{
+        }else if !text.isEmpty{
             nameErrorLable.text = "Not A Valid Name"
             nameErrorLable.isHidden = false
         }
     }
     
     @ objc func handleMobileChange(){
-        guard let text = mobileTF.text else{return}
+        guard let text = mobileTF.text else{mobileErrorLable.isHidden = false
+            mobileErrorLable.text = "This field is required"
+            return}
         if text.isValid(.phone){
             print("Valid Text")
             mobileErrorLable.isHidden = true
-        }else{
+        }else if !text.isEmpty{
             mobileErrorLable.text = "Not A Valid Mobile"
             mobileErrorLable.isHidden = false
         }

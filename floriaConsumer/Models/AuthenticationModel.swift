@@ -45,3 +45,35 @@ struct AuthenticationModel: Codable {
         }
     }
 }
+
+struct RegisterErrorModel : Codable {
+
+    let error : Error?
+    let httpCode : Int?
+
+
+    enum CodingKeys: String, CodingKey {
+        case error
+        case httpCode = "http_code"
+    }
+    
+    struct Error : Codable {
+
+        let message : Message?
+        
+        
+        struct Message : Codable {
+
+            let email : [String]?
+            let mobile : [String]?
+
+            enum CodingKeys: String, CodingKey {
+                case email = "email"
+                case mobile = "mobile"
+            }
+
+        }
+
+    }
+
+}
