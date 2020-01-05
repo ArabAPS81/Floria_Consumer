@@ -20,6 +20,12 @@ class AddressTableViewCell: UITableViewCell {
     @IBOutlet weak var notesLabel: UILabel!
     @IBOutlet weak var fullAddressLabel: UILabel!
     
+    static let reuseId = "AddressTableViewCell"
+    
+    static func registerNIBinView(tableView: UITableView) {
+        let nib = UINib.init(nibName: reuseId, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: reuseId)
+    }
     
     func configure(address: AddressModel.Address) {
         addressNameLabel.text = address.name ?? ""

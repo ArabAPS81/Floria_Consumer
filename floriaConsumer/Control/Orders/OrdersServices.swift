@@ -71,7 +71,7 @@ struct Order: Codable {
     let service: Service
     let carDecoration: [CarDecoration]?
     let products: [ProductElement]?
-    let address: [Address]
+    let address: [AddressModel.Address]?
     
     enum CodingKeys: String, CodingKey {
         case id, provider, status
@@ -84,18 +84,18 @@ struct Order: Codable {
 
 // MARK: - Address
 
-struct Address: Codable {
+/*struct Address: Codable {
     let id: Int
     let name: String?
     let district: District
-}
+}*/
 
 // MARK: - District
 
-struct District: Codable {
+/*struct District: Codable {
     let id: Int
     let name: String?
-}
+}*/
 
 // MARK: - ProductElement
 
@@ -113,7 +113,7 @@ struct Product: Codable {
     let price, favoritesCount: Int
     let isFavorited: Bool
     let rate: Int
-    let provider, service: District
+    let provider, service: AddressModel.District
     
     enum CodingKeys: String, CodingKey {
         case id, name
