@@ -47,6 +47,8 @@
 		1FB0C99823C2063C00D61A2C /* CarDecorationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C99623C2063C00D61A2C /* CarDecorationTableViewCell.xib */; };
 		1FB0C99B23C21D0900D61A2C /* CustomBouquetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0C99923C21D0900D61A2C /* CustomBouquetTableViewCell.swift */; };
 		1FB0C99C23C21D0900D61A2C /* CustomBouquetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C99A23C21D0900D61A2C /* CustomBouquetTableViewCell.xib */; };
+		1FB0C9A723C21FB500D61A2C /* PotsCareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C9A523C21FB500D61A2C /* PotsCareTableViewCell.xib */; };
+		1FB0C9A823C21FB500D61A2C /* PotsCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0C9A623C21FB500D61A2C /* PotsCareTableViewCell.swift */; };
 		1FE934FA23BB5F5900AEEA1E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */; };
 		1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */; };
 		1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */; };
@@ -188,6 +190,8 @@
 		1FB0C99623C2063C00D61A2C /* CarDecorationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDecorationTableViewCell.xib; sourceTree = "<group>"; };
 		1FB0C99923C21D0900D61A2C /* CustomBouquetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBouquetTableViewCell.swift; sourceTree = "<group>"; };
 		1FB0C99A23C21D0900D61A2C /* CustomBouquetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBouquetTableViewCell.xib; sourceTree = "<group>"; };
+		1FB0C9A523C21FB500D61A2C /* PotsCareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PotsCareTableViewCell.xib; sourceTree = "<group>"; };
+		1FB0C9A623C21FB500D61A2C /* PotsCareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotsCareTableViewCell.swift; sourceTree = "<group>"; };
 		1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServices.swift; sourceTree = "<group>"; };
@@ -465,6 +469,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1FB0C9A423C21FB500D61A2C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0C9A523C21FB500D61A2C /* PotsCareTableViewCell.xib */,
+				1FB0C9A623C21FB500D61A2C /* PotsCareTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		636806513242FDB1EBDCCC22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +628,7 @@
 		D634760C239D428F008EB755 /* Pots Care */ = {
 			isa = PBXGroup;
 			children = (
+				1FB0C9A423C21FB500D61A2C /* Cells */,
 				D6203523238A9A9300336D0B /* PotsCare.storyboard */,
 				D618A795239E5BF400C61AEB /* PotsCareViewController.swift */,
 				D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */,
@@ -886,6 +900,7 @@
 				1FB0C99823C2063C00D61A2C /* CarDecorationTableViewCell.xib in Resources */,
 				D64CBF53238EA8A300DEE040 /* HomeProductCollectionViewCell.xib in Resources */,
 				1FB0C98F23C19F6200D61A2C /* AddressTableViewCell.xib in Resources */,
+				1FB0C9A723C21FB500D61A2C /* PotsCareTableViewCell.xib in Resources */,
 				D6C1A8052392AA3600379508 /* VendorTableViewCell.xib in Resources */,
 				0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */,
 				D620351A238A963A00336D0B /* Search.storyboard in Resources */,
@@ -1039,6 +1054,7 @@
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */,
 				9C113EC823B78D3200C537D8 /* Constant.swift in Sources */,
+				1FB0C9A823C21FB500D61A2C /* PotsCareTableViewCell.swift in Sources */,
 				D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */,
 				D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */,
 				D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */,

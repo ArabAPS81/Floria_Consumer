@@ -69,8 +69,9 @@ struct Order: Codable {
     let shipping, subtotal, totalTax, delivery: Int
     let total: Int
     let service: Service
-    let carDecoration: [CarDecoration]?
     let products: [ProductElement]?
+    let carDecoration: [CarDecoration]?
+    let potsCare: [PotCare]?
     let address: [AddressModel.Address]?
     
     enum CodingKeys: String, CodingKey {
@@ -78,7 +79,7 @@ struct Order: Codable {
         case requiredAt = "required_at"
         case notes, shipping, subtotal
         case totalTax = "total_tax"
-        case delivery, total, service, carDecoration, products, address
+        case delivery, total, service, products, carDecoration, potsCare, address
     }
 }
 
@@ -165,6 +166,25 @@ struct Decoration: Codable {
         case decorationDescription = "description"
         case image, price
     }
+}
+
+// MARK: - PotCare
+
+struct PotCare: Codable {
+    let potSize: PotSize
+    let numberOfPots: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case potSize
+        case numberOfPots = "number_of_pots"
+    }
+}
+
+// MARK: - PotSize
+
+struct PotSize: Codable {
+    let id: Int
+    let name: String
 }
 
 // MARK: - Status

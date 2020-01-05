@@ -1,5 +1,5 @@
 //
-//  CarDecorationTableViewCell.swift
+//  CustomBouquetTableViewCell.swift
 //  floriaConsumer
 //
 //  Created by Symsym on 5/1/20.
