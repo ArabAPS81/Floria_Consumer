@@ -16,6 +16,10 @@ class OrderViewController: UIViewController {
     
     var order: Order?
     
+    enum OrderDetails: Int {
+        case vendor = 0, product, carDecoration, address, count
+    }
+    
     // MARK: - UIViewController
     
     override func viewDidLoad() {
@@ -42,25 +46,25 @@ class OrderViewController: UIViewController {
 
 extension OrderViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return OrderDetails.count.rawValue
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 1
-        case 1: return order?.products?.count ?? 0
-        case 2: return order?.carDecoration?.count ?? 0
+        case OrderDetails.vendor.rawValue: return 1
+        case OrderDetails.product.rawValue: return order?.products?.count ?? 0
+        case OrderDetails.carDecoration.rawValue: return order?.carDecoration?.count ?? 0
         default: return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case 0:
+        case OrderDetails.vendor.rawValue:
             return vendorCell(table: tableView, position: indexPath)
-        case 1:
+        case OrderDetails.product.rawValue:
             return productCell(table: tableView, position: indexPath)
-        case 2:
+        case OrderDetails.carDecoration.rawValue:
             return carDecorationCell(table: tableView, position: indexPath)
         default:
             return addressCell(table: tableView, position: indexPath)
