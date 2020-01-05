@@ -72,34 +72,34 @@ class HomeViewController: UIViewController {
     
     @IBAction func gerbButtonTapped(_ sender: UIButton) {
         let vc = VendorsListViewController.newInstance(service: .gerb)
-        SubmittOrderQueryModel.submittOrderQueryModel = SubmittOrderQueryModel.init()
-        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 3
+        orderRequest = SubmittOrderQueryModel.init()
+        orderRequest.serviceId = 3
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     @IBAction func customBouquetButtonTapped(_ sender: UIButton) {
         let vc = VendorsListViewController.newInstance(service: .customBouquet)
-        SubmittOrderQueryModel.submittOrderQueryModel = SubmittOrderQueryModel.init()
-        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 2
+        orderRequest = SubmittOrderQueryModel.init()
+        orderRequest.serviceId = 2
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func readyMadeButtonTapped(_ sender: UIButton) {
         let vc = VendorsListViewController.newInstance(service: .readyMade)
-        SubmittOrderQueryModel.submittOrderQueryModel = SubmittOrderQueryModel.init()
-        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 1
+        orderRequest = SubmittOrderQueryModel.init()
+        orderRequest.serviceId = 1
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func carDecorationButtonTapped(_ sender: UIButton) {
         let vc = AddressesListViewController.newInstance(serviceType: .carDecoration)
-        SubmittOrderQueryModel.submittOrderQueryModel = SubmittOrderQueryModel.init()
+        orderRequest = SubmittOrderQueryModel.init()
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     @IBAction func potsCareButtonTapped(_ sender: UIButton) {
         let vc = PotsCareViewController.newInstance()
-        SubmittOrderQueryModel.submittOrderQueryModel = SubmittOrderQueryModel.init()
+        orderRequest = SubmittOrderQueryModel.init()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

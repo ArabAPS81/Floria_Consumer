@@ -25,7 +25,7 @@ class PakingViewController: UIViewController {
         ExtrasCollectionViewCell.registerNIBinView(collection: cardCollectionView)
         let service = VendorServices.init(delegate: self)
         service.getProductExtrasFor(vendor: 1)
-        SubmittOrderQueryModel.submittOrderQueryModel.packings = []
+        orderRequest.packings = []
     }
     
 
@@ -97,7 +97,7 @@ extension PakingViewController: WebServiceDelegate {
 extension PakingViewController: ExtrasCollectionViewCellDelegate {
     func deselectPacking(packing: ProductPackingModel.ProductPacking) {
         let packingId = packing.id
-        SubmittOrderQueryModel.submittOrderQueryModel.packings.removeAll { (item) -> Bool in
+        orderRequest.packings.removeAll { (item) -> Bool in
             let delete = item.id == packingId
             print("\(item.id)*** \(delete)")
             return delete
@@ -106,7 +106,7 @@ extension PakingViewController: ExtrasCollectionViewCellDelegate {
     
     func selectPacking(packing: ProductPackingModel.ProductPacking) {
         let packing = SubmittOrderQueryModel.OrderPackings.init(id: packing.id!, quantity: 1, price: packing.price!, packingTypeId: 1)
-        SubmittOrderQueryModel.submittOrderQueryModel.packings.append(packing)
+        orderRequest.packings.append(packing)
     }
 }
 

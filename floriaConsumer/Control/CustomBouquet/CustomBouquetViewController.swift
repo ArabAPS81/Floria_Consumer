@@ -32,6 +32,7 @@ class CustomBouquetViewController: UIViewController {
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 8
         presenter = CustomBouquetPresenter.init(view: self)
         presenter.getVendorProducts(vendorId: vendorID, forService: self.serviceType)
+        orderRequest.products = []
         
     }
     
@@ -46,7 +47,7 @@ class CustomBouquetViewController: UIViewController {
     }
     
     func validation() -> Bool {
-        if SubmittOrderQueryModel.submittOrderQueryModel.products.isEmpty {
+        if orderRequest.products.isEmpty {
             alertWithMessage("No products selected")
             return false
         }

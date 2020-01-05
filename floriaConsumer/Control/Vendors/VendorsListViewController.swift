@@ -72,9 +72,9 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
         tableView.deselectRow(at: indexPath, animated: false)
         if serviceType == ServiceType.carDecoration {
             self.navigationController?.pushViewController(CarDecorationReviewController.newInstance(vendor: vendorsList[indexPath.row]), animated: true)
-            SubmittOrderQueryModel.submittOrderQueryModel.providerId = vendorsList[indexPath.row].id ?? 0
+            orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
         }else {
-            SubmittOrderQueryModel.submittOrderQueryModel.providerId = vendorsList[indexPath.row].id ?? 0
+            orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
             self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
         }
     }

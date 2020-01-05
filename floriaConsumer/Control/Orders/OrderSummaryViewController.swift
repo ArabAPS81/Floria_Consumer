@@ -36,7 +36,7 @@ class OrderSummaryViewController: UIViewController {
     }
     
     @IBAction func payButtonTapped(_ sender: UIButton) {
-        let order = SubmittOrderQueryModel.submittOrderQueryModel
+        let order = orderRequest
         let service = OrderServices.init(delegate: self)
         service.submitOrder(order: order)
         
@@ -51,10 +51,10 @@ class OrderSummaryViewController: UIViewController {
         
     }
     @IBAction func addPromoButtonTapped(_ sender: Any) {
-        SubmittOrderQueryModel.submittOrderQueryModel.code = promoTF.text
+        orderRequest.code = promoTF.text
         
         let service = OrderServices.init(delegate: self)
-        service.getOrderSummary(order: SubmittOrderQueryModel.submittOrderQueryModel)
+        service.getOrderSummary(order: orderRequest)
     }
 }
 

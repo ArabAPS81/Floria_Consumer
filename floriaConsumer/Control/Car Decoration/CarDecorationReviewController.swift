@@ -36,7 +36,7 @@ class CarDecorationReviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 4
+        orderRequest.serviceId = 4
     }
     
     func setupView() {
@@ -44,7 +44,7 @@ class CarDecorationReviewController: UIViewController {
         shadowedView?.forEach({ (view) in
             view.dropRoundedShadowForAllSides(view.layer.cornerRadius)
         })
-        let order = SubmittOrderQueryModel.submittOrderQueryModel
+        let order = orderRequest
         let id = (order.decorationTypeId ?? 1) - 1
         priceLabel.text = "\(vendor.decorationTypes?[id].price ?? 0)"
         colorNameLabel.text = Constants.carColors[order.colorId! - 1].name
@@ -57,8 +57,4 @@ class CarDecorationReviewController: UIViewController {
         decorationTypeImage.image = Constants.decorationType(id: order.decorationTypeId ?? 1).image
         carTypeImage.image = Constants.carForId(order.carTypeId ?? 0).image
     }
-    
-    
-    
-    
 }

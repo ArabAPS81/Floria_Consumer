@@ -52,14 +52,14 @@ class CarDecorationViewController: UIViewController {
         }
         sender.backgroundColor = Constants.pincColor
         sender.tintColor = .white
-        SubmittOrderQueryModel.submittOrderQueryModel.carTypeId = sender.tag
+        orderRequest.carTypeId = sender.tag
     }
     @IBAction func selectButtonTapped(_ sender: UIButton) {
         decorationTypeButtons.forEach { (button) in
             button.isSelected = false
         }
         sender.isSelected = true
-        SubmittOrderQueryModel.submittOrderQueryModel.decorationTypeId = sender.tag
+        orderRequest.decorationTypeId = sender.tag
         
 //        print(sender.frame)
 //        print(sender.bounds)
@@ -90,6 +90,18 @@ class CarDecorationViewController: UIViewController {
     }
     
     func validation() -> Bool {
+        if orderRequest.colorId == nil {
+            alertWithMessage(title: "Choose car color")
+            return false
+        }
+        if orderRequest.carTypeId == nil {
+            alertWithMessage(title: "Choose car type")
+            return false
+        }
+        if orderRequest.decorationTypeId == nil {
+            alertWithMessage(title: "Choose decorarion type")
+            return false
+        }
         return true
     }
     
@@ -99,6 +111,6 @@ extension CarDecorationViewController: ColorsViewDelegate {
     func didSelectColor(_ color: CarColor) {
         colorView.backgroundColor = UIColor.init(hexString: color.code)
         colorNameLabel.setTitle(color.name, for: .normal)
-        SubmittOrderQueryModel.submittOrderQueryModel.colorId = color.id
+        orderRequest.colorId = color.id
     }
 }

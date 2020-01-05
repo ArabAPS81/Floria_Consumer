@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+var orderRequest = SubmittOrderQueryModel.submittOrderQueryModel
 
 class SubmittOrderQueryModel: Codable {
     

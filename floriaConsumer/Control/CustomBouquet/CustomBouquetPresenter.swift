@@ -12,7 +12,7 @@ class CustomBouquetPresenter {
     
     private weak var view: CustomBouquetView?
     private var productsList = [ProductsModel.Product]()
-    private var selectedProducts = SubmittOrderQueryModel.submittOrderQueryModel
+    private var selectedProducts = orderRequest
     
     init(view: CustomBouquetView) {
         self.view = view

@@ -58,7 +58,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     @IBAction func checkOutButtonTapped(_ sender: Any) {
-        //if SubmittOrderQueryModel.submittOrderQueryModel.extras.count > 0 {
+        //if orderRequest.extras.count > 0 {
             performSegue(withIdentifier: "checkOutSegue", sender: sender)
        // } else {
         //    alertWithMessage(title: "You have to choose an Extra")
@@ -69,7 +69,10 @@ class ProductDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product.id!, quantity: x, price: product.price ?? 0)
-        SubmittOrderQueryModel.submittOrderQueryModel.products = [selectedProduct]
+        orderRequest.products = [selectedProduct]
+        orderRequest.providerId = product.provider?.id
+        orderRequest.serviceId = product.service?.id
+        
     }
 }
 
@@ -147,7 +150,7 @@ extension ProductDetailsViewController: WebServiceDelegate {
 extension ProductDetailsViewController: ExtrasCollectionViewCellDelegate {
     func deselectPacking(packing: ProductPackingModel.ProductPacking) {
         let packingId = packing.id
-        SubmittOrderQueryModel.submittOrderQueryModel.extras.removeAll { (item) -> Bool in
+        orderRequest.extras.removeAll { (item) -> Bool in
             let delete = item.id == packingId
             print("\(item.id)*** \(delete)")
             return delete
@@ -156,6 +159,6 @@ extension ProductDetailsViewController: ExtrasCollectionViewCellDelegate {
     
     func selectPacking(packing: ProductPackingModel.ProductPacking) {
         let packing = SubmittOrderQueryModel.OrderPackings.init(id: packing.id!, quantity: 1, price: packing.price!, packingTypeId: 1)
-        SubmittOrderQueryModel.submittOrderQueryModel.extras.append(packing)
+        orderRequest.extras.append(packing)
     }
 }

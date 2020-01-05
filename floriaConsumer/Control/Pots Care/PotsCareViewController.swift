@@ -32,13 +32,13 @@ class PotsCareViewController: UIViewController {
         imgView.contentMode = .scaleAspectFit
         numOfPotsTF.rightView = imgView
         potSizeTF.inputView = potSizePickerView
-        SubmittOrderQueryModel.submittOrderQueryModel.serviceId = 5
+        orderRequest.serviceId = 5
         
     }
     
     @IBAction func chooseLocationButtonTapped(_ sender: UIButton) {
         if validation() {
-            SubmittOrderQueryModel.submittOrderQueryModel.numOfPots = Int(numOfPotsTF.text ?? "1") ?? 1
+            orderRequest.numOfPots = Int(numOfPotsTF.text ?? "1") ?? 1
             let vc = AddressesListViewController.newInstance(serviceType: .potsCare)
             
             self.navigationController?.pushViewController(vc, animated: true)
@@ -73,7 +73,7 @@ extension PotsCareViewController:UIPickerViewDelegate,UIPickerViewDataSource {
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         potSizeTF.text = Constants.potsSizes[row].1
-        SubmittOrderQueryModel.submittOrderQueryModel.potSizeId = Constants.potsSizes[row].0
+        orderRequest.potSizeId = Constants.potsSizes[row].0
     }
     
 }

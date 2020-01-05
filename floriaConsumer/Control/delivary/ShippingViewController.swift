@@ -36,7 +36,7 @@ class ShippingViewController: UIViewController {
             btn.isSelected = false
         }
         sender.isSelected = true
-        SubmittOrderQueryModel.submittOrderQueryModel.paymentTypeId = sender.tag
+        orderRequest.paymentTypeId = sender.tag
     }
     
     @IBAction func delivaryDateButtonTapped(_ sender: Any) {
@@ -67,9 +67,9 @@ class ShippingViewController: UIViewController {
                 self.deliveryTimeLabel.text = formatter.string(from: dt)
                 formatter.dateFormat = "yyyy-MM-dd"
                 self.deliveryDateLabel.text = formatter.string(from: dt)
-                SubmittOrderQueryModel.submittOrderQueryModel.shipping = 1
+                orderRequest.shipping = 1
                 formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                SubmittOrderQueryModel.submittOrderQueryModel.requiredAt = formatter.string(from: dt)
+                orderRequest.requiredAt = formatter.string(from: dt)
             }
         }
     }
@@ -77,12 +77,12 @@ class ShippingViewController: UIViewController {
     @IBAction func shippingButtonTapped(_ sender: Any) {
         let serv = OrderServices.init(delegate: self)
         if validation() {
-            serv.getOrderSummary(order: SubmittOrderQueryModel.submittOrderQueryModel)
+            serv.getOrderSummary(order: orderRequest)
         }
     }
     
     func validation() -> Bool {
-        let order = SubmittOrderQueryModel.submittOrderQueryModel
+        let order = orderRequest
         if order.requiredAt == nil {
             alertWithMessage("select pick up date")
             return false

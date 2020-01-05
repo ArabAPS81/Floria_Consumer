@@ -73,7 +73,7 @@ extension AddressesListViewController: UITableViewDataSource,UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        SubmittOrderQueryModel.submittOrderQueryModel.addressId = addressesList[indexPath.row].id
+        orderRequest.addressId = addressesList[indexPath.row].id
         self.navigationController?.pushViewController(serviceType.afterAddressViewController(), animated: true)
     }
 }
