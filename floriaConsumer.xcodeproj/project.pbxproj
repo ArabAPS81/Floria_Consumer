@@ -41,6 +41,8 @@
 		04BF5773237B9EEC00A8878A /* AddressesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */; };
 		04E1139823764BF100D15FAC /* providerlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1139723764BF100D15FAC /* providerlist.swift */; };
 		1FB0C98F23C19F6200D61A2C /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C98D23C19F6200D61A2C /* AddressTableViewCell.xib */; };
+		1FB0C99223C1DDA500D61A2C /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0C99023C1DDA500D61A2C /* ProductTableViewCell.swift */; };
+		1FB0C99323C1DDA500D61A2C /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C99123C1DDA500D61A2C /* ProductTableViewCell.xib */; };
 		1FE934FA23BB5F5900AEEA1E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */; };
 		1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */; };
 		1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */; };
@@ -176,6 +178,8 @@
 		04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesListViewController.swift; sourceTree = "<group>"; };
 		04E1139723764BF100D15FAC /* providerlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = providerlist.swift; sourceTree = "<group>"; };
 		1FB0C98D23C19F6200D61A2C /* AddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		1FB0C99023C1DDA500D61A2C /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		1FB0C99123C1DDA500D61A2C /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServices.swift; sourceTree = "<group>"; };
@@ -613,6 +617,8 @@
 				D638E25F2393B040001A840C /* ProductCollectionViewCell.xib */,
 				D697FB8C2393FB6400956652 /* ExtrasCollectionViewCell.swift */,
 				D697FB8D2393FB6400956652 /* ExtrasCollectionViewCell.xib */,
+				1FB0C99023C1DDA500D61A2C /* ProductTableViewCell.swift */,
+				1FB0C99123C1DDA500D61A2C /* ProductTableViewCell.xib */,
 			);
 			path = ProductCells;
 			sourceTree = "<group>";
@@ -854,6 +860,7 @@
 				D6203520238A9A6B00336D0B /* CustomBouquet.storyboard in Resources */,
 				D620351E238A99DA00336D0B /* Payment.storyboard in Resources */,
 				0406517B23530CB60039566C /* LaunchScreen.storyboard in Resources */,
+				1FB0C99323C1DDA500D61A2C /* ProductTableViewCell.xib in Resources */,
 				D638E2612393B040001A840C /* ProductCollectionViewCell.xib in Resources */,
 				D64CBF53238EA8A300DEE040 /* HomeProductCollectionViewCell.xib in Resources */,
 				1FB0C98F23C19F6200D61A2C /* AddressTableViewCell.xib in Resources */,
@@ -951,6 +958,7 @@
 				D61E866323952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift in Sources */,
 				D6A16DA923AF7540001C80B1 /* DatePickerDialog.swift in Sources */,
 				D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */,
+				1FB0C99223C1DDA500D61A2C /* ProductTableViewCell.swift in Sources */,
 				54A2B69423BA3C9B0076BA0D /* ResendModel.swift in Sources */,
 				D62A6CD523A672DD00931B08 /* CustomBouquetPresenter.swift in Sources */,
 				D6203533238AB0CB00336D0B /* SearchViewController.swift in Sources */,

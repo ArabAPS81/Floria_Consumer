@@ -24,6 +24,7 @@ class OrderViewController: UIViewController {
         title = "#\(order!.id)"
         
         VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
     }
     
@@ -39,14 +40,24 @@ class OrderViewController: UIViewController {
 }
 
 extension OrderViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        switch section {
+        case 0: return 1
+        case 1: return order?.products?.count ?? 0
+        default: return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
             return vendorCell(table: tableView, position: indexPath)
+        case 1:
+            return productCell(table: tableView, position: indexPath)
         default:
             return addressCell(table: tableView, position: indexPath)
         }
@@ -63,7 +74,14 @@ extension OrderViewController: UITableViewDataSource {
         return cell
     }
     
-    func fillProductCell() {
+    func productCell(table: UITableView, position: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: ProductTableViewCell.reuseId, for: position) as! ProductTableViewCell
+        
+        if let product = order?.products?[position.row] {
+            cell.configure(product: product)
+        }
+        
+        return cell
     }
     
     func addressCell(table: UITableView, position: IndexPath) -> UITableViewCell {
