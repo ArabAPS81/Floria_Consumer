@@ -19,7 +19,8 @@ class menuecontroller: UIViewController {
     }
     @IBOutlet weak var logout: UIButton!
     @IBAction func out(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "userid")
+        Defaults.init().isUserLogged = false
+//        UserDefaults.standard.removeObject(forKey: "userid")
     }
     
 
