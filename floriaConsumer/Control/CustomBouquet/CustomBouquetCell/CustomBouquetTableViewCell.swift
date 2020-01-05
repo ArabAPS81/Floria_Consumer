@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CarDecorationTableViewCell: UITableViewCell {
+class CustomBouquetTableViewCell: UITableViewCell {
     @IBOutlet weak var shadowedView: UIView!
-    @IBOutlet weak var ivDecoration: UIImageView!
-    @IBOutlet weak var lblDecoration: UILabel!
-    @IBOutlet weak var ivColor: UIImageView!
-    @IBOutlet weak var lblColor: UILabel!
-    @IBOutlet weak var ivCarType: UIImageView!
-    @IBOutlet weak var lblCarType: UILabel!
+    @IBOutlet weak var ivCard: UIImageView!
+    @IBOutlet weak var lblCard: UILabel!
+    @IBOutlet weak var ivPot: UIImageView!
+    @IBOutlet weak var lblPot: UILabel!
+    @IBOutlet weak var ivBouquet: UIImageView!
+    @IBOutlet weak var lblBouquet: UILabel!
 
-    static let reuseId = "CarDecorationTableViewCell"
+    static let reuseId = "CustomBouquetTableViewCell"
     
     static func registerNIBinView(tableView: UITableView) {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
@@ -35,7 +35,7 @@ class CarDecorationTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(decoration: CarDecoration) {
+    /*func configure(decoration: CarDecoration) {
         ivDecoration.imageFromUrl(url: decoration.decoration.image, placeholder: #imageLiteral(resourceName: "carlauxe"))
         lblDecoration.text = decoration.decoration.name
         
@@ -44,5 +44,5 @@ class CarDecorationTableViewCell: UITableViewCell {
         
         ivCarType.imageFromUrl(url: decoration.car.image, placeholder: #imageLiteral(resourceName: "633107Poao80102-1"))
         lblCarType.text = decoration.car.name
-    }
+    }*/
 }
