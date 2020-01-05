@@ -348,7 +348,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="54Q-cA-Bvr" kind="show" id="I48-hr-l69"/>
+                                    <action selector="checkOutButtonTapped:" destination="NbY-dP-Emq" eventType="touchUpInside" id="suX-Vg-DZy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -373,6 +373,7 @@
                         <outlet property="priceLabel" destination="sSF-Fs-6Iy" id="EEE-ih-6xb"/>
                         <outlet property="vendorNameLabel" destination="tMV-xO-Ip9" id="2hr-HC-Rfz"/>
                         <segue destination="KuZ-FQ-SFf" kind="presentation" identifier="zoom" modalPresentationStyle="overFullScreen" id="7Ma-vl-E8A"/>
+                        <segue destination="54Q-cA-Bvr" kind="show" identifier="checkOutSegue" id="0c7-7K-3xy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPd-XP-quR" userLabel="First Responder" sceneMemberID="firstResponder"/>

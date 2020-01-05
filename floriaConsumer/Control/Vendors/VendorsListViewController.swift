@@ -47,22 +47,19 @@ class VendorsListViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
+    func setPlaceHolderLabel(view: UITableView){
+        let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
+        noDataLabel.text          = "No data available"
+        noDataLabel.textColor     = UIColor.black
+        noDataLabel.textAlignment = .center
+        view.backgroundView  = noDataLabel
+    }
+    
 }
 
 extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if vendorsList.count > 0{
-            tableView.backgroundView  = nil
-            return vendorsList.count
-        }else {
-            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            noDataLabel.text          = "No data available"
-            noDataLabel.textColor     = UIColor.black
-            noDataLabel.textAlignment = .center
-            tableView.backgroundView  = noDataLabel
-            return 0
-        }
+        return vendorsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,15 +82,15 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 106
     }
-    
-    
-    
 }
 
 extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? VendorModel {
             vendorsList = data.vendors!
+            if vendorsList.count == 0 {
+                setPlaceHolderLabel(view: tableView)
+            }
             self.tableView.reloadData()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)

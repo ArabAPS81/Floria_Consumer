@@ -44,17 +44,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if productsList.count > 0{
-            collectionView.backgroundView  = nil
-            return productsList.count
-        }else {
-            let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
-            noDataLabel.text          = "No data available"
-            noDataLabel.textColor     = UIColor.black
-            noDataLabel.textAlignment = .center
-            collectionView.backgroundView  = noDataLabel
-            return 0
-        }
+        return productsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -77,12 +67,23 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func setPlaceHolderLabel(collectionView: UICollectionView){
+        let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
+        noDataLabel.text          = "No data available"
+        noDataLabel.textColor     = UIColor.black
+        noDataLabel.textAlignment = .center
+        collectionView.backgroundView  = noDataLabel
+    }
+    
 }
 
 extension ProductListViewController: ProductsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? ProductsModel {
             productsList = data.products!
+            if productsList.count == 0 {
+                setPlaceHolderLabel(collectionView: collectionView)
+            }
             collectionView.reloadData()
         }
     }

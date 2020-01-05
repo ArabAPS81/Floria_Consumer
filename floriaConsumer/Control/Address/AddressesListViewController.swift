@@ -27,9 +27,13 @@ class AddressesListViewController: UIViewController {
             
         } else {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-            guard let vc = storyboard.instantiateInitialViewController() else { return }
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            nav.modalPresentationStyle = .fullScreen
+            let vc = nav.viewControllers.first as! LoginViewController
+            vc.event = {vc in
+                vc.dismiss(animated: true, completion: nil)
+            }
+            self.present(nav, animated: true, completion: nil)
         }
     }
     
@@ -39,8 +43,20 @@ class AddressesListViewController: UIViewController {
         service.getListOfAddresses()
     }
     
-    
-    @IBOutlet weak var shipping: UIButton!
+    @IBAction func addAddressTapped(_ sender: Any) {
+        if Defaults().isUserLogged {
+        self.performSegue(withIdentifier: "addAddress", sender: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            nav.modalPresentationStyle = .fullScreen
+            let vc = nav.viewControllers.first as! LoginViewController
+            vc.event = {vc in
+                vc.dismiss(animated: true, completion: nil)
+            }
+            self.present(nav, animated: true, completion: nil)
+        }
+    }
     
 }
 

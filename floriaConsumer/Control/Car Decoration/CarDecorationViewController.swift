@@ -76,8 +76,10 @@ class CarDecorationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let vc = VendorsListViewController.newInstance(service: .carDecoration)
-        self.navigationController?.pushViewController(vc, animated: true)
+        if validation() {
+            let vc = VendorsListViewController.newInstance(service: .carDecoration)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,6 +88,11 @@ class CarDecorationViewController: UIViewController {
             vc.delegate = self
         }
     }
+    
+    func validation() -> Bool {
+        return true
+    }
+    
 }
 
 extension CarDecorationViewController: ColorsViewDelegate {

@@ -125,6 +125,8 @@
 		D6C1A8042392AA3600379508 /* VendorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1A8022392AA3600379508 /* VendorTableViewCell.swift */; };
 		D6C1A8052392AA3600379508 /* VendorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C1A8032392AA3600379508 /* VendorTableViewCell.xib */; };
 		D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8A0EA239FA70F0041F720 /* BusinessTypes.swift */; };
+		D6C9D06423C1CECE00A0AF54 /* UICollectionviewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9D06323C1CECE00A0AF54 /* UICollectionviewExtention.swift */; };
+		D6C9D06623C1DF1600A0AF54 /* GovernorateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9D06523C1DF1600A0AF54 /* GovernorateModel.swift */; };
 		D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56C23A8E4520008CACB /* AddressServices.swift */; };
 		D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56E23A8E9610008CACB /* AddressModel.swift */; };
 		D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */; };
@@ -261,6 +263,8 @@
 		D6C1A8032392AA3600379508 /* VendorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VendorTableViewCell.xib; sourceTree = "<group>"; };
 		D6C8A0EA239FA70F0041F720 /* BusinessTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypes.swift; sourceTree = "<group>"; };
 		D6C8A0EC239FE46E0041F720 /* floriaConsumer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = floriaConsumer.entitlements; sourceTree = "<group>"; };
+		D6C9D06323C1CECE00A0AF54 /* UICollectionviewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionviewExtention.swift; sourceTree = "<group>"; };
+		D6C9D06523C1DF1600A0AF54 /* GovernorateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovernorateModel.swift; sourceTree = "<group>"; };
 		D6CFA56C23A8E4520008CACB /* AddressServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServices.swift; sourceTree = "<group>"; };
 		D6CFA56E23A8E9610008CACB /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -653,6 +657,7 @@
 				D67B30FA238C016F0080252B /* UIViewExtension.swift */,
 				D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */,
 				D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */,
+				D6C9D06323C1CECE00A0AF54 /* UICollectionviewExtention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */,
 				9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */,
 				54A2B69323BA3C9B0076BA0D /* ResendModel.swift */,
+				D6C9D06523C1DF1600A0AF54 /* GovernorateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -918,6 +924,7 @@
 				9C1D4E3E23AD007D00A7BACF /* ServicesCollectionViewCell.swift in Sources */,
 				D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */,
 				049958CD237CC49200FDF817 /* AddAddressViewController.swift in Sources */,
+				D6C9D06423C1CECE00A0AF54 /* UICollectionviewExtention.swift in Sources */,
 				D696C2B523A0ED5900E3A56A /* VendorModel.swift in Sources */,
 				D6C1A7FF2392A99300379508 /* VendorsListViewController.swift in Sources */,
 				0480B27423A478100079253B /* NewPassViewController.swift in Sources */,
@@ -963,6 +970,7 @@
 				0434EECC23530E2A00D4329E /* splashViewController.swift in Sources */,
 				0403F491235533EE001327EF /* nav.swift in Sources */,
 				D60B915723969B74002669B0 /* CarDecorationViewController.swift in Sources */,
+				D6C9D06623C1DF1600A0AF54 /* GovernorateModel.swift in Sources */,
 				1FE9350023BCA33A00AEEA1E /* OrderTableViewCell.swift in Sources */,
 				04BF5773237B9EEC00A8878A /* AddressesListViewController.swift in Sources */,
 				D696C2BA23A0F42700E3A56A /* VendorServices.swift in Sources */,

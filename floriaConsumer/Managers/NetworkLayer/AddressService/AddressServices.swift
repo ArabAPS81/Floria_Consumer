@@ -68,6 +68,23 @@ class AddressService {
         }
     }
     
+    func getListOfGovs() {
+        guard let baseUrl = (NetworkConstants.baseUrl + "governorates?").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(baseUrl, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: GovernorateModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
     func addAddress(address:SubmittAddressQueryModel) {
         guard let baseUrl = (NetworkConstants.baseUrl + "addresses").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let jsonData = (try? JSONEncoder().encode(address)) ?? Data()

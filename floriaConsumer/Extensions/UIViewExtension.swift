@@ -103,8 +103,8 @@ extension UIImageView {
 }
 
 extension UIViewController{
-    func  alertWithMessage(_ message: String, title: String = "") {
-        let alert = UIAlertController.init(title: "", message: message, preferredStyle: .actionSheet)
+    func  alertWithMessage(_ message: String = "", title: String = "") {
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

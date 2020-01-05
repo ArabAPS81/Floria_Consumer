@@ -211,11 +211,11 @@
                                     <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="skip:" destination="cEa-uG-Dcx" eventType="touchUpInside" id="Hgs-ZE-tYT"/>
+                                    <action selector="skipButtonTapped:" destination="cEa-uG-Dcx" eventType="touchUpInside" id="RQf-oK-ZJg"/>
                                 </connections>
                             </button>
                             <connections>
-                                <segue destination="dkA-Sb-bXd" kind="presentation" identifier="loged" modalPresentationStyle="fullScreen" id="bQL-ez-ozT"/>
+                                <action selector="skipButtonTapped:" destination="cEa-uG-Dcx" id="3Pq-ja-9Kd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -225,6 +225,7 @@
                         <outlet property="passTF" destination="LZw-mH-dP0" id="uMf-ov-nGz"/>
                         <outlet property="phoneTF" destination="CrX-TT-q9J" id="cPi-Z1-4hB"/>
                         <outlet property="showPassBtn" destination="0K1-8V-k8f" id="Ixo-SE-gru"/>
+                        <segue destination="dkA-Sb-bXd" kind="presentation" identifier="homeSegue" modalPresentationStyle="fullScreen" id="nTV-Re-jqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gle-YM-4s3" userLabel="First Responder" sceneMemberID="firstResponder"/>

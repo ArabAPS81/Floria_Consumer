@@ -73,6 +73,7 @@ class ShippingViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func shippingButtonTapped(_ sender: Any) {
         let serv = OrderServices.init(delegate: self)
         if validation() {
@@ -107,7 +108,11 @@ class ShippingViewController: UIViewController {
 extension ShippingViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? OrderSummaryResponceModel {
-           performSegue(withIdentifier: "summary", sender: data)
+            if data.httpCode == 200 {
+                performSegue(withIdentifier: "summary", sender: data)
+            }else {
+                // handle error
+            }
         }
     }
     

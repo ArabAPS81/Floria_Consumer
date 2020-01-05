@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
+    var event: ((UIViewController)->())!
+    
     
     static func newInstance() -> LoginViewController {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
@@ -53,13 +55,16 @@ class LoginViewController: UIViewController {
         service.loginWith(phoneNumber: Phone, password: password)
     }
     
-    @IBAction func skip(_ sender: Any) {
-        self.performSegue(withIdentifier: "loged", sender: nil)
-    }
-    
     @IBAction func forgetpass(_ sender: Any) {
         
         
+    }
+    @IBAction func skipButtonTapped(_ sender: Any) {
+        if (event != nil) {
+            event(self)
+        } else {
+            self.performSegue(withIdentifier: "homeSegue", sender: nil)
+        }
     }
     
     func setUpViewsShapes() {
@@ -84,9 +89,12 @@ extension LoginViewController: WebServiceDelegate {
             if data.httpCode == 200{
                 Defaults.init().saveUserId(userId: data.user?.id ?? 0)
                 Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
-                let vc = HomeNav.newInstance()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true)
+                Defaults().isUserLogged = true
+                if (event != nil) {
+                    event(self)
+                } else {
+                    self.performSegue(withIdentifier: "homeSegue", sender: nil)
+                }
             }else if data.httpCode == 401{
                 failureLable.text = "Your phone or password maybe wrong"
             }

@@ -16,6 +16,7 @@ class SubmittOrderQueryModel: Codable {
     
     var products: [OrderProducts] = []
     var packings: [OrderPackings] = []
+    var extras: [OrderPackings] = []
     var shipping: Int?
     var paymentTypeId: Int?
     var addressId: Int?
@@ -27,11 +28,14 @@ class SubmittOrderQueryModel: Codable {
     var decorationTypeId: Int?
     var potSizeId: Int?
     var numOfPots: Int?
+    var code: String?
     
     enum CodingKeys: String, CodingKey {
         case products
         case packings
+        case extras
         case shipping
+        case code
         case paymentTypeId = "payment_type_id"
         case addressId = "address_id"
         case serviceId = "service_id"
@@ -146,6 +150,7 @@ struct OrderSummaryResponceModel : Codable {
 
         let delivery : Int?
         let subtotal : Int?
+        let subTotalAfterDiscount: Int?
         let total : Int?
         let totalTax : Int?
 
@@ -154,6 +159,7 @@ struct OrderSummaryResponceModel : Codable {
             case subtotal = "subtotal"
             case total = "total"
             case totalTax = "total_tax"
+            case subTotalAfterDiscount
         }
     }
 }

@@ -57,6 +57,15 @@ class ProductDetailsViewController: UIViewController {
         amountLabel.text = String(x)
     }
     
+    @IBAction func checkOutButtonTapped(_ sender: Any) {
+        //if SubmittOrderQueryModel.submittOrderQueryModel.extras.count > 0 {
+            performSegue(withIdentifier: "checkOutSegue", sender: sender)
+       // } else {
+        //    alertWithMessage(title: "You have to choose an Extra")
+      //  }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product.id!, quantity: x, price: product.price ?? 0)
@@ -75,22 +84,6 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
             return extras.count
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if collectionView == imageSliderCollectioView {
-            self.performSegue(withIdentifier: "zoom", sender: nil)
-        }
-        
-        let alert = UIAlertController(title: "Done", message: "your new item displayed", preferredStyle: UIAlertController.Style.actionSheet)
-        
-        self.present(alert, animated: true, completion: nil)
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when){
-            alert.dismiss(animated: true, completion: nil)
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == imageSliderCollectioView {
             let iphone8SizeWidth: CGFloat = 375
@@ -108,6 +101,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        
         if collectionView == imageSliderCollectioView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath) as! SliderHomeCollectionViewCell
             cell.configure(url: product.image ?? "")
@@ -115,7 +109,24 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
             cell.configure(packing: extras[indexPath.row])
+            cell.delegate = self
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       if collectionView == imageSliderCollectioView {
+           self.performSegue(withIdentifier: "zoom", sender: nil)
+       }
+        if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
+            cell.setSelected(true)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+       
+        if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
+            cell.setDeselected(true)
         }
     }
 }
@@ -136,7 +147,7 @@ extension ProductDetailsViewController: WebServiceDelegate {
 extension ProductDetailsViewController: ExtrasCollectionViewCellDelegate {
     func deselectPacking(packing: ProductPackingModel.ProductPacking) {
         let packingId = packing.id
-        SubmittOrderQueryModel.submittOrderQueryModel.packings.removeAll { (item) -> Bool in
+        SubmittOrderQueryModel.submittOrderQueryModel.extras.removeAll { (item) -> Bool in
             let delete = item.id == packingId
             print("\(item.id)*** \(delete)")
             return delete
@@ -145,6 +156,6 @@ extension ProductDetailsViewController: ExtrasCollectionViewCellDelegate {
     
     func selectPacking(packing: ProductPackingModel.ProductPacking) {
         let packing = SubmittOrderQueryModel.OrderPackings.init(id: packing.id!, quantity: 1, price: packing.price!, packingTypeId: 1)
-        SubmittOrderQueryModel.submittOrderQueryModel.packings.append(packing)
+        SubmittOrderQueryModel.submittOrderQueryModel.extras.append(packing)
     }
 }
