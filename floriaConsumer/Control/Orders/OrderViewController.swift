@@ -25,6 +25,7 @@ class OrderViewController: UIViewController {
         
         VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
         ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
     }
     
@@ -41,13 +42,14 @@ class OrderViewController: UIViewController {
 
 extension OrderViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return 1
         case 1: return order?.products?.count ?? 0
+        case 2: return order?.carDecoration?.count ?? 0
         default: return 1
         }
     }
@@ -58,6 +60,8 @@ extension OrderViewController: UITableViewDataSource {
             return vendorCell(table: tableView, position: indexPath)
         case 1:
             return productCell(table: tableView, position: indexPath)
+        case 2:
+            return carDecorationCell(table: tableView, position: indexPath)
         default:
             return addressCell(table: tableView, position: indexPath)
         }
@@ -83,7 +87,17 @@ extension OrderViewController: UITableViewDataSource {
         
         return cell
     }
-    
+
+    func carDecorationCell(table: UITableView, position: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: CarDecorationTableViewCell.reuseId, for: position) as! CarDecorationTableViewCell
+        
+        if let product = order?.carDecoration?[position.row] {
+            cell.configure(decoration: product)
+        }
+        
+        return cell
+    }
+
     func addressCell(table: UITableView, position: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: AddressTableViewCell.reuseId, for: position) as! AddressTableViewCell
         
