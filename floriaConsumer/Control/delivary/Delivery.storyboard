@@ -90,7 +90,7 @@
                         <outlet property="one" destination="wdz-E6-HyL" id="1Rm-ev-CkR"/>
                         <outlet property="three" destination="PMX-r5-hY1" id="hZL-Fo-cfQ"/>
                         <outlet property="two" destination="LfF-Fx-GOU" id="cfW-Lo-f4l"/>
-                        <segue destination="aQv-Ul-deo" kind="presentation" identifier="shiping" modalPresentationStyle="fullScreen" id="sjs-ok-cMy"/>
+                        <segue destination="aQv-Ul-deo" kind="show" identifier="shiping" id="sjs-ok-cMy"/>
                         <segue destination="ZXK-PP-qe4" kind="show" identifier="addresses" id="icc-3Q-8RT"/>
                     </connections>
                 </viewController>
@@ -113,11 +113,11 @@
             <objects>
                 <viewController storyboardIdentifier="ShippingViewController" id="aQv-Ul-deo" customClass="ShippingViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k3o-jy-rlW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-X7-0zD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z5J-w6-8wJ">
                                         <rect key="frame" x="52" y="0.0" width="310.5" height="200"/>
@@ -278,7 +278,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPH-dm-Rqd">
-                                        <rect key="frame" x="97" y="764" width="220" height="46"/>
+                                        <rect key="frame" x="97" y="754" width="220" height="46"/>
                                         <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="1lv-xF-0OA"/>

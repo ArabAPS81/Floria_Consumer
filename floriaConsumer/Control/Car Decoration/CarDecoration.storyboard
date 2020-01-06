@@ -417,7 +417,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYp-tf-hcI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="yid-SL-K0G">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="yid-SL-K0G">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS3-98-rmQ">
@@ -487,7 +487,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mi-3b-F4p">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Jy-PG9">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Jy-PG9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-hM-D9U">
@@ -557,7 +557,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJG-hK-rHl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4039" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-Ri-JNF">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-Ri-JNF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-d1-hPq">
@@ -1438,6 +1438,7 @@
     <resources>
         <image name="4039" width="116" height="106.66666412353516"/>
         <image name="cabrioleticon" width="52" height="16.5"/>
+        <image name="carlauxe" width="260.5" height="92"/>
         <image name="coupeicon" width="51.5" height="17.5"/>
         <image name="group33" width="87.5" height="87"/>
         <image name="hatchbackicon" width="52" height="18"/>

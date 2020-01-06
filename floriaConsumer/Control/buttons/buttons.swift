@@ -38,7 +38,7 @@ class buttons: UIViewController {
         performSegue(withIdentifier: "addresses", sender: nil)
     }
     @IBAction func vendor(_ sender: Any) {
-     performSegue(withIdentifier: "addresses", sender: nil)
+     performSegue(withIdentifier: "shiping", sender: nil)
         
     }
 }

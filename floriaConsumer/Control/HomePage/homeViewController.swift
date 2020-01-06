@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
         SideMenuPresentationStyle.menuSlideIn.backgroundColor = .clear
         SideMenuPresentationStyle.menuDissolveIn.backgroundColor = .clear
         SideMenuPresentationStyle.viewSlideOutMenuIn.backgroundColor = .clear
+        
     }
     
     func setupViews() {
@@ -109,6 +110,7 @@ class HomeViewController: UIViewController {
         menu.presentationStyle = .menuSlideIn
         menu.menuWidth = UIScreen.main.bounds.size.width * 0.8
         menu.statusBarEndAlpha = 0
+        menu.animationOptions = .allowUserInteraction
         present(menu, animated: true, completion: nil)
     }
 }

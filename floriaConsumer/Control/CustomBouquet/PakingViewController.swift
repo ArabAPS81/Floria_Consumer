@@ -24,7 +24,7 @@ class PakingViewController: UIViewController {
         ExtrasCollectionViewCell.registerNIBinView(collection: baseCollectionView)
         ExtrasCollectionViewCell.registerNIBinView(collection: cardCollectionView)
         let service = VendorServices.init(delegate: self)
-        service.getProductExtrasFor(vendor: 1)
+        service.getProductPackingsFor(vendor: orderRequest.providerId ?? 0)
         orderRequest.packings = []
     }
     
