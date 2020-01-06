@@ -2,7 +2,7 @@
 //  ProductTableViewCell.swift
 //  floriaConsumer
 //
-//  Created by Andela on 5/1/20.
+//  Created by Symsym on 5/1/20.
 //  Copyright © 2020 Obida. All rights reserved.
 //
 

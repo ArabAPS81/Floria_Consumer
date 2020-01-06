@@ -2,7 +2,7 @@
 //  OrderTableViewCell.swift
 //  floriaConsumer
 //
-//  Created by Andela on 1/1/20.
+//  Created by Symsym on 1/1/20.
 //  Copyright © 2020 Obida. All rights reserved.
 //
 

@@ -16,6 +16,10 @@ class OrderViewController: UIViewController {
     
     var order: Order?
     
+    enum OrderDetails: Int {
+        case vendor = 0, product, carDecoration, potsCare, address, count
+    }
+    
     // MARK: - UIViewController
     
     override func viewDidLoad() {
@@ -26,6 +30,7 @@ class OrderViewController: UIViewController {
         VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
         ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)
         CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        PotsCareTableViewCell.registerNIBinView(tableView: self.tvOrder)
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
     }
     
@@ -42,26 +47,29 @@ class OrderViewController: UIViewController {
 
 extension OrderViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return OrderDetails.count.rawValue
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 1
-        case 1: return order?.products?.count ?? 0
-        case 2: return order?.carDecoration?.count ?? 0
+        case OrderDetails.vendor.rawValue: return 1
+        case OrderDetails.product.rawValue: return order?.products?.count ?? 0
+        case OrderDetails.carDecoration.rawValue: return order?.carDecoration?.count ?? 0
+        case OrderDetails.potsCare.rawValue: return order?.potsCare?.count ?? 0
         default: return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case 0:
+        case OrderDetails.vendor.rawValue:
             return vendorCell(table: tableView, position: indexPath)
-        case 1:
+        case OrderDetails.product.rawValue:
             return productCell(table: tableView, position: indexPath)
-        case 2:
+        case OrderDetails.carDecoration.rawValue:
             return carDecorationCell(table: tableView, position: indexPath)
+        case OrderDetails.potsCare.rawValue:
+            return potsCareCell(table: tableView, position: indexPath)
         default:
             return addressCell(table: tableView, position: indexPath)
         }
@@ -93,6 +101,16 @@ extension OrderViewController: UITableViewDataSource {
         
         if let product = order?.carDecoration?[position.row] {
             cell.configure(decoration: product)
+        }
+        
+        return cell
+    }
+
+    func potsCareCell(table: UITableView, position: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: PotsCareTableViewCell.reuseId, for: position) as! PotsCareTableViewCell
+        
+        if let product = order?.potsCare?[position.row] {
+            cell.configure(potCare: product)
         }
         
         return cell
