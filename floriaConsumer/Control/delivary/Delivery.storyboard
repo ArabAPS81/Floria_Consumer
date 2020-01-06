@@ -244,36 +244,48 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-5g-vxZ">
                                         <rect key="frame" x="0.0" y="220" width="414" height="128"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq7-6h-qBI">
-                                                <rect key="frame" x="107" y="49" width="44" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Online">
-                                                    <color key="titleColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <state key="selected">
-                                                    <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="paymentTypeSelected:" destination="aQv-Ul-deo" eventType="touchUpInside" id="GMu-OB-uqg"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-pg-VhH">
-                                                <rect key="frame" x="245" y="48" width="33" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="COD">
-                                                    <color key="titleColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <state key="selected">
-                                                    <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="paymentTypeSelected:" destination="aQv-Ul-deo" eventType="touchUpInside" id="vzK-Q6-qxr"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-Fi-zJq">
+                                                <rect key="frame" x="107" y="14" width="200" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq7-6h-qBI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="Lta-bk-gGq"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Online">
+                                                            <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="paymentTypeSelected:" destination="aQv-Ul-deo" eventType="touchUpInside" id="GMu-OB-uqg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-pg-VhH">
+                                                        <rect key="frame" x="0.0" y="55" width="200" height="45"/>
+                                                        <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Cash On Delivery">
+                                                            <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="paymentTypeSelected:" destination="aQv-Ul-deo" eventType="touchUpInside" id="vzK-Q6-qxr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="Ta0-G1-iHE"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ztN-Rp-KWn"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="RhX-Fi-zJq" firstAttribute="centerY" secondItem="VrJ-5g-vxZ" secondAttribute="centerY" id="1ob-Lk-bHO"/>
+                                            <constraint firstItem="RhX-Fi-zJq" firstAttribute="centerX" secondItem="VrJ-5g-vxZ" secondAttribute="centerX" id="dXN-MF-sX4"/>
                                             <constraint firstAttribute="height" constant="128" id="q4G-eh-FWk"/>
                                         </constraints>
                                     </view>

@@ -401,7 +401,6 @@
 		04459385237A5CE3007A210E /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				04459386237A5CFE007A210E /* buttons.swift */,
 			);
 			path = buttons;
 			sourceTree = "<group>";
@@ -442,6 +441,7 @@
 			children = (
 				D620351B238A992B00336D0B /* Delivery.storyboard */,
 				04441DA0237BBB5E002F5691 /* ShippingViewController.swift */,
+				04459386237A5CFE007A210E /* buttons.swift */,
 				04157CFF237EF01100F772BE /* map.swift */,
 				043F73702393ED0400843A1C /* popupVC.swift */,
 			);

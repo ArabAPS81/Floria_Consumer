@@ -25,6 +25,8 @@ class ShippingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dt = Date.init().addingTimeInterval(75.0 * 60.0)
+        setRequiredDate(dt)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,9 +49,7 @@ class ShippingViewController: UIViewController {
             (date) -> Void in
             if let dt = date {
                 self.selectedDate = dt
-                let formatter = DateFormatter()
-                formatter.dateFormat = "yyyy/MM/dd"
-                self.deliveryDateLabel.text = formatter.string(from: dt)
+                self.setRequiredDate(dt)
             }
         }
     }
@@ -62,14 +62,8 @@ class ShippingViewController: UIViewController {
         dpd.show("Time Picker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: selectedDate, minimumDate: Date(), maximumDate: nil, datePickerMode: UIDatePicker.Mode.time, window: window) {
             (date) -> Void in
             if let dt = date {
-                let formatter = DateFormatter()
-                formatter.dateFormat = "HH:mm"
-                self.deliveryTimeLabel.text = formatter.string(from: dt)
-                formatter.dateFormat = "yyyy-MM-dd"
-                self.deliveryDateLabel.text = formatter.string(from: dt)
-                orderRequest.shipping = 1
-                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                orderRequest.requiredAt = formatter.string(from: dt)
+                self.selectedDate = dt
+                self.setRequiredDate(dt)
             }
         }
     }
@@ -79,6 +73,16 @@ class ShippingViewController: UIViewController {
         if validation() {
             serv.getOrderSummary(order: orderRequest)
         }
+    }
+    
+    func setRequiredDate(_ dt: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        self.deliveryTimeLabel.text = formatter.string(from: dt)
+        formatter.dateFormat = "yyyy-MM-dd"
+        self.deliveryDateLabel.text = formatter.string(from: dt)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        orderRequest.requiredAt = formatter.string(from: dt)
     }
     
     func validation() -> Bool {

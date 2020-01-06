@@ -30,15 +30,15 @@ class buttons: UIViewController {
     }
 
     @IBAction func ME(_ sender: Any) {
-        
+        orderRequest.shipping = 1
         performSegue(withIdentifier: "addresses", sender: nil)
     }
     @IBAction func somewhere(_ sender: Any) {
-        
+        orderRequest.shipping = 2
         performSegue(withIdentifier: "addresses", sender: nil)
     }
     @IBAction func vendor(_ sender: Any) {
-     performSegue(withIdentifier: "shiping", sender: nil)
-        
+        orderRequest.shipping = 3
+        performSegue(withIdentifier: "shiping", sender: nil)
     }
 }
