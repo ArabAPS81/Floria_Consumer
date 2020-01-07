@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Filter-->
+        <scene sceneID="iAm-ch-MKz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Filter" id="g7t-EK-Tug" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fp-9C-P0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7226" y="-2955"/>
+        </scene>
         <!--Vendors List View Controller-->
         <scene sceneID="BQv-LZ-GgE">
             <objects>
@@ -30,6 +38,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgO-4u-T5M">
                                         <rect key="frame" x="16" y="0.0" width="20.5" height="44"/>
                                         <state key="normal" image="shape954"/>
+                                        <connections>
+                                            <segue destination="g7t-EK-Tug" kind="presentation" modalPresentationStyle="fullScreen" id="T3e-rn-EwU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deF-1c-Xw6">
                                         <rect key="frame" x="377.5" y="0.0" width="20.5" height="44"/>

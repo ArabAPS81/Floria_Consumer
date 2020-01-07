@@ -14,6 +14,9 @@ import Alamofire
 struct  NearestVendorQueryModel {
     var location: CLLocationCoordinate2D
 }
+struct FilterModel {
+    var district:Int
+}
 
 class VendorServices {
     
@@ -47,6 +50,26 @@ class VendorServices {
         
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
         let parameters = "lat=\(model.location.latitude)&lng=\(model.location.longitude)"
+        guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
+    func getVendorsByService(service:ServiceType, andFilter model: FilterModel) {
+        
+        let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
+        let parameters = "district_id=\(model.district)"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

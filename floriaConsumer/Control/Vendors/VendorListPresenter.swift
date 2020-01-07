@@ -21,6 +21,10 @@ class VendorListPresenter {
         let model = NearestVendorQueryModel.init(location: LocationManager.sharedManager.userCurrentCoordinate)
         service.getVendorsByService(service: serviceType, model: model)
     }
+    func getVendorsList(serviceType: ServiceType, andFilter model: FilterModel) {
+        let service = VendorServices.init(delegate: self)
+        service.getVendorsByService(service: serviceType,andFilter: model)
+    }
 }
 
 extension VendorListPresenter: WebServiceDelegate {

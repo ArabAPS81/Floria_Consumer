@@ -126,6 +126,9 @@
 		D696C2BC23A12C5500E3A56A /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696C2BB23A12C5500E3A56A /* ProductsModel.swift */; };
 		D697FB8E2393FB6400956652 /* ExtrasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FB8C2393FB6400956652 /* ExtrasCollectionViewCell.swift */; };
 		D697FB8F2393FB6400956652 /* ExtrasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697FB8D2393FB6400956652 /* ExtrasCollectionViewCell.xib */; };
+		D69AB43C23C33DC1001D52CB /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AB43B23C33DC1001D52CB /* Filter.storyboard */; };
+		D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43D23C33DE7001D52CB /* FilterViewController.swift */; };
+		D69AB44023C350C9001D52CB /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43F23C350C9001D52CB /* FilterListViewController.swift */; };
 		D6A16DA923AF7540001C80B1 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */; };
 		D6B0997523ABA75600EA7427 /* ProductPackingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */; };
 		D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */; };
@@ -272,6 +275,9 @@
 		D696C2BB23A12C5500E3A56A /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		D697FB8C2393FB6400956652 /* ExtrasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasCollectionViewCell.swift; sourceTree = "<group>"; };
 		D697FB8D2393FB6400956652 /* ExtrasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtrasCollectionViewCell.xib; sourceTree = "<group>"; };
+		D69AB43B23C33DC1001D52CB /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		D69AB43D23C33DE7001D52CB /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		D69AB43F23C350C9001D52CB /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
 		D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPackingModel.swift; sourceTree = "<group>"; };
 		D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagerController.swift; sourceTree = "<group>"; };
@@ -365,6 +371,7 @@
 				04BF5771237B9EB200A8878A /* delivary */,
 				D61E70F023B0DEEB007C252F /* Orders */,
 				04459385237A5CE3007A210E /* buttons */,
+				D69AB43A23C33DA4001D52CB /* Filter */,
 				0472F9A223784426008AD8BC /* providor profile */,
 				04E1139623764BA500D15FAC /* providerlist */,
 				0434EECB23530E2A00D4329E /* splashViewController.swift */,
@@ -746,6 +753,16 @@
 			path = VendorServices;
 			sourceTree = "<group>";
 		};
+		D69AB43A23C33DA4001D52CB /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				D69AB43B23C33DC1001D52CB /* Filter.storyboard */,
+				D69AB43D23C33DE7001D52CB /* FilterViewController.swift */,
+				D69AB43F23C350C9001D52CB /* FilterListViewController.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		D6C1A7FD2392A93500379508 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,6 +925,7 @@
 				1FB0C98F23C19F6200D61A2C /* AddressTableViewCell.xib in Resources */,
 				1FB0C9A723C21FB500D61A2C /* PotsCareTableViewCell.xib in Resources */,
 				D6C1A8052392AA3600379508 /* VendorTableViewCell.xib in Resources */,
+				D69AB43C23C33DC1001D52CB /* Filter.storyboard in Resources */,
 				0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */,
 				D620351A238A963A00336D0B /* Search.storyboard in Resources */,
 				0406517623530CB30039566C /* Main.storyboard in Resources */,
@@ -990,6 +1008,7 @@
 				9C9B039623B8C1AE00AD6EE4 /* UserDefults.swift in Sources */,
 				D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */,
 				04441DA1237BBB5F002F5691 /* ShippingViewController.swift in Sources */,
+				D69AB44023C350C9001D52CB /* FilterListViewController.swift in Sources */,
 				D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */,
 				04E1139823764BF100D15FAC /* providerlist.swift in Sources */,
 				043C1852237F80690003A633 /* ProductListViewController.swift in Sources */,
@@ -1056,6 +1075,7 @@
 				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,
 				D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */,
 				1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */,
+				D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */,
 				D604AB6F238E719400A818D2 /* populer.swift in Sources */,
 				D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */,
 				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
@@ -1222,7 +1242,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1243,7 +1263,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

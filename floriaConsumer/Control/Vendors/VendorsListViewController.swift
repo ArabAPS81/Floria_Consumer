@@ -55,6 +55,12 @@ class VendorsListViewController: UIViewController {
         view.backgroundView  = noDataLabel
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? FilterViewController {
+            vc.delegate = self
+        }
+    }
+    
 }
 
 extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -82,6 +88,15 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 106
     }
+}
+
+extension VendorsListViewController: FilterDelegate {
+    func didSelectCity(_ city: Int) {
+        let filterModel = FilterModel.init(district: city)
+        presenter?.getVendorsList(serviceType: self.serviceType, andFilter: filterModel)
+    }
+    
+    
 }
 
 extension VendorsListViewController: VendorsListView {
