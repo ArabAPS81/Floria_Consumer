@@ -13,6 +13,6 @@ target 'floriaConsumer' do
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
    
-
+   pod 'MaterialComponents/Cards'
 
 end
