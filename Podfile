@@ -14,5 +14,7 @@ target 'floriaConsumer' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Messaging'
 
+   
+   pod 'MaterialComponents/Cards'
 
 end

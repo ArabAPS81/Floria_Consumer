@@ -7,18 +7,18 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class OrderTableViewCell: UITableViewCell {
 
     // MARK: - Properties
 
-    @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var shadowedView: MDCCard!
     @IBOutlet weak var ivAvatar: UIImageView!
     @IBOutlet weak var lblOrderNumber: UILabel!
     @IBOutlet weak var lblOrderDate: UILabel!
     @IBOutlet weak var lblOrderPrice: UILabel!
     @IBOutlet weak var lblOrderStatus: UILabel!
-    
     
     // MARK: - UITableViewCell
 
@@ -26,7 +26,8 @@ class OrderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectedBackgroundView = UIView()
-        shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
+        //shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
+        shadowedView.cornerRadius = 40
     }
 
     /*override func setSelected(_ selected: Bool, animated: Bool) {
