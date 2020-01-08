@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class ShippingViewController: UIViewController {
     
@@ -72,6 +73,7 @@ class ShippingViewController: UIViewController {
         let serv = OrderServices.init(delegate: self)
         if validation() {
             serv.getOrderSummary(order: orderRequest)
+            HUD.show(.progress)
         }
     }
     
@@ -114,13 +116,15 @@ extension ShippingViewController: WebServiceDelegate {
         if let data = data as? OrderSummaryResponceModel {
             if data.httpCode == 200 {
                 performSegue(withIdentifier: "summary", sender: data)
+                HUD.hide(animated: true)
             }else {
-                // handle error
+                HUD.show(.error)
             }
         }
     }
     
     func didFailToReceiveDataWithError(error: Error) {
+        HUD.show(.error)
         print(error.localizedDescription)
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DpG-c1-Pxd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DpG-c1-Pxd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -324,6 +324,10 @@
                     <navigationItem key="navigationItem" id="vNc-jZ-IXl"/>
                     <connections>
                         <outlet property="logout" destination="xzS-Ah-CoY" id="gRU-Ed-nJY"/>
+                        <outlet property="userMailLabel" destination="RrA-na-W9c" id="2W4-iQ-bV8"/>
+                        <outlet property="userNameLabel" destination="JgG-Oy-TzP" id="a85-h9-Llo"/>
+                        <outlet property="userPhoneLabel" destination="LEm-uj-AWa" id="xCZ-Jv-Hou"/>
+                        <outlet property="userView" destination="Yek-J0-epa" id="GEF-6o-w8T"/>
                         <segue destination="Qng-0O-dl6" kind="show" identifier="Segue2Orders" id="Uww-uS-Atl"/>
                     </connections>
                 </viewController>

@@ -13,8 +13,7 @@ target 'floriaConsumer' do
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Messaging'
-
-   
-   pod 'MaterialComponents/Cards'
+  pod 'PKHUD'
+  pod 'MaterialComponents/Cards'
 
 end

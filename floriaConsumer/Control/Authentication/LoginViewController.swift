@@ -90,6 +90,7 @@ extension LoginViewController: WebServiceDelegate {
                 Defaults.init().saveUserId(userId: data.user?.id ?? 0)
                 Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
                 Defaults().isUserLogged = true
+                Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
                 if (event != nil) {
                     event(self)
                 } else {

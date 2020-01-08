@@ -34,6 +34,7 @@ class VendorsListViewController: UIViewController {
         tableView.separatorStyle = .none
         presenter = VendorListPresenter.init(view: self)
         presenter?.getVendorsList(serviceType: self.serviceType)
+        tableView.startLoading()
         
     }
     
@@ -104,9 +105,11 @@ extension VendorsListViewController: VendorsListView {
         if let data = data as? VendorModel {
             vendorsList = data.vendors!
             if vendorsList.count == 0 {
-                setPlaceHolderLabel(view: tableView)
+                tableView.stopLoading("")
+            }else {
+                self.tableView.reloadData()
+                tableView.stopLoading()
             }
-            self.tableView.reloadData()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
             }
@@ -114,7 +117,7 @@ extension VendorsListViewController: VendorsListView {
     }
     
     func didFailToReceiveData(error: Error) {
-        
+        tableView.stopLoading("No data available")
     }
     
 }

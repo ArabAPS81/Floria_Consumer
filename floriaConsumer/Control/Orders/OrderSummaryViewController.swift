@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class OrderSummaryViewController: UIViewController {
     
@@ -17,7 +18,6 @@ class OrderSummaryViewController: UIViewController {
     @IBOutlet weak var deliveryLabel: UILabel!
     @IBOutlet weak var bankLabel: UILabel!
     @IBOutlet weak var VatLabel: UILabel!
-    
     
     
     var summaryModel: OrderSummaryResponceModel?
@@ -32,7 +32,7 @@ class OrderSummaryViewController: UIViewController {
         deliveryLabel.text = "\(summaryModel?.summary?.delivery ?? 0)"
         totalLabel.text = "\(summaryModel?.summary?.total ?? 0)"
         VatLabel.text = "\(summaryModel?.summary?.totalTax ?? 0)"
-        bankLabel.text = "\(0.0)"
+        bankLabel.text = "\(summaryModel?.summary?.discount ?? 0)"
     }
     
     @IBAction func payButtonTapped(_ sender: UIButton) {
@@ -55,12 +55,14 @@ class OrderSummaryViewController: UIViewController {
         
         let service = OrderServices.init(delegate: self)
         service.getOrderSummary(order: orderRequest)
+        HUD.show(.progress)
     }
 }
 
-
 extension OrderSummaryViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
+        
+        HUD.hide(animated: true)
         if let data = data as? OrderSubmittResponseModel {
             if data.httpCode == 201 {
                 showAlert("\(data.message ?? "") \(data.data?.id ?? 0)")
@@ -75,6 +77,7 @@ extension OrderSummaryViewController: WebServiceDelegate {
     }
     
     func didFailToReceiveDataWithError(error: Error) {
+        HUD.hide(animated: true)
     }
 }
 

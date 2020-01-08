@@ -9,32 +9,25 @@
 import UIKit
 
 class menuecontroller: UIViewController {
-
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    @IBOutlet weak var userMailLabel: UILabel!
+    
+    @IBOutlet weak var userView: UIView!
+    @IBOutlet weak var userPhoneLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UserDefaults.standard.string(forKey: "userid") == nil {
-           
-        }
-        // Do any additional setup after loading the view.
+        let user = Defaults().getUser()
+        userMailLabel.text = user.email
+        userNameLabel.text = user.name
+        userPhoneLabel.text = user.phone
+        
     }
     @IBOutlet weak var logout: UIButton!
     @IBAction func out(_ sender: Any) {
         Defaults.init().isUserLogged = false
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: - Actions
     
     @IBAction func onOrdersClick(_ sender: UIButton) {
         //print("😉 onOrdersClick")

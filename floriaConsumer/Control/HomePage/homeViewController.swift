@@ -39,7 +39,9 @@ class HomeViewController: UIViewController {
         setupSideMenu()
         presenter = HomePresenter.init(view: self)
         presenter.getNearestVendor()
+        Offers.startLoading()
         presenter.getFeaturedProducts()
+        Products.startLoading()
     }
     
     private func setupSideMenu() {
@@ -179,15 +181,18 @@ extension HomeViewController: HomeView {
         if let data = data as? VendorModel {
             vendorsList = data.vendors!
             Offers.reloadData()
+            Offers.stopLoading()
         }
         if let data = data as? ProductsModel {
             productsList = data.products!
             Products.reloadData()
+            Products.stopLoading()
         }
     }
     
     func didFailToReceiveData(error: Error) {
-        
+        Offers.stopLoading()
+        Offers.stopLoading()
     }
     
     

@@ -73,4 +73,27 @@ class Defaults {
         }
     }
   
+    
+    func saveUserData(email: String?, name: String?, phone: String?) {
+        let def = UserDefaults.standard
+        def.set(email, forKey: "email")
+        def.set(name, forKey: "name")
+        def.set(phone, forKey: "phone")
+    }
+    
+    func getUser() -> userData {
+        let def = UserDefaults.standard
+        var user = userData.init()
+        user.email = def.value(forKey: "email") as? String
+        user.name = def.value(forKey: "name") as? String
+        user.phone = def.value(forKey: "phone") as? String
+        return user
+    }
+    
+}
+
+struct userData {
+    var phone: String?
+    var name: String?
+    var email: String?
 }
