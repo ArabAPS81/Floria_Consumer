@@ -28,6 +28,7 @@ class OrderTableViewCell: UITableViewCell {
         self.selectedBackgroundView = UIView()
         //shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
         shadowedView.cornerRadius = 40
+        shadowedView.setShadowElevation(ShadowElevation.fabResting, for: .normal)
     }
 
     /*override func setSelected(_ selected: Bool, animated: Bool) {

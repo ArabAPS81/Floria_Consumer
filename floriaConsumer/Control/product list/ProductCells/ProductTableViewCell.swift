@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class ProductTableViewCell: UITableViewCell {
-    @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var shadowedView: MDCCard!
     @IBOutlet weak var ivProduct: UIImageView!
     @IBOutlet weak var lblProduct: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
@@ -27,6 +28,9 @@ class ProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        shadowedView.cornerRadius = 8
+        shadowedView.setShadowElevation(ShadowElevation.fabResting, for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

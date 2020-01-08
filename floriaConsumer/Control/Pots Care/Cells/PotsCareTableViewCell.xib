@@ -16,26 +16,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-Uo-cOe">
-                        <rect key="frame" x="4" y="4" width="312" height="128"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-Uo-cOe" customClass="MDCCard">
+                        <rect key="frame" x="20" y="4" width="280" height="128"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="0qj-xq-lFW">
-                                <rect key="frame" x="2" y="2" width="308" height="124"/>
+                                <rect key="frame" x="2" y="2" width="276" height="124"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yWD-z1-RHY">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="124"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Number of Pots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-cz-qDL">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeFlowers" translatesAutoresizingMaskIntoConstraints="NO" id="QJy-Td-TzH">
-                                                <rect key="frame" x="0.0" y="23.5" width="141" height="82"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="125" height="82"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Pots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-FS-mSJ">
-                                                <rect key="frame" x="0.0" y="109.5" width="141" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="109.5" width="125" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.85294312240000003" green="0.19447296859999999" blue="0.42745816710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -43,19 +43,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MwT-IC-HoY">
-                                        <rect key="frame" x="167" y="0.0" width="141" height="124"/>
+                                        <rect key="frame" x="151" y="0.0" width="125" height="124"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Pots Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMI-A0-ilz">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeFlowers" translatesAutoresizingMaskIntoConstraints="NO" id="emH-Ua-bRi">
-                                                <rect key="frame" x="0.0" y="23.5" width="141" height="82"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="125" height="82"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Pots Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao9-tY-DOv">
-                                                <rect key="frame" x="0.0" y="109.5" width="141" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="109.5" width="125" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.85294312240000003" green="0.19447296859999999" blue="0.42745816710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -77,8 +77,8 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="hPy-Uo-cOe" secondAttribute="bottom" constant="4" id="2Ml-05-Pk0"/>
                     <constraint firstItem="hPy-Uo-cOe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="WhJ-jY-9wi"/>
-                    <constraint firstAttribute="trailing" secondItem="hPy-Uo-cOe" secondAttribute="trailing" constant="4" id="qjZ-qu-8ed"/>
-                    <constraint firstItem="hPy-Uo-cOe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="vLk-gn-Qlx"/>
+                    <constraint firstAttribute="trailing" secondItem="hPy-Uo-cOe" secondAttribute="trailing" constant="20" id="qjZ-qu-8ed"/>
+                    <constraint firstItem="hPy-Uo-cOe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vLk-gn-Qlx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
