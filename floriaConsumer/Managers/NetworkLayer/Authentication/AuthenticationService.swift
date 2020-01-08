@@ -16,6 +16,28 @@ class AuthenticationService {
         self.delegate = delegate
     }
     
+    //user-tokens
+    func postDeviceToken(_ token: String, deviceId: String) {
+        let url = NetworkConstants.baseUrl + "user-tokens"
+        let parameters = ["token": token,
+                          "device_id": Defaults().getUniqueID(),
+                          "device_type": "ios"] as [String : Any]
+        
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                //let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
+                //self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func forgetPass(phone : String) {
         let url = NetworkConstants.baseUrl + "forget-password"
         let parameters = ["mobile" : phone]
@@ -87,7 +109,8 @@ class AuthenticationService {
             "email" : email,
             "mobile" : phone,
             "password" : password,
-            "check_privacy" : checkPrivecy
+            "check_privacy" : checkPrivecy,
+            "device_id" : Defaults().getUniqueID()
         ] as [String : Any]
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()

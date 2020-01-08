@@ -121,15 +121,29 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 extension AppDelegate: MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-      print("Firebase registration token: \(fcmToken)")
-      
-      let dataDict:[String: String] = ["token": fcmToken]
-      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-      
+        print("Firebase registration token: \(fcmToken)")
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        let deviceId = NSUUID().uuidString
+        let service = AuthenticationService.init(delegate: self)
+        service.postDeviceToken(fcmToken, deviceId: deviceId)
+        
     }
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
       print("Received data message: \(remoteMessage.appData)")
     }
+}
+
+extension AppDelegate: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
+    
+    
 }
 

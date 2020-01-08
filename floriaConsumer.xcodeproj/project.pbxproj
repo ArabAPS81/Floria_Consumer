@@ -58,7 +58,7 @@
 		9C113EC423B78A4200C537D8 /* RegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */; };
 		9C113EC623B78CA000C537D8 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC523B78CA000C537D8 /* TermsViewController.swift */; };
 		9C113EC823B78D3200C537D8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC723B78D3200C537D8 /* Constant.swift */; };
-		9C113ECA23B78F9E00C537D8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC923B78F9E00C537D8 /* Extension.swift */; };
+		9C113ECA23B78F9E00C537D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C113EC923B78F9E00C537D8 /* StringExtension.swift */; };
 		9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */; };
 		9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */; };
 		9C1D4E3E23AD007D00A7BACF /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */; };
@@ -208,7 +208,7 @@
 		9C113EC323B78A4200C537D8 /* RegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewController.swift; sourceTree = "<group>"; };
 		9C113EC523B78CA000C537D8 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		9C113EC723B78D3200C537D8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		9C113EC923B78F9E00C537D8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9C113EC923B78F9E00C537D8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailsPresenter.swift; sourceTree = "<group>"; };
 		9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionDataSource.swift; sourceTree = "<group>"; };
 		9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -585,6 +585,7 @@
 		D63475FA239D209F008EB755 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */,
 				D6347609239D2B20008EB755 /* LocationManager */,
 				D63475FB239D22D2008EB755 /* NetworkLayer */,
 			);
@@ -715,6 +716,7 @@
 		D67B30F9238C014D0080252B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9C113EC923B78F9E00C537D8 /* StringExtension.swift */,
 				D67B30FA238C016F0080252B /* UIViewExtension.swift */,
 				D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */,
 				D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */,
@@ -739,8 +741,6 @@
 				D6CFA56E23A8E9610008CACB /* AddressModel.swift */,
 				D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */,
 				9C113EC723B78D3200C537D8 /* Constant.swift */,
-				9C113EC923B78F9E00C537D8 /* Extension.swift */,
-				9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */,
 				9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */,
 				54A2B69323BA3C9B0076BA0D /* ResendModel.swift */,
 				D6C9D06523C1DF1600A0AF54 /* GovernorateModel.swift */,
@@ -1072,7 +1072,7 @@
 				1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */,
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */,
-				9C113ECA23B78F9E00C537D8 /* Extension.swift in Sources */,
+				9C113ECA23B78F9E00C537D8 /* StringExtension.swift in Sources */,
 				0415146A2357EB4200797A33 /* menuecontroller.swift in Sources */,
 				1FB0C99723C2063C00D61A2C /* CarDecorationTableViewCell.swift in Sources */,
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,

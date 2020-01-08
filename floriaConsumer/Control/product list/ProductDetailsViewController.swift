@@ -58,15 +58,17 @@ class ProductDetailsViewController: UIViewController {
     }
     
     @IBAction func checkOutButtonTapped(_ sender: Any) {
-        //if orderRequest.extras.count > 0 {
             performSegue(withIdentifier: "checkOutSegue", sender: sender)
-       // } else {
-        //    alertWithMessage(title: "You have to choose an Extra")
-      //  }
+       
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? viewimg {
+            vc.image = product.image
+        }
+        
         super.prepare(for: segue, sender: sender)
         let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product.id!, quantity: x, price: product.price ?? 0)
         orderRequest.products = [selectedProduct]
@@ -119,7 +121,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        if collectionView == imageSliderCollectioView {
-           self.performSegue(withIdentifier: "zoom", sender: nil)
+        self.performSegue(withIdentifier: "zoom", sender: product.image)
        }
         if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
             cell.setSelected(true)

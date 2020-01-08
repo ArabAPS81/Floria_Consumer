@@ -10,10 +10,6 @@ import Foundation
 class Defaults {
     
     
-    
-    func saveUserData(userId : Int , userName : String , phone : String){
-        
-    }
     func saveUserId(userId : Int){
         let def = UserDefaults.standard
         def.set(userId, forKey: "userId")
@@ -29,9 +25,17 @@ class Defaults {
     var isUserLogged: Bool {
         set {
             UserDefaults.standard.set(newValue, forKey: "logged")
+            if !newValue {
+                removeUserToken()
+            }
         } get {
             return UserDefaults.standard.bool(forKey: "logged")
         }
+    }
+    
+    private func removeUserToken(){
+        let def = UserDefaults.standard
+        def.removeObject(forKey: "token")
     }
     
     func saveUserToken(token : String){
@@ -59,4 +63,14 @@ class Defaults {
     }
     
     
+    func getUniqueID() -> String {
+        if let id = UserDefaults.standard.string(forKey: "uuid") {
+            return id
+        }else {
+            let id = NSUUID().uuidString
+            UserDefaults.standard.set(id, forKey: "uuid")
+            return id
+        }
+    }
+  
 }

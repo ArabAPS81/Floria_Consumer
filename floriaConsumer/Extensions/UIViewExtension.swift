@@ -88,8 +88,8 @@ extension UIImageView {
         self.image = placeholder
         guard let url = url else {return}
         guard let urls = URL.init(string: url) else {return}
-        var request = URLRequest.init(url: urls)
-        request.cachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
+        let request = URLRequest.init(url: urls, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 1)
+      //  request.cachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
         Alamofire.request(request).responseData { (response) in
             switch response.result {
             case .success(let date):

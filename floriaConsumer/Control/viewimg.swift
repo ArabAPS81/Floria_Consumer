@@ -9,12 +9,11 @@
 import UIKit
 import Kingfisher
 class viewimg: UIViewController {
+    var image: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // let url = NSURL(string:UserDefaults.standard.string(forKey: "pic")!)
-    
-//self.backimg.kf.setImage(with: url as! URL)
+        backimg.imageFromUrl(url: image, placeholder: nil)
         
     }
     @IBOutlet weak var backimg: UIImageView!
@@ -22,15 +21,5 @@ class viewimg: UIViewController {
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
