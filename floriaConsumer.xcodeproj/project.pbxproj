@@ -129,6 +129,7 @@
 		D69AB43C23C33DC1001D52CB /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AB43B23C33DC1001D52CB /* Filter.storyboard */; };
 		D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43D23C33DE7001D52CB /* FilterViewController.swift */; };
 		D69AB44023C350C9001D52CB /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43F23C350C9001D52CB /* FilterListViewController.swift */; };
+		D69AB44223C4AE9B001D52CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */; };
 		D6A16DA923AF7540001C80B1 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */; };
 		D6B0997523ABA75600EA7427 /* ProductPackingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */; };
 		D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */; };
@@ -278,6 +279,7 @@
 		D69AB43B23C33DC1001D52CB /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		D69AB43D23C33DE7001D52CB /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		D69AB43F23C350C9001D52CB /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
+		D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPackingModel.swift; sourceTree = "<group>"; };
 		D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagerController.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				0406517423530CB30039566C /* Main.storyboard */,
 				0444939A235C8BBD00650DFD /* Assets.xcassets */,
 				0406517923530CB60039566C /* LaunchScreen.storyboard */,
+				D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */,
 				0406517C23530CB60039566C /* Info.plist */,
 			);
 			path = floriaConsumer;
@@ -932,6 +935,7 @@
 				D6203518238A962400336D0B /* Splash.storyboard in Resources */,
 				D6E80B7F23897C9D003A7DFF /* MainScreen.storyboard in Resources */,
 				D620352A238A9AEF00336D0B /* Orders.storyboard in Resources */,
+				D69AB44223C4AE9B001D52CB /* GoogleService-Info.plist in Resources */,
 				D6203516238A74EC00336D0B /* Vendor.storyboard in Resources */,
 				D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */,
 				D6203524238A9A9300336D0B /* PotsCare.storyboard in Resources */,

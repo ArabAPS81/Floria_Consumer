@@ -12,7 +12,7 @@ target 'floriaConsumer' do
 	pod 'SideMenu'
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
-   
+  pod 'Firebase/Messaging'
 
 
 end

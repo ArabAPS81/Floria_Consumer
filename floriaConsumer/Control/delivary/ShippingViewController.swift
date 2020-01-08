@@ -93,7 +93,7 @@ class ShippingViewController: UIViewController {
         }
         if order.shipping == nil {
             alertWithMessage("")
-            return false
+            orderRequest.shipping = 1
         }
         if order.paymentTypeId == nil {
             alertWithMessage("Select payment method")
