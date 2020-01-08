@@ -49,6 +49,7 @@
 		1FB0C99C23C21D0900D61A2C /* CustomBouquetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C99A23C21D0900D61A2C /* CustomBouquetTableViewCell.xib */; };
 		1FB0C9A723C21FB500D61A2C /* PotsCareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0C9A523C21FB500D61A2C /* PotsCareTableViewCell.xib */; };
 		1FB0C9A823C21FB500D61A2C /* PotsCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0C9A623C21FB500D61A2C /* PotsCareTableViewCell.swift */; };
+		1FCA252623C633BC0044CD9E /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA252523C633BC0044CD9E /* OrderStatusView.swift */; };
 		1FE934FA23BB5F5900AEEA1E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */; };
 		1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */; };
 		1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */; };
@@ -192,6 +193,7 @@
 		1FB0C99A23C21D0900D61A2C /* CustomBouquetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBouquetTableViewCell.xib; sourceTree = "<group>"; };
 		1FB0C9A523C21FB500D61A2C /* PotsCareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PotsCareTableViewCell.xib; sourceTree = "<group>"; };
 		1FB0C9A623C21FB500D61A2C /* PotsCareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotsCareTableViewCell.swift; sourceTree = "<group>"; };
+		1FCA252523C633BC0044CD9E /* OrderStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStatusView.swift; sourceTree = "<group>"; };
 		1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServices.swift; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 		D61E70F023B0DEEB007C252F /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				1FCA252523C633BC0044CD9E /* OrderStatusView.swift */,
 				D6203529238A9AEF00336D0B /* Orders.storyboard */,
 				D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */,
 				1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */,
@@ -1059,6 +1062,7 @@
 				D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */,
 				D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
+				1FCA252623C633BC0044CD9E /* OrderStatusView.swift in Sources */,
 				D6347604239D22D2008EB755 /* WebserviceHelper.swift in Sources */,
 				D60B9155239671EC002669B0 /* Constants.swift in Sources */,
 				9C113EC423B78A4200C537D8 /* RegisterationViewController.swift in Sources */,
