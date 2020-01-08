@@ -17,35 +17,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYM-FZ-gxo" customClass="MDCCard">
-                        <rect key="frame" x="20" y="0.0" width="280" height="102"/>
+                        <rect key="frame" x="20" y="8" width="280" height="86"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="633107Poao80102-1" translatesAutoresizingMaskIntoConstraints="NO" id="j77-Cw-oAM">
-                                <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j77-Cw-oAM" secondAttribute="height" multiplier="1:1" id="MtV-wh-eEn"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-MF-YOs">
-                                <rect key="frame" x="110" y="30.5" width="21.5" height="10"/>
+                                <rect key="frame" x="94" y="30.5" width="21.5" height="10"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="8"/>
                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-CO-JaU">
-                                <rect key="frame" x="110" y="8" width="47" height="14.5"/>
+                                <rect key="frame" x="94" y="8" width="47" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <color key="textColor" red="0.85294312240000003" green="0.19447296859999999" blue="0.42745816710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Mb-6O-Pj5" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
-                                <rect key="frame" x="110" y="48.5" width="55" height="11"/>
+                                <rect key="frame" x="94" y="48.5" width="55" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="9o4-gY-N1R"/>
                                     <constraint firstAttribute="height" constant="11" id="wUr-zy-g2f"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-Zu-sNE">
-                                <rect key="frame" x="244" y="23.5" width="28" height="55"/>
+                                <rect key="frame" x="244" y="15.5" width="28" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p18-5X-JHA">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="19.5"/>
@@ -79,8 +79,8 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="EYM-FZ-gxo" secondAttribute="bottom" id="C07-bZ-fdb"/>
-                    <constraint firstItem="EYM-FZ-gxo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OdS-Kk-nN2"/>
+                    <constraint firstAttribute="bottom" secondItem="EYM-FZ-gxo" secondAttribute="bottom" constant="8" id="C07-bZ-fdb"/>
+                    <constraint firstItem="EYM-FZ-gxo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="OdS-Kk-nN2"/>
                     <constraint firstAttribute="trailing" secondItem="EYM-FZ-gxo" secondAttribute="trailing" constant="20" id="ex0-wg-GlA"/>
                     <constraint firstItem="EYM-FZ-gxo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gu0-J5-rHE"/>
                 </constraints>
