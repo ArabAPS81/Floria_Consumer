@@ -7,29 +7,33 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class PotsCareTableViewCell: UITableViewCell {
-    @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var shadowedView: MDCCard!
     @IBOutlet weak var ivNumberOfPots: UIImageView!
     @IBOutlet weak var lblNumberOfPots: UILabel!
     @IBOutlet weak var ivPotSize: UIImageView!
     @IBOutlet weak var lblPotsSize: UILabel!
-
+    
     static let reuseId = "PotsCareTableViewCell"
     
     static func registerNIBinView(tableView: UITableView) {
         let nib = UINib.init(nibName: reuseId, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: reuseId)
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        shadowedView.cornerRadius = 8
+        shadowedView.setShadowElevation(ShadowElevation.fabResting, for: .normal)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

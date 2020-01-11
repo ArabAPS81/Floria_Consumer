@@ -12,6 +12,7 @@ class OrderViewController: UIViewController {
     
     // MARK: - Properties
     
+    @IBOutlet weak var svStatus: OrderStatusView!
     @IBOutlet weak var tvOrder: UITableView!
     
     var order: Order?
@@ -26,6 +27,12 @@ class OrderViewController: UIViewController {
         super.viewDidLoad()
         
         title = "#\(order!.id)"
+        
+        if (order?.status.id ?? 1) > 4 {
+            svStatus.status = 7
+        } else {
+            svStatus.status = (order?.status.id ?? 1) * 2 - 1
+        }
         
         VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
         ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)

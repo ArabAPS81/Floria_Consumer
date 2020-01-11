@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class CustomBouquetTableViewCell: UITableViewCell {
-    @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var shadowedView: MDCCard!
     @IBOutlet weak var ivCard: UIImageView!
     @IBOutlet weak var lblCard: UILabel!
     @IBOutlet weak var ivPot: UIImageView!
@@ -27,6 +28,9 @@ class CustomBouquetTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        shadowedView.cornerRadius = 8
+        shadowedView.setShadowElevation(ShadowElevation.fabResting, for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
