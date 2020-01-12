@@ -23,8 +23,8 @@ extension String{
     enum RegularExpressions : String{
         case name = "[a-zA-Z ]{3,50}"
         case email = "[A-Z0-9a-z._%+_]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
-        case phone = "[0123456789]{11,11}"
-        case password = "[^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$]{6,16}"
+        case phone = "^(01(0|1|2|5)[0-9]{8})"
+        case password = "^(?=.{8,})"
     }
     
     func isValid(_ validityType: ValidityType) -> Bool {

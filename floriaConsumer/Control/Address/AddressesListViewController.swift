@@ -41,6 +41,7 @@ class AddressesListViewController: UIViewController {
         super.viewDidAppear(animated)
         let service = AddressService.init(delegate: self)
         service.getListOfAddresses()
+        table.startLoading()
     }
     
     @IBAction func addAddressTapped(_ sender: Any) {
@@ -82,11 +83,12 @@ extension AddressesListViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? AddressModel {
             addressesList = data.addresses ?? []
+            table.stopLoading()
             table.reloadData()
         }
     }
     
     func didFailToReceiveDataWithError(error: Error) {
-        
+        table.stopLoading("No data available")
     }
 }

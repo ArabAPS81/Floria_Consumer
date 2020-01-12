@@ -407,10 +407,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YW3-fO-Cec"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Resend  Code">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="resendTapped:" destination="gd2-S1-q83" eventType="touchUpInside" id="sQJ-N0-GqF"/>
                                 </connections>

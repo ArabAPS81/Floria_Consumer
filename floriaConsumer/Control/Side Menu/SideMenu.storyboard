@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menuecontroller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="j3v-Tf-QAA">
             <objects>
-                <viewController storyboardIdentifier="sideMen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ftf-hq-tk8" customClass="menuecontroller" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ftf-hq-tk8" customClass="SideMenuViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQ3-7a-8w3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,6 +323,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vNc-jZ-IXl"/>
                     <connections>
+                        <outlet property="logButton" destination="xzS-Ah-CoY" id="R1D-bc-39L"/>
                         <outlet property="logout" destination="xzS-Ah-CoY" id="gRU-Ed-nJY"/>
                         <outlet property="userMailLabel" destination="RrA-na-W9c" id="2W4-iQ-bV8"/>
                         <outlet property="userNameLabel" destination="JgG-Oy-TzP" id="a85-h9-Llo"/>

@@ -13,11 +13,13 @@ struct AuthenticationModel: Codable {
     let user : User?
     let httpCode : Int?
     let message : String?
+    let error : FloriaError?
     
     enum CodingKeys: String, CodingKey {
         case user = "data"
         case httpCode = "http_code"
         case message = "message"
+        case error
     }
     
     struct User : Codable {
@@ -42,6 +44,20 @@ struct AuthenticationModel: Codable {
             case name = "name"
             case tokenType = "token_type"
             case verified = "verified"
+        }
+    }
+    struct FloriaError : Codable {
+        let message : Message?
+        enum CodingKeys: String, CodingKey {
+            case message
+        }
+        struct Message : Codable {
+            let email : [String]?
+            let mobile : [String]?
+            enum CodingKeys: String, CodingKey {
+                case email = "email"
+                case mobile = "mobile"
+            }
         }
     }
 }

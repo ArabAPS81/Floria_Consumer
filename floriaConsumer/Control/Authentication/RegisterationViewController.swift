@@ -74,20 +74,52 @@ class RegisterationViewController: UIViewController {
     }
     
     @IBAction func registerTapped(_ sender: Any) {
-        guard let name = nameTF.text?.trimmed , !name.isEmpty else {return}
-        guard let email = emailTF.text?.trimmed , !email.isEmpty else {return}
-        guard let mobile = mobileTF.text?.trimmed , !mobile.isEmpty else {return}
-        guard let password = passwordTF.text?.trimmed , !password.isEmpty else {return}
-        guard let confirmPass = confirmPassTF.text?.trimmed , !confirmPass.isEmpty else {return}
-        guard password == confirmPass else {
-            alertWithMessage("Passwords dont match")
-            return
+        if validation() {
+            guard let name = nameTF.text?.trimmed , !name.isEmpty else {return}
+            guard let email = emailTF.text?.trimmed , !email.isEmpty else {return}
+            guard let mobile = mobileTF.text?.trimmed , !mobile.isEmpty else {return}
+            guard let password = passwordTF.text?.trimmed , !password.isEmpty else {return}
+            guard let confirmPass = confirmPassTF.text?.trimmed , !confirmPass.isEmpty else {return}
+            guard password == confirmPass else {
+                alertWithMessage("Passwords dont match")
+                return
+            }
+            
+            let service = AuthenticationService.init(delegate: self)
+            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
         }
         
-        let service = AuthenticationService.init(delegate: self)
-        service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
-        
     }
+    
+    func validation() -> Bool {
+        if !(nameTF.text?.isValid(.name) ?? false) {
+            alertWithMessage(title: "Name is not valid")
+            return false
+        }
+        if !(emailTF.text?.isValid(.email) ?? false) {
+            alertWithMessage(title: "email is not valid")
+            return false
+        }
+        if passwordTF.text?.count ?? 0 < 8  {
+            alertWithMessage(title: "Password must be 8 or more charachters")
+            return false
+        }
+        if !(mobileTF.text?.isValid(.phone) ?? false) {
+            alertWithMessage(title: "Phone number is not valid")
+            return false
+        }
+        if checkTerms == nil {
+            alertWithMessage(title: "You have to agree to terms and conditions")
+            return false
+        }
+        if !(passwordTF.text?.elementsEqual(confirmPassTF.text ?? "") ?? false) {
+            alertWithMessage(title: "Passwords dont match")
+            return false
+        }
+        return true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Registration"
@@ -157,6 +189,12 @@ extension RegisterationViewController : WebServiceDelegate{
                 Defaults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
                 let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: model.user?.mobile ?? "")
                 self.navigationController?.pushViewController(vc, animated: true)
+            }else if model.httpCode == 422 {
+                if let message = model.error?.message?.email?.first {
+                    alertWithMessage(title: message)
+                }else if let message = model.error?.message?.mobile?.first {
+                    alertWithMessage(title: message)
+                }
             }
         }
     }

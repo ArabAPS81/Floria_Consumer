@@ -23,9 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
             window?.rootViewController = homeVC
         }else {
-            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-            let homeVC = storyboard.instantiateInitialViewController()
-            window?.rootViewController = homeVC
+            if /*Defaults().getIfFirstTime()*/false {
+                let storyboard = UIStoryboard(name: "Splash", bundle: nil)
+                let homeVC = storyboard.instantiateInitialViewController()
+                window?.rootViewController = homeVC
+            } else {
+                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+                let homeVC = storyboard.instantiateInitialViewController()
+                window?.rootViewController = homeVC
+            }
         }
         IQKeyboardManager.shared.enable = true
         

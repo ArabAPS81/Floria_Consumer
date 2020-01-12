@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import PKHUD
 
 
 class AuthenticationService {
@@ -112,17 +113,19 @@ class AuthenticationService {
             "check_privacy" : checkPrivecy,
             "device_id" : Defaults().getUniqueID()
         ] as [String : Any]
-        
+        HUD.show(.progress)
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):
                 print(value)
+                HUD.hide(animated: true)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
                 self.delegate?.didRecieveData(data: data)
                 break
                 
             case .failure(let error):
+                HUD.flash(.labeledError(title: error.localizedDescription, subtitle: nil))
                 print(error.localizedDescription)
             }
         }
@@ -174,15 +177,18 @@ class AuthenticationService {
         let params: [String:String] = ["mobile": phoneNumber,
                                        "password":password]
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        HUD.show(.progress)
         Alamofire.request(url, method: .post, parameters: params, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):
                 print(value)
+                HUD.flash(.success)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
                 self.delegate?.didRecieveData(data: data)
                 break
                 
             case .failure(let error):
+                HUD.flash(.labeledError(title: error.localizedDescription, subtitle: nil))
                 print(error.localizedDescription)
             }
         }

@@ -49,10 +49,24 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func signin(_ sender: Any) {
-        guard let Phone = phoneTF.text , !Phone.isEmpty else{return}
-        guard let password = passTF.text , !password.isEmpty else{return}
-        let service = AuthenticationService.init(delegate: self)
-        service.loginWith(phoneNumber: Phone, password: password)
+        if validation() {
+            let Phone = phoneTF.text!
+            let password = passTF.text!
+            let service = AuthenticationService.init(delegate: self)
+            service.loginWith(phoneNumber: Phone, password: password)
+        }
+    }
+    
+    func validation() -> Bool {
+        if !(phoneTF.text ?? "").isValid(.phone) {
+            alertWithMessage(title: NSLocalizedString("Phone not valid", comment: ""))
+            return false
+        }
+        if passTF.text?.count ?? 0 < 8 {
+            alertWithMessage(title: NSLocalizedString("Password not valid", comment: ""))
+            return false
+        }
+        return true
     }
     
     @IBAction func forgetpass(_ sender: Any) {
