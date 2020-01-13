@@ -99,6 +99,16 @@ class Defaults {
         }
     }
     
+    var isArabic: Bool {
+        get{
+            if Locale.current.languageCode?.contains("ar") ?? false {
+                return true
+            }else {
+                return false
+            }
+        }
+    }
+    
 }
 
 struct userData {

@@ -26,8 +26,9 @@ class ShippingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dt = Date.init().addingTimeInterval(75.0 * 60.0)
+        let dt = Date.init().addingTimeInterval(65.0 * 60.0)
         setRequiredDate(dt)
+        orderRequest.paymentTypeId = 2 // cash on delivary
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,7 +46,7 @@ class ShippingViewController: UIViewController {
     @IBAction func delivaryDateButtonTapped(_ sender: Any) {
         let window = self.view.window
         let dpd = DatePickerDialog.init()
-        dpd.locale = Locale.current
+        dpd.locale = Locale.init(identifier: "en")
         dpd.show("Date Picker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: selectedDate, minimumDate: Date(), maximumDate: nil, datePickerMode: UIDatePicker.Mode.date, window: window) {
             (date) -> Void in
             if let dt = date {
@@ -59,7 +60,7 @@ class ShippingViewController: UIViewController {
         
         let window = self.view.window
         let dpd = DatePickerDialog.init()
-        dpd.locale = Locale.current
+        dpd.locale = Locale.init(identifier: "en")
         dpd.show("Time Picker", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: selectedDate, minimumDate: Date(), maximumDate: nil, datePickerMode: UIDatePicker.Mode.time, window: window) {
             (date) -> Void in
             if let dt = date {
@@ -79,7 +80,8 @@ class ShippingViewController: UIViewController {
     
     func setRequiredDate(_ dt: Date) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale.init(identifier: "en")
+        formatter.dateFormat = "hh:mm a"
         self.deliveryTimeLabel.text = formatter.string(from: dt)
         formatter.dateFormat = "yyyy-MM-dd"
         self.deliveryDateLabel.text = formatter.string(from: dt)
@@ -94,7 +96,6 @@ class ShippingViewController: UIViewController {
             return false
         }
         if order.shipping == nil {
-            alertWithMessage("")
             orderRequest.shipping = 1
         }
         if order.paymentTypeId == nil {
@@ -116,16 +117,21 @@ extension ShippingViewController: WebServiceDelegate {
         if let data = data as? OrderSummaryResponceModel {
             if data.httpCode == 200 {
                 performSegue(withIdentifier: "summary", sender: data)
-                HUD.hide(animated: true)
+                HUD.flash(.success)
             }else {
-                HUD.show(.error)
+                HUD.flash(.error)
             }
+        }else {
+            HUD.flash(.error)
         }
     }
     
+    
+    
+}
+extension WebServiceDelegate {
     func didFailToReceiveDataWithError(error: Error) {
-        HUD.show(.error)
+        HUD.flash(.error)
         print(error.localizedDescription)
     }
-    
 }

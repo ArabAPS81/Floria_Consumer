@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "  Sub total"; ObjectID = "2XP-kv-x8T"; */
+"2XP-kv-x8T.text" = "  Sub total";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "HNd-Ao-0f1"; */
+"HNd-Ao-0f1.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "Validate"; ObjectID = "K5A-cK-MGI"; */
+"K5A-cK-MGI.normalTitle" = "Validate";
+
+/* Class = "UILabel"; text = "Shipped"; ObjectID = "Oml-Ob-BlV"; */
+"Oml-Ob-BlV.text" = "Shipped";
+
+/* Class = "UIViewController"; title = "Orders"; ObjectID = "Pbr-61-Ojs"; */
+"Pbr-61-Ojs.title" = "Orders";
+
+/* Class = "UILabel"; text = "  Delivery"; ObjectID = "Pvv-UJ-Jay"; */
+"Pvv-UJ-Jay.text" = "  Delivery";
+
+/* Class = "UITextField"; placeholder = "Promo Code"; ObjectID = "UZO-m9-OlO"; */
+"UZO-m9-OlO.placeholder" = "Promo Code";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Wur-do-XS7"; */
+"Wur-do-XS7.text" = "0";
+
+/* Class = "UILabel"; text = "#123456789"; ObjectID = "XZ0-lP-Prd"; */
+"XZ0-lP-Prd.text" = "#123456789";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "YwG-MY-EHY"; */
+"YwG-MY-EHY.text" = "Title";
+
+/* Class = "UILabel"; text = "  Vat"; ObjectID = "aAk-FA-rf6"; */
+"aAk-FA-rf6.text" = "  Vat";
+
+/* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "alr-Ro-2J2"; */
+"alr-Ro-2J2.normalTitle" = "Pay";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cPv-4E-M2m"; */
+"cPv-4E-M2m.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "e0b-4c-Yik"; */
+"e0b-4c-Yik.text" = "0";
+
+/* Class = "UILabel"; text = "  Discount"; ObjectID = "hLI-ZC-o5n"; */
+"hLI-ZC-o5n.text" = "  Discount";
+
+/* Class = "UILabel"; text = "  Total"; ObjectID = "ib7-Gh-EZn"; */
+"ib7-Gh-EZn.text" = "  Total";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "kFs-Yl-gs1"; */
+"kFs-Yl-gs1.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "lDZ-RJ-SeH"; */
+"lDZ-RJ-SeH.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "nBq-uJ-qyd"; */
+"nBq-uJ-qyd.text" = "0";
+
+/* Class = "UILabel"; text = "260 EGP"; ObjectID = "oiC-Hj-zLf"; */
+"oiC-Hj-zLf.text" = "260 EGP";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "olJ-at-Z6B"; */
+"olJ-at-Z6B.text" = "Title";
+
+/* Class = "UILabel"; text = "  Sub total after discount"; ObjectID = "vqw-FS-kPW"; */
+"vqw-FS-kPW.text" = "  Sub total after discount";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "w2h-za-YTe"; */
+"w2h-za-YTe.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "20/9/2019"; ObjectID = "z9Y-6E-wl6"; */
+"z9Y-6E-wl6.text" = "20/9/2019";

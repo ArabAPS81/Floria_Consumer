@@ -113,6 +113,7 @@ class HomeViewController: UIViewController {
         menu.menuWidth = UIScreen.main.bounds.size.width * 0.8
         menu.statusBarEndAlpha = 0
         menu.animationOptions = .allowUserInteraction
+        menu.leftSide = !Defaults().isArabic
         present(menu, animated: true, completion: nil)
     }
 }

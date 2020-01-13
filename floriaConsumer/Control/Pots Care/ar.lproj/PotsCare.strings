@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Total Price"; ObjectID = "9s8-HX-Lkf"; */
+"9s8-HX-Lkf.text" = "Total Price";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "BQ8-GQ-bwn"; */
+"BQ8-GQ-bwn.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "Location"; ObjectID = "Pjz-so-7G7"; */
+"Pjz-so-7G7.normalTitle" = "Location";
+
+/* Class = "UILabel"; text = "31 Street 9, Mokattam, Cairo."; ObjectID = "Syh-nr-0i6"; */
+"Syh-nr-0i6.text" = "31 Street 9, Mokattam, Cairo.";
+
+/* Class = "UILabel"; text = "Vendor"; ObjectID = "TDy-NG-4Ds"; */
+"TDy-NG-4Ds.text" = "Vendor";
+
+/* Class = "UILabel"; text = "Vendor Name"; ObjectID = "WDw-ix-3Md"; */
+"WDw-ix-3Md.text" = "Vendor Name";
+
+/* Class = "UILabel"; text = "EGP"; ObjectID = "b8f-h7-NOL"; */
+"b8f-h7-NOL.text" = "EGP";
+
+/* Class = "UITextField"; placeholder = "Pots size"; ObjectID = "baS-Dn-GXe"; */
+"baS-Dn-GXe.placeholder" = "Pots size";
+
+/* Class = "UILabel"; text = "Pots size"; ObjectID = "cBi-NX-aPD"; */
+"cBi-NX-aPD.text" = "Pots size";
+
+/* Class = "UILabel"; text = "Order review"; ObjectID = "dmK-DD-wCR"; */
+"dmK-DD-wCR.text" = "Order review";
+
+/* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "gPW-8D-8Xj"; */
+"gPW-8D-8Xj.normalTitle" = "Checkout";
+
+/* Class = "UITextField"; placeholder = "Number Of Pots"; ObjectID = "i3Y-w0-0vM"; */
+"i3Y-w0-0vM.placeholder" = "Number Of Pots";
+
+/* Class = "UILabel"; text = "Number of pots: "; ObjectID = "k4e-mH-1A1"; */
+"k4e-mH-1A1.text" = "Number of pots: ";
+
+/* Class = "UIButton"; normalTitle = "Pots Care"; ObjectID = "nib-rG-zsb"; */
+"nib-rG-zsb.normalTitle" = "Pots Care";
+
+/* Class = "UILabel"; text = "1200"; ObjectID = "sh2-Zl-3ti"; */
+"sh2-Zl-3ti.text" = "1200";
+
+/* Class = "UIButton"; normalTitle = "Pots Care"; ObjectID = "yJD-Mg-ZTE"; */
+"yJD-Mg-ZTE.normalTitle" = "Pots Care";

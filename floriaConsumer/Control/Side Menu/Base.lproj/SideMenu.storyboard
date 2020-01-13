@@ -88,6 +88,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qk-he-k77">
                                                         <rect key="frame" x="40" y="0.0" width="374" height="48.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <state key="normal" title="Edit Profile">
                                                             <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,7 +210,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7A-SL-G6f">
                                                         <rect key="frame" x="40" y="0.0" width="374" height="48.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <state key="normal" title="Privacy &amp; Policy">
+                                                        <state key="normal" title="Terms &amp; Conditions">
                                                             <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
@@ -329,6 +330,13 @@
                         <outlet property="userNameLabel" destination="JgG-Oy-TzP" id="a85-h9-Llo"/>
                         <outlet property="userPhoneLabel" destination="LEm-uj-AWa" id="xCZ-Jv-Hou"/>
                         <outlet property="userView" destination="Yek-J0-epa" id="GEF-6o-w8T"/>
+                        <outletCollection property="sideMenuButtons" destination="5qk-he-k77" collectionClass="NSMutableArray" id="9Fc-Cj-RXs"/>
+                        <outletCollection property="sideMenuButtons" destination="YrJ-tf-gEj" collectionClass="NSMutableArray" id="TNf-en-snA"/>
+                        <outletCollection property="sideMenuButtons" destination="u85-sV-grr" collectionClass="NSMutableArray" id="hTP-3U-Gbm"/>
+                        <outletCollection property="sideMenuButtons" destination="3h1-pX-JwG" collectionClass="NSMutableArray" id="44G-3H-oWc"/>
+                        <outletCollection property="sideMenuButtons" destination="l7A-SL-G6f" collectionClass="NSMutableArray" id="pvi-YJ-DBh"/>
+                        <outletCollection property="sideMenuButtons" destination="oPC-p3-ofL" collectionClass="NSMutableArray" id="vUg-fN-be4"/>
+                        <outletCollection property="sideMenuButtons" destination="xzS-Ah-CoY" collectionClass="NSMutableArray" id="GbP-xQ-Qj3"/>
                         <segue destination="Qng-0O-dl6" kind="show" identifier="Segue2Orders" id="Uww-uS-Atl"/>
                     </connections>
                 </viewController>

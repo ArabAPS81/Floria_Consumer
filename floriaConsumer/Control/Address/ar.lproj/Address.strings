@@ -1,0 +1,57 @@
+
+/* Class = "UITextField"; placeholder = "Contact name"; ObjectID = "014-sA-R45"; */
+"014-sA-R45.placeholder" = "إسم للتواصل";
+
+/* Class = "UILabel"; text = "Building no 30"; ObjectID = "14u-ce-E0p"; */
+"14u-ce-E0p.text" = "";
+
+/* Class = "UILabel"; text = "cairo"; ObjectID = "1TO-Nd-Vja"; */
+"1TO-Nd-Vja.text" = "";
+
+/* Class = "UITextField"; placeholder = "governorate"; ObjectID = "7jO-0o-Mx4"; */
+"7jO-0o-Mx4.placeholder" = "المحافظة";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "7nA-Rz-dim"; */
+"7nA-Rz-dim.normalTitle" = "إلغاء";
+
+/* Class = "UITextField"; placeholder = "Street name"; ObjectID = "BFK-s6-SSF"; */
+"BFK-s6-SSF.placeholder" = "إسم الشارع";
+
+/* Class = "UITextField"; placeholder = "Address name"; ObjectID = "Ek6-Dg-C9y"; */
+"Ek6-Dg-C9y.placeholder" = "العنوان";
+
+/* Class = "UILabel"; text = "My Home"; ObjectID = "I4b-xD-5KO"; */
+"I4b-xD-5KO.text" = "";
+
+/* Class = "UILabel"; text = "01122343344"; ObjectID = "Lpz-Gl-emP"; */
+"Lpz-Gl-emP.text" = "";
+
+/* Class = "UILabel"; text = "mohammed ahmed ali"; ObjectID = "WQi-nh-HVU"; */
+"WQi-nh-HVU.text" = "";
+
+/* Class = "UITextField"; placeholder = "Contact phone"; ObjectID = "Z7g-Ge-XaM"; */
+"Z7g-Ge-XaM.placeholder" = "التليفون";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "ZlA-Xc-0xI"; */
+"ZlA-Xc-0xI.normalTitle" = "التالي";
+
+/* Class = "UITextField"; placeholder = "Building No."; ObjectID = "aRo-oA-dcD"; */
+"aRo-oA-dcD.placeholder" = "رقم المبني";
+
+/* Class = "UILabel"; text = "street 16 ,moqattam street 9 ,any"; ObjectID = "kPe-kY-ejd"; */
+"kPe-kY-ejd.text" = "";
+
+/* Class = "UITextField"; placeholder = "District"; ObjectID = "qVx-Kr-Pua"; */
+"qVx-Kr-Pua.placeholder" = "الحي";
+
+/* Class = "UILabel"; text = "near dar alarqam"; ObjectID = "qgQ-Ew-kWN"; */
+"qgQ-Ew-kWN.text" = "";
+
+/* Class = "UITextField"; placeholder = "Notes"; ObjectID = "reo-u6-mCB"; */
+"reo-u6-mCB.placeholder" = "ملاحظات";
+
+/* Class = "UIButton"; normalTitle = "Location on map"; ObjectID = "t0y-3u-LS1"; */
+"t0y-3u-LS1.normalTitle" = "الموقع على الخريظة";
+
+/* Class = "UIButton"; normalTitle = "Add address"; ObjectID = "zjf-ve-WMk"; */
+"zjf-ve-WMk.normalTitle" = "إضافة عنوان";

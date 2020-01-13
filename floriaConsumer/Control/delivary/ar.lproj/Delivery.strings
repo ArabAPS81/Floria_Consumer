@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "1Wi-I2-4fg"; */
+"1Wi-I2-4fg.text" = "Date";
+
+/* Class = "UIButton"; normalTitle = "some wher else "; ObjectID = "LfF-Fx-GOU"; */
+"LfF-Fx-GOU.normalTitle" = "some wher else ";
+
+/* Class = "UIButton"; normalTitle = "pick from vendor "; ObjectID = "PMX-r5-hY1"; */
+"PMX-r5-hY1.normalTitle" = "pick from vendor ";
+
+/* Class = "UIButton"; normalTitle = "Cash On Delivery"; ObjectID = "cC5-pg-VhH"; */
+"cC5-pg-VhH.normalTitle" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "oFA-7B-rtG"; */
+"oFA-7B-rtG.text" = "Time";
+
+/* Class = "UIButton"; normalTitle = "Shipping"; ObjectID = "pPH-dm-Rqd"; */
+"pPH-dm-Rqd.normalTitle" = "Shipping";
+
+/* Class = "UITextField"; placeholder = "Note"; ObjectID = "qL2-9Y-4Oj"; */
+"qL2-9Y-4Oj.placeholder" = "Note";
+
+/* Class = "UIButton"; normalTitle = "Online"; ObjectID = "qq7-6h-qBI"; */
+"qq7-6h-qBI.normalTitle" = "Online";
+
+/* Class = "UIButton"; normalTitle = "for me "; ObjectID = "wdz-E6-HyL"; */
+"wdz-E6-HyL.normalTitle" = "for me ";

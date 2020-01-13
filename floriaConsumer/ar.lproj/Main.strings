@@ -1,0 +1,54 @@
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "0Bs-a4-ECm"; */
+"0Bs-a4-ECm.normalTitle" = "Get Started";
+
+/* Class = "UILabel"; text = "Extra products"; ObjectID = "0IG-Dw-6mX"; */
+"0IG-Dw-6mX.text" = "Extra products";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "4no-0o-ycM"; */
+"4no-0o-ycM.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Registration"; ObjectID = "CSn-da-otQ"; */
+"CSn-da-otQ.text" = "Registration";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "G74-IN-Uto"; */
+"G74-IN-Uto.normalTitle" = "Skip";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "GLr-oa-r77"; */
+"GLr-oa-r77.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Oit-ec-fzh"; */
+"Oit-ec-fzh.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,"; ObjectID = "Qnt-wS-n8i"; */
+"Qnt-wS-n8i.text" = "DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,DEMO,";
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "VJr-rx-Svk"; */
+"VJr-rx-Svk.placeholder" = "Mobile";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "Vx6-xs-X8T"; */
+"Vx6-xs-X8T.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "agh-tO-pNq"; */
+"agh-tO-pNq.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "your code"; ObjectID = "bDB-vo-Djl"; */
+"bDB-vo-Djl.placeholder" = "your code";
+
+/* Class = "UIButton"; normalTitle = "close"; ObjectID = "d1F-v6-kgI"; */
+"d1F-v6-kgI.normalTitle" = "close";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "sFA-cM-NRj"; */
+"sFA-cM-NRj.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "sp5-Zq-JRa"; */
+"sp5-Zq-JRa.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "t7l-fT-Qaf"; */
+"t7l-fT-Qaf.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "vRI-up-RBO"; */
+"vRI-up-RBO.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zi7-pI-5FR"; */
+"zi7-pI-5FR.normalTitle" = "Button";

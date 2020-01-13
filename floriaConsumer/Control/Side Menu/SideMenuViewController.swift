@@ -10,6 +10,9 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     
+    
+    @IBOutlet var sideMenuButtons: [UIButton]!
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userMailLabel: UILabel!
     @IBOutlet weak var logButton: UIButton!
@@ -33,6 +36,10 @@ class SideMenuViewController: UIViewController {
             logButton.setTitle(NSLocalizedString("Logout", comment: ""), for: .normal)
         }else {
             logButton.setTitle(NSLocalizedString("Login", comment: ""), for: .normal)
+        }
+        
+        for button in sideMenuButtons {
+            button.contentHorizontalAlignment = .leading
         }
         
     }

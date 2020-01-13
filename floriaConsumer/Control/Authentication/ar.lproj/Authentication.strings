@@ -1,0 +1,99 @@
+
+/* Class = "UINavigationItem"; title = "reset password"; ObjectID = "0N2-Zm-ca1"; */
+"0N2-Zm-ca1.title" = "اعادة تعيين كلمة السر";
+
+/* Class = "UINavigationItem"; title = "Forget password"; ObjectID = "2eO-bK-naF"; */
+"2eO-bK-naF.title" = "Forget password";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "4A9-5s-pYD"; */
+"4A9-5s-pYD.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "00 : 00"; ObjectID = "ATz-zk-86A"; */
+"ATz-zk-86A.text" = "00 : 00";
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "AXl-a2-e50"; */
+"AXl-a2-e50.placeholder" = "رقم الجوال";
+
+/* Class = "UIButton"; normalTitle = "login"; ObjectID = "BfR-Nz-shL"; */
+"BfR-Nz-shL.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UITextField"; placeholder = "Mobile"; ObjectID = "CrX-TT-q9J"; */
+"CrX-TT-q9J.placeholder" = "رقم الجوال";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Ctj-KE-Xsm"; */
+"Ctj-KE-Xsm.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Not Registered Yet!"; ObjectID = "DLS-bp-ykX"; */
+"DLS-bp-ykX.normalTitle" = "Not Registered Yet!";
+
+/* Class = "UIButton"; normalTitle = "Forget Password!"; ObjectID = "EKn-oj-ZN0"; */
+"EKn-oj-ZN0.normalTitle" = "Forget Password!";
+
+/* Class = "UITextField"; placeholder = "Mobile number"; ObjectID = "H8A-Re-gJK"; */
+"H8A-Re-gJK.placeholder" = "Mobile number";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "KTH-tM-w32"; */
+"KTH-tM-w32.normalTitle" = "حفظ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "LZw-mH-dP0"; */
+"LZw-mH-dP0.placeholder" = "كلمة السر";
+
+/* Class = "UITextField"; placeholder = "code"; ObjectID = "Nhs-xY-MiB"; */
+"Nhs-xY-MiB.placeholder" = "code";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "R04-Gw-buw"; */
+"R04-Gw-buw.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ThJ-gj-mOo"; */
+"ThJ-gj-mOo.text" = "";
+
+/* Class = "UIButton"; normalTitle = "Already have an account!"; ObjectID = "Tyr-OM-uYl"; */
+"Tyr-OM-uYl.normalTitle" = "Already have an account!";
+
+/* Class = "UIButton"; normalTitle = "Resend  Code"; ObjectID = "Wjx-uq-iSg"; */
+"Wjx-uq-iSg.normalTitle" = "Resend  Code";
+
+/* Class = "UINavigationItem"; title = "Virification code"; ObjectID = "Xac-zN-9nX"; */
+"Xac-zN-9nX.title" = "Virification code";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zhj-wa-hte"; */
+"Zhj-wa-hte.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "bbO-lA-Gly"; */
+"bbO-lA-Gly.placeholder" = "اسم المستخدم";
+
+/* Class = "UINavigationItem"; title = "Sign in"; ObjectID = "bca-6S-Dls"; */
+"bca-6S-Dls.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "eyp-q6-mfK"; */
+"eyp-q6-mfK.normalTitle" = "تأكيد";
+
+/* Class = "UIButton"; normalTitle = "Terms and Conditions"; ObjectID = "f3d-Be-Xkg"; */
+"f3d-Be-Xkg.normalTitle" = "الشروط والاحكام";
+
+/* Class = "UIButton"; normalTitle = "Send Code"; ObjectID = "gwS-az-q8r"; */
+"gwS-az-q8r.normalTitle" = "Send Code";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "na1-Fj-eq1"; */
+"na1-Fj-eq1.normalTitle" = "تخطي";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "qMs-S0-RbX"; */
+"qMs-S0-RbX.placeholder" = "تأكيد كلمة السر";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "qoq-jC-cq5"; */
+"qoq-jC-cq5.placeholder" = "تأكيد كلمة السر";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "w3h-80-wdb"; */
+"w3h-80-wdb.placeholder" = "كلمة السر";
+
+/* Class = "UIButton"; normalTitle = " "; ObjectID = "xIU-Ph-p26"; */
+"xIU-Ph-p26.normalTitle" = " ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xms-h3-zi5"; */
+"xms-h3-zi5.text" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yM2-Ut-bTU"; */
+"yM2-Ut-bTU.text" = "";
+
+
+"z8e-si-90b.text" = """لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ..وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام  النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد. من كتاب  أقاصي الخير والشر";

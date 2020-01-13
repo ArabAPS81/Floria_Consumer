@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "180 LE"; ObjectID = "8W9-A5-KvM"; */
+"8W9-A5-KvM.text" = "180 LE";
+
+/* Class = "UILabel"; text = "Vendor Name"; ObjectID = "Bb3-vZ-m4V"; */
+"Bb3-vZ-m4V.text" = "Vendor Name";
+
+/* Class = "UILabel"; text = "31 Street 9, Mokattam, Cairo."; ObjectID = "JlV-Wy-dCi"; */
+"JlV-Wy-dCi.text" = "31 Street 9, Mokattam, Cairo.";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "o4q-nC-xKM"; */
+"o4q-nC-xKM.text" = "Product Name";
+
+/* Class = "UILabel"; text = "lorem wv rw wv we teg qev webwb f qev qev qr btev e ev eb ev e"; ObjectID = "onW-4B-Rfa"; */
+"onW-4B-Rfa.text" = "lorem wv rw wv we teg qev webwb f qev qev qr btev e ev eb ev e";
+
+/* Class = "UILabel"; text = "lorem wv r"; ObjectID = "vl8-OI-caY"; */
+"vl8-OI-caY.text" = "lorem wv r";
+
+/* Class = "UITextField"; placeholder = "Search Text Here"; ObjectID = "wPc-Gj-YRJ"; */
+"wPc-Gj-YRJ.placeholder" = "Search Text Here";

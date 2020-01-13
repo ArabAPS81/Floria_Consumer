@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "Help & Support"; ObjectID = "3h1-pX-JwG"; */
+"3h1-pX-JwG.normalTitle" = "الدعم والمساعدة";
+
+/* Class = "UIButton"; normalTitle = "Edit Profile"; ObjectID = "5qk-he-k77"; */
+"5qk-he-k77.normalTitle" = "تعديل الملف الشخصي";
+
+/* Class = "UILabel"; text = "Ahmed Mohamed Ali"; ObjectID = "JgG-Oy-TzP"; */
+"JgG-Oy-TzP.text" = "";
+
+/* Class = "UILabel"; text = "0112345676789"; ObjectID = "LEm-uj-AWa"; */
+"LEm-uj-AWa.text" = "";
+
+/* Class = "UILabel"; text = "ahmed@gmail.com"; ObjectID = "RrA-na-W9c"; */
+"RrA-na-W9c.text" = "";
+
+/* Class = "UIButton"; normalTitle = "Orders"; ObjectID = "YrJ-tf-gEj"; */
+"YrJ-tf-gEj.normalTitle" = "الطلبات";
+
+/* Class = "UIButton"; normalTitle = "Privacy & Policy"; ObjectID = "l7A-SL-G6f"; */
+"l7A-SL-G6f.normalTitle" = "الخصوصية والسرية";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "oPC-p3-ofL"; */
+"oPC-p3-ofL.normalTitle" = "الاعدادات";
+
+/* Class = "UIButton"; normalTitle = "Favorite"; ObjectID = "u85-sV-grr"; */
+"u85-sV-grr.normalTitle" = "المفضلة";
+
+/* Class = "UIButton"; normalTitle = "Log Out"; ObjectID = "xzS-Ah-CoY"; */
+"xzS-Ah-CoY.normalTitle" = "Log Out";
