@@ -57,6 +57,12 @@ class OrderSummaryViewController: UIViewController {
         service.getOrderSummary(order: orderRequest)
         HUD.show(.progress)
     }
+    
+    func showWebView(urlString: String) {
+        let vc = PaymentViewController.init()
+        vc.urlString = urlString
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension OrderSummaryViewController: WebServiceDelegate {
@@ -65,7 +71,11 @@ extension OrderSummaryViewController: WebServiceDelegate {
         HUD.hide(animated: true)
         if let data = data as? OrderSubmittResponseModel {
             if data.httpCode == 201 {
-                showAlert("\(data.message ?? "") \(data.data?.id ?? 0)")
+                if let urlString = data.responseModel?.paymentUrl {
+                    showWebView(urlString: urlString)
+                }else {
+                    showAlert("\(data.message ?? "") \(data.responseModel?.id ?? 0)")
+                }
             }
         }
         if let data = data as? OrderSummaryResponceModel {

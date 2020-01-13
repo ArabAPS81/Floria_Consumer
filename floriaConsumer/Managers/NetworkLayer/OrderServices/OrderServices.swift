@@ -125,6 +125,8 @@ class OrderServices {
                 JSONResponseDecoder.decodeFrom(value, returningModelType: OrderSubmittResponseModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
+                    }else {
+                        self.delegate?.didFailToReceiveDataWithError(error: error!)
                     }
                 }
             case .failure(let error):
@@ -169,20 +171,22 @@ struct OrderSummaryResponceModel : Codable {
 
 struct OrderSubmittResponseModel : Codable {
 
-    let data : Data?
+    let responseModel : ResponseModel?
     let httpCode : Int?
     let message : String?
 
     enum CodingKeys: String, CodingKey {
-        case data
+        case responseModel = "data"
         case httpCode = "http_code"
         case message = "message"
     }
-    struct Data : Codable {
+    struct ResponseModel : Codable {
 
         let id : Int?
+        let paymentUrl: String
         enum CodingKeys: String, CodingKey {
             case id = "id"
+            case paymentUrl
         }
     }
 }

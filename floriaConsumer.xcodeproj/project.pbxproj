@@ -66,6 +66,7 @@
 		D60B915723969B74002669B0 /* CarDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915623969B74002669B0 /* CarDecorationViewController.swift */; };
 		D60B91592397E3BD002669B0 /* ColorsPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */; };
 		D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */; };
+		D612EB1E23CC66E7005360FC /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612EB1D23CC66E7005360FC /* PaymentViewController.swift */; };
 		D618A796239E5BF400C61AEB /* PotsCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A795239E5BF400C61AEB /* PotsCareViewController.swift */; };
 		D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */; };
 		D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */; };
@@ -214,6 +215,7 @@
 		D60B915623969B74002669B0 /* CarDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDecorationViewController.swift; sourceTree = "<group>"; };
 		D60B91582397E3BD002669B0 /* ColorsPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPopupViewController.swift; sourceTree = "<group>"; };
 		D60B915A2397E51B002669B0 /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
+		D612EB1D23CC66E7005360FC /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		D618A795239E5BF400C61AEB /* PotsCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareViewController.swift; sourceTree = "<group>"; };
 		D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareReviewViewController.swift; sourceTree = "<group>"; };
 		D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +518,8 @@
 				1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */,
 				1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */,
 				1FE934FF23BCA33A00AEEA1E /* OrderTableViewCell.swift */,
+				D620351D238A99DA00336D0B /* Payment.storyboard */,
+				D612EB1D23CC66E7005360FC /* PaymentViewController.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -811,7 +815,6 @@
 			isa = PBXGroup;
 			children = (
 				D6203517238A962400336D0B /* Splash.storyboard */,
-				D620351D238A99DA00336D0B /* Payment.storyboard */,
 				D6203525238A9AB000336D0B /* UserProfile.storyboard */,
 				D6203527238A9AD900336D0B /* Settings.storyboard */,
 				D620352B238A9B0000336D0B /* Favorites.storyboard */,
@@ -1051,6 +1054,7 @@
 				1FB0C99723C2063C00D61A2C /* CarDecorationTableViewCell.swift in Sources */,
 				D6036EA6238EC45300044EFF /* HomeVendorCollectionViewCell.swift in Sources */,
 				D6347605239D22D2008EB755 /* NetworkConstants.swift in Sources */,
+				D612EB1E23CC66E7005360FC /* PaymentViewController.swift in Sources */,
 				D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */,
 				1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */,
 				D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */,
