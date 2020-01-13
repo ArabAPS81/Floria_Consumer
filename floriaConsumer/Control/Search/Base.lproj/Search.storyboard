@@ -236,6 +236,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="shadowedView" destination="h5N-Ae-7k4" id="LCe-HC-15y"/>
+                                            <segue destination="XGM-Uh-Tc1" kind="show" id="EQw-Hr-OOG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VendorSearchTableViewCell" rowHeight="106" id="ehz-LH-2yA" customClass="VendorSearchTableViewCell" customModule="floriaConsumer" customModuleProvider="target">
@@ -374,6 +375,16 @@
             </objects>
             <point key="canvasLocation" x="1634.4000000000001" y="91.304347826086968"/>
         </scene>
+        <!--ProductDetailsViewController-->
+        <scene sceneID="TUf-lc-MCf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Product" referencedIdentifier="ProductDetailsViewController" id="XGM-Uh-Tc1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wrg-ik-ahZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VU-ow-W1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2304" y="-48"/>
+        </scene>
         <!--VendorProfile-->
         <scene sceneID="jk5-gW-oYJ">
             <objects>
@@ -382,7 +393,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-3I-Qkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2155" y="-50"/>
+            <point key="canvasLocation" x="2226" y="314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TAl-7f-a9H">

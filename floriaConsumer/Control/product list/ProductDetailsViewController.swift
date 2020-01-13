@@ -17,7 +17,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var product: ProductsModel.Product!
+    var product: ProductsModel.Product?
     var extras = [ProductPackingModel.ProductPacking]()
     
     var idofpro = ""
@@ -38,11 +38,11 @@ class ProductDetailsViewController: UIViewController {
     }
     
     func setupViews() {
-        vendorNameLabel.text = product.provider?.name ?? ""
-        descriptionLabel.text = product.descriptionField
+        vendorNameLabel.text = product?.provider?.name ?? ""
+        descriptionLabel.text = product?.descriptionField
         priceLabel.text = "\(product?.price ?? 0)"
         let service = VendorServices.init(delegate: self)
-        service.getProductExtrasFor(vendor: (product.provider?.id)!)
+        service.getProductExtrasFor(vendor: (product?.provider?.id) ?? 0)
     }
     
     @IBAction func minase(_ sender: Any) {
@@ -66,14 +66,14 @@ class ProductDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let vc = segue.destination as? viewimg {
-            vc.image = product.image
+            vc.image = product?.image
         }
         
         super.prepare(for: segue, sender: sender)
-        let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product.id!, quantity: x, price: product.price ?? 0)
+        let selectedProduct = SubmittOrderQueryModel.OrderProducts.init(id: product?.id ?? 0, quantity: x, price: product?.price ?? 0)
         orderRequest.products = [selectedProduct]
-        orderRequest.providerId = product.provider?.id
-        orderRequest.serviceId = product.service?.id
+        orderRequest.providerId = product?.provider?.id
+        orderRequest.serviceId = product?.service?.id
         
     }
 }
@@ -109,7 +109,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
         
         if collectionView == imageSliderCollectioView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath) as! SliderHomeCollectionViewCell
-            cell.configure(url: product.image ?? "")
+            cell.configure(url: product?.image ?? "")
             return cell;
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExtrasCollectionViewCell.reuseId, for: indexPath) as! ExtrasCollectionViewCell
@@ -121,7 +121,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        if collectionView == imageSliderCollectioView {
-        self.performSegue(withIdentifier: "zoom", sender: product.image)
+        self.performSegue(withIdentifier: "zoom", sender: product?.image)
        }
         if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
             cell.setSelected(true)
