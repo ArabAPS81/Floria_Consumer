@@ -35,7 +35,7 @@ class VendorServices {
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }
@@ -55,7 +55,7 @@ class VendorServices {
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }
@@ -75,7 +75,26 @@ class VendorServices {
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
+    func getVendorsDetails(vendorId: Int) {
+        
+        let baseUrl = NetworkConstants.baseUrl + "providers/\(vendorId)"
+        guard let url = baseUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorDetailsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }

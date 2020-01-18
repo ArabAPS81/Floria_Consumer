@@ -148,7 +148,7 @@ class ProductService {
                         }
                     }
                 }else {
-                    JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                    JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
                         if let result = result {
                             self.delegate?.didRecieveData(data: result)
                         }
@@ -161,7 +161,25 @@ class ProductService {
         }
     }
     
-    
+    func homeSliderData() {
+        let baseUrl = NetworkConstants.baseUrl + "sliders"
+        
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: HomeSliderModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+
 }
 
 

@@ -24,9 +24,9 @@ class CarDecorationReviewController: UIViewController {
     
     @IBOutlet weak var decorationTypeImage: UIImageView!
     @IBOutlet weak var carTypeImage: UIImageView!
-    var vendor: VendorModel.Vendor!
+    var vendor: VendorsModel.Vendor!
     
-    static func newInstance(vendor: VendorModel.Vendor) -> CarDecorationReviewController {
+    static func newInstance(vendor: VendorsModel.Vendor) -> CarDecorationReviewController {
         let sb = UIStoryboard.init(name: "CarDecoration", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CarDecorationReviewController") as! CarDecorationReviewController
         vc.vendor = vendor

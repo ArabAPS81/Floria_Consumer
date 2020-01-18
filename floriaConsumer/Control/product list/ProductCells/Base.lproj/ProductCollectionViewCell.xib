@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,13 +26,16 @@
                                 <rect key="frame" x="8" y="130" width="94" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pac-T1-M4Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="12"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P7y-F2-jmR" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="12" width="94" height="32"/>
+                                        <rect key="frame" x="0.0" y="22" width="94" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Wlb-90-w00"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -43,7 +46,7 @@
                                     <constraint firstItem="P7y-F2-jmR" firstAttribute="leading" secondItem="ktO-Wd-4RT" secondAttribute="leading" id="FLu-ID-SPV"/>
                                     <constraint firstItem="pac-T1-M4Q" firstAttribute="top" secondItem="ktO-Wd-4RT" secondAttribute="top" id="UKO-Ao-hHw"/>
                                     <constraint firstAttribute="trailing" secondItem="pac-T1-M4Q" secondAttribute="trailing" id="khm-EM-0xM"/>
-                                    <constraint firstAttribute="bottom" secondItem="P7y-F2-jmR" secondAttribute="bottom" id="yfK-KJ-gDi"/>
+                                    <constraint firstAttribute="bottom" secondItem="P7y-F2-jmR" secondAttribute="bottom" constant="5" id="yfK-KJ-gDi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNq-Ob-bVN">

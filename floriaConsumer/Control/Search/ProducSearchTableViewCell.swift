@@ -16,7 +16,7 @@ class ProducSearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productdiscriptionLabel: UILabel!
-    
+    @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var vendorNameLabel: UILabel!
     
     @IBOutlet weak var productImage: UIImageView!
@@ -24,6 +24,8 @@ class ProducSearchTableViewCell: UITableViewCell {
     func configure(product: ProductsModel.Product?) {
         productNameLabel.text = product?.name
         productImage.imageFromUrl(url: product?.image, placeholder: UIImage.init(named: "633107Poao80102-1"))
+        productPrice.text = "\(Int(product?.price ?? 0))LE"
+        
     }
 
     override func awakeFromNib() {

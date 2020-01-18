@@ -12,11 +12,18 @@ protocol VendorDetailsView: class{
 }
 
 class VendorDetailsViewController: UIViewController{
-    var vendor: VendorModel.Vendor!
+    
+    
+    static func newInstance(vendorId: Int) -> VendorDetailsViewController {
+        let storyboard = UIStoryboard.init(name: "Vendor", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "VendorDetailsViewController") as! VendorDetailsViewController
+        vc.vendorId = vendorId
+        return vc
+    }
     
     var presenter: VendorDetailsPresenter!
     var vendorProducts = [ProductsModel.Product]()
-    
+    var vendorId: Int!
     // MARK: -OUTLETS
     @IBOutlet weak var recentProductCollectionView: UICollectionView!
     @IBOutlet weak var servicesCollectionView: UICollectionView!
@@ -26,7 +33,7 @@ class VendorDetailsViewController: UIViewController{
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var rate: RateView!
 
-    lazy var serviceCollectionDataSource:ServiceCollectionDataSource = ServiceCollectionDataSource(services: vendor.services ?? [])
+    var serviceCollectionDataSource:ServiceCollectionDataSource!
     // MARK: - BTNs Actions
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -35,19 +42,27 @@ class VendorDetailsViewController: UIViewController{
         super.viewDidLoad()
         setUpViewsShapes()
         ProductCollectionViewCell.registerNIBinView(collection: recentProductCollectionView)
-        picofvendor.imageFromUrl(url: vendor.image, placeholder: nil)
+        presenter = VendorDetailsPresenter.init(view: self)
+        presenter.getVendorDetails(vendorId: vendorId)
+        
+        
+    }
+    
+    func setUpData(vendor: VendorsModel.Vendor) {
         name.text = vendor.name
         address.text = vendor.address
         rate.setRate(rate: vendor.rate)
-        
+        serviceCollectionDataSource = ServiceCollectionDataSource(services: vendor.services ?? [])
         servicesCollectionView.delegate = serviceCollectionDataSource
         servicesCollectionView.dataSource = serviceCollectionDataSource
         
-        let id = vendor.id!
-        presenter = VendorDetailsPresenter.init(view: self)
-        presenter?.getVendorProducts(vendorId: id )
-        //print(vendorProducts)
+        let id = vendor.id
+        
+        presenter?.getVendorProducts(vendorId: id!)
+        picofvendor.imageFromUrl(url: vendor.image, placeholder: nil)
     }
+    
+    
     
     func setUpViewsShapes(){
         providerCard.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
@@ -59,13 +74,6 @@ class VendorDetailsViewController: UIViewController{
     
     func clipCorners(button: UIButton , by : Float){
         button.layer.cornerRadius = CGFloat(by)
-    }
-    
-    static func newInstance(vendor: VendorModel.Vendor) -> VendorDetailsViewController {
-        let storyboard = UIStoryboard.init(name: "Vendor", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "VendorDetailsViewController") as! VendorDetailsViewController
-        vc.vendor = vendor
-        return vc
     }
 }
 
@@ -81,28 +89,40 @@ extension VendorDetailsViewController : UICollectionViewDelegate , UICollectionV
         cell.configure(product: vendorProducts[indexPath.row])
         return cell
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let iphone8SizeWidth: CGFloat = 375
-//        let iphone8Height: CGFloat = 250
-//        let iphone8Width: CGFloat = 180
-//        let scale: CGFloat = UIScreen.main.bounds.width / iphone8SizeWidth
-//        let size = CGSize.init(width: iphone8Width * scale, height: iphone8Height * scale)
-//        return size
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == recentProductCollectionView {
+            let iphone8SizeWidth: CGFloat = 375
+            let iphone8Height: CGFloat = 245
+            let iphone8Width: CGFloat = 162
+            let scale: CGFloat = UIScreen.main.bounds.width / iphone8SizeWidth
+            let size = CGSize.init(width: iphone8Width * scale, height: iphone8Height * scale)
+            return size
+        }
+        else {
+            return CGSize.init(width: 70, height: 66)
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "prouduct", sender: nil)
+        //self.performSegue(withIdentifier: "prouduct", sender: nil)
     }
 }
 
 extension VendorDetailsViewController: VendorDetailsView{
     func didReceiveData(data: Codable) {
+        if let model = data as? VendorDetailsModel {
+            if let vendor = model.data {
+                setUpData(vendor: vendor)
+            }
+        }
+        
         if let data = data as? ProductsModel {
             vendorProducts = data.products!
             print(vendorProducts)
             recentProductCollectionView.reloadData()
         }
     }
+    
     func didFailToReceiveData(error: Error) {
         
     }

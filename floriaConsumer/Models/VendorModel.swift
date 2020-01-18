@@ -1,5 +1,5 @@
 //
-//  VendorModel.swift
+//  VendorsModel.swift
 //  floriaConsumer
 //
 //  Created by arabpas on 12/11/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VendorModel: Codable {
+struct VendorsModel: Codable {
 
     let vendors : [Vendor]!
     let httpCode : Int?
@@ -93,6 +93,26 @@ struct VendorModel: Codable {
             case price = "price"
         }
     }
+
+
+}
+
+
+
+struct VendorDetailsModel : Codable {
+
+    let data : VendorsModel.Vendor?
+    let httpCode : Int?
+    let message : String?
+
+
+    enum CodingKeys: String, CodingKey {
+        case data
+        case httpCode = "http_code"
+        case message = "message"
+    }
+    
+    
 
 
 }

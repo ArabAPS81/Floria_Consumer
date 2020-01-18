@@ -24,7 +24,7 @@ class VendorsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var serviceType: ServiceType!
-    var vendorsList = [VendorModel.Vendor]()
+    var vendorsList = [VendorsModel.Vendor]()
     var presenter: VendorListPresenter?
 
     override func viewDidLoad() {
@@ -102,7 +102,7 @@ extension VendorsListViewController: FilterDelegate {
 
 extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
-        if let data = data as? VendorModel {
+        if let data = data as? VendorsModel {
             vendorsList = data.vendors!
             if vendorsList.count == 0 {
                 tableView.stopLoading("")

@@ -25,7 +25,7 @@ class VendorTableViewCell: UITableViewCell {
     @IBOutlet weak var vendorAddressLabel: UILabel!
     @IBOutlet weak var ratingView: RateView!
     
-    func cofigure(vendor: VendorModel.Vendor) {
+    func cofigure(vendor: VendorsModel.Vendor) {
         vendorNameLabel.text = vendor.name
         vendorAddressLabel.text = vendor.address ?? vendor.district?.name
         vendorImageView.imageFromUrl(url: vendor.image, placeholder: nil)

@@ -94,6 +94,7 @@
 		D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */; };
 		D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */; };
 		D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */; };
+		D64D0C0C23D3005800293C53 /* HomeSliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64D0C0B23D3005800293C53 /* HomeSliderModel.swift */; };
 		D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652F83E23A7BDF100E7EED8 /* TipView.swift */; };
 		D652F84123A7C5B800E7EED8 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D652F84023A7C5B800E7EED8 /* TipView.xib */; };
 		D670270723A4EF1B00CBBD63 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670270623A4EF1B00CBBD63 /* HomeViewController.swift */; };
@@ -242,6 +243,7 @@
 		D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		D64D0C0B23D3005800293C53 /* HomeSliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderModel.swift; sourceTree = "<group>"; };
 		D652F83E23A7BDF100E7EED8 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		D652F84023A7C5B800E7EED8 /* TipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
 		D670270623A4EF1B00CBBD63 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				9C9B039723B8C92300AD6EE4 /* AuthenticationModel.swift */,
 				54A2B69323BA3C9B0076BA0D /* ResendModel.swift */,
 				D6C9D06523C1DF1600A0AF54 /* GovernorateModel.swift */,
+				D64D0C0B23D3005800293C53 /* HomeSliderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				1FE934FE23BB6E7D00AEEA1E /* OrdersServices.swift in Sources */,
 				D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */,
 				D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */,
+				D64D0C0C23D3005800293C53 /* HomeSliderModel.swift in Sources */,
 				D6347602239D22D2008EB755 /* JSONResponseDecoder.swift in Sources */,
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */,

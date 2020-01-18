@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class ServiceCollectionDataSource : NSObject,UICollectionViewDelegate , UICollectionViewDataSource{
-    let services:[VendorModel.Service]
-    init(services:[VendorModel.Service]) {
+    let services:[VendorsModel.Service]
+    init(services:[VendorsModel.Service]) {
         self.services = services
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -17,7 +17,7 @@ class HomeVendorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var vendorDistrictLabel: UILabel!
     @IBOutlet weak var ratingView: RateView!
     
-    func cofigure(vendor: VendorModel.Vendor) {
+    func cofigure(vendor: VendorsModel.Vendor) {
         vendorNameLabel.text = vendor.name
         vendorDistrictLabel.text = vendor.district?.name
         imageView.imageFromUrl(url: vendor.image, placeholder: nil)

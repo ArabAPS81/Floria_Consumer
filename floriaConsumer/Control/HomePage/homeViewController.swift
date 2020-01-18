@@ -18,8 +18,9 @@ protocol HomeView: class{
 class HomeViewController: UIViewController {
     
     var presenter: HomePresenter!
-    var vendorsList = [VendorModel.Vendor]()
+    var vendorsList = [VendorsModel.Vendor]()
     var productsList = [ProductsModel.Product]()
+    var slidersList = [HomeSliderModel.Slider]()
     
     
     @IBOutlet var homeButtonsCollction: [UIButton]!
@@ -42,6 +43,9 @@ class HomeViewController: UIViewController {
         Offers.startLoading()
         presenter.getFeaturedProducts()
         Products.startLoading()
+        presenter.getHomeSliderData()
+        SliderHome.startLoading()
+        
     }
     
     private func setupSideMenu() {
@@ -62,6 +66,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         Products.reloadData()
     }
     
@@ -127,7 +132,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
             case Products:
                 return productsList.count
             case SliderHome:
-            return 3
+                return slidersList.count
         default:
             return 0
         }
@@ -149,6 +154,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     {
         if collectionView == SliderHome {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderHome", for: indexPath) as! SliderHomeCollectionViewCell
+            cell.configure(url: slidersList[indexPath.row].image ?? "")
             return cell;
         } else if collectionView == Products {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeProductCollectionViewCell", for: indexPath) as! HomeProductCollectionViewCell
@@ -163,14 +169,18 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == SliderHome {
-            
+            let model = slidersList[indexPath.row]
+            if model.modelType == "provider"{
+                let vc = VendorDetailsViewController.newInstance(vendorId: model.modelId ?? 0)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         } else if collectionView == Products {
             let vc = ProductDetailsViewController.newInstance(product: productsList[indexPath.row])
             self.navigationController?.pushViewController(vc, animated: true)
         } else if collectionView == Offers {
             let vendor = vendorsList[indexPath.row]
             
-            let vc = VendorDetailsViewController.newInstance(vendor: vendor)
+            let vc = VendorDetailsViewController.newInstance(vendorId: vendor.id ?? 0)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -179,21 +189,27 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
 
 extension HomeViewController: HomeView {
     func didReceiveData(data: Codable) {
-        if let data = data as? VendorModel {
-            vendorsList = data.vendors!
+        if let data = data as? VendorsModel {
+            vendorsList = data.vendors ?? []
             Offers.reloadData()
             Offers.stopLoading()
         }
         if let data = data as? ProductsModel {
-            productsList = data.products!
+            productsList = data.products ?? []
             Products.reloadData()
             Products.stopLoading()
+        }
+        if let data = data as? HomeSliderModel {
+            slidersList = data.sliders ?? []
+            SliderHome.reloadData()
+            SliderHome.stopLoading()
         }
     }
     
     func didFailToReceiveData(error: Error) {
         Offers.stopLoading()
-        Offers.stopLoading()
+        Products.stopLoading()
+        SliderHome.stopLoading()
     }
     
     

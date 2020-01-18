@@ -34,7 +34,7 @@ class SearchTableViewController: UIViewController {
     var tableType: TableType = .products
     @IBOutlet weak var tableView: UITableView!
     var productList: [ProductsModel.Product] = []
-    var vendorList: [VendorModel.Vendor] = []
+    var vendorList: [VendorsModel.Vendor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +103,7 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
         case .vendors:
             let vendor = vendorList[indexPath.row]
-            let vc = VendorDetailsViewController.newInstance(vendor: vendor)
+            let vc = VendorDetailsViewController.newInstance(vendorId: vendor.id ?? 0)
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -133,7 +133,7 @@ extension SearchTableViewController: WebServiceDelegate {
             tableView.reloadData()
             tableView.stopLoading((productList.count == 0) ? "no data available" : "")
         }
-        if let model = data as? VendorModel {
+        if let model = data as? VendorsModel {
             vendorList = model.vendors ?? []
             tableView.reloadData()
             tableView.stopLoading((vendorList.count == 0) ? "no data available" : "")

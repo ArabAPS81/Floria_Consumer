@@ -34,7 +34,12 @@ class PaymentViewController: UIViewController,WKUIDelegate{
     
     func responsePaymentFinish(_ response: PaymentResponse) {
         print(response)
-        showAlert("payment done is : \(response.http_code ?? 0)")
+        if response.http_code == 201 {
+            showAlert("payment done is : \(response.data?.orderId ?? "")")
+        }else {
+            showAlert(response.error?.message?.body?.first)
+        }
+        
     }
     
     func showAlert(_ message: String?) {
@@ -61,16 +66,33 @@ extension PaymentViewController: WKNavigationDelegate {
             }
         }
     }
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let urlStr = navigationAction.request.url?.absoluteString {
+            let bv = urlStr
+        }
+        decisionHandler(.allow)
+    }
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        decisionHandler(.allow)
+    }
 }
 
 struct PaymentResponse: Codable {
-    let http_code: Int?
+    let http_code: Int
     let message: String?
     let error:PaymentResponseError?
+    let data: PaymentOrder?
     struct PaymentResponseError: Codable {
         let message : Message?
         struct Message : Codable {
             let body : [String]?
         }
     }
+    
+    struct PaymentOrder: Codable {
+        let orderId: String?
+        let decision: String?
+    }
+    
 }

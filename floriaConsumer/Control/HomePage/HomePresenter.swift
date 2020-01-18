@@ -28,6 +28,10 @@ class HomePresenter {
         service.getFeaturedProducts(model: model)
     }
     
+    func getHomeSliderData() {
+        let service = ProductService.init(delegate: self)
+        service.homeSliderData()
+    }
 }
 
 extension HomePresenter : WebServiceDelegate {
@@ -35,11 +39,7 @@ extension HomePresenter : WebServiceDelegate {
         view?.didReceiveData(data: data)
         
     }
-    
     func didFailToReceiveDataWithError(error: Error) {
         view?.didFailToReceiveData(error: error)
     }
-    
-    
-    
 }

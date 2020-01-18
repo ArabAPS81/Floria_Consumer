@@ -19,8 +19,9 @@ class VendorSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var vendorAddresslabel: UILabel!
     @IBOutlet weak var vendorImage: UIImageView!
     
-    func configure(vendor: VendorModel.Vendor) {
-        vendorAddresslabel.text = vendor.name
+    func configure(vendor: VendorsModel.Vendor) {
+        vendorAddresslabel.text = vendor.address
+        vendorNameLabel.text = vendor.name
         vendorImage.imageFromUrl(url: vendor.image, placeholder: nil)
     }
     

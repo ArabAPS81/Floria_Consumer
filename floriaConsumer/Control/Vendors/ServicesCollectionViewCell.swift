@@ -12,7 +12,7 @@ class ServicesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var name: UILabel!
     
-    func putDataToViews(service: VendorModel.Service) {
+    func putDataToViews(service: VendorsModel.Service) {
         name.text = service.name
         
         img.imageFromUrl(url: service.image, placeholder: nil)

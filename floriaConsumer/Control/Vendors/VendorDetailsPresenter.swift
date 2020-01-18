@@ -21,6 +21,11 @@ class VendorDetailsPresenter {
         productService.getProductsForVendor(vendorId)
     }
     
+    func getVendorDetails(vendorId: Int) {
+        let productService = VendorServices.init(delegate: self)
+        productService.getVendorsDetails(vendorId: vendorId)
+    }
+    
 }
 
 extension VendorDetailsPresenter : WebServiceDelegate {

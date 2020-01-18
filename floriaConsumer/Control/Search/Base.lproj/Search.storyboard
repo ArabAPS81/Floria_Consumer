@@ -251,6 +251,7 @@
                                         <connections>
                                             <outlet property="productImage" destination="Qcb-1e-Hzw" id="aU9-Kx-bxr"/>
                                             <outlet property="productNameLabel" destination="o4q-nC-xKM" id="Ve5-w1-ewe"/>
+                                            <outlet property="productPrice" destination="8W9-A5-KvM" id="Mwx-ig-iET"/>
                                             <outlet property="productdiscriptionLabel" destination="onW-4B-Rfa" id="9Ff-dd-z0L"/>
                                             <outlet property="shadowedView" destination="h5N-Ae-7k4" id="LCe-HC-15y"/>
                                             <outlet property="vendorNameLabel" destination="vl8-OI-caY" id="QRy-I9-3Nr"/>
