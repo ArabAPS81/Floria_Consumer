@@ -71,13 +71,27 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-3x-Za1">
+                                    <rect key="frame" x="170" y="0.0" width="30" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="K6m-8V-eIW"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" image="magnifyingglass" catalog="system"/>
+                                    <connections>
+                                        <action selector="searchButtonTapped:" destination="Ulk-s6-DeV" eventType="touchUpInside" id="KST-6w-u9v"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="wPc-Gj-YRJ" firstAttribute="leading" secondItem="JyR-UT-zdF" secondAttribute="leading" constant="8" id="BUS-u2-47v"/>
                                 <constraint firstAttribute="trailing" secondItem="wPc-Gj-YRJ" secondAttribute="trailing" constant="8" id="MCi-qH-MX0"/>
+                                <constraint firstItem="4GO-3x-Za1" firstAttribute="top" secondItem="JyR-UT-zdF" secondAttribute="top" id="UFM-qs-DYh"/>
                                 <constraint firstAttribute="bottom" secondItem="wPc-Gj-YRJ" secondAttribute="bottom" id="bOP-of-MES"/>
+                                <constraint firstAttribute="bottom" secondItem="4GO-3x-Za1" secondAttribute="bottom" id="bZ9-MS-OF7"/>
                                 <constraint firstItem="wPc-Gj-YRJ" firstAttribute="top" secondItem="JyR-UT-zdF" secondAttribute="top" id="hEU-wa-tZB"/>
+                                <constraint firstAttribute="trailing" secondItem="4GO-3x-Za1" secondAttribute="trailing" id="iyU-3C-z5m"/>
                             </constraints>
                         </view>
                     </navigationItem>
@@ -235,8 +249,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="productImage" destination="Qcb-1e-Hzw" id="aU9-Kx-bxr"/>
+                                            <outlet property="productNameLabel" destination="o4q-nC-xKM" id="Ve5-w1-ewe"/>
+                                            <outlet property="productdiscriptionLabel" destination="onW-4B-Rfa" id="9Ff-dd-z0L"/>
                                             <outlet property="shadowedView" destination="h5N-Ae-7k4" id="LCe-HC-15y"/>
-                                            <segue destination="XGM-Uh-Tc1" kind="show" id="EQw-Hr-OOG"/>
+                                            <outlet property="vendorNameLabel" destination="vl8-OI-caY" id="QRy-I9-3Nr"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VendorSearchTableViewCell" rowHeight="106" id="ehz-LH-2yA" customClass="VendorSearchTableViewCell" customModule="floriaConsumer" customModuleProvider="target">
@@ -348,7 +365,9 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="shadowedView" destination="Pw2-1Z-Z88" id="vPO-r0-cCr"/>
-                                            <segue destination="9qX-Am-8Pc" kind="show" id="WgS-3x-bDf"/>
+                                            <outlet property="vendorAddresslabel" destination="JlV-Wy-dCi" id="1QT-Ld-RTA"/>
+                                            <outlet property="vendorImage" destination="Tut-X9-9Hy" id="7AC-UU-Wg8"/>
+                                            <outlet property="vendorNameLabel" destination="Bb3-vZ-m4V" id="6UV-yz-7VG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -417,6 +436,7 @@
     <resources>
         <image name="633107Poao80102-1" width="89" height="79"/>
         <image name="favorite" width="26.5" height="24"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="shape952" width="10" height="10"/>
         <image name="vendorAvatar" width="80" height="80"/>
     </resources>

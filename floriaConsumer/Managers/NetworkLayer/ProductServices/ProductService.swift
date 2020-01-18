@@ -15,8 +15,13 @@ struct  FeaturedProductsQueryModel {
 }
 
 struct  SearchProductsQueryModel {
-    var id: Int
-    var Location: CLLocationCoordinate2D
+    var districtId: Int?
+    var searchText: String
+    var type: SearchType
+    
+    enum SearchType: String {
+        case product,provider
+    }
 }
 
 class ProductService {
@@ -124,18 +129,32 @@ class ProductService {
     }
     
     func searchInProducts(model: SearchProductsQueryModel) {
+       // let model = SearchProductsQueryModel.init(districtId: nil, searchText: "test", type: SearchProductsQueryModel.SearchType.product)
+        var baseUrl = NetworkConstants.baseUrl + "search?type=\(model.type)&search=\(model.searchText)"
+        if let distId = model.districtId {
+            baseUrl.append(contentsOf: "district_id=\(distId)")
+        }
         
-        let baseUrl = (NetworkConstants.baseUrl + "products/")
         guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: ProductsModel.self) { (result, error) in
-                    if let result = result {
-                        self.delegate?.didRecieveData(data: result)
+                
+                if model.type == SearchProductsQueryModel.SearchType.product{
+                    JSONResponseDecoder.decodeFrom(value, returningModelType: ProductsModel.self) { (result, error) in
+                        if let result = result {
+                            self.delegate?.didRecieveData(data: result)
+                        }
+                    }
+                }else {
+                    JSONResponseDecoder.decodeFrom(value, returningModelType: VendorModel.self) { (result, error) in
+                        if let result = result {
+                            self.delegate?.didRecieveData(data: result)
+                        }
                     }
                 }
+                
             case .failure(let error):
                 self.delegate?.didFailToReceiveDataWithError(error: error)
             }

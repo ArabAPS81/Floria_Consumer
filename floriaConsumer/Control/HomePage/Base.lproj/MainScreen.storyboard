@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kls-Vw-ydk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kls-Vw-ydk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +77,7 @@
                                                                     <constraint firstAttribute="width" constant="70" id="acB-QT-DW2"/>
                                                                     <constraint firstAttribute="width" secondItem="dun-Rk-i1S" secondAttribute="height" multiplier="1:1" id="e5f-Nb-01D"/>
                                                                 </constraints>
-                                                                <state key="normal" image="FlowerBoket"/>
+                                                                <state key="normal" image="readymadeicon"/>
                                                                 <connections>
                                                                     <action selector="readyMadeButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="jPI-mj-pWT"/>
                                                                 </connections>
@@ -99,7 +99,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="Lik-iE-JuO" secondAttribute="height" multiplier="1:1" id="9TZ-kB-qiI"/>
                                                                 </constraints>
-                                                                <state key="normal" image="FlowerZohria"/>
+                                                                <state key="normal" image="custombouqueticon"/>
                                                                 <connections>
                                                                     <action selector="customBouquetButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="4cB-Lg-EuQ"/>
                                                                 </connections>
@@ -121,7 +121,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="cAp-eg-AgC" secondAttribute="height" multiplier="1:1" id="rMI-fG-jIt"/>
                                                                 </constraints>
-                                                                <state key="normal" image="BoketWard"/>
+                                                                <state key="normal" image="gerbicon"/>
                                                                 <connections>
                                                                     <action selector="gerbButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="wcR-dT-S38"/>
                                                                 </connections>
@@ -151,7 +151,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="Ppd-0O-mjp" secondAttribute="height" multiplier="1:1" id="TQx-up-1qc"/>
                                                                 </constraints>
-                                                                <state key="normal" image="CarWedding"/>
+                                                                <state key="normal" image="cardecorationicon"/>
                                                                 <connections>
                                                                     <action selector="carDecorationButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="CUh-0m-pZF"/>
                                                                 </connections>
@@ -177,7 +177,7 @@
                                                                     <constraint firstAttribute="width" secondItem="vpq-Wd-B7a" secondAttribute="height" multiplier="1:1" id="uS3-Sx-I1F"/>
                                                                     <constraint firstAttribute="width" constant="70" id="zhg-tj-0AQ"/>
                                                                 </constraints>
-                                                                <state key="normal" image="HomeFlowers"/>
+                                                                <state key="normal" image="potscare"/>
                                                                 <connections>
                                                                     <action selector="potsCareButtonTapped:" destination="Fso-8p-WFu" eventType="touchUpInside" id="K4w-AI-amc"/>
                                                                 </connections>
@@ -480,13 +480,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BoketWard" width="46" height="46.5"/>
-        <image name="CarWedding" width="49.5" height="32"/>
-        <image name="FlowerBoket" width="43.5" height="43.5"/>
-        <image name="FlowerZohria" width="46.5" height="48"/>
-        <image name="HomeFlowers" width="47" height="45.5"/>
+        <image name="cardecorationicon" width="567" height="567"/>
+        <image name="custombouqueticon" width="567" height="567"/>
+        <image name="gerbicon" width="567" height="567"/>
         <image name="group5" width="375" height="166.5"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
+        <image name="potscare" width="567" height="567"/>
+        <image name="readymadeicon" width="567" height="567"/>
         <image name="shape3" width="18.5" height="20"/>
         <image name="side-menu-icon" width="20" height="13"/>
     </resources>

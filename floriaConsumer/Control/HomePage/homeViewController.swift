@@ -125,7 +125,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         case Offers:
             return vendorsList.count
             case Products:
-                return vendorsList.count
+                return productsList.count
             case SliderHome:
             return 3
         default:

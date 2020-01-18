@@ -31,5 +31,13 @@ class SearchPagerController: ButtonBarPagerTabStripViewController {
         return [productsVC,vendorsVC]
         
     }
-
+    override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int) {
+        delegate?.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex)
+    }
+    
+    override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {
+        super.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
+        delegate?.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex)
+    }
+    
 }

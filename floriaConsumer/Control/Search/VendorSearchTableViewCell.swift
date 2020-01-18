@@ -13,6 +13,18 @@ class VendorSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var shadowedView: UIView!
     
     static let rowHeight: CGFloat = 106
+    
+    
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    @IBOutlet weak var vendorAddresslabel: UILabel!
+    @IBOutlet weak var vendorImage: UIImageView!
+    
+    func configure(vendor: VendorModel.Vendor) {
+        vendorAddresslabel.text = vendor.name
+        vendorImage.imageFromUrl(url: vendor.image, placeholder: nil)
+    }
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,9 +48,6 @@ class VendorSearchTableViewCell: UITableViewCell {
         super.setNeedsLayout()
     }
     
-    
-    
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         selectedBackgroundView = UIView()

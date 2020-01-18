@@ -13,6 +13,18 @@ class ProducSearchTableViewCell: UITableViewCell {
     static let rowHeight: CGFloat = 93
     
     @IBOutlet weak var shadowedView: UIView!
+    
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productdiscriptionLabel: UILabel!
+    
+    @IBOutlet weak var vendorNameLabel: UILabel!
+    
+    @IBOutlet weak var productImage: UIImageView!
+    
+    func configure(product: ProductsModel.Product?) {
+        productNameLabel.text = product?.name
+        productImage.imageFromUrl(url: product?.image, placeholder: UIImage.init(named: "633107Poao80102-1"))
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

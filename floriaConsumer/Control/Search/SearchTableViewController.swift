@@ -33,6 +33,8 @@ class SearchTableViewController: UIViewController {
     
     var tableType: TableType = .products
     @IBOutlet weak var tableView: UITableView!
+    var productList: [ProductsModel.Product] = []
+    var vendorList: [VendorModel.Vendor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,14 @@ class SearchTableViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
+    func showSearchData(model: SearchProductsQueryModel) {
+        var model = model
+        model.type = (tableType == TableType.products) ? SearchProductsQueryModel.SearchType.product : SearchProductsQueryModel.SearchType.provider
+        let service = ProductService.init(delegate: self)
+        service.searchInProducts(model: model)
+        tableView.startLoading()
+    }
+    
 
 
 }
@@ -51,9 +61,9 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableType {
         case .products:
-            return 5
+            return productList.count
         case .vendors:
-            return 12
+            return vendorList.count
         }
     }
     
@@ -68,10 +78,11 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
         switch tableType {
         case .products:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProducSearchTableViewCell") as! ProducSearchTableViewCell
-            
+            cell.configure(product: productList[indexPath.row])
             return cell
         case .vendors:
             let cell = tableView.dequeueReusableCell(withIdentifier: "VendorSearchTableViewCell") as! VendorSearchTableViewCell
+            cell.configure(vendor: vendorList[indexPath.row])
             return cell
         }
     }
@@ -83,6 +94,19 @@ extension SearchTableViewController: UITableViewDelegate,UITableViewDataSource {
         case .vendors:
             return VendorSearchTableViewCell.rowHeight
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch tableType {
+        case .products:
+            let vc = ProductDetailsViewController.newInstance(product: productList[indexPath.row])
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .vendors:
+            let vendor = vendorList[indexPath.row]
+            let vc = VendorDetailsViewController.newInstance(vendor: vendor)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     
@@ -98,6 +122,21 @@ extension SearchTableViewController: IndicatorInfoProvider {
         case .vendors:
             let indInfo = IndicatorInfo.init(title: "Vendors")
             return indInfo
+        }
+    }
+}
+
+extension SearchTableViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let model = data as? ProductsModel {
+            productList = model.products ?? []
+            tableView.reloadData()
+            tableView.stopLoading((productList.count == 0) ? "no data available" : "")
+        }
+        if let model = data as? VendorModel {
+            vendorList = model.vendors ?? []
+            tableView.reloadData()
+            tableView.stopLoading((vendorList.count == 0) ? "no data available" : "")
         }
     }
     
