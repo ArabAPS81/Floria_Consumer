@@ -1,39 +1,39 @@
 
 /* Class = "UILabel"; text = "  Sub total"; ObjectID = "2XP-kv-x8T"; */
-"2XP-kv-x8T.text" = "  Sub total";
+"2XP-kv-x8T.text" = "المجموع الفرعي";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "HNd-Ao-0f1"; */
-"HNd-Ao-0f1.text" = "Subtitle";
+"HNd-Ao-0f1.text" = "";
 
 /* Class = "UIButton"; normalTitle = "Validate"; ObjectID = "K5A-cK-MGI"; */
-"K5A-cK-MGI.normalTitle" = "Validate";
+"K5A-cK-MGI.normalTitle" = "التحقق";
 
 /* Class = "UILabel"; text = "Shipped"; ObjectID = "Oml-Ob-BlV"; */
-"Oml-Ob-BlV.text" = "Shipped";
+"Oml-Ob-BlV.text" = "تم الشحن";
 
 /* Class = "UIViewController"; title = "Orders"; ObjectID = "Pbr-61-Ojs"; */
-"Pbr-61-Ojs.title" = "Orders";
+"Pbr-61-Ojs.title" = "الطلبات";
 
 /* Class = "UILabel"; text = "  Delivery"; ObjectID = "Pvv-UJ-Jay"; */
-"Pvv-UJ-Jay.text" = "  Delivery";
+"Pvv-UJ-Jay.text" = "التوصيل";
 
 /* Class = "UITextField"; placeholder = "Promo Code"; ObjectID = "UZO-m9-OlO"; */
-"UZO-m9-OlO.placeholder" = "Promo Code";
+"UZO-m9-OlO.placeholder" = "كود الخصم";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "Wur-do-XS7"; */
 "Wur-do-XS7.text" = "0";
 
 /* Class = "UILabel"; text = "#123456789"; ObjectID = "XZ0-lP-Prd"; */
-"XZ0-lP-Prd.text" = "#123456789";
+"XZ0-lP-Prd.text" = "";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "YwG-MY-EHY"; */
-"YwG-MY-EHY.text" = "Title";
+"YwG-MY-EHY.text" = "";
 
 /* Class = "UILabel"; text = "  Vat"; ObjectID = "aAk-FA-rf6"; */
-"aAk-FA-rf6.text" = "  Vat";
+"aAk-FA-rf6.text" = "  الضريبة";
 
 /* Class = "UIButton"; normalTitle = "Pay"; ObjectID = "alr-Ro-2J2"; */
-"alr-Ro-2J2.normalTitle" = "Pay";
+"alr-Ro-2J2.normalTitle" = "الدفع";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "cPv-4E-M2m"; */
 "cPv-4E-M2m.text" = "0";
@@ -42,10 +42,10 @@
 "e0b-4c-Yik.text" = "0";
 
 /* Class = "UILabel"; text = "  Discount"; ObjectID = "hLI-ZC-o5n"; */
-"hLI-ZC-o5n.text" = "  Discount";
+"hLI-ZC-o5n.text" = "  الخصم";
 
 /* Class = "UILabel"; text = "  Total"; ObjectID = "ib7-Gh-EZn"; */
-"ib7-Gh-EZn.text" = "  Total";
+"ib7-Gh-EZn.text" = "  الاجمالي";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "kFs-Yl-gs1"; */
 "kFs-Yl-gs1.text" = "0";
@@ -57,16 +57,16 @@
 "nBq-uJ-qyd.text" = "0";
 
 /* Class = "UILabel"; text = "260 EGP"; ObjectID = "oiC-Hj-zLf"; */
-"oiC-Hj-zLf.text" = "260 EGP";
+"oiC-Hj-zLf.text" = "";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "olJ-at-Z6B"; */
-"olJ-at-Z6B.text" = "Title";
+"olJ-at-Z6B.text" = "";
 
 /* Class = "UILabel"; text = "  Sub total after discount"; ObjectID = "vqw-FS-kPW"; */
-"vqw-FS-kPW.text" = "  Sub total after discount";
+"vqw-FS-kPW.text" = "  المجموع الفرعي بعد الخصم";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "w2h-za-YTe"; */
-"w2h-za-YTe.text" = "Subtitle";
+"w2h-za-YTe.text" = "";
 
 /* Class = "UILabel"; text = "20/9/2019"; ObjectID = "z9Y-6E-wl6"; */
-"z9Y-6E-wl6.text" = "20/9/2019";
+"z9Y-6E-wl6.text" = "";

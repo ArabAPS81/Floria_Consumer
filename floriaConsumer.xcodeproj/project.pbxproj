@@ -97,6 +97,7 @@
 		D64D0C0C23D3005800293C53 /* HomeSliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64D0C0B23D3005800293C53 /* HomeSliderModel.swift */; };
 		D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652F83E23A7BDF100E7EED8 /* TipView.swift */; };
 		D652F84123A7C5B800E7EED8 /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D652F84023A7C5B800E7EED8 /* TipView.xib */; };
+		D658E57A23D457E600B656DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D658E57C23D457E600B656DF /* Localizable.strings */; };
 		D670270723A4EF1B00CBBD63 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670270623A4EF1B00CBBD63 /* HomeViewController.swift */; };
 		D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */; };
 		D67B30F8238BD4E60080252B /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B30F7238BD4E60080252B /* RateView.swift */; };
@@ -144,7 +145,6 @@
 		D6E097E123CB445400704020 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E097E323CB445400704020 /* ProductTableViewCell.xib */; };
 		D6E097E623CB448B00704020 /* CarDecorationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E097E823CB448B00704020 /* CarDecorationTableViewCell.xib */; };
 		D6E097EB23CB44A600704020 /* PotsCareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E097ED23CB44A600704020 /* PotsCareTableViewCell.xib */; };
-		D6E097F223CB6BD600704020 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6E097F423CB6BD600704020 /* Localizable.strings */; };
 		D6E207C523A2CB18004C5E87 /* VendorListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */; };
 		D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */; };
 		D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC55F623954ADC00C31DB3 /* PakingViewController.swift */; };
@@ -246,6 +246,8 @@
 		D64D0C0B23D3005800293C53 /* HomeSliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderModel.swift; sourceTree = "<group>"; };
 		D652F83E23A7BDF100E7EED8 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		D652F84023A7C5B800E7EED8 /* TipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
+		D658E57B23D457E600B656DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D658E57D23D457EA00B656DF /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D670270623A4EF1B00CBBD63 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D67B30F4238BC34C0080252B /* ProducSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D67B30F7238BD4E60080252B /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
@@ -318,8 +320,6 @@
 		D6E097EA23CB448F00704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CarDecorationTableViewCell.strings; sourceTree = "<group>"; };
 		D6E097EC23CB44A600704020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PotsCareTableViewCell.xib; sourceTree = "<group>"; };
 		D6E097EF23CB44A800704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PotsCareTableViewCell.strings; sourceTree = "<group>"; };
-		D6E097F323CB6BD600704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D6E097F523CB6BDA00704020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6E207C423A2CB18004C5E87 /* VendorListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorListPresenter.swift; sourceTree = "<group>"; };
 		D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenter.swift; sourceTree = "<group>"; };
 		D6EC55F623954ADC00C31DB3 /* PakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PakingViewController.swift; sourceTree = "<group>"; };
@@ -373,8 +373,8 @@
 				0406517223530CB30039566C /* ViewController.swift */,
 				D60B9154239671EC002669B0 /* Constants.swift */,
 				0406517423530CB30039566C /* Main.storyboard */,
+				D658E57C23D457E600B656DF /* Localizable.strings */,
 				0444939A235C8BBD00650DFD /* Assets.xcassets */,
-				D6E097F423CB6BD600704020 /* Localizable.strings */,
 				0406517923530CB60039566C /* LaunchScreen.storyboard */,
 				D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */,
 				0406517C23530CB60039566C /* Info.plist */,
@@ -912,7 +912,7 @@
 				D6E097D223CB442E00704020 /* VendorTableViewCell.xib in Resources */,
 				D6E0978C23CB416B00704020 /* Filter.storyboard in Resources */,
 				0444939B235C8BBD00650DFD /* Assets.xcassets in Resources */,
-				D6E097F223CB6BD600704020 /* Localizable.strings in Resources */,
+				D658E57A23D457E600B656DF /* Localizable.strings in Resources */,
 				D6E097A023CB41C500704020 /* Search.storyboard in Resources */,
 				0406517623530CB30039566C /* Main.storyboard in Resources */,
 				D6203518238A962400336D0B /* Splash.storyboard in Resources */,
@@ -1103,6 +1103,15 @@
 				D6E0978123CB40B500704020 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D658E57C23D457E600B656DF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D658E57B23D457E600B656DF /* en */,
+				D658E57D23D457EA00B656DF /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D6E0978423CB40E200704020 /* SideMenu.storyboard */ = {
@@ -1303,15 +1312,6 @@
 			name = PotsCareTableViewCell.xib;
 			sourceTree = "<group>";
 		};
-		D6E097F423CB6BD600704020 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6E097F323CB6BD600704020 /* ar */,
-				D6E097F523CB6BDA00704020 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1438,7 +1438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1459,7 +1459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 32644F4K6R;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

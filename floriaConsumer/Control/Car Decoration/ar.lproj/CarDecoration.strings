@@ -1,63 +1,63 @@
 
 /* Class = "UILabel"; text = "EGP"; ObjectID = "15l-u9-0VS"; */
-"15l-u9-0VS.text" = "EGP";
+"15l-u9-0VS.text" = "جم";
 
 /* Class = "UILabel"; text = "Medium"; ObjectID = "4fb-QF-7Mv"; */
-"4fb-QF-7Mv.text" = "Medium";
+"4fb-QF-7Mv.text" = "لوكس";
 
 /* Class = "UILabel"; text = "Vendor"; ObjectID = "7Lx-5x-Amw"; */
-"7Lx-5x-Amw.text" = "Vendor";
+"7Lx-5x-Amw.text" = "البائع";
 
 /* Class = "UILabel"; text = "Color"; ObjectID = "864-Zf-9vO"; */
-"864-Zf-9vO.text" = "Color";
+"864-Zf-9vO.text" = "اللون";
 
 /* Class = "UILabel"; text = "Sport car"; ObjectID = "GW5-Tf-Vq1"; */
-"GW5-Tf-Vq1.text" = "Sport car";
+"GW5-Tf-Vq1.text" = "رياضية";
 
 /* Class = "UILabel"; text = "Hatchback"; ObjectID = "JJA-E8-b5a"; */
-"JJA-E8-b5a.text" = "Hatchback";
+"JJA-E8-b5a.text" = "هاتشباك";
 
 /* Class = "UILabel"; text = "Medium"; ObjectID = "MEG-x9-CMm"; */
-"MEG-x9-CMm.text" = "Medium";
+"MEG-x9-CMm.text" = "لوكس";
 
 /* Class = "UILabel"; text = "Select car type"; ObjectID = "OOt-FD-wud"; */
-"OOt-FD-wud.text" = "Select car type";
+"OOt-FD-wud.text" = "اختر نوع السيارة";
 
 /* Class = "UILabel"; text = "31 Street 9, Mokattam, Cairo."; ObjectID = "QME-A1-gm8"; */
 "QME-A1-gm8.text" = "31 Street 9, Mokattam, Cairo.";
 
 /* Class = "UILabel"; text = "Basic"; ObjectID = "SNz-uG-8a6"; */
-"SNz-uG-8a6.text" = "Basic";
+"SNz-uG-8a6.text" = "لايت";
 
 /* Class = "UILabel"; text = "Extra"; ObjectID = "TXD-Gf-Qwr"; */
-"TXD-Gf-Qwr.text" = "Extra";
+"TXD-Gf-Qwr.text" = "سوبر لوكس";
 
 /* Class = "UILabel"; text = "Car "; ObjectID = "TuD-yP-6DY"; */
-"TuD-yP-6DY.text" = "Car ";
+"TuD-yP-6DY.text" = "السيارة";
 
 /* Class = "UIButton"; normalTitle = "Color Name"; ObjectID = "a5y-HC-iRQ"; */
-"a5y-HC-iRQ.normalTitle" = "Color Name";
+"a5y-HC-iRQ.normalTitle" = "اللون";
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "ct7-Bc-gVw"; */
-"ct7-Bc-gVw.normalTitle" = "Next";
+"ct7-Bc-gVw.normalTitle" = "التالي";
 
 /* Class = "UILabel"; text = "Decoration Type"; ObjectID = "dtL-BV-0nc"; */
-"dtL-BV-0nc.text" = "Decoration Type";
+"dtL-BV-0nc.text" = "نوع التزيين";
 
 /* Class = "UILabel"; text = "Sedan"; ObjectID = "gGo-gj-EF1"; */
-"gGo-gj-EF1.text" = "Sedan";
+"gGo-gj-EF1.text" = "سيدان";
 
 /* Class = "UILabel"; text = "Cabriolet"; ObjectID = "mDa-id-hxh"; */
-"mDa-id-hxh.text" = "Cabriolet";
+"mDa-id-hxh.text" = "كابورليه";
 
 /* Class = "UILabel"; text = "Coupe"; ObjectID = "mlz-wd-dLI"; */
-"mlz-wd-dLI.text" = "Coupe";
+"mlz-wd-dLI.text" = "كوبة";
 
 /* Class = "UILabel"; text = "Decoration"; ObjectID = "nsR-ej-e83"; */
-"nsR-ej-e83.text" = "Decoration";
+"nsR-ej-e83.text" = "التزيين";
 
 /* Class = "UILabel"; text = "Choose Color"; ObjectID = "px8-YR-CUG"; */
-"px8-YR-CUG.text" = "Choose Color";
+"px8-YR-CUG.text" = "اختر اللون";
 
 /* Class = "UILabel"; text = "1200"; ObjectID = "q58-xG-L6x"; */
 "q58-xG-L6x.text" = "1200";
@@ -66,16 +66,16 @@
 "t3s-0F-tMe.text" = "SUV";
 
 /* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "tla-sO-wpU"; */
-"tla-sO-wpU.normalTitle" = "Checkout";
+"tla-sO-wpU.normalTitle" = "الدفع";
 
 /* Class = "UILabel"; text = "Total Price"; ObjectID = "v9z-4D-Cni"; */
-"v9z-4D-Cni.text" = "Total Price";
+"v9z-4D-Cni.text" = "السعر الاجمالي";
 
 /* Class = "UILabel"; text = "Car Color"; ObjectID = "wrb-7e-4P1"; */
-"wrb-7e-4P1.text" = "Car Color";
+"wrb-7e-4P1.text" = "لون السيارة";
 
 /* Class = "UILabel"; text = "Vendor Name"; ObjectID = "xbB-jK-kkp"; */
-"xbB-jK-kkp.text" = "Vendor Name";
+"xbB-jK-kkp.text" = "اسم البائع";
 
 /* Class = "UILabel"; text = "Order review"; ObjectID = "yBZ-wz-2bk"; */
-"yBZ-wz-2bk.text" = "Order review";
+"yBZ-wz-2bk.text" = "مراجعة الطلب";

@@ -3,37 +3,37 @@
 "1ie-vs-u4R.text" = "Bouquet Fowers";
 
 /* Class = "UILabel"; text = "Card"; ObjectID = "3Kc-Ab-Y4M"; */
-"3Kc-Ab-Y4M.text" = "Card";
+"3Kc-Ab-Y4M.text" = "الكروت";
 
 /* Class = "UILabel"; text = "Base"; ObjectID = "E6H-VC-V1n"; */
-"E6H-VC-V1n.text" = "Base";
+"E6H-VC-V1n.text" = "القصيص";
 
 /* Class = "UIButton"; normalTitle = "Packing"; ObjectID = "IGu-p9-6JE"; */
-"IGu-p9-6JE.normalTitle" = "Packing";
+"IGu-p9-6JE.normalTitle" = "التعبئة";
 
 /* Class = "UILabel"; text = "Bouquet will arranged based on vendors taste"; ObjectID = "Izp-cn-wBP"; */
-"Izp-cn-wBP.text" = "Bouquet will arranged based on vendors taste";
+"Izp-cn-wBP.text" = "سيتم ترتيب الباقة بناءً على ذوق البائع";
 
 /* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "QHx-MA-OrM"; */
 "QHx-MA-OrM.normalTitle" = "Checkout";
 
 /* Class = "UILabel"; text = "EGP"; ObjectID = "SWk-RD-A0p"; */
-"SWk-RD-A0p.text" = "EGP";
+"SWk-RD-A0p.text" = "جم";
 
 /* Class = "UILabel"; text = "Order review"; ObjectID = "Wln-dU-P16"; */
 "Wln-dU-P16.text" = "Order review";
 
 /* Class = "UILabel"; text = "Exstras"; ObjectID = "dLg-wN-hsQ"; */
-"dLg-wN-hsQ.text" = "Exstras";
+"dLg-wN-hsQ.text" = "الاضافات";
 
 /* Class = "UILabel"; text = "Total Price"; ObjectID = "lzb-4M-mCl"; */
 "lzb-4M-mCl.text" = "Total Price";
 
 /* Class = "UILabel"; text = "Packing"; ObjectID = "phm-oF-9hP"; */
-"phm-oF-9hP.text" = "Packing";
+"phm-oF-9hP.text" = "الباقة";
 
 /* Class = "UILabel"; text = "1200"; ObjectID = "sYt-fm-hJs"; */
-"sYt-fm-hJs.text" = "1200";
+"sYt-fm-hJs.text" = "";
 
 /* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "zUg-VT-0jf"; */
 "zUg-VT-0jf.normalTitle" = "Checkout";

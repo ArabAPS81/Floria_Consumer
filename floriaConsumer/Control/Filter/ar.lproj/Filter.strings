@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "Location"; ObjectID = "0qR-Sd-7zj"; */
-"0qR-Sd-7zj.text" = "Location";
+"0qR-Sd-7zj.text" = "الموقع";
 
 /* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "1xA-57-VFF"; */
-"1xA-57-VFF.normalTitle" = "Filter";
+"1xA-57-VFF.normalTitle" = "تصفية";
 
 /* Class = "UITextField"; placeholder = "District"; ObjectID = "yto-pN-648"; */
-"yto-pN-648.placeholder" = "District";
+"yto-pN-648.placeholder" = "المنطقة";

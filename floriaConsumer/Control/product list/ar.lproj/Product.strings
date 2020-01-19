@@ -3,25 +3,25 @@
 "64D-rU-jQp.text" = "1";
 
 /* Class = "UILabel"; text = "Quantity"; ObjectID = "Awb-Fw-r30"; */
-"Awb-Fw-r30.text" = "Quantity";
+"Awb-Fw-r30.text" = "الكمية";
 
 /* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "PZQ-bE-Ftt"; */
-"PZQ-bE-Ftt.normalTitle" = "Checkout";
+"PZQ-bE-Ftt.normalTitle" = "الدفع";
 
 /* Class = "UILabel"; text = "I had problems with the bounds of the collectionView passed into sizeForItemAtIndexPath not being correct sgsev erthb wv4y5 gw4y wv4y wg4y wb4y tryj rh yknu yku uk rj et rbnj nuk rnj"; ObjectID = "Pr7-mJ-bcb"; */
-"Pr7-mJ-bcb.text" = "I had problems with the bounds of the collectionView passed into sizeForItemAtIndexPath not being correct sgsev erthb wv4y5 gw4y wv4y wg4y wb4y tryj rh yknu yku uk rj et rbnj nuk rnj";
+"Pr7-mJ-bcb.text" = "";
 
 /* Class = "UIButton"; normalTitle = "X"; ObjectID = "QOc-Zd-9ZM"; */
 "QOc-Zd-9ZM.normalTitle" = "X";
 
 /* Class = "UILabel"; text = "Extras"; ObjectID = "az5-Bv-pNq"; */
-"az5-Bv-pNq.text" = "Extras";
+"az5-Bv-pNq.text" = "الاضافات";
 
 /* Class = "UILabel"; text = "EGP"; ObjectID = "rLb-xN-4Ll"; */
-"rLb-xN-4Ll.text" = "EGP";
+"rLb-xN-4Ll.text" = "جم";
 
 /* Class = "UILabel"; text = "250"; ObjectID = "sSF-Fs-6Iy"; */
-"sSF-Fs-6Iy.text" = "250";
+"sSF-Fs-6Iy.text" = "";
 
 /* Class = "UILabel"; text = "Vendor Name"; ObjectID = "tMV-xO-Ip9"; */
-"tMV-xO-Ip9.text" = "Vendor Name";
+"tMV-xO-Ip9.text" = "";

@@ -21,16 +21,16 @@
 "CrX-TT-q9J.placeholder" = "رقم الجوال";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "Ctj-KE-Xsm"; */
-"Ctj-KE-Xsm.placeholder" = "Password";
+"Ctj-KE-Xsm.placeholder" = "كلمة السر";
 
 /* Class = "UIButton"; normalTitle = "Not Registered Yet!"; ObjectID = "DLS-bp-ykX"; */
-"DLS-bp-ykX.normalTitle" = "Not Registered Yet!";
+"DLS-bp-ykX.normalTitle" = "ليس لديك حساب!";
 
 /* Class = "UIButton"; normalTitle = "Forget Password!"; ObjectID = "EKn-oj-ZN0"; */
-"EKn-oj-ZN0.normalTitle" = "Forget Password!";
+"EKn-oj-ZN0.normalTitle" = "نسيت كلمة المرور!";
 
 /* Class = "UITextField"; placeholder = "Mobile number"; ObjectID = "H8A-Re-gJK"; */
-"H8A-Re-gJK.placeholder" = "Mobile number";
+"H8A-Re-gJK.placeholder" = "رقم الهاتف";
 
 /* Class = "UIButton"; normalTitle = "Save"; ObjectID = "KTH-tM-w32"; */
 "KTH-tM-w32.normalTitle" = "حفظ";
@@ -39,22 +39,22 @@
 "LZw-mH-dP0.placeholder" = "كلمة السر";
 
 /* Class = "UITextField"; placeholder = "code"; ObjectID = "Nhs-xY-MiB"; */
-"Nhs-xY-MiB.placeholder" = "code";
+"Nhs-xY-MiB.placeholder" = "الكود";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "R04-Gw-buw"; */
-"R04-Gw-buw.normalTitle" = "Register";
+"R04-Gw-buw.normalTitle" = "التسجيل";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ThJ-gj-mOo"; */
 "ThJ-gj-mOo.text" = "";
 
 /* Class = "UIButton"; normalTitle = "Already have an account!"; ObjectID = "Tyr-OM-uYl"; */
-"Tyr-OM-uYl.normalTitle" = "Already have an account!";
+"Tyr-OM-uYl.normalTitle" = "لديك حساب بالفعل!";
 
 /* Class = "UIButton"; normalTitle = "Resend  Code"; ObjectID = "Wjx-uq-iSg"; */
-"Wjx-uq-iSg.normalTitle" = "Resend  Code";
+"Wjx-uq-iSg.normalTitle" = "اعادة ارسال الكود";
 
 /* Class = "UINavigationItem"; title = "Virification code"; ObjectID = "Xac-zN-9nX"; */
-"Xac-zN-9nX.title" = "Virification code";
+"Xac-zN-9nX.title" = "كود التآكيد";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Zhj-wa-hte"; */
 "Zhj-wa-hte.text" = "Label";
@@ -63,7 +63,7 @@
 "bbO-lA-Gly.placeholder" = "اسم المستخدم";
 
 /* Class = "UINavigationItem"; title = "Sign in"; ObjectID = "bca-6S-Dls"; */
-"bca-6S-Dls.title" = "Sign in";
+"bca-6S-Dls.title" = "تسجيل الدخول";
 
 /* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "eyp-q6-mfK"; */
 "eyp-q6-mfK.normalTitle" = "تأكيد";
@@ -72,7 +72,7 @@
 "f3d-Be-Xkg.normalTitle" = "الشروط والاحكام";
 
 /* Class = "UIButton"; normalTitle = "Send Code"; ObjectID = "gwS-az-q8r"; */
-"gwS-az-q8r.normalTitle" = "Send Code";
+"gwS-az-q8r.normalTitle" = "ارسال الكود";
 
 /* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "na1-Fj-eq1"; */
 "na1-Fj-eq1.normalTitle" = "تخطي";
@@ -96,4 +96,4 @@
 "yM2-Ut-bTU.text" = "";
 
 
-"z8e-si-90b.text" = """لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ..وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام  النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد. من كتاب  أقاصي الخير والشر";
+"z8e-si-90b.text" = "لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ..وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام  النص من التصميم ويت وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاسوخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في ا اللاتيني الكلاسيكي منذ العام 45 قبل الميلاد. من كتاب  أقاصي الخير والشر";

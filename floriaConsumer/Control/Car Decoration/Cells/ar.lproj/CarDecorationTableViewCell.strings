@@ -1,18 +1,18 @@
 
 /* Class = "UILabel"; text = "Decoration"; ObjectID = "CYm-Yq-QaX"; */
-"CYm-Yq-QaX.text" = "Decoration";
+"CYm-Yq-QaX.text" = "تزيين السيارة";
 
 /* Class = "UILabel"; text = "Color"; ObjectID = "Of4-cz-qDL"; */
-"Of4-cz-qDL.text" = "Color";
+"Of4-cz-qDL.text" = "اللون";
 
 /* Class = "UILabel"; text = "Decoration"; ObjectID = "RLC-b8-mXF"; */
-"RLC-b8-mXF.text" = "Decoration";
+"RLC-b8-mXF.text" = "التزيين";
 
 /* Class = "UILabel"; text = "Color"; ObjectID = "SVz-FS-mSJ"; */
-"SVz-FS-mSJ.text" = "Color";
+"SVz-FS-mSJ.text" = "اللون";
 
 /* Class = "UILabel"; text = "Car Type"; ObjectID = "ao9-tY-DOv"; */
-"ao9-tY-DOv.text" = "Car Type";
+"ao9-tY-DOv.text" = "نوع السيارة";
 
 /* Class = "UILabel"; text = "Car Type"; ObjectID = "oMI-A0-ilz"; */
-"oMI-A0-ilz.text" = "Car Type";
+"oMI-A0-ilz.text" = "نوع السيارة";
