@@ -29,9 +29,9 @@ class OrderViewController: UIViewController {
         title = "#\(order!.id)"
         
         if (order?.status.id ?? 1) > 4 {
-            svStatus.status = 7
+            svStatus.status = 0
         } else {
-            svStatus.status = (order?.status.id ?? 1) * 2 - 1
+            svStatus.status = order!.status.id + 1
         }
         
         VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
