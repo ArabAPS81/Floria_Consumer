@@ -12,6 +12,7 @@ class ConfirmationCodeViewController: UIViewController {
     
     var mobile : String!
     var comingFromVC : String!
+    var event: ((UIViewController)->())!
     
     static func newInstance(comingFromVC : String ,mobile : String) -> ConfirmationCodeViewController {
         let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
@@ -111,8 +112,6 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
             
         }
     }
-    
-    
     func didFailToReceiveDataWithError(error: Error) {
         
     }

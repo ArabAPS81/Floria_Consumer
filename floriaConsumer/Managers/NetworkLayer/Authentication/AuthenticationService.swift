@@ -75,6 +75,7 @@ class AuthenticationService {
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
     }
@@ -97,6 +98,7 @@ class AuthenticationService {
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
     }
@@ -127,6 +129,7 @@ class AuthenticationService {
             case .failure(let error):
                 HUD.flash(.labeledError(title: error.localizedDescription, subtitle: nil))
                 print(error.localizedDescription)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
     }
@@ -136,18 +139,21 @@ class AuthenticationService {
         let parameters = [
             "verification_code" : code
         ] as [String : Any]
-        
+        HUD.show(.progress)
         let headers = WebServiceConfigure.getHeadersForAuthentication()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):
                 print(value)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
+                HUD.flash(.success)
                 self.delegate?.didRecieveData(data: data)
                 break
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                HUD.flash(.error)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
     }
@@ -167,6 +173,7 @@ class AuthenticationService {
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
     }
@@ -189,6 +196,7 @@ class AuthenticationService {
                 
             case .failure(let error):
                 HUD.flash(.labeledError(title: error.localizedDescription, subtitle: nil))
+                self.delegate?.didFailToReceiveDataWithError(error: error)
                 print(error.localizedDescription)
             }
         }

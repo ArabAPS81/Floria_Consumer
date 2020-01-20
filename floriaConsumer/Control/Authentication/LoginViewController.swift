@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUpViewsShapes()
         self.title = "Login"
-        failureLable.isHidden = true
+       // failureLable.isHidden = true
         phoneTF.addTarget(self, action: #selector(handlePhoneChange), for: .editingDidEnd)
         hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
@@ -94,10 +94,10 @@ class LoginViewController: UIViewController {
         guard let text = phoneTF.text else{return}
         if text.isValid(.phone){
             print("Valid Text")
-            failureLable.isHidden = true
+            //failureLable.isHidden = true
         }else{
             failureLable.text = "Not a Valid Mobile"
-            failureLable.isHidden = false
+           // failureLable.isHidden = false
         }
     }
 }
@@ -105,15 +105,25 @@ class LoginViewController: UIViewController {
 extension LoginViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? AuthenticationModel {
-            if data.httpCode == 200{
-                Defaults.init().saveUserId(userId: data.user?.id ?? 0)
-                Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
-                Defaults().isUserLogged = true
-                Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
-                if (event != nil) {
-                    event(self)
-                } else {
-                    self.performSegue(withIdentifier: "homeSegue", sender: nil)
+            if data.httpCode == 200 {
+                if data.user?.verified ?? false {
+                    Defaults.init().saveUserId(userId: data.user?.id ?? 0)
+                    Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                    Defaults().isUserLogged = true
+                    Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
+                    if (event != nil) {
+                        event(self)
+                    } else {
+                        self.performSegue(withIdentifier: "homeSegue", sender: nil)
+                    }
+                }else{
+                    Defaults.init().saveUserId(userId: data.user?.id ?? 0)
+                    Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                    Defaults().isUserLogged = false
+                    Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
+                    let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: data.user!.mobile!)
+                    vc.modalPresentationStyle = .fullScreen
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             }else if data.httpCode == 401{
                 failureLable.text = "Your phone or password maybe wrong"
