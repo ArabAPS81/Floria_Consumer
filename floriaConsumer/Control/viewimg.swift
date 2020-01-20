@@ -13,7 +13,7 @@ class viewimg: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        backimg.imageFromUrl(url: image, placeholder: nil)
+        backimg.kf.setImage(with: URL.init(string:  image))
         
     }
     @IBOutlet weak var backimg: UIImageView!

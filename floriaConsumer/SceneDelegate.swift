@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func fddd() {
         
-        UserDefaults.standard.set((Defaults().isArabic ? ["en"] : ["ar"]), forKey: "AppleLanguages")
+       // UserDefaults.standard.set((Defaults().isArabic ? ["en"] : ["ar"]), forKey: "AppleLanguages")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

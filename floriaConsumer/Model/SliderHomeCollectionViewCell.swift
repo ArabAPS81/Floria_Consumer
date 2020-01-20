@@ -14,6 +14,6 @@ class SliderHomeCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var img: UIImageView!
     
     func configure(url: String) {
-        img.imageFromUrl(url: url, placeholder: nil)
+        img.kf.setImage(with: URL.init(string: url))
     }
 }

@@ -495,7 +495,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kpo-LK-aJn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QNF-yN-eLU"/>
+                    <navigationItem key="navigationItem" id="QNF-yN-eLU">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="ASX-ck-KYI">
+                            <rect key="frame" x="187.5" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-YX-ZDd">
+                                    <rect key="frame" x="-57" y="-10" width="127" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="RlX-y9-9Nf" id="vAc-QA-92v"/>
                         <segue destination="NbY-dP-Emq" kind="show" identifier="ProductDetails" id="HUD-3j-qhS"/>

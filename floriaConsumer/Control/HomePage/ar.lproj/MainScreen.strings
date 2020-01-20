@@ -1,30 +1,30 @@
 
 /* Class = "UILabel"; text = "Ready-made Bouquet"; ObjectID = "3LI-jT-nLU"; */
-"3LI-jT-nLU.text" = "Ready-made Bouquet";
+"3LI-jT-nLU.text" = "بوكيهات جاهزة";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "FgN-Ya-9TE"; */
-"FgN-Ya-9TE.title" = "Item";
+"FgN-Ya-9TE.title" = "";
 
 /* Class = "UILabel"; text = "Pots Care"; ObjectID = "XYk-oz-nkC"; */
-"XYk-oz-nkC.text" = "Pots Care";
+"XYk-oz-nkC.text" = "رعاية احواض الورد";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "fU6-7c-D5F"; */
-"fU6-7c-D5F.title" = "Item";
+"fU6-7c-D5F.title" = "";
 
 /* Class = "UILabel"; text = "Nearest Vendors"; ObjectID = "fmc-i9-3Lp"; */
-"fmc-i9-3Lp.text" = "Nearest Vendors";
+"fmc-i9-3Lp.text" = "التجار الاقرب";
 
 /* Class = "UILabel"; text = "Gerb"; ObjectID = "kTl-5t-kQd"; */
-"kTl-5t-kQd.text" = "Gerb";
+"kTl-5t-kQd.text" = "بوكيه العروسة";
 
 /* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "mgZ-43-aVt"; */
-"mgZ-43-aVt.title" = "Item";
+"mgZ-43-aVt.title" = "";
 
 /* Class = "UILabel"; text = "Popular Products"; ObjectID = "rK1-EK-Jw0"; */
-"rK1-EK-Jw0.text" = "Popular Products";
+"rK1-EK-Jw0.text" = "المنتجات الشائعة";
 
 /* Class = "UILabel"; text = "Custom Bouquet"; ObjectID = "vOR-Wo-NS6"; */
-"vOR-Wo-NS6.text" = "Custom Bouquet";
+"vOR-Wo-NS6.text" = "بوكيهات مجمعة";
 
 /* Class = "UILabel"; text = "Car Decoration"; ObjectID = "zfp-tz-FeY"; */
-"zfp-tz-FeY.text" = "Car Decoration";
+"zfp-tz-FeY.text" = "تزيين السيارة";

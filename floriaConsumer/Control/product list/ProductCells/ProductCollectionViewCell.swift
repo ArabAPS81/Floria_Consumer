@@ -25,7 +25,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var rate: RateView!
     func configure(product: ProductsModel.Product){
-        productImage.imageFromUrl(url: product.image, placeholder: nil)
+        productImage.kf.setImage(with: URL.init(string: product.image ?? ""))
         name.text = product.name
         price.text = "\(product.price ?? 0.0)"
         rate.setRate(rate: product.rate)

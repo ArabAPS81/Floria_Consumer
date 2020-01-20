@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeProductCollectionViewCell: UICollectionViewCell {
     
@@ -28,7 +29,7 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
         nameLabel.text = product.name
         priceLabel.text = "\(product.price ?? 0)"
         vendorNameLabel.text = product.provider?.name
-        imageView.imageFromUrl(url:  product.image, placeholder: nil)
+        imageView.kf.setImage(with: URL.init(string: product.image ?? ""))
         ratingView.setRate(rate: product.rate)
     }
     

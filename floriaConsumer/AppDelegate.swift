@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func fddd() {
-        UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
+      //  UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
     }
     
     

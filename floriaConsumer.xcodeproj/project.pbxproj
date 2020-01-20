@@ -123,6 +123,7 @@
 		D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56C23A8E4520008CACB /* AddressServices.swift */; };
 		D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56E23A8E9610008CACB /* AddressModel.swift */; };
 		D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */; };
+		D6D2B69A23D476EB00817EB0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */; };
 		D6E0978223CB40E200704020 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978423CB40E200704020 /* SideMenu.storyboard */; };
 		D6E0978723CB414000704020 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978923CB414000704020 /* Address.storyboard */; };
 		D6E0978C23CB416B00704020 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978E23CB416B00704020 /* Filter.storyboard */; };
@@ -274,6 +275,7 @@
 		D6CFA56C23A8E4520008CACB /* AddressServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServices.swift; sourceTree = "<group>"; };
 		D6CFA56E23A8E9610008CACB /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D6E0978023CB40B400704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		D6E0978123CB40B500704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D6E0978523CB40E600704020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
@@ -711,6 +713,7 @@
 			children = (
 				D6E0978423CB40E200704020 /* SideMenu.storyboard */,
 				041514692357EB4200797A33 /* SideMenuViewController.swift */,
+				D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */,
 			);
 			path = "Side Menu";
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */,
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
 				9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */,
+				D6D2B69A23D476EB00817EB0 /* SettingsViewController.swift in Sources */,
 				043F73712393ED0500843A1C /* popupVC.swift in Sources */,
 				045B4A5B2381845400CCC257 /* UnrelatedProductsCollectionViewCell.swift in Sources */,
 				D634760B239D324F008EB755 /* LocationManager.swift in Sources */,

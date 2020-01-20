@@ -15,5 +15,6 @@ target 'floriaConsumer' do
   pod 'Firebase/Messaging'
   pod 'PKHUD'
   pod 'MaterialComponents/Cards'
+  pod 'Kingfisher'
 
 end

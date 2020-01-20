@@ -32,6 +32,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         HomeProductCollectionViewCell.registerNIBinView(collection: collectionView)
         presenter = ProductsListPresenter.init(view: self)
         presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)

@@ -32,6 +32,11 @@ class ProductDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let textAttributes = [NSAttributedString.Key.foregroundColor:Constants.pincColor]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        self.title = product?.name
+        self.navigationItem.title = ""
         setupViews()
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0

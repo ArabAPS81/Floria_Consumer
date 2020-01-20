@@ -23,7 +23,7 @@ class ProducSearchTableViewCell: UITableViewCell {
     
     func configure(product: ProductsModel.Product?) {
         productNameLabel.text = product?.name
-        productImage.imageFromUrl(url: product?.image, placeholder: UIImage.init(named: "633107Poao80102-1"))
+        productImage.kf.setImage(with: URL.init(string: product?.image ?? ""))
         productPrice.text = "\(Int(product?.price ?? 0))LE"
         
     }

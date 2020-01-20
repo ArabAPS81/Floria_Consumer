@@ -8,8 +8,6 @@
 /* Class = "UIButton"; normalTitle = "Checkout"; ObjectID = "PZQ-bE-Ftt"; */
 "PZQ-bE-Ftt.normalTitle" = "الدفع";
 
-/* Class = "UILabel"; text = "I had problems with the bounds of the collectionView passed into sizeForItemAtIndexPath not being correct sgsev erthb wv4y5 gw4y wv4y wg4y wb4y tryj rh yknu yku uk rj et rbnj nuk rnj"; ObjectID = "Pr7-mJ-bcb"; */
-"Pr7-mJ-bcb.text" = "";
 
 /* Class = "UIButton"; normalTitle = "X"; ObjectID = "QOc-Zd-9ZM"; */
 "QOc-Zd-9ZM.normalTitle" = "X";
@@ -20,8 +18,4 @@
 /* Class = "UILabel"; text = "EGP"; ObjectID = "rLb-xN-4Ll"; */
 "rLb-xN-4Ll.text" = "جم";
 
-/* Class = "UILabel"; text = "250"; ObjectID = "sSF-Fs-6Iy"; */
-"sSF-Fs-6Iy.text" = "";
-
-/* Class = "UILabel"; text = "Vendor Name"; ObjectID = "tMV-xO-Ip9"; */
-"tMV-xO-Ip9.text" = "";
+"Rao-YX-ZDd.text" = "اختر المنتج";

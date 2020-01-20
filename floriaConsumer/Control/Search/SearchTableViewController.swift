@@ -117,10 +117,10 @@ extension SearchTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         switch tableType {
         case .products:
-            let indInfo = IndicatorInfo.init(title: "Products")
+            let indInfo = IndicatorInfo.init(title: NSLocalizedString("products", comment: ""))
             return indInfo
         case .vendors:
-            let indInfo = IndicatorInfo.init(title: "Vendors")
+            let indInfo = IndicatorInfo.init(title: NSLocalizedString("vendors", comment: ""))
             return indInfo
         }
     }
