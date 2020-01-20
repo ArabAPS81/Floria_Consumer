@@ -16,7 +16,7 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userMailLabel: UILabel!
     @IBOutlet weak var logButton: UIButton!
-    
+    @IBOutlet weak var logout: UIButton!
     @IBOutlet weak var userView: UIView!
     @IBOutlet weak var userPhoneLabel: UILabel!
     override func viewDidLoad() {
@@ -43,12 +43,30 @@ class SideMenuViewController: UIViewController {
         }
         
     }
-    @IBOutlet weak var logout: UIButton!
+    
+    @IBAction func editProfileTapped(_ sender: Any) {
+        if Defaults().isUserLogged {
+            //show user profile
+        }else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            nav.modalPresentationStyle = .fullScreen
+            let vc = nav.viewControllers.first as! LoginViewController
+            vc.event = {vc in
+                vc.dismiss(animated: true, completion: nil)
+            }
+            self.present(nav, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
     @IBAction func out(_ sender: Any) {
         if Defaults().isUserLogged {
-        Defaults.init().isUserLogged = false
-        Defaults().saveUserData(email: "", name: "", phone: "")
-        self.dismiss(animated: true)
+            Defaults.init().isUserLogged = false
+            Defaults().saveUserData(email: "", name: "", phone: "")
+            self.dismiss(animated: true)
         }else {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let nav = storyboard.instantiateInitialViewController() as! UINavigationController

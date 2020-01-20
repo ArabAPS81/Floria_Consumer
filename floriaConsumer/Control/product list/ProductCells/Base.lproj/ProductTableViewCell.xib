@@ -26,7 +26,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-MF-YOs">
-                                <rect key="frame" x="94" y="30.5" width="21.5" height="10"/>
+                                <rect key="frame" x="94" y="30.5" width="150" height="10"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="8"/>
                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +69,7 @@
                             <constraint firstItem="pg7-Zu-sNE" firstAttribute="centerY" secondItem="EYM-FZ-gxo" secondAttribute="centerY" id="W3v-69-V6Q"/>
                             <constraint firstItem="Epc-CO-JaU" firstAttribute="top" secondItem="EYM-FZ-gxo" secondAttribute="top" constant="8" id="YWr-eR-LLe"/>
                             <constraint firstItem="1Mb-6O-Pj5" firstAttribute="top" secondItem="EUC-MF-YOs" secondAttribute="bottom" constant="8" id="bQm-8r-zxb"/>
+                            <constraint firstItem="pg7-Zu-sNE" firstAttribute="leading" secondItem="EUC-MF-YOs" secondAttribute="trailing" id="bag-xJ-FaD"/>
                             <constraint firstItem="Epc-CO-JaU" firstAttribute="leading" secondItem="j77-Cw-oAM" secondAttribute="trailing" constant="8" id="bdD-ea-T5F"/>
                             <constraint firstAttribute="bottom" secondItem="j77-Cw-oAM" secondAttribute="bottom" id="i2E-fE-5MD"/>
                             <constraint firstItem="j77-Cw-oAM" firstAttribute="leading" secondItem="EYM-FZ-gxo" secondAttribute="leading" id="ibX-DB-Gt8"/>

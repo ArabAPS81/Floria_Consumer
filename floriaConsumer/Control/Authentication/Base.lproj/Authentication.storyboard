@@ -345,7 +345,7 @@
             </objects>
             <point key="canvasLocation" x="-12888" y="-2660"/>
         </scene>
-        <!--Virification code-->
+        <!--Verification code-->
         <scene sceneID="ctV-xr-Z75">
             <objects>
                 <viewController storyboardIdentifier="confirmCodeVC" id="gd2-S1-q83" customClass="ConfirmationCodeViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
@@ -387,15 +387,19 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyp-q6-mfK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyp-q6-mfK">
                                 <rect key="frame" x="62" y="777" width="290" height="60"/>
-                                <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8Fd-Z8-KYj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="confirmTapped:" destination="gd2-S1-q83" eventType="touchUpInside" id="qA1-4m-bri"/>
@@ -448,7 +452,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PpZ-TJ-l4V"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Virification code" id="Xac-zN-9nX"/>
+                    <navigationItem key="navigationItem" title="Verification code" id="Xac-zN-9nX"/>
                     <connections>
                         <outlet property="chagePassBtn" destination="eyp-q6-mfK" id="HTq-wM-EXU"/>
                         <outlet property="codeTF" destination="Nhs-xY-MiB" id="JsT-r2-6Hi"/>

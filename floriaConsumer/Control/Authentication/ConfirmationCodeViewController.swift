@@ -34,11 +34,26 @@ class ConfirmationCodeViewController: UIViewController {
         setUpViewsShapes()
         resendBtn.isHidden = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+        chagePassBtn.isEnabled = false
+        chagePassBtn.backgroundColor = .darkGray
+        codeTF.addTarget(self, action: #selector(textChanged(_:)), for: UIControl.Event.editingChanged)
         
     }
     
+    @objc func textChanged(_ sender: UITextField) {
+        if sender.text?.isValid(.verficationCode) ?? false {
+            chagePassBtn.isEnabled = true
+            chagePassBtn.backgroundColor = Constants.pincColor
+        }else {
+            chagePassBtn.isEnabled = false
+            chagePassBtn.backgroundColor = .darkGray
+        }
+    }
+    
     @IBAction func confirmTapped(_ sender: Any) {
-        guard let code = codeTF.text?.trimmed , !code.isEmpty else {return}
+        guard let code = codeTF.text?.trimmed , !code.isEmpty else {
+            
+            return}
         if comingFromVC == "registration"{
             let service = AuthenticationService.init(delegate: self)
             service.confirmNewUser(code: code)
@@ -53,6 +68,9 @@ class ConfirmationCodeViewController: UIViewController {
     @IBAction func resendTapped(_ sender: Any) {
         let service = AuthenticationService.init(delegate: self)
         service.resend(mobile: mobile)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+        resendBtn.isHidden = true
+        seconds = 60
     }
     
     func setUpViewsShapes(){
@@ -99,3 +117,5 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
         
     }
 }
+
+

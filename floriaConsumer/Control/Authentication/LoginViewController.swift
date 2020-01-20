@@ -13,6 +13,11 @@ import SwiftyJSON
 class LoginViewController: UIViewController {
     
     var event: ((UIViewController)->())!
+    @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var passTF: UITextField!
+    @IBOutlet weak var failureLable: UILabel!
+    @IBOutlet weak var showPassBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
     
     
     static func newInstance() -> LoginViewController {
@@ -33,11 +38,11 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var phoneTF: UITextField!
-    @IBOutlet weak var passTF: UITextField!
-    @IBOutlet weak var failureLable: UILabel!
-    @IBOutlet weak var showPassBtn: UIButton!
-    @IBOutlet weak var loginBtn: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passTF.text = ""
+    }
+    
     
     @IBAction func showPassTapped(_ sender: Any) {
         if (passTF.isSecureTextEntry == true){

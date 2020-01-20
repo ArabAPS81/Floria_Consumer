@@ -18,6 +18,7 @@ extension String{
         case email
         case phone
         case password
+        case verficationCode
     }
     
     enum RegularExpressions : String{
@@ -25,6 +26,7 @@ extension String{
         case email = "[A-Z0-9a-z._%+_]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
         case phone = "^(01(0|1|2|5)[0-9]{8})"
         case password = "^(?=.{8,})"
+        case verficationCode = "^[0-9]{4}"
     }
     
     func isValid(_ validityType: ValidityType) -> Bool {
@@ -40,6 +42,8 @@ extension String{
             regEx = RegularExpressions.phone.rawValue
         case .password:
             regEx = RegularExpressions.password.rawValue
+        case .verficationCode:
+            regEx = RegularExpressions.verficationCode.rawValue
         }
         return NSPredicate(format: format, regEx).evaluate(with: self)
     }

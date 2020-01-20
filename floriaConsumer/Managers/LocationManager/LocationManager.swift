@@ -6,7 +6,7 @@
 //  Copyright © 2019 G Abhisek. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 
 final class LocationManager: NSObject, CLLocationManagerDelegate {
@@ -21,6 +21,12 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.denied {
+            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
