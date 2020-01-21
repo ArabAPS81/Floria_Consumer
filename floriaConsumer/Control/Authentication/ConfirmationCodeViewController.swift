@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class ConfirmationCodeViewController: UIViewController {
     
@@ -108,6 +109,8 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
                     let vc = NewPassViewController.newInstance(mobile: mobile)
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
+            }else if model.httpCode == 400 {
+                HUD.flash(.labeledError(title: model.error?.message?.body?.first ?? "", subtitle: nil), delay: 2)
             }
             
         }

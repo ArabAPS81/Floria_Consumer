@@ -64,11 +64,11 @@ class LoginViewController: UIViewController {
     
     func validation() -> Bool {
         if !(phoneTF.text ?? "").isValid(.phone) {
-            alertWithMessage(title: NSLocalizedString("Phone not valid", comment: ""))
+            alertWithMessage(title: NSLocalizedString("Enter avalid mobile number", comment: ""))
             return false
         }
         if passTF.text?.count ?? 0 < 8 {
-            alertWithMessage(title: NSLocalizedString("Password not valid", comment: ""))
+            alertWithMessage(title: NSLocalizedString("Enter avalid password", comment: ""))
             return false
         }
         return true
@@ -96,7 +96,7 @@ class LoginViewController: UIViewController {
             print("Valid Text")
             //failureLable.isHidden = true
         }else{
-            failureLable.text = "Not a Valid Mobile"
+            failureLable.text = NSLocalizedString("Enter avalid mobile number", comment: "")
            // failureLable.isHidden = false
         }
     }

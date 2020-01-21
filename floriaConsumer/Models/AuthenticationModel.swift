@@ -54,9 +54,11 @@ struct AuthenticationModel: Codable {
         struct Message : Codable {
             let email : [String]?
             let mobile : [String]?
+            let body : [String]?
             enum CodingKeys: String, CodingKey {
                 case email = "email"
                 case mobile = "mobile"
+                case body = "body"
             }
         }
     }
