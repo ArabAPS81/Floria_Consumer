@@ -40,11 +40,11 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     func configure(product: ProductElement) {
-        ivProduct.imageFromUrl(url: product.product.image, placeholder: #imageLiteral(resourceName: "633107Poao80102-1"))
-        lblProduct.text = product.product.name
-        lblDescription.text = product.product.productDescription
-        rvRating.setRate(rate: product.product.rate)
+        ivProduct.imageFromUrl(url: product.product?.image, placeholder: #imageLiteral(resourceName: "633107Poao80102-1"))
+        lblProduct.text = product.product?.name
+        lblDescription.text = product.product?.productDescription
+        rvRating.setRate(rate: product.product?.rate ?? 0)
         lblQuantity.text = "\(product.qunatity)"
-        lblPrice.text = "\(product.product.price)"
+        lblPrice.text = "\(product.product?.price ?? 0)"
     }
 }

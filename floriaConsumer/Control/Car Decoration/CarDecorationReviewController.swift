@@ -46,7 +46,7 @@ class CarDecorationReviewController: UIViewController {
         })
         let order = orderRequest
         let id = (order.decorationTypeId ?? 1) - 1
-        priceLabel.text = "\(vendor.decorationTypes?[id].price ?? 0)"
+        priceLabel.text = "\(vendor.decorationTypes?[safe: id]?.price ?? 0)"
         colorNameLabel.text = Constants.carColors[order.colorId! - 1].name
         colorView.backgroundColor = UIColor.init(hexString: Constants.carColors[order.colorId! - 1].code)
         vendorNameLabel.text = vendor.name
@@ -56,5 +56,12 @@ class CarDecorationReviewController: UIViewController {
         decorationTypeLabel.text = Constants.decorationType(id: order.decorationTypeId ?? 1).name
         decorationTypeImage.image = Constants.decorationType(id: order.decorationTypeId ?? 1).image
         carTypeImage.image = Constants.carForId(order.carTypeId ?? 0).image
+    }
+}
+extension Collection {
+
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }

@@ -27,6 +27,7 @@ class PaymentViewController: UIViewController,WKUIDelegate{
         super.viewDidLoad()
         webView.uiDelegate = self
         webView.navigationDelegate = self
+        webView.sizeToFit()
         let url = URL.init(string: urlString)!
         let request = URLRequest.init(url: url)
         webView.load(request)
@@ -75,6 +76,11 @@ extension PaymentViewController: WKNavigationDelegate {
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {     //for making the content to fit with the device size
+        let jscript = "var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);"
+        webView.evaluateJavaScript(jscript)
     }
 }
 

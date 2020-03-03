@@ -104,6 +104,7 @@ extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? VendorsModel {
             vendorsList = data.vendors!
+            tableView.reloadData()
             if vendorsList.count == 0 {
                 tableView.stopLoading("")
             }else {

@@ -21,6 +21,7 @@ class ShippingViewController: UIViewController {
     @IBOutlet weak var deliveryDateLabel: UILabel!
     @IBOutlet weak var deliveryTimeLabel: UILabel!
     @IBOutlet weak var notesTF: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     var selectedDate = Date()
     
@@ -33,6 +34,8 @@ class ShippingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let indexPath = IndexPath(row: 1, section: 0)
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
     
     @IBAction func paymentTypeSelected(_ sender: UIButton) {
@@ -112,6 +115,37 @@ class ShippingViewController: UIViewController {
     }
 }
 
+extension ShippingViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell\(indexPath.row + 1)")
+
+           cell?.accessoryType = .none
+        if indexPath.row == 1 {
+            cell?.setSelected(true, animated: false)
+            cell?.accessoryType = .checkmark
+        }
+        cell?.selectedBackgroundView = UIView()
+        return cell ?? UITableViewCell()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        orderRequest.paymentTypeId = indexPath.row + 1
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .none
+    }
+    
+}
+
 extension ShippingViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? OrderSummaryResponceModel {
@@ -125,8 +159,6 @@ extension ShippingViewController: WebServiceDelegate {
             HUD.flash(.error)
         }
     }
-    
-    
     
 }
 extension WebServiceDelegate {

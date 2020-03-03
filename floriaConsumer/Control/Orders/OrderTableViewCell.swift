@@ -40,7 +40,7 @@ class OrderTableViewCell: UITableViewCell {
     // MARK: - Minions
 
     func configure(order: Order) {
-        self.ivAvatar.imageFromUrl(url: order.provider.image, placeholder: #imageLiteral(resourceName: "pro"))
+        self.ivAvatar.imageFromUrl(url: order.service.image, placeholder: #imageLiteral(resourceName: "pro"))
         self.lblOrderNumber.text = "#\(order.id)"
         self.lblOrderDate.text = order.requiredAt
         self.lblOrderPrice.text = ("\(order.total) EGP")

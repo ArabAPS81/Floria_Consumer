@@ -15,17 +15,10 @@ class OrdersServices {
         self.delegate = delegate
     }
     
-    func getOrders() {
-        let baseUrl = (NetworkConstants.baseUrl + "orders")
+    func getOrders(page:Int) {
+        let baseUrl = (NetworkConstants.baseUrl + "orders?page=\(page)")
         guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-        /*var params: [String:Any] = [:]
-         
-         do {
-         let jsonData = try JSONEncoder().encode(order)
-         params = try JSONSerialization.jsonObject(with: jsonData, options:[]) as! [String : Any]
-         } catch {
-         print(error.localizedDescription)
-         }*/
+        
         
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         
@@ -101,7 +94,7 @@ struct Order: Codable {
 // MARK: - ProductElement
 
 struct ProductElement: Codable {
-    let product: Product
+    let product: Product?
     let qunatity: Int
 }
 

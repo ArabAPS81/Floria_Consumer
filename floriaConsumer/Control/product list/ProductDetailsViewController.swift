@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 
 class ProductDetailsViewController: UIViewController {
@@ -126,7 +127,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        if collectionView == imageSliderCollectioView {
-        self.performSegue(withIdentifier: "zoom", sender: product?.image)
+       // self.performSegue(withIdentifier: "zoom", sender: product?.image)
        }
         if let cell = collectionView.cellForItem(at: indexPath) as? ExtrasCollectionViewCell {
             cell.setSelected(true)
@@ -150,7 +151,15 @@ extension ProductDetailsViewController: WebServiceDelegate {
     }
     
     func didFailToReceiveDataWithError(error: Error) {
-        
+        guard let error = error as? AFError else {
+            return
+        }
+        switch error {
+        case .invalidURL(let url):
+            break
+        default:
+            break
+        }
     }
 }
 

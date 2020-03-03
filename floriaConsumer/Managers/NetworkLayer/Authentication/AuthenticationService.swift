@@ -19,12 +19,12 @@ class AuthenticationService {
     
     //user-tokens
     func postDeviceToken(_ token: String, deviceId: String) {
-        let url = NetworkConstants.baseUrl + "user-tokens"
+        let url = NetworkConstants.baseUrl + "provider/provider-tokens"
         let parameters = ["token": token,
                           "device_id": Defaults().getUniqueID(),
                           "device_type": "ios"] as [String : Any]
         
-        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):

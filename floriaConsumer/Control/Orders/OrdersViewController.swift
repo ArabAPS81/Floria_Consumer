@@ -13,8 +13,9 @@ class OrdersViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var tvOrders: UITableView!
-    
-    var orders: Orders? {
+    var meta: Meta!
+    var page = 1
+    var orders: [Order]? {
         didSet {
             tvOrders.reloadData()
         }
@@ -47,30 +48,48 @@ class OrdersViewController: UIViewController {
     
     func requestOrders() {
         OrdersServices.init(delegate: self)
-            .getOrders()
+            .getOrders(page: 1)
     }
 }
 
 extension OrdersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders?.orders.count ?? 0
+        return orders?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCustomCell", for: indexPath) as! OrderTableViewCell
         
-        if let order = orders?.orders[indexPath.row] {
+        if let order = orders?[safe: indexPath.row] {
             cell.configure(order: order)
         }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastItem = (orders?.count)! - 1
+        if indexPath.row == lastItem{
+            loadMoreData()
+        }
+    }
+    
+    func loadMoreData(){
+        if meta.currentPage < meta.lastPage {
+            //tableView.reloadData()
+            
+            let service = OrdersServices.init(delegate: self)
+
+            service.getOrders(page: meta.currentPage + 1)
+            
+        }
+    }
+    
 }
 
 extension OrdersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let order = orders?.orders[indexPath.row] {
+        if let order = orders?[indexPath.row] {
             self.selectedOrder = order
         }
     }
@@ -79,7 +98,11 @@ extension OrdersViewController: UITableViewDelegate {
 extension OrdersViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let orders = data as? Orders {
-            self.orders = orders
+            if self.orders == nil {
+                self.orders = [Order]()
+            }
+            self.orders!.append(contentsOf: orders.orders)
+            self.meta = orders.meta
         }
     }
     
