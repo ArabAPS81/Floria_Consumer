@@ -29,21 +29,13 @@ class ShippingViewController: UIViewController {
         super.viewDidLoad()
         let dt = Date.init().addingTimeInterval(65.0 * 60.0)
         setRequiredDate(dt)
-        orderRequest.paymentTypeId = 2 // cash on delivary
+        orderRequest.paymentTypeId = 1 // Visa
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let indexPath = IndexPath(row: 1, section: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
-    }
-    
-    @IBAction func paymentTypeSelected(_ sender: UIButton) {
-        for btn in paymentTypes {
-            btn.isSelected = false
-        }
-        sender.isSelected = true
-        orderRequest.paymentTypeId = sender.tag
     }
     
     @IBAction func delivaryDateButtonTapped(_ sender: Any) {
@@ -125,10 +117,15 @@ extension ShippingViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell\(indexPath.row + 1)")
 
            cell?.accessoryType = .none
-        if indexPath.row == 1 {
-            cell?.setSelected(true, animated: false)
+        if indexPath.row == 0 {
             cell?.accessoryType = .checkmark
         }
+        
+        if orderRequest.shipping == 2 && indexPath.row == 1 {
+            cell?.isUserInteractionEnabled = false
+            cell?.isHidden = true
+        }
+        
         cell?.selectedBackgroundView = UIView()
         return cell ?? UITableViewCell()
         
@@ -142,7 +139,10 @@ extension ShippingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .none
+        cell?.setSelected(false, animated: true)
+        cell?.accessoryType = .none
     }
+    
     
 }
 

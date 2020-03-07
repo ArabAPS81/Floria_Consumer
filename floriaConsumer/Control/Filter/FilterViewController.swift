@@ -28,6 +28,7 @@ class FilterViewController: UIViewController {
         locationTF.inputView = picker
         let service = AddressService.init(delegate: self)
         service.getListOfGovs()
+        locationTF.delegate = self
     }
     
     @IBAction func filterButtonTapped(_ sender: UIButton) {
@@ -91,5 +92,15 @@ extension FilterViewController: UIPickerViewDelegate,UIPickerViewDataSource {
             pickerView.reloadComponent(1)
         }
         
+    }
+}
+
+extension FilterViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == locationTF {
+            selectedGov = govsList[0]
+            picker.selectRow(0, inComponent: 1, animated: true)
+            pickerView(picker, didSelectRow: 0, inComponent: 1)
+        }
     }
 }
