@@ -67,7 +67,7 @@
                                                             <outlet property="delegate" destination="NbY-dP-Emq" id="VXK-d2-sYE"/>
                                                         </connections>
                                                     </collectionView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-Ke-WfQ">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-Ke-WfQ">
                                                         <rect key="frame" x="321" y="275" width="44" height="22"/>
                                                         <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.066807577054794523" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -136,11 +136,15 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-sC-vnC">
                                                         <rect key="frame" x="10" y="0.0" width="282" height="83.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-xO-Ip9">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-xO-Ip9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="282" height="19.5"/>
+                                                                <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="4th-1T-Aaw" appends="YES" id="OAS-US-M0C"/>
+                                                                </connections>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-mJ-bcb">
                                                                 <rect key="frame" x="0.0" y="19.5" width="282" height="64"/>
@@ -377,6 +381,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPd-XP-quR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4th-1T-Aaw">
+                    <connections>
+                        <action selector="vendorNameTapped:" destination="NbY-dP-Emq" id="Rqy-8Q-ERA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-7010.3999999999996" y="-3443.0284857571219"/>
         </scene>

@@ -14,6 +14,7 @@ class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        title = NSLocalizedString("settings", comment: "")
         // Do any additional setup after loading the view.
     }
     

@@ -61,6 +61,7 @@ extension PaymentViewController: WKNavigationDelegate {
                // htmlString = "{\"status\":true}"
                 JSONResponseDecoder.decodeFrom(htmlString.data(using: .utf8)!, returningModelType: PaymentResponse.self) { (result, erorr) in
                     if result != nil {
+                        webView.loadHTMLString("", baseURL: nil)
                         self.responsePaymentFinish(result!)
                     }
                 }

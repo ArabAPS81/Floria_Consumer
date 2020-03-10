@@ -30,7 +30,7 @@ class OrdersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = NSLocalizedString("orders", comment: "")
         // Do any additional setup after loading the view.
         requestOrders()
     }

@@ -258,25 +258,36 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISA/MASTER CARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXf-9n-Li3">
-                                                                    <rect key="frame" x="86" y="5" width="158.5" height="40"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="80" y="5" width="170" height="40"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="363_Visa_Credit_Card_logo-512" translatesAutoresizingMaskIntoConstraints="NO" id="7Nu-nM-X51">
-                                                                    <rect key="frame" x="5" y="5" width="75" height="40"/>
+                                                                    <rect key="frame" x="5" y="5" width="37.5" height="40"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="7Nu-nM-X51" secondAttribute="height" multiplier="15:8" id="CbD-Uy-Ge4"/>
+                                                                        <constraint firstAttribute="width" constant="37.5" id="hif-JS-1NX"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercardlogo" translatesAutoresizingMaskIntoConstraints="NO" id="U3t-Q5-xRb">
+                                                                    <rect key="frame" x="42.5" y="5" width="37.5" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="37.5" id="hiP-XY-SD5"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" id="GMF-pd-dJr"/>
+                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="leading" secondItem="U3t-Q5-xRb" secondAttribute="trailing" id="IYs-gK-2Qh"/>
+                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" id="IgM-Wz-EY3"/>
+                                                                <constraint firstItem="U3t-Q5-xRb" firstAttribute="leading" secondItem="7Nu-nM-X51" secondAttribute="trailing" id="Jk9-Oy-0TN"/>
                                                                 <constraint firstItem="7Nu-nM-X51" firstAttribute="top" secondItem="3sc-G2-Pdf" secondAttribute="top" constant="5" id="Lkj-Ve-LcD"/>
                                                                 <constraint firstItem="zXf-9n-Li3" firstAttribute="top" secondItem="3sc-G2-Pdf" secondAttribute="top" constant="5" id="QBv-L6-0Cz"/>
-                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" id="Qh4-1O-HGT"/>
                                                                 <constraint firstItem="zXf-9n-Li3" firstAttribute="centerY" secondItem="3sc-G2-Pdf" secondAttribute="centerY" id="XRb-DQ-yI9"/>
                                                                 <constraint firstAttribute="bottom" secondItem="7Nu-nM-X51" secondAttribute="bottom" constant="5" id="ZxI-EV-VXF"/>
                                                                 <constraint firstAttribute="bottom" secondItem="zXf-9n-Li3" secondAttribute="bottom" constant="5" id="dMa-lb-GeF"/>
+                                                                <constraint firstItem="U3t-Q5-xRb" firstAttribute="top" secondItem="3sc-G2-Pdf" secondAttribute="top" constant="5" id="fEz-MD-MeG"/>
+                                                                <constraint firstAttribute="bottom" secondItem="U3t-Q5-xRb" secondAttribute="bottom" constant="5" id="fe8-m6-tJK"/>
                                                                 <constraint firstItem="7Nu-nM-X51" firstAttribute="leading" secondItem="3sc-G2-Pdf" secondAttribute="leading" constant="5" id="lFE-U0-dho"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
@@ -396,6 +407,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hTw-X7-0zD" firstAttribute="trailing" secondItem="zJ7-6O-QtU" secondAttribute="trailing" id="DYT-SW-sRG"/>
                             <constraint firstItem="zJ7-6O-QtU" firstAttribute="bottom" secondItem="hTw-X7-0zD" secondAttribute="bottom" id="DiR-JJ-Dfa"/>
@@ -417,7 +429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erz-5N-h6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6619" y="-3500"/>
+            <point key="canvasLocation" x="-6620.289855072464" y="-3500.2232142857142"/>
         </scene>
         <!--OrderSummaryViewController-->
         <scene sceneID="ZAT-UB-fQA">
@@ -434,5 +446,6 @@
         <image name="363_Visa_Credit_Card_logo-512" width="63.666667938232422" height="64"/>
         <image name="Buy" width="68.333335876464844" height="52.333332061767578"/>
         <image name="a9e1ed88001167.5dc9778d3ed42" width="77.333335876464844" height="57"/>
+        <image name="mastercardlogo" width="61.333332061767578" height="45.333332061767578"/>
     </resources>
 </document>

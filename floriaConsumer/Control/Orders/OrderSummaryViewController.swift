@@ -76,6 +76,9 @@ extension OrderSummaryViewController: WebServiceDelegate {
                 }else {
                     showAlert("\(data.message ?? "") \(data.responseModel?.id ?? 0)")
                 }
+            }else if data.httpCode == 422 || data.httpCode == 400 {
+                promoTF.text = nil
+                orderRequest.code = nil
             }
         }
         if let data = data as? OrderSummaryResponceModel {

@@ -44,8 +44,10 @@ class VendorDetailsViewController: UIViewController{
         ProductCollectionViewCell.registerNIBinView(collection: recentProductCollectionView)
         presenter = VendorDetailsPresenter.init(view: self)
         presenter.getVendorDetails(vendorId: vendorId)
-        
-        
+        let layout = servicesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.minimumLineSpacing = 0
+        layout?.minimumInteritemSpacing = 0
+        title = NSLocalizedString("vendor details", comment: "")
     }
     
     func setUpData(vendor: VendorsModel.Vendor) {
@@ -68,8 +70,8 @@ class VendorDetailsViewController: UIViewController{
         providerCard.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         providerCard.layer.shadowOffset = CGSize(width: 0.1, height: 3.0)
         providerCard.layer.shadowOpacity = 1
-        providerCard.layer.cornerRadius = 40
-        picofvendor.layer.cornerRadius = 25
+        providerCard.layer.cornerRadius = 50
+        picofvendor.layer.cornerRadius = 44
     }
     
     func clipCorners(button: UIButton , by : Float){
@@ -106,6 +108,12 @@ extension VendorDetailsViewController : UICollectionViewDelegate , UICollectionV
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "prouduct", sender: nil)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = ProductDetailsViewController.newInstance(product: vendorProducts[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }
 
 extension VendorDetailsViewController: VendorDetailsView{
@@ -115,7 +123,6 @@ extension VendorDetailsViewController: VendorDetailsView{
                 setUpData(vendor: vendor)
             }
         }
-        
         if let data = data as? ProductsModel {
             vendorProducts = data.products!
             print(vendorProducts)
@@ -126,8 +133,6 @@ extension VendorDetailsViewController: VendorDetailsView{
     func didFailToReceiveData(error: Error) {
         
     }
-    
-    
 }
 
 

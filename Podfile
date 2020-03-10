@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'floriaConsumer' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,7 +8,6 @@ target 'floriaConsumer' do
   # Pods for floriaConsumer
 	pod 'Alamofire'
 	pod 'SwiftyJSON', '~> 4.0'
-	pod 'Kingfisher', '~> 5.0'
 	pod 'SideMenu'
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
@@ -16,5 +15,6 @@ target 'floriaConsumer' do
   pod 'PKHUD'
   pod 'MaterialComponents/Cards'
   pod 'Kingfisher'
+  pod 'ReachabilitySwift'
 
 end

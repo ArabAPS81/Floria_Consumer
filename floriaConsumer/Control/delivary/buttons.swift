@@ -15,6 +15,7 @@ class buttons: UIViewController {
         Shadoow(bu: one)
         Shadoow(bu: two)
         Shadoow(bu: three)
+        title = NSLocalizedString("delivery", comment: "")
     }
 
     @IBOutlet weak var one: UIButton!

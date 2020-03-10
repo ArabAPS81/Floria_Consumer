@@ -23,6 +23,7 @@ class AddressesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = NSLocalizedString("delivery", comment: "")
         if Defaults().isUserLogged {
             
         } else {

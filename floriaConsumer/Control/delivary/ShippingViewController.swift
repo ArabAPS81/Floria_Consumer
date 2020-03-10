@@ -27,6 +27,7 @@ class ShippingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = NSLocalizedString("shipping", comment: "")
         let dt = Date.init().addingTimeInterval(65.0 * 60.0)
         setRequiredDate(dt)
         orderRequest.paymentTypeId = 1 // Visa
@@ -68,6 +69,7 @@ class ShippingViewController: UIViewController {
     @IBAction func shippingButtonTapped(_ sender: Any) {
         let serv = OrderServices.init(delegate: self)
         if validation() {
+            orderRequest.code = nil
             serv.getOrderSummary(order: orderRequest)
             HUD.show(.progress)
         }
@@ -141,6 +143,12 @@ extension ShippingViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.accessoryType = .none
         cell?.setSelected(false, animated: true)
         cell?.accessoryType = .none
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if orderRequest.shipping == 2 && indexPath.row == 1 {
+            return 0.0
+        }
+        return 50
     }
     
     

@@ -28,6 +28,7 @@ class ProductDetailsViewController: UIViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "ProductDetailsViewController") as! ProductDetailsViewController
         vc.product = product
+        
         return vc
     }
     
@@ -37,7 +38,6 @@ class ProductDetailsViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         self.title = product?.name
-        self.navigationItem.title = ""
         setupViews()
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
@@ -66,6 +66,14 @@ class ProductDetailsViewController: UIViewController {
     @IBAction func checkOutButtonTapped(_ sender: Any) {
             performSegue(withIdentifier: "checkOutSegue", sender: sender)
        
+    }
+    
+    
+    @IBAction func vendorNameTapped(_ sender: Any) {
+        
+        let vendor = product?.provider
+        let vc = VendorDetailsViewController.newInstance(vendorId: vendor?.id ?? 0)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
