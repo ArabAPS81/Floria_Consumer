@@ -159,6 +159,9 @@
                                                         <state key="normal" title="Favorite">
                                                             <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="JRI-sx-vaG" kind="show" id="8t2-PP-KHm"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-IF-Tu8">
                                                         <rect key="frame" x="27" y="48.5" width="360" height="1.5"/>
@@ -361,6 +364,37 @@
             </objects>
             <point key="canvasLocation" x="-9984" y="-1934"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="ilo-wT-qgc">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="JRI-sx-vaG" customClass="FavoritesViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pIW-8O-e6G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-v6-GQj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="kUH-va-Qoc" kind="embed" id="NPi-Gb-c4W"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dos-ei-RWc" firstAttribute="bottom" secondItem="ibh-v6-GQj" secondAttribute="bottom" id="9wL-ku-f7f"/>
+                            <constraint firstItem="ibh-v6-GQj" firstAttribute="leading" secondItem="dos-ei-RWc" secondAttribute="leading" id="Khe-l5-xQs"/>
+                            <constraint firstItem="dos-ei-RWc" firstAttribute="trailing" secondItem="ibh-v6-GQj" secondAttribute="trailing" id="pwc-1N-Jzl"/>
+                            <constraint firstItem="ibh-v6-GQj" firstAttribute="top" secondItem="dos-ei-RWc" secondAttribute="top" id="zyM-FU-iAj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dos-ei-RWc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6W-1X-NL1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcp-k9-n3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9321" y="-2582"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="5ym-ic-xZH">
             <objects>
@@ -430,6 +464,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMe-Q1-f5W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-11623" y="-1832"/>
+        </scene>
+        <!--SearchPagerController-->
+        <scene sceneID="Dd4-fi-mkO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchPagerController" id="kUH-va-Qoc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXZ-jO-q1o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8678" y="-2582"/>
         </scene>
     </scenes>
     <resources>

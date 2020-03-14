@@ -10,6 +10,8 @@ import UIKit
 import XLPagerTabStrip
 
 class SearchPagerController: ButtonBarPagerTabStripViewController {
+    
+    var fromFavorite: Bool = false
 
     override func viewDidLoad() {
         setup()
@@ -27,11 +29,16 @@ class SearchPagerController: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let productsVC = SearchTableViewController.newInstance(with: .products)
+        productsVC.fromFavorite = fromFavorite
         let vendorsVC = SearchTableViewController.newInstance(with: .vendors)
+        vendorsVC.fromFavorite = fromFavorite
         return [productsVC,vendorsVC]
         
     }
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int) {
+        if delegate is SearchPagerController {
+            return
+        }
         delegate?.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex)
     }
     

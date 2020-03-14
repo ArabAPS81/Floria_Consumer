@@ -40,10 +40,24 @@ class OrderTableViewCell: UITableViewCell {
     // MARK: - Minions
 
     func configure(order: Order) {
-        self.ivAvatar.imageFromUrl(url: order.service.image, placeholder: #imageLiteral(resourceName: "pro"))
+        //self.ivAvatar.imageFromUrl(url: order.service.image, placeholder: #imageLiteral(resourceName: "pro"))
         self.lblOrderNumber.text = "#\(order.id)"
         self.lblOrderDate.text = order.requiredAt
         self.lblOrderPrice.text = ("\(order.total) EGP")
         self.lblOrderStatus.text = order.status.name
+        switch order.service.id {
+        case 1:
+            ivAvatar.image = #imageLiteral(resourceName: "readymadeicon")
+        case 2:
+            ivAvatar.image = #imageLiteral(resourceName: "custombouqueticon")
+        case 3:
+            ivAvatar.image = #imageLiteral(resourceName: "gerbicon")
+        case 4:
+            ivAvatar.image = #imageLiteral(resourceName: "cardecorationicon")
+        case 5:
+            ivAvatar.image = #imageLiteral(resourceName: "potscare")
+        default:
+            break
+        }
     }    
 }

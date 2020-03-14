@@ -35,10 +35,10 @@ class PaymentViewController: UIViewController,WKUIDelegate{
     
     func responsePaymentFinish(_ response: PaymentResponse) {
         print(response)
-        if response.http_code == 201 {
-            showAlert("payment done is : \(response.data?.orderId ?? "")")
+        if response.http_code == 201 || response.http_code == 200 {
+            showAlert("payment done is : \(response.data?.orderId ?? response.message!)")
         }else {
-            showAlert(response.error?.message?.body?.first)
+            showFailureAlert(response.error?.message?.body?.first)
         }
         
     }
@@ -47,6 +47,15 @@ class PaymentViewController: UIViewController,WKUIDelegate{
         let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in
             self.navigationController?.popToRootViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func showFailureAlert(_ message: String?) {
+        let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true, completion: nil)
         

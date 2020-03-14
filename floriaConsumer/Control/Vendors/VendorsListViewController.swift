@@ -62,6 +62,15 @@ class VendorsListViewController: UIViewController {
         }
     }
     
+    func setVendorFavorite(_ favorite: Bool, id:Int) {
+        let service = FavoriteServices.init(delegate: self)
+        if favorite {
+            service.setProviderUnFavorite(id)
+        }else {
+            service.setProviderFavorite(id)
+        }
+    }
+    
 }
 
 extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -72,6 +81,9 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: VendorTableViewCell.reuseId) as! VendorTableViewCell
         cell.cofigure(vendor: vendorsList[indexPath.row])
+        cell.setFavorite = { id,fav in
+            self.setVendorFavorite(fav , id: id)
+        }
         return cell
     }
     
@@ -120,5 +132,14 @@ extension VendorsListViewController: VendorsListView {
     func didFailToReceiveData(error: Error) {
         tableView.stopLoading("No data available")
     }
+    
+}
+extension VendorsListViewController : WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let model = data as? FavoriteResponse {
+            presenter?.getVendorsList(serviceType: self.serviceType)
+        }
+    }
+    
     
 }

@@ -11,6 +11,8 @@ import XLPagerTabStrip
 
 class SearchTableViewController: UIViewController {
     
+    var fromFavorite: Bool = false
+    
     static func newInstance(with tableType: TableType) -> SearchTableViewController {
         
         let storyboard = UIStoryboard.init(name: "Search", bundle: nil)
@@ -39,6 +41,16 @@ class SearchTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         VendorTableViewCell.registerNIBinView(tableView: tableView)
+        if fromFavorite {
+            switch tableType {
+            case .vendors:
+                let service = FavoriteServices.init(delegate: self)
+                service.getVendorsFavoriteList()
+            case .products:
+                let service = FavoriteServices.init(delegate: self)
+                service.getProductsFavoriteList()
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {

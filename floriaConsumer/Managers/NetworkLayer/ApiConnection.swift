@@ -27,7 +27,7 @@ class ApiConnection {
         switch reachability.connection {
         case .wifi , .cellular:
             if showProgress {HUD.show(.progress)}
-            Alamofire.request(url, method: method, parameters: parameters,encoding: URLEncoding.default, headers: headers ).responseJSON { (response) in
+            Alamofire.request(url, method: method, parameters: parameters,encoding: URLEncoding.default, headers: headers ).responseData { (response) in
                 switch response.result {
                 case .success(let value):
                     print(value)

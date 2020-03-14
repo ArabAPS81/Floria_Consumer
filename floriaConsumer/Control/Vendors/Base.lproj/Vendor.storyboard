@@ -122,6 +122,10 @@
                                                                     <constraint firstAttribute="width" secondItem="M8T-wB-HVz" secondAttribute="height" multiplier="13:12" id="Zbz-4V-fc9"/>
                                                                 </constraints>
                                                                 <state key="normal" image="unfavorite"/>
+                                                                <state key="selected" image="favorite"/>
+                                                                <connections>
+                                                                    <action selector="setFavoriteButtonTapped:" destination="FqI-v5-SEQ" eventType="touchUpInside" id="Chi-xR-OJ2"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -396,6 +400,7 @@
                     <navigationItem key="navigationItem" id="Wfr-aB-mxn"/>
                     <connections>
                         <outlet property="address" destination="92a-56-3BS" id="rgs-oF-lpM"/>
+                        <outlet property="favoriteButton" destination="M8T-wB-HVz" id="iiU-Wg-O4R"/>
                         <outlet property="name" destination="JTp-p2-E7j" id="URm-eG-ba3"/>
                         <outlet property="picofvendor" destination="nwt-lB-1il" id="PQh-mj-kya"/>
                         <outlet property="providerCard" destination="ysI-GN-zda" id="nWJ-P2-JFF"/>
@@ -428,6 +433,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite" width="26.5" height="24"/>
         <image name="shape954" width="20.5" height="20.5"/>
         <image name="sortingicon" width="20.5" height="19.5"/>
         <image name="unfavorite" width="20" height="18.5"/>

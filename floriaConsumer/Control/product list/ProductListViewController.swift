@@ -43,6 +43,15 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addShadow"), object: nil)
     }
     
+    func setProductFavorite(_ favorite: Bool, id:Int) {
+        let service = FavoriteServices.init(delegate: self.presenter!)
+        if favorite {
+            service.setProductUnFavorite(id)
+        }else {
+            service.setProductFavorite(id)
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsList.count
@@ -51,6 +60,9 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeProductCollectionViewCell.reuseId, for: indexPath) as!  HomeProductCollectionViewCell
         cell.cofigure(product: productsList[indexPath.row])
+        cell.setFavorite = { id ,fav in 
+            self.setProductFavorite(fav, id: id)
+        }
         return cell 
     }
     
@@ -86,6 +98,8 @@ extension ProductListViewController: ProductsListView {
                 setPlaceHolderLabel(collectionView: collectionView)
             }
             collectionView.reloadData()
+        }else if data is FavoriteResponse {
+            presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)
         }
     }
     

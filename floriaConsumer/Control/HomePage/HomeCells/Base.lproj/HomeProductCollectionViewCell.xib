@@ -109,6 +109,9 @@
                                 </constraints>
                                 <state key="normal" image="unfavorite"/>
                                 <state key="selected" image="favorite"/>
+                                <connections>
+                                    <action selector="setFavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2Qs-gi-U06"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,6 +140,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="favoriteButton" destination="pEn-Bt-8XX" id="Vue-tn-UOD"/>
                 <outlet property="imageView" destination="duB-4d-JLI" id="zCm-4c-d72"/>
                 <outlet property="nameLabel" destination="CNp-GV-9Kj" id="rCf-gK-z9N"/>
                 <outlet property="priceLabel" destination="awp-Mc-VCa" id="otf-aW-18e"/>

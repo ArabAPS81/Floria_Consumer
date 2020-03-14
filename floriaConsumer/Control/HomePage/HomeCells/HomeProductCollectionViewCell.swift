@@ -24,16 +24,25 @@ class HomeProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ratingView: RateView!
     @IBOutlet weak var shadowedView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    var setFavorite:((_ id: Int,_ favorite: Bool)->())?
+    var productId: Int!
     
     func cofigure(product: ProductsModel.Product) {
+        productId = product.id
         nameLabel.text = product.name
         priceLabel.text = "\(product.price ?? 0)"
         vendorNameLabel.text = product.provider?.name
         imageView.kf.setImage(with: URL.init(string: product.image ?? ""))
         ratingView.setRate(rate: product.rate)
+        favoriteButton.isSelected = product.isFavorited
     }
     
-    
+    @IBAction func setFavorite(_ sender: UIButton) {
+        if setFavorite != nil {
+            setFavorite!(productId,sender.isSelected)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

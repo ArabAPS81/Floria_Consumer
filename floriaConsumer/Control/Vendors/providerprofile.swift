@@ -32,6 +32,7 @@ class VendorDetailsViewController: UIViewController{
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var rate: RateView!
+    @IBOutlet weak var favoriteButton: UIButton!
 
     var serviceCollectionDataSource:ServiceCollectionDataSource!
     // MARK: - BTNs Actions
@@ -50,6 +51,16 @@ class VendorDetailsViewController: UIViewController{
         title = NSLocalizedString("vendor details", comment: "")
     }
     
+    @IBAction func setFavoriteButtonTapped(_ sender: UIButton) {
+
+        let service = FavoriteServices.init(delegate: self.presenter)
+        if !sender.isSelected {
+            service.setProviderUnFavorite(self.vendorId)
+        }else {
+            service.setProductFavorite(self.vendorId)
+        }
+    }
+    
     func setUpData(vendor: VendorsModel.Vendor) {
         name.text = vendor.name
         address.text = vendor.address
@@ -57,7 +68,7 @@ class VendorDetailsViewController: UIViewController{
         serviceCollectionDataSource = ServiceCollectionDataSource(services: vendor.services ?? [])
         servicesCollectionView.delegate = serviceCollectionDataSource
         servicesCollectionView.dataSource = serviceCollectionDataSource
-        
+        favoriteButton.isSelected = vendor.isFavorited 
         let id = vendor.id
         
         presenter?.getVendorProducts(vendorId: id!)
@@ -128,6 +139,10 @@ extension VendorDetailsViewController: VendorDetailsView{
             print(vendorProducts)
             recentProductCollectionView.reloadData()
         }
+        if let data = data as? FavoriteResponse {
+            favoriteButton.isSelected = data.data?.isFavorited ?? false
+        }
+        
     }
     
     func didFailToReceiveData(error: Error) {

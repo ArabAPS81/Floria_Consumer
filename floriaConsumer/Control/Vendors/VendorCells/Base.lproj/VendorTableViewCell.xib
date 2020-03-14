@@ -23,11 +23,15 @@
                                 <rect key="frame" x="273" y="0.0" width="50" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ7-tm-eC7">
-                                        <rect key="frame" x="12" y="42" width="26.5" height="24"/>
+                                        <rect key="frame" x="13" y="43" width="24" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="nJ7-tm-eC7" secondAttribute="height" multiplier="13:12" id="HJ6-pg-HFV"/>
                                         </constraints>
-                                        <state key="normal" image="favorite"/>
+                                        <state key="normal" image="unfavorite"/>
+                                        <state key="selected" image="favorite"/>
+                                        <connections>
+                                            <action selector="setFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NJz-HM-Woc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,6 +121,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favoriteButton" destination="nJ7-tm-eC7" id="ZC1-yb-kYC"/>
                 <outlet property="ratingView" destination="Xwe-Di-wp8" id="pg8-px-Oka"/>
                 <outlet property="shadowedView" destination="UiN-tq-uMO" id="plF-HM-2AU"/>
                 <outlet property="vendorAddressLabel" destination="Vcl-ge-aQZ" id="qho-tE-zE0"/>
@@ -128,6 +133,7 @@
     </objects>
     <resources>
         <image name="favorite" width="26.5" height="24"/>
+        <image name="unfavorite" width="20" height="18.5"/>
         <image name="vendorAvatar" width="80" height="80"/>
     </resources>
 </document>

@@ -30,7 +30,8 @@ class SideMenuViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-        
+        self.navigationController?.navigationBar.tintColor = .red
+        self.navigationController?.navigationBar.barTintColor = .red
         
         if Defaults().isUserLogged {
             logButton.setTitle(NSLocalizedString("Logout", comment: ""), for: .normal)
@@ -62,6 +63,7 @@ class SideMenuViewController: UIViewController {
     
     
     
+    
     @IBAction func out(_ sender: Any) {
         if Defaults().isUserLogged {
             Defaults.init().isUserLogged = false
@@ -84,3 +86,4 @@ class SideMenuViewController: UIViewController {
         performSegue(withIdentifier: "Segue2Orders", sender: self)
     }
 }
+

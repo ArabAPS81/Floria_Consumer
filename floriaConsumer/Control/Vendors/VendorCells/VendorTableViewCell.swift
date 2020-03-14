@@ -24,12 +24,23 @@ class VendorTableViewCell: UITableViewCell {
     @IBOutlet weak var vendorNameLabel: UILabel!
     @IBOutlet weak var vendorAddressLabel: UILabel!
     @IBOutlet weak var ratingView: RateView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    var setFavorite:((_ id: Int,_ favorite: Bool)->())?
+    var vendorId: Int!
     
     func cofigure(vendor: VendorsModel.Vendor) {
         vendorNameLabel.text = vendor.name
         vendorAddressLabel.text = vendor.address ?? vendor.district?.name
         vendorImageView.imageFromUrl(url: vendor.image, placeholder: nil)
         ratingView.setRate(rate: vendor.rate)
+        favoriteButton.isSelected = vendor.isFavorited
+        vendorId = vendor.id
+    }
+    
+    @IBAction func setFavorite(_ sender: UIButton) {
+        if setFavorite != nil {
+            setFavorite!(vendorId,sender.isSelected)
+        }
     }
 
     override func awakeFromNib() {

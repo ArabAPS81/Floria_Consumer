@@ -51,7 +51,7 @@ class VendorServices {
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
         let parameters = "lat=\(model.location.latitude)&lng=\(model.location.longitude)"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
@@ -71,7 +71,7 @@ class VendorServices {
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
         let parameters = "district_id=\(model.district)"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
@@ -90,7 +90,7 @@ class VendorServices {
         
         let baseUrl = NetworkConstants.baseUrl + "providers/\(vendorId)"
         guard let url = baseUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-        let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
             switch response.result {
             case .success(let value):
