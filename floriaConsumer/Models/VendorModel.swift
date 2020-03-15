@@ -33,6 +33,7 @@ struct VendorsModel: Codable {
         let name : String?
         let services : [Service]?
         let isFavorited: Bool
+        let isOnline: Bool?
         let rate: Int
 
         enum CodingKeys: String, CodingKey {
@@ -49,6 +50,7 @@ struct VendorsModel: Codable {
             case name = "name"
             case services = "services"
             case isFavorited
+            case isOnline = "is_online"
             case rate
         }
     }

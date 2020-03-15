@@ -16,5 +16,6 @@ target 'floriaConsumer' do
   pod 'MaterialComponents/Cards'
   pod 'Kingfisher'
   pod 'ReachabilitySwift'
+  pod 'Cosmos'
 
 end

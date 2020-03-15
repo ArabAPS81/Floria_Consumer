@@ -29,30 +29,30 @@ extension UIColor {
 }
 
 
-class A {
-    var a:Int
-    
-    init(a:Int) {
-        self.a=a
-    }
-}
-
-class B: A {
-    var b:Int
-    
-    convenience init() {
-        self.init(b:2)
-    }
-    
-    init(b:Int) {
-        self.b=b
-        super.init(a: 0)
-    }
-    
-    init(a:Int,b:Int) {
-        self.b = b
-        super.init(a: a)
-    }
-}
-
-let b = B.init(b: 3)
+//class A {
+//    var a:Int
+//    
+//    init(a:Int) {
+//        self.a=a
+//    }
+//}
+//
+//class B: A {
+//    var b:Int
+//    
+//    convenience init() {
+//        self.init(b:2)
+//    }
+//    
+//    init(b:Int) {
+//        self.b=b
+//        super.init(a: 0)
+//    }
+//    
+//    init(a:Int,b:Int) {
+//        self.b = b
+//        super.init(a: a)
+//    }
+//}
+//
+//let b = B.init(b: 3)

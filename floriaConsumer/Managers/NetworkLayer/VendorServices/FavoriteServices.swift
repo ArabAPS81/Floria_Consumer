@@ -27,7 +27,7 @@ class FavoriteServices {
         }
     }
     func setProductUnFavorite(_ id: Int) {
-        let baseUrl = (NetworkConstants.baseUrl + "favorites?id=\(id)&model=provider")
+        let baseUrl = (NetworkConstants.baseUrl + "favorites?id=\(id)&model=product")
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         ApiConnection.request(.delete, url: baseUrl, headers: headers, model: FavoriteResponse.self, completion: { (result) in
             self.delegate?.didRecieveData(data: result)

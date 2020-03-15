@@ -41,6 +41,10 @@ class SearchTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         VendorTableViewCell.registerNIBinView(tableView: tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if fromFavorite {
             switch tableType {
             case .vendors:

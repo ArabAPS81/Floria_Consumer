@@ -17,6 +17,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     var product: ProductsModel.Product?
     var extras = [ProductPackingModel.ProductPacking]()
@@ -47,8 +48,19 @@ class ProductDetailsViewController: UIViewController {
         vendorNameLabel.text = product?.provider?.name ?? ""
         descriptionLabel.text = product?.descriptionField
         priceLabel.text = "\(product?.price ?? 0)"
+        favoriteButton.isSelected = product?.isFavorited ?? false
         let service = VendorServices.init(delegate: self)
         service.getProductExtrasFor(vendor: (product?.provider?.id) ?? 0)
+    }
+    
+    @IBAction func setFavoriteButtonTapped(_ sender: UIButton) {
+
+        let service = FavoriteServices.init(delegate: self)
+        if sender.isSelected {
+            service.setProductUnFavorite(self.product!.id!)
+        }else {
+            service.setProductFavorite(self.product!.id!)
+        }
     }
     
     @IBAction func minase(_ sender: Any) {
@@ -155,6 +167,9 @@ extension ProductDetailsViewController: WebServiceDelegate {
         if let data = data as? ProductPackingModel {
             extras = data.packings ?? []
             extrasCollectionView.reloadData()
+        }
+        if let data = data as? FavoriteResponse {
+            favoriteButton.isSelected = data.data?.isFavorited ?? false
         }
     }
     

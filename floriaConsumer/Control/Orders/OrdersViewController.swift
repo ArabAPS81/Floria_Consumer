@@ -10,6 +10,14 @@ import UIKit
 
 class OrdersViewController: UIViewController {
     
+    
+    // MARK: - Statics
+    static func newInstance() -> OrdersViewController {
+        let storyboard = UIStoryboard.init(name: "Orders", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "OrdersViewControllerStoryboard") as! OrdersViewController
+        return vc
+    }
+    
     // MARK: - Properties
     
     @IBOutlet weak var tvOrders: UITableView!

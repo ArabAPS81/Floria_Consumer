@@ -25,7 +25,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i12-GQ-Ol3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375.5" height="300"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="i12-GQ-Ol3" secondAttribute="height" multiplier="375:300" id="e1r-tc-E6B"/>
@@ -67,31 +67,36 @@
                                                             <outlet property="delegate" destination="NbY-dP-Emq" id="VXK-d2-sYE"/>
                                                         </connections>
                                                     </collectionView>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-Ke-WfQ">
-                                                        <rect key="frame" x="321" y="275" width="44" height="22"/>
-                                                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.066807577054794523" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-Ke-WfQ">
+                                                        <rect key="frame" x="8" y="8" width="44" height="22"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="44" id="Fok-LT-m4R"/>
                                                         </constraints>
-                                                        <state key="normal" image="shareIcon"/>
+                                                        <state key="normal" image="unfavorite"/>
+                                                        <state key="selected" image="favorite">
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setFavoriteButtonTapped:" destination="NbY-dP-Emq" eventType="touchUpInside" id="Z1M-NV-lXB"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="i12-GQ-Ol3" firstAttribute="leading" secondItem="1xX-OF-ELs" secondAttribute="leading" id="4Lb-hk-n9N"/>
-                                                    <constraint firstAttribute="width" secondItem="1xX-OF-ELs" secondAttribute="height" multiplier="83:68" id="51s-8K-3Xw"/>
                                                     <constraint firstAttribute="bottom" secondItem="i12-GQ-Ol3" secondAttribute="bottom" constant="7" id="7gy-zr-UgH"/>
                                                     <constraint firstAttribute="trailing" secondItem="i12-GQ-Ol3" secondAttribute="trailing" id="LL1-Xb-xQc"/>
                                                     <constraint firstItem="i12-GQ-Ol3" firstAttribute="top" secondItem="1xX-OF-ELs" secondAttribute="top" id="QGh-3H-PsG"/>
-                                                    <constraint firstAttribute="bottom" secondItem="rQg-Ke-WfQ" secondAttribute="bottom" constant="10" id="csu-ae-9ml"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rQg-Ke-WfQ" secondAttribute="trailing" constant="10" id="exC-5v-iUn"/>
+                                                    <constraint firstItem="rQg-Ke-WfQ" firstAttribute="leading" secondItem="1xX-OF-ELs" secondAttribute="leading" constant="8" id="dlt-6R-RIp"/>
+                                                    <constraint firstItem="rQg-Ke-WfQ" firstAttribute="top" secondItem="1xX-OF-ELs" secondAttribute="top" constant="8" id="o6P-7W-oIy"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-1f-Pgc">
-                                                <rect key="frame" x="0.0" y="315" width="375" height="83.5"/>
+                                                <rect key="frame" x="0.0" y="315" width="375" height="83"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-mt-dUn">
-                                                        <rect key="frame" x="292" y="0.0" width="75" height="83.5"/>
+                                                        <rect key="frame" x="292" y="0.0" width="75" height="83"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v87-IR-3gS" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
@@ -134,7 +139,7 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-sC-vnC">
-                                                        <rect key="frame" x="10" y="0.0" width="282" height="83.5"/>
+                                                        <rect key="frame" x="10" y="0.0" width="282" height="83"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-xO-Ip9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="282" height="19.5"/>
@@ -147,7 +152,7 @@
                                                                 </connections>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-mJ-bcb">
-                                                                <rect key="frame" x="0.0" y="19.5" width="282" height="64"/>
+                                                                <rect key="frame" x="0.0" y="19.5" width="282" height="63.5"/>
                                                                 <string key="text">I had problems with the bounds of the collectionView passed into sizeForItemAtIndexPath not being correct sgsev erthb wv4y5 gw4y wv4y wg4y wb4y tryj rh yknu yku uk rj et rbnj nuk rnj</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -168,7 +173,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y9-tv-ddy">
-                                                <rect key="frame" x="0.0" y="406.5" width="375" height="70"/>
+                                                <rect key="frame" x="0.0" y="406" width="375" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-5D-Kuq">
                                                         <rect key="frame" x="110.5" y="1" width="44" height="44"/>
@@ -230,7 +235,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-Xq-SWF">
-                                                <rect key="frame" x="0.0" y="476.5" width="375" height="35"/>
+                                                <rect key="frame" x="0.0" y="476" width="375" height="35"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0M-Hq-oAK">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
@@ -288,7 +293,7 @@
                                                 </constraints>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-2l-tiP">
-                                                <rect key="frame" x="0.0" y="511.5" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="511" width="375" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="yMo-aR-ib9"/>
@@ -373,6 +378,7 @@
                         <outlet property="amountLabel" destination="64D-rU-jQp" id="F0k-LJ-D9P"/>
                         <outlet property="descriptionLabel" destination="Pr7-mJ-bcb" id="BpP-Aq-DAB"/>
                         <outlet property="extrasCollectionView" destination="sBJ-2l-tiP" id="Vze-2k-HIr"/>
+                        <outlet property="favoriteButton" destination="rQg-Ke-WfQ" id="p1h-6Z-hV1"/>
                         <outlet property="imageSliderCollectioView" destination="i12-GQ-Ol3" id="rGE-YY-NN2"/>
                         <outlet property="priceLabel" destination="sSF-Fs-6Iy" id="EEE-ih-6xb"/>
                         <outlet property="vendorNameLabel" destination="tMV-xO-Ip9" id="2hr-HC-Rfz"/>
@@ -551,11 +557,12 @@
     </scenes>
     <resources>
         <image name="552736Pk366H319" width="375" height="300"/>
+        <image name="favorite" width="26.5" height="24"/>
         <image name="minusIcon" width="20" height="20"/>
         <image name="plusIcon" width="20" height="20"/>
         <image name="shape954" width="20.5" height="20.5"/>
-        <image name="shareIcon" width="20" height="17.5"/>
         <image name="sortingicon" width="20.5" height="19.5"/>
+        <image name="unfavorite" width="20" height="18.5"/>
     </resources>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -14,6 +14,7 @@ class OrderViewController: UIViewController {
     
     @IBOutlet weak var svStatus: OrderStatusView!
     @IBOutlet weak var tvOrder: UITableView!
+    @IBOutlet weak var rateButton: UIButton!
     
     var order: Order?
     
@@ -25,6 +26,13 @@ class OrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rateButton.isEnabled = (order?.status.id == 5)
+        if order?.status.id == 5 {
+            rateButton.isEnabled = true
+            rateButton.backgroundColor = Constants.pincColor
+            rateButton.setTitleColor(.white, for: .normal)
+        }
         
         title = "#\(order!.id)"
         

@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="93" width="414" height="805"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHy-Pt-YJf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="166.69999999999999" id="xYI-8X-0Qf"/>
+                                            <constraint firstAttribute="width" secondItem="cHy-Pt-YJf" secondAttribute="height" multiplier="207:83" id="QRf-8q-J3u"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Njd-AQ-ktn">
                                             <size key="itemSize" width="417" height="157.5"/>
@@ -62,7 +62,7 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFj-fR-NrJ">
-                                        <rect key="frame" x="0.0" y="166.5" width="414" height="270"/>
+                                        <rect key="frame" x="0.0" y="166" width="414" height="270"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="RiL-Nx-Fws">
                                                 <rect key="frame" x="67" y="35" width="280" height="98.5"/>
@@ -207,7 +207,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-y3-ttP">
-                                        <rect key="frame" x="0.0" y="436.5" width="414" height="35"/>
+                                        <rect key="frame" x="0.0" y="436" width="414" height="35"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-CX-SB6">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="35"/>
@@ -264,7 +264,7 @@
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ztW-CQ-hhc">
-                                        <rect key="frame" x="0.0" y="471.5" width="414" height="190"/>
+                                        <rect key="frame" x="0.0" y="471" width="414" height="190"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="uag-Li-DeB"/>
@@ -282,7 +282,7 @@
                                         </connections>
                                     </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-OK-yDO">
-                                        <rect key="frame" x="0.0" y="661.5" width="414" height="35"/>
+                                        <rect key="frame" x="0.0" y="661" width="414" height="35"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7h0-E8-Gvk">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="35"/>
@@ -339,7 +339,7 @@
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ike-vU-jD5">
-                                        <rect key="frame" x="0.0" y="696.5" width="414" height="190"/>
+                                        <rect key="frame" x="0.0" y="696" width="414" height="190"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="alo-Kd-Kk3"/>
@@ -411,11 +411,10 @@
                             <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mNM-tX-sgy">
-                                    <rect key="frame" x="-22" y="-22" width="44.000000000000007" height="44"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mNM-tX-sgy">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="0.0"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="LLz-oE-Br0"/>
-                                        <constraint firstAttribute="height" constant="44" id="Qne-cB-fZq"/>
                                     </constraints>
                                 </imageView>
                             </subviews>

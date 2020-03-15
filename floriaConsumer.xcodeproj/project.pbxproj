@@ -88,6 +88,8 @@
 		D634760B239D324F008EB755 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D634760A239D324F008EB755 /* LocationManager.swift */; };
 		D635C25323ADF69200A0DC73 /* OrderServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635C25223ADF69200A0DC73 /* OrderServices.swift */; };
 		D635C25523AE001F00A0DC73 /* WebServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635C25423AE001F00A0DC73 /* WebServiceDelegate.swift */; };
+		D638CE8B241E1D5C00829ACF /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638CE8A241E1D5C00829ACF /* RatingViewController.swift */; };
+		D638CE8D241E74B900829ACF /* VendorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638CE8C241E74B900829ACF /* VendorDetailsViewController.swift */; };
 		D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */; };
 		D639A097238D12700098F402 /* VendorSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */; };
 		D64CBF52238EA8A300DEE040 /* HomeProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */; };
@@ -250,6 +252,8 @@
 		D634760A239D324F008EB755 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D635C25223ADF69200A0DC73 /* OrderServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServices.swift; sourceTree = "<group>"; };
 		D635C25423AE001F00A0DC73 /* WebServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDelegate.swift; sourceTree = "<group>"; };
+		D638CE8A241E1D5C00829ACF /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		D638CE8C241E74B900829ACF /* VendorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailsViewController.swift; sourceTree = "<group>"; };
 		D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D639A096238D12700098F402 /* VendorSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSearchTableViewCell.swift; sourceTree = "<group>"; };
 		D64CBF50238EA8A300DEE040 /* HomeProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -543,6 +547,7 @@
 				D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */,
 				1FE934F923BB5F5900AEEA1E /* OrdersViewController.swift */,
 				1FE934FB23BB5FD000AEEA1E /* OrderViewController.swift */,
+				D638CE8A241E1D5C00829ACF /* RatingViewController.swift */,
 				1FE934FD23BB6E7D00AEEA1E /* OrdersServices.swift */,
 				1FE934FF23BCA33A00AEEA1E /* OrderTableViewCell.swift */,
 				D620351D238A99DA00336D0B /* Payment.storyboard */,
@@ -796,6 +801,7 @@
 				9C1D4E3D23AD007D00A7BACF /* ServicesCollectionViewCell.swift */,
 				9C1D4E3B23ABF8C500A7BACF /* ServiceCollectionDataSource.swift */,
 				0472F9A323784449008AD8BC /* providerprofile.swift */,
+				D638CE8C241E74B900829ACF /* VendorDetailsViewController.swift */,
 				9C18CDEA23AD3B9C00F3273F /* VendorDetailsPresenter.swift */,
 				D6E097B623CB420500704020 /* Vendor.storyboard */,
 				D6C1A8012392AA0500379508 /* VendorCells */,
@@ -1109,6 +1115,7 @@
 				04459387237A5CFE007A210E /* buttons.swift in Sources */,
 				0472F9A423784449008AD8BC /* providerprofile.swift in Sources */,
 				54A2B69223BA32420076BA0D /* HomeNav.swift in Sources */,
+				D638CE8D241E74B900829ACF /* VendorDetailsViewController.swift in Sources */,
 				D670270723A4EF1B00CBBD63 /* HomeViewController.swift in Sources */,
 				D697FB8E2393FB6400956652 /* ExtrasCollectionViewCell.swift in Sources */,
 				D696C2B723A0F2F200E3A56A /* HomePresenter.swift in Sources */,
@@ -1135,6 +1142,7 @@
 				D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */,
 				D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */,
 				9C113EC823B78D3200C537D8 /* Constant.swift in Sources */,
+				D638CE8B241E1D5C00829ACF /* RatingViewController.swift in Sources */,
 				1FB0C9A823C21FB500D61A2C /* PotsCareTableViewCell.swift in Sources */,
 				D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */,
 				D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */,

@@ -88,14 +88,33 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        if serviceType == ServiceType.carDecoration {
-            self.navigationController?.pushViewController(CarDecorationReviewController.newInstance(vendor: vendorsList[indexPath.row]), animated: true)
-            orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
+        if vendorsList[indexPath.row].isOnline ?? false {
+            tableView.deselectRow(at: indexPath, animated: false)
+            if serviceType == ServiceType.carDecoration {
+                self.navigationController?.pushViewController(CarDecorationReviewController.newInstance(vendor: vendorsList[indexPath.row]), animated: true)
+                orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
+            }else {
+                orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
+                self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
+            }
         }else {
-            orderRequest.providerId = vendorsList[indexPath.row].id ?? 0
-            self.navigationController?.pushViewController((serviceType?.associatedViewController(vendorsList[indexPath.row].id))!, animated: true)
+            alertWith(vendor: vendorsList[indexPath.row])
         }
+        
+    }
+    
+    func alertWith(vendor: VendorsModel.Vendor) {
+        let alert = UIAlertController.init(title: NSLocalizedString("sorry", comment: ""), message: NSLocalizedString("vendor not available", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("show profile", comment: ""), style: .default, handler: { action in
+            self.showVendorProfile(vendor)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showVendorProfile(_ vendor: VendorsModel.Vendor) {
+        let vc = VendorDetailsViewController.newInstance(vendorId: vendor.id!)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

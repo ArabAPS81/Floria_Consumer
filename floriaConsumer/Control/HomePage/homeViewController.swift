@@ -40,14 +40,9 @@ class HomeViewController: UIViewController {
         setupViews()
         setupSideMenu()
         presenter = HomePresenter.init(view: self)
-        presenter.getNearestVendor()
-        Offers.startLoading()
-        presenter.getFeaturedProducts()
-        Products.startLoading()
-        presenter.getHomeSliderData()
-        SliderHome.startLoading()
         
     }
+    
     
     private func setupSideMenu() {
         SideMenuPresentationStyle.menuSlideIn.backgroundColor = .clear
@@ -69,6 +64,12 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Products.reloadData()
+        presenter.getNearestVendor()
+        Offers.startLoading()
+        presenter.getFeaturedProducts()
+        Products.startLoading()
+        presenter.getHomeSliderData()
+        SliderHome.startLoading()
     }
     
     func registerCells() {

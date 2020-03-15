@@ -45,11 +45,18 @@ class OrderSummaryViewController: UIViewController {
     func showAlert(_ message: String?) {
         let alert = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in
-            self.navigationController?.popToRootViewController(animated: true)
+            self.navToOrdersVC()
         }))
         self.present(alert, animated: true, completion: nil)
         
     }
+    
+    func navToOrdersVC() {
+        let ordersVC = OrdersViewController.newInstance()
+        let home = self.navigationController!.viewControllers.first!
+        self.navigationController?.setViewControllers([home,ordersVC], animated: true)
+    }
+    
     @IBAction func addPromoButtonTapped(_ sender: Any) {
         orderRequest.code = promoTF.text
         

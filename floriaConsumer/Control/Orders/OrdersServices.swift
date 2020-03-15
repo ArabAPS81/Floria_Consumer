@@ -35,6 +35,23 @@ class OrdersServices {
             }
         }
     }
+    
+    func sendRate(orderId: Int , rating: Double , comment: String) {
+        let parameters = [
+            "order_id" : orderId,
+            "rating" : rating,
+            "comment" : comment
+        ] as [String : Any]
+        
+        let url = NetworkConstants.baseUrl + "rating"
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        
+        ApiConnection.request(.post, url: url, parameters: parameters, headers: headers, showProgress: true, model: RateModel.self, completion: { (result) in
+            self.delegate?.didRecieveData(data: result)
+        }) { (error) in
+            self.delegate?.didFailToReceiveDataWithError(error: error)
+        }
+    }
 }
 
 // MARK: - Orders
@@ -219,3 +236,38 @@ struct Meta: Codable {
         case to, total
     }
 }
+
+
+struct RateModel : Codable {
+
+    let data : Rate?
+    let httpCode : Int?
+    let message : String?
+
+
+    enum CodingKeys: String, CodingKey {
+        case data
+        case httpCode = "http_code"
+        case message = "message"
+    }
+    
+    struct Rate : Codable {
+
+        let comment : String?
+        let id : Int?
+        let orderId : String?
+        let rating : String?
+        let userId : Int?
+
+
+        enum CodingKeys: String, CodingKey {
+            case comment = "comment"
+            case id = "id"
+            case orderId = "order_id"
+            case rating = "rating"
+            case userId = "user_id"
+        }
+    }
+
+}
+
