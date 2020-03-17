@@ -36,12 +36,12 @@ class OrdersServices {
         }
     }
     
-    func sendRate(orderId: Int , rating: Double , comment: String) {
-        let parameters = [
-            "order_id" : orderId,
-            "rating" : rating,
-            "comment" : comment
-        ] as [String : Any]
+    func sendRate(orderId: Int, ratingV: Double,ratingP: Double, commentV: String,commentP: String) {
+        let parameters = ["order_id" : orderId,
+                          "product_rating" : ratingP,
+                          "provider_rating" : ratingV,
+                          "product_comment" : commentP,
+                          "provider_comment" : commentV] as [String : Any]
         
         let url = NetworkConstants.baseUrl + "rating"
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()

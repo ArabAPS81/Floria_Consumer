@@ -21,26 +21,52 @@ class RatingViewController: UIViewController {
         return rateVC
     }
     
-    @IBOutlet weak var rateView: CosmosView!
-    @IBOutlet weak var commentTF: UITextField!
-    
-    @IBAction func rateTapped(_ sender: Any) {
-        let comment = commentTF.text?.trimmed ?? ""
-        let service = OrdersServices.init(delegate: self)
-        service.sendRate(orderId: orderId, rating: rate ?? 3.0, comment: comment)
-    }
+    @IBOutlet weak var rateVendorView: CosmosView!
+    @IBOutlet weak var rateProductView: CosmosView!
+    @IBOutlet weak var commentVendorTF: UITextField!
+    @IBOutlet weak var commentProductTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         let screenWidth = self.view.bounds.width
-        rateView.settings.starSize = Double((screenWidth - 120.0) / 5.0)
-        rateView.didFinishTouchingCosmos = {rating in
-            self.rate = rating
+        rateProductView.settings.starSize = Double((screenWidth - 120.0) / 5.0)
+        rateProductView.didFinishTouchingCosmos = {rating in
+            //self.rate = rating
+        }
+        rateVendorView.settings.starSize = Double((screenWidth - 120.0) / 5.0)
+        rateVendorView.didFinishTouchingCosmos = {rating in
+            //self.rate = rating
         }
         title = NSLocalizedString("rating", comment: "")
         
     }
+    
+    @IBAction func rateTapped(_ sender: Any) {
+        if validation() {
+            let commentP = commentProductTF.text?.trimmed ?? ""
+            let commentV = commentVendorTF.text?.trimmed ?? ""
+            let service = OrdersServices.init(delegate: self)
+            service.sendRate(orderId: orderId, ratingV: rateVendorView.rating, ratingP: rateProductView.rating, commentV: commentV, commentP: commentP)
+        }
+    }
+    
+    func validation() -> Bool{
+        if rateProductView.rating <= 2.0 {
+            if commentProductTF.text?.isEmpty ?? true{
+                alertWithMessage(NSLocalizedString("let us know why product", comment: ""))
+                return false
+            }
+        }
+        if rateVendorView.rating <= 2.0 {
+            if commentVendorTF.text?.isEmpty ?? true{
+                alertWithMessage(NSLocalizedString("let us know why vendor", comment: ""))
+                return false
+            }
+        }
+        return true
+    }
+    
 }
 
 extension RatingViewController : WebServiceDelegate{

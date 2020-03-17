@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="ehl-Pv-Iag">
             <objects>
-                <viewController id="Fso-8p-WFu" customClass="HomeViewController" customModule="floriaConsumer" sceneMemberID="viewController">
+                <viewController id="Fso-8p-WFu" customClass="HomeViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jjp-43-Hy7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="947"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderHome" id="cRF-oW-6eX" customClass="SliderHomeCollectionViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderHome" id="cRF-oW-6eX" customClass="SliderHomeCollectionViewCell" customModule="Floria" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="4.5" width="417" height="157.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -403,11 +403,11 @@
                             <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="fU6-7c-D5F">
                                 <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <segue destination="T00-Nk-aK9" kind="show" id="WWm-Me-XuF"/>
+                                    <segue destination="T00-Nk-aK9" kind="show" id="DPU-LX-SH8"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <view key="titleView" contentMode="scaleToFill" id="hkV-Oj-xuX">
+                        <view key="titleView" contentMode="scaleToFill" ambiguous="YES" id="hkV-Oj-xuX">
                             <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -436,7 +436,7 @@
                         <outlet property="Offers" destination="ike-vU-jD5" id="EYa-bV-o6q"/>
                         <outlet property="Products" destination="ztW-CQ-hhc" id="yCr-IP-6Yh"/>
                         <outlet property="SliderHome" destination="cHy-Pt-YJf" id="jXd-IE-sgj"/>
-                        <outlet property="search" destination="fU6-7c-D5F" id="Yys-80-wdE"/>
+                        <outlet property="search" destination="fU6-7c-D5F" id="eFN-U9-V2Z"/>
                         <outlet property="sideMenu" destination="mgZ-43-aVt" id="Aku-rw-jjb"/>
                         <outletCollection property="homeButtonsCollction" destination="Lik-iE-JuO" collectionClass="NSMutableArray" id="fne-E2-WFt"/>
                         <outletCollection property="homeButtonsCollction" destination="dun-Rk-i1S" collectionClass="NSMutableArray" id="Pab-ZO-GFZ"/>
@@ -482,7 +482,7 @@
         <!--Home Nav-->
         <scene sceneID="Ilo-sD-1nf">
             <objects>
-                <navigationController storyboardIdentifier="homeNav" automaticallyAdjustsScrollViewInsets="NO" id="kls-Vw-ydk" customClass="HomeNav" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeNav" automaticallyAdjustsScrollViewInsets="NO" id="kls-Vw-ydk" customClass="HomeNav" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pji-3W-lA9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

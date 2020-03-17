@@ -8,6 +8,7 @@
 import UIKit
 import SideMenu
 import Alamofire
+import FirebaseMessaging
 
 protocol HomeView: class{
     func didReceiveData(data: Codable)
@@ -40,6 +41,9 @@ class HomeViewController: UIViewController {
         setupViews()
         setupSideMenu()
         presenter = HomePresenter.init(view: self)
+        Messaging.messaging().subscribe(toTopic: "general") { error in
+          print("Subscribed to general topic")
+        }
         
     }
     
