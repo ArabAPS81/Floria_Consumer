@@ -112,6 +112,8 @@ class AuthenticationService {
             "email" : email,
             "mobile" : phone,
             "password" : password,
+            "country_code":"002",
+            "code":"EG",
             "check_privacy" : checkPrivecy,
             "device_id" : Defaults().getUniqueID()
         ] as [String : Any]

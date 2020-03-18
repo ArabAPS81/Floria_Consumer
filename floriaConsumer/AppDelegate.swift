@@ -31,15 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         IQKeyboardManager.shared.enable = true
         setUpFirbaseNotification(application: application)
-        fddd()
         
         return true
     }
-    
-    func fddd() {
-      //  UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
-    }
-    
     
     func setUpFirbaseNotification(application: UIApplication) {
         

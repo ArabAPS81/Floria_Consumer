@@ -9,10 +9,26 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
+    
+    
+    static func newInstance() -> EditProfileViewController {
+        let storyboard = UIStoryboard.init(name: "UserProfile", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "EditProfileViewController") as! EditProfileViewController
+        return vc
+    }
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userMailLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
+    
+    func setData() {
+        let user = Defaults().getUser()
+        userMailLabel.text = user.email
+        userNameLabel.text = user.name
+    }
+    
 }
