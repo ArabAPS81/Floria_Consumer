@@ -10,6 +10,18 @@ import UIKit
 
 class AddAddressViewController: UIViewController {
     
+    
+    static func newInstance(fromEdit: Bool, address: AddressModel.Address? = nil) -> AddAddressViewController {
+        let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AddAddressViewController") as! AddAddressViewController
+        vc.fromEdit = fromEdit
+        vc.address = address
+        return vc
+    }
+    
+    var fromEdit: Bool = false
+    var address:AddressModel.Address?
+    
     @IBOutlet weak var addressTitleTF: UITextField!
     @IBOutlet weak var streetNameTF: UITextField!
     @IBOutlet weak var buildingNumTF: UITextField!
@@ -29,6 +41,7 @@ class AddAddressViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setData()
         let service = AddressService.init(delegate: self)
         service.getListOfGovs()
         govPicker.delegate = self
@@ -44,10 +57,15 @@ class AddAddressViewController: UIViewController {
             var address = SubmittAddressQueryModel.init()
             address.streetName = streetNameTF.text
             address.name = addressTitleTF.text
-            address.districtId = 3
+            address.districtId = district?.id
             address.phoneNum = contactPhoneTF.text
             let service = AddressService.init(delegate: self)
-            service.addAddress(address: address)
+            if fromEdit{
+                service.editAddress(address: address, id: (self.address?.id!)!)
+            }else {
+                service.addAddress(address: address)
+            }
+            
         }
     }
     
@@ -55,6 +73,17 @@ class AddAddressViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func setData() {
+        if address != nil {
+            streetNameTF.text = address?.streetName
+            addressTitleTF.text = address?.name
+            self.district = GovernorateModel.Governorate.District()
+            self.district?.id = address?.id
+            self.district?.name = address?.district?.name
+            self.districtButton.text = district?.name
+            contactPhoneTF.text = address?.mobile
+        }
+    }
     
     
     func validation() -> Bool {
@@ -118,6 +147,8 @@ extension AddAddressViewController: UIPickerViewDelegate, UIPickerViewDataSource
         if pickerView == govPicker {
             govenorate = govs[row]
             governorateNameButton.text = govs[row].name
+            district = nil
+            districtButton.text = nil
         }
         else {
             district = govenorate?.districts?[row]

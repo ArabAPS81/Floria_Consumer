@@ -17,18 +17,56 @@ class EditProfileViewController: UIViewController {
         return vc
     }
     
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userMailLabel: UILabel!
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var userMailTF: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setData()
     }
     
     func setData() {
         let user = Defaults().getUser()
-        userMailLabel.text = user.email
-        userNameLabel.text = user.name
+        userMailTF.text = user.email
+        userNameTF.text = user.name
     }
+    
+    @IBAction func addressesButtonTapped(_ sender: UIButton) {
+        let vc = UserAddressListViewController.newInstance()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        if validation() {
+            let service = AuthenticationService.init(delegate: self)
+            service.editProfile(name: userNameTF.text!, email: userMailTF.text!)
+        }
+    }
+    
+    func validation() -> Bool {
+        guard let _ =  userNameTF.text ,!userNameTF.text!.isEmpty else {
+            alertWithMessage(title: NSLocalizedString("not valid user name", comment: ""))
+            return false
+        }
+        if !(userMailTF?.text ?? "").isValid(.email) {
+            alertWithMessage(title: NSLocalizedString("not valid email", comment: ""))
+            return false
+        }
+        return true
+    }
+    
+}
+
+extension EditProfileViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        if let model = data as? ComplainModel {
+            if model.httpCode == 200 || model.httpCode == 201 {
+                let phone = Defaults().getUser().phone
+                Defaults().saveUserData(email: userMailTF.text, name: userNameTF.text, phone: phone)
+                
+            }
+        }
+    }
+    
     
 }

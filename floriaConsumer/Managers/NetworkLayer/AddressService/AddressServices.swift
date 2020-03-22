@@ -103,4 +103,23 @@ class AddressService {
             }
         }
     }
+    
+    func editAddress(address:SubmittAddressQueryModel, id: Int) {
+        guard let baseUrl = (NetworkConstants.baseUrl + "addresses/\(id)").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let jsonData = (try? JSONEncoder().encode(address)) ?? Data()
+        let json = try? JSONSerialization.jsonObject(with: jsonData, options:[]) as? [String:Any]
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        Alamofire.request(baseUrl, method: .put, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: AddAddressResponseModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import FirebaseMessaging
 
 class LoginViewController: UIViewController {
     
@@ -35,7 +36,15 @@ class LoginViewController: UIViewController {
        // failureLable.isHidden = true
         phoneTF.addTarget(self, action: #selector(handlePhoneChange), for: .editingDidEnd)
         hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
+        
+        
+        
+        Messaging.messaging().subscribe(toTopic: "general") { error in
+          print("Subscribed to general topic")
+        }
+        Messaging.messaging().subscribe(toTopic: "consumer") { error in
+          print("Subscribed to consumer topic")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

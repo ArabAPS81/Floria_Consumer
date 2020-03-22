@@ -10,7 +10,7 @@
         <!--Buttons-->
         <scene sceneID="dbX-Gk-afS">
             <objects>
-                <viewController storyboardIdentifier="delivary" id="xId-ot-c3k" customClass="buttons" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="delivary" id="xId-ot-c3k" customClass="buttons" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mKm-9I-7uy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
         <!--Shipping View Controller-->
         <scene sceneID="rwQ-7Y-Yeu">
             <objects>
-                <viewController storyboardIdentifier="ShippingViewController" id="aQv-Ul-deo" customClass="ShippingViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShippingViewController" id="aQv-Ul-deo" customClass="ShippingViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k3o-jy-rlW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISA/MASTER CARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXf-9n-Li3">
-                                                                    <rect key="frame" x="80" y="5" width="170" height="40"/>
+                                                                    <rect key="frame" x="103" y="5" width="150" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -277,9 +277,7 @@
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" id="GMF-pd-dJr"/>
-                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="leading" secondItem="U3t-Q5-xRb" secondAttribute="trailing" id="IYs-gK-2Qh"/>
-                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" id="IgM-Wz-EY3"/>
+                                                                <constraint firstItem="zXf-9n-Li3" firstAttribute="centerX" secondItem="3sc-G2-Pdf" secondAttribute="centerX" constant="13" id="GMF-pd-dJr"/>
                                                                 <constraint firstItem="U3t-Q5-xRb" firstAttribute="leading" secondItem="7Nu-nM-X51" secondAttribute="trailing" id="Jk9-Oy-0TN"/>
                                                                 <constraint firstItem="7Nu-nM-X51" firstAttribute="top" secondItem="3sc-G2-Pdf" secondAttribute="top" constant="5" id="Lkj-Ve-LcD"/>
                                                                 <constraint firstItem="zXf-9n-Li3" firstAttribute="top" secondItem="3sc-G2-Pdf" secondAttribute="top" constant="5" id="QBv-L6-0Cz"/>
@@ -301,7 +299,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" CASH ON DELIVERY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="799-QR-Ry4">
-                                                                    <rect key="frame" x="85" y="5" width="160.5" height="40"/>
+                                                                    <rect key="frame" x="96" y="5" width="160.5" height="40"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -318,7 +316,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="799-QR-Ry4" secondAttribute="bottom" constant="5" id="Bsq-v4-Ngq"/>
                                                                 <constraint firstItem="799-QR-Ry4" firstAttribute="centerY" secondItem="Pc9-zq-rPm" secondAttribute="centerY" id="FRk-se-rx6"/>
                                                                 <constraint firstItem="UnM-7Y-qYl" firstAttribute="leading" secondItem="Pc9-zq-rPm" secondAttribute="leading" constant="5" id="M2o-sz-g7K"/>
-                                                                <constraint firstItem="799-QR-Ry4" firstAttribute="centerX" secondItem="Pc9-zq-rPm" secondAttribute="centerX" id="RQH-ba-jgE"/>
+                                                                <constraint firstItem="799-QR-Ry4" firstAttribute="centerX" secondItem="Pc9-zq-rPm" secondAttribute="centerX" constant="11" id="RQH-ba-jgE"/>
                                                                 <constraint firstItem="799-QR-Ry4" firstAttribute="top" secondItem="Pc9-zq-rPm" secondAttribute="top" constant="5" id="e6s-U5-blG"/>
                                                                 <constraint firstAttribute="bottom" secondItem="UnM-7Y-qYl" secondAttribute="bottom" constant="5" id="yft-1G-JLK"/>
                                                             </constraints>

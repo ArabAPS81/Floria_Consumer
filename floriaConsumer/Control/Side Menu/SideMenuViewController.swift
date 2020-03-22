@@ -42,12 +42,12 @@ class SideMenuViewController: UIViewController {
         for button in sideMenuButtons {
             button.contentHorizontalAlignment = .leading
         }
-        
     }
     
     @IBAction func editProfileTapped(_ sender: Any) {
         if Defaults().isUserLogged {
-            //show user profile
+            let vc = EditProfileViewController.newInstance()
+            self.navigationController?.pushViewController(vc, animated: true)
         }else {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let nav = storyboard.instantiateInitialViewController() as! UINavigationController

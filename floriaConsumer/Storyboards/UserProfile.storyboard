@@ -10,7 +10,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="2xS-fj-RDN">
             <objects>
-                <viewController id="xo3-4i-TXl" customClass="EditProfileViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" id="xo3-4i-TXl" customClass="EditProfileViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8V-Nk-mTh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,10 +28,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ahmed labeeb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-Zp-5FL">
-                                                <rect key="frame" x="0.0" y="20.5" width="335" height="49"/>
+                                                <rect key="frame" x="4" y="20.5" width="331" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="nickname"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDG-QL-w1O">
                                                 <rect key="frame" x="0.0" y="69.5" width="335" height="0.5"/>
@@ -50,7 +50,7 @@
                                             <constraint firstItem="3cS-Zp-5FL" firstAttribute="top" secondItem="KAw-o9-YVV" secondAttribute="bottom" id="O6M-oO-fbA"/>
                                             <constraint firstAttribute="trailing" secondItem="TDG-QL-w1O" secondAttribute="trailing" id="Sew-HK-vTR"/>
                                             <constraint firstAttribute="bottom" secondItem="TDG-QL-w1O" secondAttribute="bottom" id="VHL-ya-vjJ"/>
-                                            <constraint firstItem="3cS-Zp-5FL" firstAttribute="leading" secondItem="OqV-bE-b0j" secondAttribute="leading" id="c7v-jb-XAX"/>
+                                            <constraint firstItem="3cS-Zp-5FL" firstAttribute="leading" secondItem="OqV-bE-b0j" secondAttribute="leading" constant="4" id="c7v-jb-XAX"/>
                                             <constraint firstItem="KAw-o9-YVV" firstAttribute="top" secondItem="OqV-bE-b0j" secondAttribute="top" id="d8O-Dk-gfq"/>
                                             <constraint firstItem="KAw-o9-YVV" firstAttribute="leading" secondItem="OqV-bE-b0j" secondAttribute="leading" id="jQz-3W-ApX"/>
                                             <constraint firstItem="TDG-QL-w1O" firstAttribute="leading" secondItem="OqV-bE-b0j" secondAttribute="leading" id="vjZ-y2-Cbr"/>
@@ -66,10 +66,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="alldddfv@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ER-LF-BjZ">
-                                                <rect key="frame" x="0.0" y="20.5" width="335" height="49"/>
+                                                <rect key="frame" x="4" y="20.5" width="331" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifm-Jv-ljD">
                                                 <rect key="frame" x="0.0" y="69.5" width="335" height="0.5"/>
@@ -83,7 +83,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0ER-LF-BjZ" secondAttribute="trailing" id="5Ul-HE-4ro"/>
                                             <constraint firstItem="Z2q-44-zkK" firstAttribute="leading" secondItem="KNa-3C-yNb" secondAttribute="leading" id="C5Q-E6-6SI"/>
-                                            <constraint firstItem="0ER-LF-BjZ" firstAttribute="leading" secondItem="KNa-3C-yNb" secondAttribute="leading" id="KBA-EE-nVw"/>
+                                            <constraint firstItem="0ER-LF-BjZ" firstAttribute="leading" secondItem="KNa-3C-yNb" secondAttribute="leading" constant="4" id="KBA-EE-nVw"/>
                                             <constraint firstAttribute="trailing" secondItem="Ifm-Jv-ljD" secondAttribute="trailing" id="UMJ-WT-HRu"/>
                                             <constraint firstAttribute="bottom" secondItem="Ifm-Jv-ljD" secondAttribute="bottom" id="Wfh-E7-thr"/>
                                             <constraint firstItem="Ifm-Jv-ljD" firstAttribute="leading" secondItem="KNa-3C-yNb" secondAttribute="leading" id="Z3F-m5-PKa"/>
@@ -102,6 +102,9 @@
                                                 <state key="normal" title="Delivery Addresses">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addressesButtonTapped:" destination="xo3-4i-TXl" eventType="touchUpInside" id="Li4-J2-kDn"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-5Y-ePu">
                                                 <rect key="frame" x="0.0" y="69.5" width="335" height="0.5"/>
@@ -148,6 +151,9 @@
                                         <integer key="value" value="23"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="xo3-4i-TXl" eventType="touchUpInside" id="y8h-zL-knp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -161,6 +167,10 @@
                         <viewLayoutGuide key="safeArea" id="ZgO-fv-Wij"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="userMailTF" destination="0ER-LF-BjZ" id="PZX-94-w13"/>
+                        <outlet property="userNameTF" destination="3cS-Zp-5FL" id="rTC-QX-gRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtH-gm-CYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

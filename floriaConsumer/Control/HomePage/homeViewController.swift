@@ -44,6 +44,9 @@ class HomeViewController: UIViewController {
         Messaging.messaging().subscribe(toTopic: "general") { error in
           print("Subscribed to general topic")
         }
+        Messaging.messaging().subscribe(toTopic: "consumer") { error in
+          print("Subscribed to consumer topic")
+        }
         
     }
     

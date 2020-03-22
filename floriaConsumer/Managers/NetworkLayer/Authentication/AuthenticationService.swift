@@ -203,4 +203,18 @@ class AuthenticationService {
             }
         }
     }
+    
+    func editProfile(name: String, email: String) {
+        let url = NetworkConstants.baseUrl + "profile"
+        let params: [String:String] = ["name": name,
+                                       "email":email]
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        ApiConnection.request(.put, url: url, parameters: params, headers: headers, showProgress: true, model: ComplainModel.self, completion: { (result) in
+            self.delegate?.didRecieveData(data: result)
+        }) { (error) in
+            self.delegate?.didFailToReceiveDataWithError(error: error)
+        }
+    }
+    
 }
+

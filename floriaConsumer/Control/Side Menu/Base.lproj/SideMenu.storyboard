@@ -10,7 +10,7 @@
         <!--Support View Controller-->
         <scene sceneID="cbz-YV-ypb">
             <objects>
-                <viewController id="mZf-Yc-wbn" customClass="SupportViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mZf-Yc-wbn" customClass="SupportViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bD-Ju-Jxx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--Side Menu View Controller-->
         <scene sceneID="j3v-Tf-QAA">
             <objects>
-                <viewController storyboardIdentifier="sideMen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ftf-hq-tk8" customClass="SideMenuViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ftf-hq-tk8" customClass="SideMenuViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQ3-7a-8w3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,7 +433,7 @@
         <!--Favorites View Controller-->
         <scene sceneID="ilo-wT-qgc">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="JRI-sx-vaG" customClass="FavoritesViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JRI-sx-vaG" customClass="FavoritesViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pIW-8O-e6G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +464,7 @@
         <!--Settings View Controller-->
         <scene sceneID="5ym-ic-xZH">
             <objects>
-                <tableViewController id="a4M-PC-O9r" customClass="SettingsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="a4M-PC-O9r" customClass="SettingsViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ATk-bx-G4W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

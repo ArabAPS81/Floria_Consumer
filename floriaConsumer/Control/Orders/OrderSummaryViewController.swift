@@ -24,6 +24,7 @@ class OrderSummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = NSLocalizedString("summary", comment: "")
         setUpViews()
     }
     func setUpViews() {

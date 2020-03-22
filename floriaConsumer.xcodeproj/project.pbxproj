@@ -118,6 +118,13 @@
 		D6B0997523ABA75600EA7427 /* ProductPackingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */; };
 		D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */; };
 		D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */; };
+		D6BD385824275212008359D2 /* Countries.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6BD384E24275212008359D2 /* Countries.bundle */; };
+		D6BD385924275212008359D2 /* LocaleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385024275212008359D2 /* LocaleStore.swift */; };
+		D6BD385A24275212008359D2 /* LocaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385224275212008359D2 /* LocaleInfo.swift */; };
+		D6BD385B24275212008359D2 /* LocalePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385324275212008359D2 /* LocalePickerViewController.swift */; };
+		D6BD385C24275212008359D2 /* PhoneCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385524275212008359D2 /* PhoneCodeCell.swift */; };
+		D6BD385D24275212008359D2 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385624275212008359D2 /* CurrencyCell.swift */; };
+		D6BD385E24275212008359D2 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385724275212008359D2 /* CountryCell.swift */; };
 		D6C14ABB2416489200460EBD /* FavoriteServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14ABA2416489200460EBD /* FavoriteServices.swift */; };
 		D6C14AC324177F6F00460EBD /* floriaConsumerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14AC224177F6F00460EBD /* floriaConsumerTests.swift */; };
 		D6C14ACB2417811600460EBD /* TestFavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14ACA2417811600460EBD /* TestFavoriteService.swift */; };
@@ -157,6 +164,7 @@
 		D6E207C723A2DDE0004C5E87 /* ProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */; };
 		D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC55F623954ADC00C31DB3 /* PakingViewController.swift */; };
 		D6EC55F923955BED00C31DB3 /* CustomBouquetReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC55F823955BED00C31DB3 /* CustomBouquetReviewController.swift */; };
+		D6F27A362422368300B30978 /* UserAddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F27A352422368300B30978 /* UserAddressListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +294,13 @@
 		D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPackingModel.swift; sourceTree = "<group>"; };
 		D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagerController.swift; sourceTree = "<group>"; };
 		D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		D6BD384E24275212008359D2 /* Countries.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Countries.bundle; sourceTree = "<group>"; };
+		D6BD385024275212008359D2 /* LocaleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleStore.swift; sourceTree = "<group>"; };
+		D6BD385224275212008359D2 /* LocaleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleInfo.swift; sourceTree = "<group>"; };
+		D6BD385324275212008359D2 /* LocalePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalePickerViewController.swift; sourceTree = "<group>"; };
+		D6BD385524275212008359D2 /* PhoneCodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeCell.swift; sourceTree = "<group>"; };
+		D6BD385624275212008359D2 /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		D6BD385724275212008359D2 /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		D6C14ABA2416489200460EBD /* FavoriteServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServices.swift; sourceTree = "<group>"; };
 		D6C14AC024177F6F00460EBD /* floriaConsumerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = floriaConsumerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C14AC224177F6F00460EBD /* floriaConsumerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floriaConsumerTests.swift; sourceTree = "<group>"; };
@@ -352,6 +367,7 @@
 		D6E207C623A2DDE0004C5E87 /* ProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListPresenter.swift; sourceTree = "<group>"; };
 		D6EC55F623954ADC00C31DB3 /* PakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PakingViewController.swift; sourceTree = "<group>"; };
 		D6EC55F823955BED00C31DB3 /* CustomBouquetReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetReviewController.swift; sourceTree = "<group>"; };
+		D6F27A352422368300B30978 /* UserAddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddressListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +412,7 @@
 		0406516D23530CB30039566C /* floriaConsumer */ = {
 			isa = PBXGroup;
 			children = (
+				D6BD384C242751C2008359D2 /* ExternalSources */,
 				D696C2B323A0EC4600E3A56A /* Models */,
 				D6C8A0EC239FE46E0041F720 /* floriaConsumer.entitlements */,
 				D63475FA239D209F008EB755 /* Managers */,
@@ -717,6 +734,7 @@
 				D6E0978923CB414000704020 /* Address.storyboard */,
 				04BF5772237B9EEC00A8878A /* AddressesListViewController.swift */,
 				049958CC237CC49200FDF817 /* AddAddressViewController.swift */,
+				D6F27A352422368300B30978 /* UserAddressListViewController.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -798,6 +816,52 @@
 				D69F7F2C241F73C1002E677E /* GeneralServices.swift */,
 			);
 			path = GeneralServices;
+			sourceTree = "<group>";
+		};
+		D6BD384C242751C2008359D2 /* ExternalSources */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD384D24275212008359D2 /* Locale */,
+			);
+			path = ExternalSources;
+			sourceTree = "<group>";
+		};
+		D6BD384D24275212008359D2 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD384E24275212008359D2 /* Countries.bundle */,
+				D6BD384F24275212008359D2 /* Managers */,
+				D6BD385124275212008359D2 /* Models */,
+				D6BD385324275212008359D2 /* LocalePickerViewController.swift */,
+				D6BD385424275212008359D2 /* Views */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		D6BD384F24275212008359D2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD385024275212008359D2 /* LocaleStore.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D6BD385124275212008359D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD385224275212008359D2 /* LocaleInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6BD385424275212008359D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6BD385524275212008359D2 /* PhoneCodeCell.swift */,
+				D6BD385624275212008359D2 /* CurrencyCell.swift */,
+				D6BD385724275212008359D2 /* CountryCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D6C14AC124177F6F00460EBD /* floriaConsumerTests */ = {
@@ -982,6 +1046,7 @@
 				D6E0978223CB40E200704020 /* SideMenu.storyboard in Resources */,
 				D6E097CD23CB441300704020 /* HomeVendorCollectionViewCell.xib in Resources */,
 				D6E0978723CB414000704020 /* Address.storyboard in Resources */,
+				D6BD385824275212008359D2 /* Countries.bundle in Resources */,
 				D61E866423952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib in Resources */,
 				D6E097DC23CB444A00704020 /* ExtrasCollectionViewCell.xib in Resources */,
 				D6E097B923CB421400704020 /* CustomBouquet.storyboard in Resources */,
@@ -1080,6 +1145,7 @@
 				D6C1A7FF2392A99300379508 /* VendorsListViewController.swift in Sources */,
 				0480B27423A478100079253B /* NewPassViewController.swift in Sources */,
 				042E2318235A699300FD4CD1 /* ProductDetailsViewController.swift in Sources */,
+				D6BD385B24275212008359D2 /* LocalePickerViewController.swift in Sources */,
 				D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */,
 				D635C25323ADF69200A0DC73 /* OrderServices.swift in Sources */,
 				9C9B039623B8C1AE00AD6EE4 /* UserDefults.swift in Sources */,
@@ -1090,6 +1156,7 @@
 				043C1852237F80690003A633 /* ProductListViewController.swift in Sources */,
 				D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */,
 				D69F7F2A241F70C8002E677E /* SupportViewController.swift in Sources */,
+				D6BD385A24275212008359D2 /* LocaleInfo.swift in Sources */,
 				045B4A5A2381845400CCC257 /* SlidesGetStartedCollectionViewCell.swift in Sources */,
 				9C18CDEB23AD3B9C00F3273F /* VendorDetailsPresenter.swift in Sources */,
 				D6D2B69A23D476EB00817EB0 /* SettingsViewController.swift in Sources */,
@@ -1143,8 +1210,10 @@
 				D61E865C23950B4900CC0287 /* locationcell.swift in Sources */,
 				D6CFA56D23A8E4520008CACB /* AddressServices.swift in Sources */,
 				1FE934FC23BB5FD000AEEA1E /* OrderViewController.swift in Sources */,
+				D6BD385D24275212008359D2 /* CurrencyCell.swift in Sources */,
 				D67B30F5238BC34C0080252B /* ProducSearchTableViewCell.swift in Sources */,
 				D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */,
+				D6F27A362422368300B30978 /* UserAddressListViewController.swift in Sources */,
 				9C113ECA23B78F9E00C537D8 /* StringExtension.swift in Sources */,
 				0415146A2357EB4200797A33 /* SideMenuViewController.swift in Sources */,
 				1FB0C99723C2063C00D61A2C /* CarDecorationTableViewCell.swift in Sources */,
@@ -1167,13 +1236,16 @@
 				D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */,
 				D6C8A0EB239FA70F0041F720 /* BusinessTypes.swift in Sources */,
 				D6CE0DDD2417B7B0005EB259 /* FavoritesViewController.swift in Sources */,
+				D6BD385E24275212008359D2 /* CountryCell.swift in Sources */,
 				D6EC55F723954ADC00C31DB3 /* PakingViewController.swift in Sources */,
 				045B4A572381845400CCC257 /* OffersCollectionViewCell.swift in Sources */,
 				1FCA252623C633BC0044CD9E /* OrderStatusView.swift in Sources */,
 				D6347604239D22D2008EB755 /* WebserviceHelper.swift in Sources */,
+				D6BD385C24275212008359D2 /* PhoneCodeCell.swift in Sources */,
 				D60B9155239671EC002669B0 /* Constants.swift in Sources */,
 				9C113EC423B78A4200C537D8 /* RegisterationViewController.swift in Sources */,
 				D635C25523AE001F00A0DC73 /* WebServiceDelegate.swift in Sources */,
+				D6BD385924275212008359D2 /* LocaleStore.swift in Sources */,
 				D68D740123BCC58C000E64E1 /* LoginViewController.swift in Sources */,
 				0480B27623A4790A0079253B /* ForgetPassViewController.swift in Sources */,
 				9C1D4E3C23ABF8C500A7BACF /* ServiceCollectionDataSource.swift in Sources */,
@@ -1552,14 +1624,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = 32644F4K6R;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arabaps.floriaConsumer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1573,14 +1645,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
-				DEVELOPMENT_TEAM = 32644F4K6R;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = arabaps.floriaConsumer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
