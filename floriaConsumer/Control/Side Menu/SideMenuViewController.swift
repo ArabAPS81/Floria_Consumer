@@ -19,6 +19,7 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var logout: UIButton!
     @IBOutlet weak var userView: UIView!
     @IBOutlet weak var userPhoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = Defaults().getUser()
@@ -61,6 +62,11 @@ class SideMenuViewController: UIViewController {
     }
     
     
+    @IBAction func termsTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+        let termsVC = storyboard.instantiateViewController(withIdentifier: "termsVC") as! TermsViewController
+        self.navigationController?.pushViewController(termsVC, animated: true)
+    }
     
     
     
