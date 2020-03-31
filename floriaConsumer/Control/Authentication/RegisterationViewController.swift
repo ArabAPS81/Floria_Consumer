@@ -29,6 +29,9 @@ class RegisterationViewController: UIViewController {
     @IBOutlet weak var showConfirmPassBtn: UIButton!
     @IBOutlet weak var termsBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var countryFlagImage: UIImageView!
+    var phoneCode:String = "+2"
+    var code: String = "EG"
     
     
     @IBAction func showPassTapped(_ sender: Any) {
@@ -73,8 +76,19 @@ class RegisterationViewController: UIViewController {
         self.navigationController?.pushViewController(termsVC, animated: true)
     }
     
+    @IBAction func phoneCodeTapped(_ sender: UIButton) {
+        let alert = UIAlertController(style: .actionSheet, title: "Phone Codes")
+        alert.addLocalePicker(type: .phoneCode) { info in
+            self.countryFlagImage.image = info?.flag
+            sender.setTitle(info?.phoneCode, for: .normal)
+        }
+        alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
+        alert.show()
+    }
+    
     @IBAction func registerTapped(_ sender: Any) {
         if validation() {
+            
             guard let name = nameTF.text?.trimmed , !name.isEmpty else {return}
             guard let email = emailTF.text?.trimmed , !email.isEmpty else {return}
             guard let mobile = mobileTF.text?.trimmed , !mobile.isEmpty else {return}
@@ -86,7 +100,7 @@ class RegisterationViewController: UIViewController {
             }
             
             let service = AuthenticationService.init(delegate: self)
-            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms)
+            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms, countryCode: phoneCode, code: code)
         }
         
     }
@@ -104,7 +118,7 @@ class RegisterationViewController: UIViewController {
             alertWithMessage(title: "Password must be 8 or more charachters")
             return false
         }
-        if !(mobileTF.text?.isValid(.phone) ?? false) {
+        if !(mobileTF.text?.isValid(.phone) ?? false) || phoneCode == nil {
             alertWithMessage(title: "Phone number is not valid")
             return false
         }

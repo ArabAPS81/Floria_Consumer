@@ -10,7 +10,7 @@
         <!--Sign in-->
         <scene sceneID="PmL-5j-Gg8">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="cEa-uG-Dcx" customClass="LoginViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="cEa-uG-Dcx" customClass="LoginViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BEO-MB-CPK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                                 <rect key="frame" x="37.5" y="260.5" width="300" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrX-TT-q9J">
-                                        <rect key="frame" x="60" y="0.0" width="240" height="50"/>
+                                        <rect key="frame" x="75" y="0.0" width="225" height="50"/>
                                         <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -80,9 +80,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-0e-peC">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
-                                        <color key="tintColor" red="0.1960784314" green="0.70980392160000005" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v1-b4-jsj">
+                                        <rect key="frame" x="30" y="0.0" width="45" height="49"/>
+                                        <state key="normal" title="+2"/>
+                                        <connections>
+                                            <action selector="phoneCodeTapped:" destination="cEa-uG-Dcx" eventType="touchUpInside" id="uxe-MJ-REU"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Egypt.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-0e-peC">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-c5-idT">
                                         <rect key="frame" x="0.0" y="49" width="300" height="1"/>
@@ -95,18 +101,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="CrX-TT-q9J" secondAttribute="bottom" id="0et-HR-2GR"/>
-                                    <constraint firstItem="M4c-0e-peC" firstAttribute="width" secondItem="98i-q9-sLC" secondAttribute="width" multiplier="1/5" id="CJI-WG-mRz"/>
+                                    <constraint firstItem="M4c-0e-peC" firstAttribute="width" secondItem="98i-q9-sLC" secondAttribute="width" multiplier="0.1" id="CJI-WG-mRz"/>
+                                    <constraint firstItem="Y47-c5-idT" firstAttribute="top" secondItem="5v1-b4-jsj" secondAttribute="bottom" id="D6B-De-98N"/>
                                     <constraint firstAttribute="trailing" secondItem="Y47-c5-idT" secondAttribute="trailing" id="GfH-DX-g39"/>
                                     <constraint firstAttribute="bottom" secondItem="M4c-0e-peC" secondAttribute="bottom" id="OC9-Kg-NzQ"/>
-                                    <constraint firstItem="CrX-TT-q9J" firstAttribute="width" secondItem="98i-q9-sLC" secondAttribute="width" multiplier="4/5" id="WPR-iT-hhe"/>
+                                    <constraint firstItem="CrX-TT-q9J" firstAttribute="width" secondItem="98i-q9-sLC" secondAttribute="width" multiplier="0.75" id="WPR-iT-hhe"/>
                                     <constraint firstAttribute="height" constant="50" id="dfE-wm-vSR"/>
+                                    <constraint firstItem="CrX-TT-q9J" firstAttribute="leading" secondItem="5v1-b4-jsj" secondAttribute="trailing" id="dqt-o1-YAB"/>
                                     <constraint firstAttribute="bottom" secondItem="Y47-c5-idT" secondAttribute="bottom" id="evr-9d-K5a"/>
                                     <constraint firstItem="Y47-c5-idT" firstAttribute="leading" secondItem="98i-q9-sLC" secondAttribute="leading" id="gJP-8n-Adi"/>
                                     <constraint firstItem="M4c-0e-peC" firstAttribute="top" secondItem="98i-q9-sLC" secondAttribute="top" id="hFf-vR-S1Z"/>
                                     <constraint firstItem="CrX-TT-q9J" firstAttribute="top" secondItem="98i-q9-sLC" secondAttribute="top" id="iS2-ax-OE0"/>
                                     <constraint firstItem="CrX-TT-q9J" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M4c-0e-peC" secondAttribute="trailing" id="kJo-eN-TgV"/>
+                                    <constraint firstItem="5v1-b4-jsj" firstAttribute="top" secondItem="98i-q9-sLC" secondAttribute="top" id="omo-Mi-ZJh"/>
                                     <constraint firstItem="M4c-0e-peC" firstAttribute="leading" secondItem="98i-q9-sLC" secondAttribute="leading" id="pur-f8-1D9"/>
                                     <constraint firstItem="CrX-TT-q9J" firstAttribute="centerY" secondItem="98i-q9-sLC" secondAttribute="centerY" id="qU6-GN-qFr"/>
+                                    <constraint firstItem="5v1-b4-jsj" firstAttribute="leading" secondItem="M4c-0e-peC" secondAttribute="trailing" id="vHB-t4-ENN"/>
                                     <constraint firstAttribute="trailing" secondItem="CrX-TT-q9J" secondAttribute="trailing" id="vqZ-RU-dQu"/>
                                 </constraints>
                             </view>
@@ -220,6 +230,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="countryFlagImage" destination="M4c-0e-peC" id="NzP-1y-5VF"/>
                         <outlet property="failureLable" destination="yM2-Ut-bTU" id="png-lT-uKX"/>
                         <outlet property="loginBtn" destination="BfR-Nz-shL" id="cm4-bk-2zO"/>
                         <outlet property="passTF" destination="LZw-mH-dP0" id="uMf-ov-nGz"/>
@@ -265,7 +276,7 @@
         <!--Forget password-->
         <scene sceneID="ehv-GZ-TC6">
             <objects>
-                <viewController id="0wb-35-2Z8" customClass="ForgetPassViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0wb-35-2Z8" customClass="ForgetPassViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ssj-4c-Jnw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,10 +292,10 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="tEp-4R-DKy"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2be-ea-BWu">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2be-ea-BWu">
                                 <rect key="frame" x="48.5" y="326" width="278" height="20"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-j7-62D">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Egypt.png" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-j7-62D">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -292,11 +303,20 @@
                                             <constraint firstAttribute="height" constant="20" id="iJR-cQ-TYK"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTs-fb-2zG">
+                                        <rect key="frame" x="20" y="0.0" width="50" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="0rx-eo-UBR"/>
+                                        </constraints>
+                                        <state key="normal" title="+966"/>
+                                        <connections>
+                                            <action selector="phoneCodeTapped:" destination="0wb-35-2Z8" eventType="touchUpInside" id="XiG-Gh-HvK"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-Re-gJK">
-                                        <rect key="frame" x="35" y="0.0" width="243" height="20"/>
+                                        <rect key="frame" x="70" y="0.0" width="208" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="6qE-s7-AKT"/>
-                                            <constraint firstAttribute="width" constant="243" id="zvj-f3-hqY"/>
                                         </constraints>
                                         <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -325,6 +345,7 @@
                             <constraint firstItem="Iad-jW-NOV" firstAttribute="centerX" secondItem="Bim-z5-73q" secondAttribute="centerX" id="58R-WO-in7"/>
                             <constraint firstItem="aVU-5b-MGu" firstAttribute="centerX" secondItem="Bim-z5-73q" secondAttribute="centerX" id="CTu-6A-Zif"/>
                             <constraint firstItem="gwS-az-q8r" firstAttribute="width" secondItem="ssj-4c-Jnw" secondAttribute="width" multiplier="0.7" id="Ced-Yt-3JO"/>
+                            <constraint firstItem="2be-ea-BWu" firstAttribute="width" secondItem="ssj-4c-Jnw" secondAttribute="width" multiplier="0.741333" id="IZC-4g-wva"/>
                             <constraint firstItem="aVU-5b-MGu" firstAttribute="centerY" secondItem="Bim-z5-73q" secondAttribute="centerY" id="Kwf-sk-HJ8"/>
                             <constraint firstItem="2be-ea-BWu" firstAttribute="top" secondItem="Iad-jW-NOV" secondAttribute="bottom" constant="68" id="N1H-Wr-zcY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aVU-5b-MGu" secondAttribute="trailing" constant="15" id="Pn7-hs-4BI"/>
@@ -337,6 +358,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Forget password" id="2eO-bK-naF"/>
                     <connections>
+                        <outlet property="countryFlagImage" destination="UlJ-j7-62D" id="x9U-ck-djt"/>
                         <outlet property="mobileTF" destination="H8A-Re-gJK" id="9FG-Y9-xDV"/>
                         <outlet property="sendCodeBtn" destination="gwS-az-q8r" id="ue8-Ew-PI3"/>
                     </connections>
@@ -348,7 +370,7 @@
         <!--Verification code-->
         <scene sceneID="ctV-xr-Z75">
             <objects>
-                <viewController storyboardIdentifier="confirmCodeVC" id="gd2-S1-q83" customClass="ConfirmationCodeViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confirmCodeVC" id="gd2-S1-q83" customClass="ConfirmationCodeViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRr-Q3-dtO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +489,7 @@
         <!--reset password-->
         <scene sceneID="Xao-6e-9wD">
             <objects>
-                <viewController storyboardIdentifier="newPassVC" id="net-6V-mIH" customClass="NewPassViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newPassVC" id="net-6V-mIH" customClass="NewPassViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0n-9m-zIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -638,7 +660,7 @@
         <!--Registeration View Controller-->
         <scene sceneID="vi6-EB-oyv">
             <objects>
-                <viewController storyboardIdentifier="registrationVC" id="hfz-2z-MSe" customClass="RegisterationViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationVC" id="hfz-2z-MSe" customClass="RegisterationViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7UB-FZ-7Ge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,8 +855,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FtT-9o-mOb">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Egypt.png" translatesAutoresizingMaskIntoConstraints="NO" id="FtT-9o-mOb">
+                                                <rect key="frame" x="0.0" y="0.0" width="21" height="50"/>
                                                 <color key="tintColor" red="0.1960784314" green="0.70980392160000005" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6j-ys-5ld">
@@ -844,11 +866,19 @@
                                                     <constraint firstAttribute="height" constant="1" id="PK4-Tf-AOr"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4U-K7-V99">
+                                                <rect key="frame" x="21" y="0.0" width="39" height="49"/>
+                                                <state key="normal" title="+966"/>
+                                                <connections>
+                                                    <action selector="phoneCodeTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="KUp-8b-9Od"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="FtT-9o-mOb" firstAttribute="width" secondItem="Mvo-ZA-X5s" secondAttribute="width" multiplier="1/5" id="0dw-aw-alt"/>
+                                            <constraint firstItem="FtT-9o-mOb" firstAttribute="width" secondItem="Mvo-ZA-X5s" secondAttribute="width" multiplier="0.07" id="0dw-aw-alt"/>
                                             <constraint firstItem="AXl-a2-e50" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FtT-9o-mOb" secondAttribute="trailing" id="22Z-uC-STS"/>
+                                            <constraint firstItem="A4U-K7-V99" firstAttribute="leading" secondItem="FtT-9o-mOb" secondAttribute="trailing" id="5Tc-Cl-Gfw"/>
                                             <constraint firstAttribute="height" constant="50" id="7fL-ea-Ji3"/>
                                             <constraint firstItem="AXl-a2-e50" firstAttribute="top" secondItem="Mvo-ZA-X5s" secondAttribute="top" id="CCz-ki-r7v"/>
                                             <constraint firstAttribute="bottom" secondItem="AXl-a2-e50" secondAttribute="bottom" id="Caw-bg-oyd"/>
@@ -856,10 +886,13 @@
                                             <constraint firstItem="AXl-a2-e50" firstAttribute="centerY" secondItem="Mvo-ZA-X5s" secondAttribute="centerY" id="GPx-aq-akw"/>
                                             <constraint firstItem="AXl-a2-e50" firstAttribute="width" secondItem="Mvo-ZA-X5s" secondAttribute="width" multiplier="4/5" id="J91-fe-Hfm"/>
                                             <constraint firstItem="FtT-9o-mOb" firstAttribute="top" secondItem="Mvo-ZA-X5s" secondAttribute="top" id="NOc-aA-jzF"/>
+                                            <constraint firstItem="AXl-a2-e50" firstAttribute="leading" secondItem="A4U-K7-V99" secondAttribute="trailing" id="QdS-Lz-KpE"/>
                                             <constraint firstAttribute="trailing" secondItem="V6j-ys-5ld" secondAttribute="trailing" id="TDe-Ke-6ZN"/>
                                             <constraint firstItem="FtT-9o-mOb" firstAttribute="leading" secondItem="Mvo-ZA-X5s" secondAttribute="leading" id="Vdq-b7-TNO"/>
+                                            <constraint firstItem="V6j-ys-5ld" firstAttribute="top" secondItem="A4U-K7-V99" secondAttribute="bottom" id="Xfw-RS-63t"/>
                                             <constraint firstAttribute="trailing" secondItem="AXl-a2-e50" secondAttribute="trailing" id="YAx-a7-0P3"/>
                                             <constraint firstItem="V6j-ys-5ld" firstAttribute="leading" secondItem="Mvo-ZA-X5s" secondAttribute="leading" id="ljl-YL-N6c"/>
+                                            <constraint firstItem="A4U-K7-V99" firstAttribute="top" secondItem="Mvo-ZA-X5s" secondAttribute="top" id="vJ0-z0-BC8"/>
                                             <constraint firstAttribute="bottom" secondItem="FtT-9o-mOb" secondAttribute="bottom" id="y2G-I9-JiT"/>
                                         </constraints>
                                     </view>
@@ -1025,6 +1058,7 @@
                     <connections>
                         <outlet property="confirmPassContainer" destination="74i-PP-Fhp" id="gOW-9B-JGx"/>
                         <outlet property="confirmPassTF" destination="qoq-jC-cq5" id="bfP-UG-xyY"/>
+                        <outlet property="countryFlagImage" destination="FtT-9o-mOb" id="eSc-Gg-1kj"/>
                         <outlet property="emailContainerView" destination="wCf-x2-HO1" id="aIl-zF-6Jd"/>
                         <outlet property="emailErrorLable" destination="xms-h3-zi5" id="UAF-lk-aTq"/>
                         <outlet property="emailTF" destination="4A9-5s-pYD" id="MFT-Yi-fgW"/>
@@ -1044,12 +1078,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epi-Zg-aCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12129" y="-3339"/>
+            <point key="canvasLocation" x="-12130.4" y="-3339.5802098950526"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="zJG-bY-K14">
             <objects>
-                <viewController storyboardIdentifier="termsVC" id="CrJ-r2-eND" customClass="TermsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="termsVC" id="CrJ-r2-eND" customClass="TermsViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qR2-qM-QXv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1114,6 +1148,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
         </scene>
     </scenes>
     <resources>
+        <image name="Egypt.png" width="70" height="47"/>
         <image name="ShowPass" width="23" height="18.5"/>
         <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="envelope.open" catalog="system" width="64" height="60"/>
@@ -1122,7 +1157,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
         <image name="layer1" width="18.5" height="18"/>
         <image name="passIcon" width="12.5" height="20"/>
         <image name="person" catalog="system" width="64" height="58"/>
-        <image name="phoneIcon" width="20" height="20.5"/>
     </resources>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

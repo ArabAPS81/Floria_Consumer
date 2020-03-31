@@ -39,9 +39,9 @@ class AuthenticationService {
         }
     }
     
-    func forgetPass(phone : String) {
+    func forgetPass(phone : String,countryCode: String) {
         let url = NetworkConstants.baseUrl + "forget-password"
-        let parameters = ["mobile" : phone]
+        let parameters = ["mobile": phone,"country_code": countryCode]
         
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
@@ -105,18 +105,19 @@ class AuthenticationService {
     
     
     
-    func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int) {
+    func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int,countryCode: String,code:String) {
         let url = NetworkConstants.baseUrl + "register"
         let parameters = [
             "name" : name,
             "email" : email,
             "mobile" : phone,
             "password" : password,
-            "country_code":"002",
-            "code":"EG",
+            "country_code":countryCode,
+            "code":code,
             "check_privacy" : checkPrivecy,
-            "device_id" : Defaults().getUniqueID()
-        ] as [String : Any]
+            "device_id" : Defaults().getUniqueID(),
+            
+            ] as [String : Any]
         HUD.show(.progress)
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
@@ -180,11 +181,12 @@ class AuthenticationService {
         }
     }
     
-    func loginWith(phoneNumber: String, password: String) {
+    func loginWith(phoneNumber: String, password: String,countryCode:String) {
         let url = NetworkConstants.baseUrl + "login"
         
         let params: [String:String] = ["mobile": phoneNumber,
-                                       "password":password]
+                                       "password":password,
+                                       "country_code": "+2"]
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         HUD.show(.progress)
         Alamofire.request(url, method: .post, parameters: params, headers: headers).responseJSON{ (response) in

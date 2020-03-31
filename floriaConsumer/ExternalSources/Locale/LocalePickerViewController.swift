@@ -63,8 +63,8 @@ final class LocalePickerViewController: UIViewController {
         /// true if search bar in tableView header
         $0.hidesNavigationBarDuringPresentation = true
         $0.searchBar.searchBarStyle = .minimal
-        $0.searchBar.textField?.textColor = .black
-        $0.searchBar.textField?.clearButtonMode = .whileEditing
+        $0.searchBar.searchTextField.textColor = .black
+        $0.searchBar.searchTextField.clearButtonMode = .whileEditing
         return $0
     }(UISearchController(searchResultsController: nil))
     
@@ -84,7 +84,7 @@ final class LocalePickerViewController: UIViewController {
     fileprivate lazy var indicatorView: UIActivityIndicatorView = {
         $0.color = .lightGray
         return $0
-    }(UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge))
+    }(UIActivityIndicatorView(style: .large))
     
     // MARK: Initialize
     
@@ -101,7 +101,7 @@ final class LocalePickerViewController: UIViewController {
     deinit {
         // http://stackoverflow.com/questions/32675001/uisearchcontroller-warning-attempting-to-load-the-view-of-a-view-controller/
         let _ = searchController.view
-        Log("has deinitialized")
+        print("has deinitialized")
     }
     
     override func loadView() {
@@ -134,7 +134,7 @@ final class LocalePickerViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        tableView.tableHeaderView?.height = 57
+        tableView.tableHeaderView?.bounds.size.height = 57
         searchController.searchBar.sizeToFit()
         searchController.searchBar.frame.size.width = searchView.frame.size.width
         searchController.searchBar.frame.size.height = searchView.frame.size.height
@@ -176,12 +176,11 @@ final class LocalePickerViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    let alert = UIAlertController(style: .alert, title: error.title, message: error.message)
-                    alert.addAction(title: "OK", style: .cancel) { action in
+                    let alert = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: { (action) in
                         self.indicatorView.stopAnimating()
-                        self.alertController?.dismiss(animated: true)
-                    }
-                    alert.show()
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }
@@ -252,7 +251,7 @@ extension LocalePickerViewController: UISearchResultsUpdating {
         tableView.reloadData()
         
         guard let selectedIndexPath = indexPathOfSelectedInfo() else { return }
-        Log("selectedIndexPath = \(selectedIndexPath)")
+        print("selectedIndexPath = \(selectedIndexPath)")
         tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .none)
     }
 }

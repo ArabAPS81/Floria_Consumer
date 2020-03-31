@@ -46,6 +46,11 @@ class UserAddressListViewController: UIViewController {
         }
     }
     
+    func deleteAddress(id: Int) {
+        let service = AddressService.init(delegate: self)
+        service.deleteAddress(id: id)
+    }
+    
 }
 
 extension UserAddressListViewController: UITableViewDataSource,UITableViewDelegate {
@@ -61,17 +66,45 @@ extension UserAddressListViewController: UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = AddAddressViewController.newInstance(fromEdit: true, address: addressesList[indexPath.row])
-        self.navigationController?.pushViewController(vc, animated: true)
+        //let vc = AddAddressViewController.newInstance(fromEdit: true, address: addressesList[indexPath.row])
+       // self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("Delete", comment: "")) { action, index in
+            let id = self.addressesList[indexPath.row].id
+            self.deleteAddress(id: id!)
+        }
+        delete.backgroundColor = .orange
+
+        let edit = UITableViewRowAction(style: .normal, title: NSLocalizedString("Edit", comment: "")) { action, index in
+            let vc = AddAddressViewController.newInstance(fromEdit: true, address: self.addressesList[indexPath.row])
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        edit.backgroundColor = .lightGray
+        
+        return [delete, edit]
+    }
+    
 }
 
 extension UserAddressListViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
-        if let data = data as? AddressModel {
-            addressesList = data.addresses ?? []
+        if let model = data as? AddressModel {
+            addressesList = model.addresses ?? []
             table.stopLoading()
             table.reloadData()
+        }
+        if let model = data as? ComplainModel {
+            if model.httpCode == 200 {
+                let service = AddressService.init(delegate: self)
+                service.getListOfAddresses()
+                table.startLoading()
+            }
         }
     }
     

@@ -31,7 +31,7 @@ struct AddressModel : Codable {
         let notes : String?
         let postalCode : String?
         let streetName : String?
-        let userId : Int?
+        let userId : String?
 
         enum CodingKeys: String, CodingKey {
             case anotherMobile = "another_mobile"

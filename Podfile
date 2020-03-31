@@ -17,5 +17,7 @@ target 'floriaConsumer' do
   pod 'Kingfisher'
   pod 'ReachabilitySwift'
   pod 'Cosmos'
+  pod 'MaterialShowcase'
+  pod "Popover"
 
 end

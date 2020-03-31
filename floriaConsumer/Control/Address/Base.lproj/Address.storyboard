@@ -520,6 +520,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iow-Oq-u4g"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NDn-oT-ZbD"/>
                     <connections>
                         <outlet property="addressTitleTF" destination="Ek6-Dg-C9y" id="Ots-zg-gIh"/>
                         <outlet property="buildingNumTF" destination="aRo-oA-dcD" id="dgy-dc-Sxc"/>
@@ -810,11 +811,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="table" destination="or0-Cg-fcK" id="OZR-e6-1f3"/>
+                        <segue destination="yrj-9H-G1v" kind="presentation" identifier="addAddress" modalPresentationStyle="fullScreen" id="o9g-rb-QJ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbI-d6-aLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4352" y="-4101"/>
+            <point key="canvasLocation" x="-6045" y="-4148"/>
         </scene>
     </scenes>
     <resources>
@@ -822,5 +824,8 @@
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="location" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="o9g-rb-QJ2"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

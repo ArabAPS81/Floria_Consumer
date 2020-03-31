@@ -122,4 +122,15 @@ class AddressService {
             }
         }
     }
+    
+    func deleteAddress(id: Int) {
+        let url = NetworkConstants.baseUrl + "addresses/\(id)"
+        let header = WebServiceConfigure.getHeadersForAuthenticatedState()
+        ApiConnection.request(.delete, url: url,headers: header , model: ComplainModel.self, completion: { (result) in
+            self.delegate?.didRecieveData(data: result)
+        }) { (error) in
+            self.delegate?.didFailToReceiveDataWithError(error: error)
+        }
+    }
+    
 }

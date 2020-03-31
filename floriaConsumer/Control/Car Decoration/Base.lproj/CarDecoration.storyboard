@@ -11,7 +11,7 @@
         <!--Car Decoration View Controller-->
         <scene sceneID="TzC-JH-Huy">
             <objects>
-                <viewController storyboardIdentifier="CarDecorationViewController" id="tW0-FR-INB" customClass="CarDecorationViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarDecorationViewController" id="tW0-FR-INB" customClass="CarDecorationViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHF-bp-hcP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,7 +417,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYp-tf-hcI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="yid-SL-K0G">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car lite" translatesAutoresizingMaskIntoConstraints="NO" id="yid-SL-K0G">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS3-98-rmQ">
@@ -446,7 +446,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69J-CU-VKP">
                                                                         <rect key="frame" x="8" y="0.0" width="106" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-uG-8a6">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-uG-8a6">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -487,7 +487,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mi-3b-F4p">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Jy-PG9">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car lauxe" translatesAutoresizingMaskIntoConstraints="NO" id="9IT-Jy-PG9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-hM-D9U">
@@ -516,7 +516,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O85-hO-0Ph">
                                                                         <rect key="frame" x="8" y="0.0" width="106" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-QF-7Mv">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lauxe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-QF-7Mv">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -557,7 +557,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJG-hK-rHl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carlauxe" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-Ri-JNF">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car super lauxe" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-Ri-JNF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="122" height="111.5"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-d1-hPq">
@@ -586,7 +586,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ooa-Jd-lnQ">
                                                                         <rect key="frame" x="8" y="0.0" width="106" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXD-Gf-Qwr">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Lauxe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXD-Gf-Qwr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -719,7 +719,7 @@
         <!--Colors Popup View Controller-->
         <scene sceneID="Ijv-x6-M9a">
             <objects>
-                <viewController modalPresentationStyle="pageSheet" id="5Yd-9p-BWk" customClass="ColorsPopupViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="pageSheet" id="5Yd-9p-BWk" customClass="ColorsPopupViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dtF-KY-S9q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -847,7 +847,7 @@
         <!--Car Decoration Review Controller-->
         <scene sceneID="e53-1h-Jcv">
             <objects>
-                <viewController storyboardIdentifier="CarDecorationReviewController" id="in2-Nl-Ixg" customClass="CarDecorationReviewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarDecorationReviewController" id="in2-Nl-Ixg" customClass="CarDecorationReviewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8k-AP-i9q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1303,7 +1303,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-Dh-7Lj">
                                                                 <rect key="frame" x="0.0" y="63" width="223" height="11"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="c1K-Zl-qeY" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="c1K-Zl-qeY" customClass="RateView" customModule="Floria" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="11"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="55" id="ehp-u4-NSY"/>
@@ -1438,7 +1438,9 @@
     <resources>
         <image name="4039" width="116" height="106.66666412353516"/>
         <image name="cabrioleticon" width="52" height="16.5"/>
-        <image name="carlauxe" width="260.5" height="92"/>
+        <image name="car lauxe" width="1456" height="693"/>
+        <image name="car lite" width="1484" height="695"/>
+        <image name="car super lauxe" width="1404" height="691"/>
         <image name="coupeicon" width="51.5" height="17.5"/>
         <image name="group33" width="87.5" height="87"/>
         <image name="hatchbackicon" width="52" height="18"/>

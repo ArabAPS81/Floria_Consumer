@@ -9,6 +9,7 @@ import UIKit
 import SideMenu
 import Alamofire
 import FirebaseMessaging
+import MaterialShowcase
 
 protocol HomeView: class{
     func didReceiveData(data: Codable)
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
     var vendorsList = [VendorsModel.Vendor]()
     var productsList = [ProductsModel.Product]()
     var slidersList = [HomeSliderModel.Slider]()
+    var showCaseSequence: MaterialShowcaseSequence!
     
     
     @IBOutlet var homeButtonsCollction: [UIButton]!
@@ -79,6 +81,11 @@ class HomeViewController: UIViewController {
         SliderHome.startLoading()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setShowCases()
+    }
+    
     func registerCells() {
         let nib = UINib.init(nibName: "HomeProductCollectionViewCell", bundle: nil)
         Products.register(nib, forCellWithReuseIdentifier: "HomeProductCollectionViewCell")
@@ -115,6 +122,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func potsCareButtonTapped(_ sender: UIButton) {
+       // showCaseSequence.removeUserState(key: "for")
         let vc = PotsCareViewController.newInstance()
         orderRequest = SubmittOrderQueryModel.init()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -221,6 +229,67 @@ extension HomeViewController: HomeView {
         SliderHome.stopLoading()
     }
     
+    
+}
+
+extension HomeViewController :MaterialShowcaseDelegate{
+    func setShowCases() {
+        self.showCaseSequence = MaterialShowcaseSequence()
+        let showcase1 = MaterialShowcase()
+        showcase1.setTargetView(view: homeButtonsCollction[1])
+        showcase1.primaryText = "Ready Made Bouquet"
+        showcase1.secondaryText = "Click here to show ready made bouquet vendors"
+        showcase1.shouldSetTintColor = false // It should be set to false when button uses image.
+        showcase1.backgroundPromptColor = UIColor.gray
+        showcase1.isTapRecognizerForTargetView = true
+        
+        let showcase2 = MaterialShowcase()
+        showcase2.setTargetView(view: homeButtonsCollction[0])
+        showcase2.primaryText = "Custom Bouquet"
+        showcase2.secondaryText = "Click here to collect custom bouquet flowers "
+        showcase2.shouldSetTintColor = false // It should be set to false when button uses image.
+        showcase2.backgroundPromptColor = UIColor.darkGray
+        showcase2.isTapRecognizerForTargetView = true
+        
+        let showcase3 = MaterialShowcase()
+        showcase3.setTargetView(view: homeButtonsCollction[2])
+        showcase3.primaryText = "Gerb"
+        showcase3.secondaryText = "Click here select a Gerb"
+        showcase3.shouldSetTintColor = false // It should be set to false when button uses image.
+        showcase3.backgroundPromptColor = UIColor.blue
+        showcase3.isTapRecognizerForTargetView = false
+        
+        let showcase4 = MaterialShowcase()
+        showcase4.setTargetView(view: homeButtonsCollction[3])
+        showcase4.primaryText = "Car Decoration"
+        showcase4.secondaryText = "Click here to decorate your car"
+        showcase4.shouldSetTintColor = false // It should be set to false when button uses image.
+        showcase4.backgroundPromptColor = UIColor.blue
+        showcase4.isTapRecognizerForTargetView = false
+        
+        let showcase5 = MaterialShowcase()
+        showcase5.setTargetView(view: homeButtonsCollction[4])
+        showcase5.primaryText = "Pots Care"
+        showcase5.secondaryText = "Click here to demand pots care service"
+        showcase5.shouldSetTintColor = false // It should be set to false when button uses image.
+        showcase5.backgroundPromptColor = UIColor.blue
+        showcase5.isTapRecognizerForTargetView = false
+
+        
+        showcase1.delegate = self
+        showcase2.delegate = self
+        showcase3.delegate = self
+        showcase4.delegate = self
+        showcase5.delegate = self
+        
+        
+        
+        showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5).setKey(key: "for").start()
+    }
+    
+    func showCaseDidDismiss(showcase: MaterialShowcase, didTapTarget: Bool) {
+        showCaseSequence.showCaseWillDismis()
+    }
     
 }
 

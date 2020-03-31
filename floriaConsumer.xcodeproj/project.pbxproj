@@ -125,6 +125,7 @@
 		D6BD385C24275212008359D2 /* PhoneCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385524275212008359D2 /* PhoneCodeCell.swift */; };
 		D6BD385D24275212008359D2 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385624275212008359D2 /* CurrencyCell.swift */; };
 		D6BD385E24275212008359D2 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385724275212008359D2 /* CountryCell.swift */; };
+		D6BD386024275703008359D2 /* AlertExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD385F24275703008359D2 /* AlertExtentions.swift */; };
 		D6C14ABB2416489200460EBD /* FavoriteServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14ABA2416489200460EBD /* FavoriteServices.swift */; };
 		D6C14AC324177F6F00460EBD /* floriaConsumerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14AC224177F6F00460EBD /* floriaConsumerTests.swift */; };
 		D6C14ACB2417811600460EBD /* TestFavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C14ACA2417811600460EBD /* TestFavoriteService.swift */; };
@@ -301,6 +302,7 @@
 		D6BD385524275212008359D2 /* PhoneCodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeCell.swift; sourceTree = "<group>"; };
 		D6BD385624275212008359D2 /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		D6BD385724275212008359D2 /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		D6BD385F24275703008359D2 /* AlertExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtentions.swift; sourceTree = "<group>"; };
 		D6C14ABA2416489200460EBD /* FavoriteServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServices.swift; sourceTree = "<group>"; };
 		D6C14AC024177F6F00460EBD /* floriaConsumerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = floriaConsumerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C14AC224177F6F00460EBD /* floriaConsumerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = floriaConsumerTests.swift; sourceTree = "<group>"; };
@@ -834,6 +836,7 @@
 				D6BD385124275212008359D2 /* Models */,
 				D6BD385324275212008359D2 /* LocalePickerViewController.swift */,
 				D6BD385424275212008359D2 /* Views */,
+				D6BD385F24275703008359D2 /* AlertExtentions.swift */,
 			);
 			path = Locale;
 			sourceTree = "<group>";
@@ -1151,6 +1154,7 @@
 				9C9B039623B8C1AE00AD6EE4 /* UserDefults.swift in Sources */,
 				D63475F9239D0845008EB755 /* CarDecorationReviewController.swift in Sources */,
 				04441DA1237BBB5F002F5691 /* ShippingViewController.swift in Sources */,
+				D6BD386024275703008359D2 /* AlertExtentions.swift in Sources */,
 				D69AB44023C350C9001D52CB /* FilterListViewController.swift in Sources */,
 				D652F83F23A7BDF100E7EED8 /* TipView.swift in Sources */,
 				043C1852237F80690003A633 /* ProductListViewController.swift in Sources */,
@@ -1624,13 +1628,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				SWIFT_VERSION = 5.0;
@@ -1645,13 +1651,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				SWIFT_VERSION = 5.0;

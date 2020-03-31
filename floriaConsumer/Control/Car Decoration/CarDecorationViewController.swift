@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Popover
 
 class CarDecorationViewController: UIViewController {
     
@@ -61,18 +62,18 @@ class CarDecorationViewController: UIViewController {
         sender.isSelected = true
         orderRequest.decorationTypeId = sender.tag
         
-//        print(sender.frame)
-//        print(sender.bounds)
-//        sender.isSelected = true
-//        let iview = UIView.init(frame: self.view.frame)
-//        iview.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
-//        let subView = TipView.newInstance()
-//        let vframe = sender.convert(sender.frame, to: iview)
-//        print(vframe)
-//        subView.bounds = vframe
-//        iview.addSubview(subView)
-//        self.view.addSubview(iview)
-//        //self.view.bringSubviewToFront(view)
+        let subView = TipView.newInstance(id: sender.tag)
+        let options = [
+          .type(.up),
+          .cornerRadius(5),
+          .animationIn(0.3),
+          .blackOverlayColor(.clear)//,
+          //.arrowSize(CGSize.zero)
+          ] as [PopoverOption]
+        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        popover.show(subView, fromView: sender)
+        
+        
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {

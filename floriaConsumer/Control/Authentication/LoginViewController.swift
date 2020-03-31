@@ -19,18 +19,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var failureLable: UILabel!
     @IBOutlet weak var showPassBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var countryFlagImage: UIImageView!
     
+    var phoneCode = "+2"
     
     static func newInstance() -> LoginViewController {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-            
             return loginVC
-    
         }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpViewsShapes()
         self.title = "Login"
        // failureLable.isHidden = true
@@ -50,6 +51,12 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         passTF.text = ""
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        countryFlagImage.image = UIImage.init(named: "Egypt.png")
     }
     
     
@@ -63,11 +70,15 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func signin(_ sender: Any) {
+        
+
+        
+        
         if validation() {
             let Phone = phoneTF.text!
             let password = passTF.text!
             let service = AuthenticationService.init(delegate: self)
-            service.loginWith(phoneNumber: Phone, password: password)
+            service.loginWith(phoneNumber: Phone, password: password, countryCode: phoneCode)
         }
     }
     
@@ -83,10 +94,18 @@ class LoginViewController: UIViewController {
         return true
     }
     
-    @IBAction func forgetpass(_ sender: Any) {
-        
-        
+    @IBAction func phoneCodeTapped(_ sender: UIButton) {
+        let alert = UIAlertController(style: .actionSheet, title: "Phone Codes")
+        alert.addLocalePicker(type: .phoneCode) { info in
+            self.countryFlagImage.image = info?.flag
+            sender.setTitle(info?.phoneCode, for: .normal)
+        }
+        alert.addAction(title: "OK", style: .cancel)
+        self.present(alert, animated: true, completion: nil)
     }
+    
+    
+    
     @IBAction func skipButtonTapped(_ sender: Any) {
         if (event != nil) {
             event(self)
