@@ -18,7 +18,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     static func newInstance(listType: ServiceType, vendorId: Int) -> ProductListViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ProductListViewController") as! ProductListViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as! ProductListViewController
         vc.productListType = listType
         vc.vendorId = vendorId
         return vc

@@ -20,7 +20,7 @@ class PotsCareReviewViewController: UIViewController {
     @IBOutlet weak var vendorImage: UIImageView!
     static func newInstance() -> PotsCareReviewViewController {
         let storyboard = UIStoryboard.init(name: "PotsCare", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "PotsCareReviewViewController") as! PotsCareReviewViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "PotsCareReviewViewController") as! PotsCareReviewViewController
         return vc
     }
     

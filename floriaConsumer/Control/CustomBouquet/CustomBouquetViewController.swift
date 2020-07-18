@@ -22,7 +22,7 @@ class CustomBouquetViewController: UIViewController {
     
     static func newInstance(vendorID: Int) -> CustomBouquetViewController {
         let storyboard = UIStoryboard.init(name: "CustomBouquet", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "CustomBouquetViewController") as! CustomBouquetViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "CustomBouquetViewController") as! CustomBouquetViewController
         vc.vendorID = vendorID
         return vc
     }

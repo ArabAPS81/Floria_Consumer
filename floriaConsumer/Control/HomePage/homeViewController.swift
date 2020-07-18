@@ -188,7 +188,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         if collectionView == SliderHome {
             let model = slidersList[indexPath.row]
             if model.modelType == "provider"{
-                let vc = VendorDetailsViewController.newInstance(vendorId: model.modelId ?? 0)
+                let vc = VendorDetailsViewController.newInstance(vendorId: Int(model.modelId ?? "0") ?? 0)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if collectionView == Products {

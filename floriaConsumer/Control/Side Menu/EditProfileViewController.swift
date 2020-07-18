@@ -13,7 +13,7 @@ class EditProfileViewController: UIViewController {
     
     static func newInstance() -> EditProfileViewController {
         let storyboard = UIStoryboard.init(name: "UserProfile", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "EditProfileViewController") as! EditProfileViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
         return vc
     }
     

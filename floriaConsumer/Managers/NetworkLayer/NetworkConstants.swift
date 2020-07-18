@@ -11,6 +11,6 @@ import Foundation
 class NetworkConstants {
     //http://159.8.13.122/
     //http://api2.floriaapp.com
-    static let baseUrl = "https://staging.floriaapp.com/api/v1/"
+    static let baseUrl = "https://floria.floria-app.com/api/v1/"
     static let sfv = ""
 }

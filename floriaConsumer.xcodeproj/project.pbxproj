@@ -110,12 +110,12 @@
 		D697FB8E2393FB6400956652 /* ExtrasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697FB8C2393FB6400956652 /* ExtrasCollectionViewCell.swift */; };
 		D69AB43E23C33DE7001D52CB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43D23C33DE7001D52CB /* FilterViewController.swift */; };
 		D69AB44023C350C9001D52CB /* FilterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB43F23C350C9001D52CB /* FilterListViewController.swift */; };
-		D69AB44223C4AE9B001D52CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */; };
 		D69F7F2A241F70C8002E677E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F7F29241F70C8002E677E /* SupportViewController.swift */; };
 		D69F7F2D241F73C1002E677E /* GeneralServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F7F2C241F73C1002E677E /* GeneralServices.swift */; };
 		D69F7F2F241FA36C002E677E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F7F2E241FA36C002E677E /* EditProfileViewController.swift */; };
 		D6A16DA923AF7540001C80B1 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */; };
 		D6B0997523ABA75600EA7427 /* ProductPackingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */; };
+		D6B31651248BE67A00912736 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B31650248BE67A00912736 /* GoogleService-Info.plist */; };
 		D6B6038C238AC9E1007D7999 /* SearchPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */; };
 		D6B6038E238ACF02007D7999 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */; };
 		D6BD385824275212008359D2 /* Countries.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6BD384E24275212008359D2 /* Countries.bundle */; };
@@ -287,12 +287,12 @@
 		D697FB8C2393FB6400956652 /* ExtrasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasCollectionViewCell.swift; sourceTree = "<group>"; };
 		D69AB43D23C33DE7001D52CB /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		D69AB43F23C350C9001D52CB /* FilterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewController.swift; sourceTree = "<group>"; };
-		D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D69F7F29241F70C8002E677E /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		D69F7F2C241F73C1002E677E /* GeneralServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralServices.swift; sourceTree = "<group>"; };
 		D69F7F2E241FA36C002E677E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D6A16DA823AF7540001C80B1 /* DatePickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		D6B0997423ABA75600EA7427 /* ProductPackingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPackingModel.swift; sourceTree = "<group>"; };
+		D6B31650248BE67A00912736 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6B6038B238AC9E1007D7999 /* SearchPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPagerController.swift; sourceTree = "<group>"; };
 		D6B6038D238ACF02007D7999 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D6BD384E24275212008359D2 /* Countries.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Countries.bundle; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 				D658E57C23D457E600B656DF /* Localizable.strings */,
 				0444939A235C8BBD00650DFD /* Assets.xcassets */,
 				0406517923530CB60039566C /* LaunchScreen.storyboard */,
-				D69AB44123C4AE9B001D52CB /* GoogleService-Info.plist */,
+				D6B31650248BE67A00912736 /* GoogleService-Info.plist */,
 				0406517C23530CB60039566C /* Info.plist */,
 			);
 			path = floriaConsumer;
@@ -1045,6 +1045,7 @@
 				D620352C238A9B0000336D0B /* Favorites.storyboard in Resources */,
 				1FB0C99C23C21D0900D61A2C /* CustomBouquetTableViewCell.xib in Resources */,
 				D6E097BE23CB422200704020 /* CarDecoration.storyboard in Resources */,
+				D6B31651248BE67A00912736 /* GoogleService-Info.plist in Resources */,
 				D6E097AF23CB41F600704020 /* Authentication.storyboard in Resources */,
 				D6E0978223CB40E200704020 /* SideMenu.storyboard in Resources */,
 				D6E097CD23CB441300704020 /* HomeVendorCollectionViewCell.xib in Resources */,
@@ -1070,7 +1071,6 @@
 				D6203518238A962400336D0B /* Splash.storyboard in Resources */,
 				D6E097AA23CB41E100704020 /* MainScreen.storyboard in Resources */,
 				D6E0979123CB418100704020 /* Orders.storyboard in Resources */,
-				D69AB44223C4AE9B001D52CB /* GoogleService-Info.plist in Resources */,
 				D6E097B423CB420500704020 /* Vendor.storyboard in Resources */,
 				D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */,
 				D6E0979B23CB41A800704020 /* PotsCare.storyboard in Resources */,
@@ -1627,18 +1627,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1650,18 +1652,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -16,7 +16,7 @@ class AddressesListViewController: UIViewController {
     
     static func newInstance(serviceType: ServiceType) -> AddressesListViewController {
         let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "AddressesListViewController") as! AddressesListViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddressesListViewController") as! AddressesListViewController
         vc.serviceType = serviceType
         return vc
     }

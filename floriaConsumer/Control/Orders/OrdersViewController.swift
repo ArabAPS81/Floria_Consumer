@@ -14,7 +14,7 @@ class OrdersViewController: UIViewController {
     // MARK: - Statics
     static func newInstance() -> OrdersViewController {
         let storyboard = UIStoryboard.init(name: "Orders", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "OrdersViewControllerStoryboard") as! OrdersViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "OrdersViewControllerStoryboard") as! OrdersViewController
         return vc
     }
     

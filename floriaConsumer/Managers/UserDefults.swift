@@ -7,12 +7,16 @@
 //
 
 import Foundation
+
+enum DefaultsKeys: String {
+    case userId = "userId",logged = "logged",token,authenToken,uuid,email,name,phone,firstTime
+}
 class Defaults {
     
     
     func saveUserId(userId : Int){
         let def = UserDefaults.standard
-        def.set(userId, forKey: "userId")
+        def.set(userId, forKey: DefaultsKeys.userId.rawValue)
         def.synchronize()
         print(userId)
     }

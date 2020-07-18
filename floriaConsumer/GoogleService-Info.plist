@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>869392008384-c26ur3bl65duft1ush68jdfe3anpl2rc.apps.googleusercontent.com</string>
+	<string>869392008384-bqp32ipkj6nkjfs80ug3a7kh0tfjbpa0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.869392008384-c26ur3bl65duft1ush68jdfe3anpl2rc</string>
+	<string>com.googleusercontent.apps.869392008384-bqp32ipkj6nkjfs80ug3a7kh0tfjbpa0</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>869392008384-l5gm50a805fik8fca1k32qpb9e7gi7p5.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAp6t4MYKJAEtUxcQxKPtk1qa-QzRghYQY</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>arabaps.floriaConsumer</string>
+	<string>com.arabaps.floria</string>
 	<key>PROJECT_ID</key>
 	<string>floria-d1d99</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:869392008384:ios:81516e1d68d5db14a2d925</string>
+	<string>1:869392008384:ios:df16da8fb2e47179a2d925</string>
 	<key>DATABASE_URL</key>
 	<string>https://floria-d1d99.firebaseio.com</string>
 </dict>

@@ -27,8 +27,8 @@ struct VendorsModel: Codable {
         let facebookUrl : String?
         let id : Int?
         let image : String?
-        let lat : Float?
-        let lng : Float?
+        let lat : String?
+        let lng : String?
         let mobile : String?
         let name : String?
         let services : [Service]?

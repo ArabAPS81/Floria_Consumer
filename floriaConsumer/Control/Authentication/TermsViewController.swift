@@ -9,11 +9,13 @@
 import UIKit
 
 class TermsViewController: UIViewController {
+    
+    @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = NSLocalizedString("terms and condition", comment: "")
+        label.text = NSLocalizedString("terms and condition content", comment: "")
     }
     
 

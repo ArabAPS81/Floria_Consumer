@@ -16,7 +16,7 @@ class SearchTableViewController: UIViewController {
     static func newInstance(with tableType: TableType) -> SearchTableViewController {
         
         let storyboard = UIStoryboard.init(name: "Search", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "SearchTableViewController") as! SearchTableViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
         vc.tableType = tableType
         return vc
     }

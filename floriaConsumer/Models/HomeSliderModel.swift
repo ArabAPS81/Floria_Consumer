@@ -24,7 +24,7 @@ struct HomeSliderModel : Codable {
         let content : String?
         let id : Int?
         let image : String?
-        let modelId : Int?
+        let modelId : String?
         let modelType : String?
         let title : String?
 

@@ -13,7 +13,7 @@ class ShippingViewController: UIViewController {
     
     static func newInstance(serviceType: ServiceType) -> ShippingViewController {
         let storyboard = UIStoryboard.init(name: "Delivery", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ShippingViewController") as! ShippingViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ShippingViewController") as! ShippingViewController
         return vc
     }
     

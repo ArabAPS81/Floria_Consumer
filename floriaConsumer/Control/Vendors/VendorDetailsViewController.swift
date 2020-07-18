@@ -16,7 +16,7 @@ class VendorDetailsViewController: UIViewController{
     
     static func newInstance(vendorId: Int) -> VendorDetailsViewController {
         let storyboard = UIStoryboard.init(name: "Vendor", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "VendorDetailsViewController") as! VendorDetailsViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "VendorDetailsViewController") as! VendorDetailsViewController
         vc.vendorId = vendorId
         return vc
     }

@@ -12,7 +12,7 @@ class PotsCareViewController: UIViewController {
     
     static func newInstance() -> PotsCareViewController {
         let storyboard = UIStoryboard.init(name: "PotsCare", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "PotsCareViewController") as! PotsCareViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "PotsCareViewController") as! PotsCareViewController
         return vc
     }
     

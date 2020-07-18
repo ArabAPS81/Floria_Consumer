@@ -17,7 +17,7 @@ class VendorsListViewController: UIViewController {
     
     static func newInstance(service: ServiceType) -> VendorsListViewController {
         let storyboard = UIStoryboard.init(name: "Vendor", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "VendorsListViewController") as! VendorsListViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "VendorsListViewController") as! VendorsListViewController
         vc.serviceType = service
         return vc
     }
@@ -134,7 +134,7 @@ extension VendorsListViewController: FilterDelegate {
 extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? VendorsModel {
-            vendorsList = data.vendors!
+            vendorsList = data.vendors ?? []
             tableView.reloadData()
             if vendorsList.count == 0 {
                 tableView.stopLoading("")

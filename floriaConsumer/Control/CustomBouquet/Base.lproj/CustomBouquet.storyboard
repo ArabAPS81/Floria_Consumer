@@ -10,7 +10,7 @@
         <!--Custom Bouquet View Controller-->
         <scene sceneID="ifV-Eo-b9I">
             <objects>
-                <viewController storyboardIdentifier="CustomBouquetViewController" id="OCQ-KI-TS8" customClass="CustomBouquetViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomBouquetViewController" id="OCQ-KI-TS8" customClass="CustomBouquetViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qqA-gz-Mlf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     <constraint firstItem="Izp-cn-wBP" firstAttribute="leading" secondItem="4id-By-OUP" secondAttribute="leading" id="thx-yM-BBo"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y7F-eZ-6Oq">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y7F-eZ-6Oq">
                                 <rect key="frame" x="8" y="146" width="398" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GDF-oc-x4c">
@@ -100,7 +100,7 @@
         <!--Paking View Controller-->
         <scene sceneID="Kwr-G7-yTe">
             <objects>
-                <viewController id="H7J-aU-Zwz" customClass="PakingViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="H7J-aU-Zwz" customClass="PakingViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X1D-ir-fjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,7 +420,7 @@
         <!--Custom Bouquet Review Controller-->
         <scene sceneID="5Y5-06-QMH">
             <objects>
-                <viewController storyboardIdentifier="CustomBouquetReviewController" id="Sl7-iP-FfP" customClass="CustomBouquetReviewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomBouquetReviewController" id="Sl7-iP-FfP" customClass="CustomBouquetReviewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dzj-IO-EZq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

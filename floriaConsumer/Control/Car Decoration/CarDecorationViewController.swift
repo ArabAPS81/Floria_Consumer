@@ -14,7 +14,7 @@ class CarDecorationViewController: UIViewController {
     
     static func newInstance() -> CarDecorationViewController {
         let storyboard = UIStoryboard.init(name: "CarDecoration", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "CarDecorationViewController") as! CarDecorationViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "CarDecorationViewController") as! CarDecorationViewController
         return vc
     }
     

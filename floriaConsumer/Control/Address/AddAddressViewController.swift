@@ -13,7 +13,7 @@ class AddAddressViewController: UIViewController {
     
     static func newInstance(fromEdit: Bool, address: AddressModel.Address? = nil) -> AddAddressViewController {
         let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "AddAddressViewController") as! AddAddressViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddAddressViewController") as! AddAddressViewController
         vc.fromEdit = fromEdit
         vc.address = address
         return vc

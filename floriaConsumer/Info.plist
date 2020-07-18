@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) Wants to use Your location</string>
+	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>$(PRODUCT_NAME) Wants to use Your location</string>
+	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) Wants to use Your location</string>
+	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

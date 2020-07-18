@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2b-R0-Q3R">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,9 +34,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKn-oj-ZN0">
-                                <rect key="frame" x="110.5" y="390.5" width="154" height="30"/>
+                                <rect key="frame" x="97.5" y="390.5" width="113" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="154" id="CuL-dF-oUH"/>
                                     <constraint firstAttribute="height" constant="30" id="R0P-lT-Lx1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,15 +47,20 @@
                                     <segue destination="0wb-35-2Z8" kind="show" id="pha-Jl-nMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV5-qE-CJv">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dr-AV-1Co">
                                 <rect key="frame" x="164.5" y="494" width="46" height="46"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="DhM-hh-Q3n"/>
-                                    <constraint firstAttribute="width" constant="46" id="Z9l-Ap-c6x"/>
-                                </constraints>
-                                <state key="normal" image="group5-2"/>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV5-qE-CJv">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="DhM-hh-Q3n"/>
+                                            <constraint firstAttribute="width" constant="46" id="Z9l-Ap-c6x"/>
+                                        </constraints>
+                                        <state key="normal" image="group5-2"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-bp-ykX">
                                 <rect key="frame" x="124.5" y="446" width="126" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -135,12 +140,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qwx-bs-6nD">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="49"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="49"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-8V-k8f">
                                         <rect key="frame" x="240" y="0.0" width="60" height="49"/>
                                         <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ShowPass"/>
+                                        <state key="normal" image="HidePass"/>
+                                        <state key="selected" image="ShowPass"/>
                                         <connections>
                                             <action selector="showPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="qIf-Ih-c7W"/>
                                             <action selector="showPassTapped:" destination="cEa-uG-Dcx" eventType="touchUpInside" id="ywz-xp-52C"/>
@@ -167,7 +173,7 @@
                                     <constraint firstAttribute="bottom" secondItem="LZw-mH-dP0" secondAttribute="bottom" constant="1" id="KfN-68-oma"/>
                                     <constraint firstAttribute="bottom" secondItem="0K1-8V-k8f" secondAttribute="bottom" constant="1" id="Nw9-Yf-bps"/>
                                     <constraint firstItem="LZw-mH-dP0" firstAttribute="centerX" secondItem="nSL-9a-4Ia" secondAttribute="centerX" id="beB-3m-LKJ"/>
-                                    <constraint firstItem="qwx-bs-6nD" firstAttribute="width" secondItem="nSL-9a-4Ia" secondAttribute="width" multiplier="1/5" id="cxh-8f-4r2"/>
+                                    <constraint firstItem="qwx-bs-6nD" firstAttribute="width" secondItem="nSL-9a-4Ia" secondAttribute="width" multiplier="0.1" id="cxh-8f-4r2"/>
                                     <constraint firstAttribute="bottom" secondItem="qwx-bs-6nD" secondAttribute="bottom" constant="1" id="iea-Mg-RJo"/>
                                     <constraint firstItem="qwx-bs-6nD" firstAttribute="top" secondItem="nSL-9a-4Ia" secondAttribute="top" id="lRo-AU-KBM"/>
                                     <constraint firstItem="qwx-bs-6nD" firstAttribute="leading" secondItem="nSL-9a-4Ia" secondAttribute="leading" id="rqV-ej-yDt"/>
@@ -185,20 +191,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BfR-Nz-shL" firstAttribute="top" secondItem="uV5-qE-CJv" secondAttribute="bottom" constant="28" id="0hA-26-Dlj"/>
-                            <constraint firstItem="EKn-oj-ZN0" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="2hV-rm-DZl"/>
+                            <constraint firstItem="2dr-AV-1Co" firstAttribute="centerX" secondItem="BEO-MB-CPK" secondAttribute="centerX" id="15U-VV-Qbw"/>
                             <constraint firstItem="98i-q9-sLC" firstAttribute="top" secondItem="sax-oc-9zJ" secondAttribute="bottom" constant="10" id="4fh-sJ-H1t"/>
                             <constraint firstItem="98i-q9-sLC" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="6oV-jJ-Z8i"/>
                             <constraint firstItem="yM2-Ut-bTU" firstAttribute="top" secondItem="nSL-9a-4Ia" secondAttribute="bottom" constant="5" id="8IP-L7-QZZ"/>
                             <constraint firstItem="nSL-9a-4Ia" firstAttribute="top" secondItem="98i-q9-sLC" secondAttribute="bottom" constant="20" id="CWD-hK-SWn"/>
                             <constraint firstItem="98i-q9-sLC" firstAttribute="width" secondItem="BEO-MB-CPK" secondAttribute="width" multiplier="0.8" id="FFo-vX-qaI"/>
                             <constraint firstItem="nSL-9a-4Ia" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="Hgi-Fw-CCH"/>
-                            <constraint firstItem="uV5-qE-CJv" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="Mtm-FF-9z2"/>
+                            <constraint firstItem="2dr-AV-1Co" firstAttribute="top" secondItem="DLS-bp-ykX" secondAttribute="bottom" constant="19" id="Mjh-fc-rNd"/>
                             <constraint firstItem="98i-q9-sLC" firstAttribute="bottom" secondItem="BEO-MB-CPK" secondAttribute="centerY" constant="-23" id="QLb-Ux-MIz"/>
-                            <constraint firstItem="uV5-qE-CJv" firstAttribute="top" secondItem="DLS-bp-ykX" secondAttribute="bottom" constant="19" id="SIO-jP-pkf"/>
-                            <constraint firstItem="DLS-bp-ykX" firstAttribute="centerX" secondItem="EKn-oj-ZN0" secondAttribute="centerX" id="UZ7-w5-9Y2"/>
+                            <constraint firstItem="DLS-bp-ykX" firstAttribute="centerX" secondItem="2dr-AV-1Co" secondAttribute="centerX" id="Rt0-CE-d9n"/>
                             <constraint firstItem="sax-oc-9zJ" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="VT9-Oc-LlC"/>
                             <constraint firstItem="piV-dk-J1v" firstAttribute="bottom" secondItem="BfR-Nz-shL" secondAttribute="bottom" constant="39" id="ge0-eh-pyR"/>
+                            <constraint firstItem="BfR-Nz-shL" firstAttribute="top" secondItem="2dr-AV-1Co" secondAttribute="bottom" constant="28" id="gt5-YS-vJc"/>
                             <constraint firstItem="EKn-oj-ZN0" firstAttribute="top" secondItem="yM2-Ut-bTU" secondAttribute="bottom" constant="5" id="jtu-Dn-aHE"/>
                             <constraint firstItem="sax-oc-9zJ" firstAttribute="top" secondItem="piV-dk-J1v" secondAttribute="top" constant="30" id="k64-1d-kPJ"/>
                             <constraint firstItem="BfR-Nz-shL" firstAttribute="width" secondItem="BEO-MB-CPK" secondAttribute="width" multiplier="0.7" id="kgR-rn-Uhz"/>
@@ -206,6 +211,7 @@
                             <constraint firstItem="BfR-Nz-shL" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="nYV-Cw-wXN"/>
                             <constraint firstItem="sax-oc-9zJ" firstAttribute="leading" secondItem="BEO-MB-CPK" secondAttribute="leadingMargin" id="niF-FO-0KG"/>
                             <constraint firstItem="yM2-Ut-bTU" firstAttribute="centerX" secondItem="piV-dk-J1v" secondAttribute="centerX" id="qSQ-pn-Fz5"/>
+                            <constraint firstItem="EKn-oj-ZN0" firstAttribute="leading" secondItem="LZw-mH-dP0" secondAttribute="leading" id="yjf-wg-yRl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="piV-dk-J1v"/>
                     </view>
@@ -1092,20 +1098,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-si-90b">
-                                        <rect key="frame" x="30" y="2" width="315" height="1968"/>
-                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-
-consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. </string>
+                                        <rect key="frame" x="30" y="2" width="315" height="142.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. etur adipiscing elit. Vivamus erat turpis, cursus non consectetur sit amet, consectetur sit amet lectus. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1141,6 +1135,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O7H-NG-xNE"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="z8e-si-90b" id="RCI-dP-iCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tzn-s6-iAB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1149,6 +1146,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat turpis, cu
     </scenes>
     <resources>
         <image name="Egypt.png" width="70" height="47"/>
+        <image name="HidePass" width="23.5" height="24"/>
         <image name="ShowPass" width="23" height="18.5"/>
         <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="envelope.open" catalog="system" width="64" height="60"/>

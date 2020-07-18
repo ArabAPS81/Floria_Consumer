@@ -27,7 +27,7 @@ class ProductDetailsViewController: UIViewController {
     
     static func newInstance(product: ProductsModel.Product) -> ProductDetailsViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
         vc.product = product
         
         return vc

@@ -10,7 +10,7 @@
         <!--Order Summary View Controller-->
         <scene sceneID="XYB-uw-jx8">
             <objects>
-                <viewController storyboardIdentifier="OrderSummaryViewController" id="7BM-UN-QNb" customClass="OrderSummaryViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderSummaryViewController" id="7BM-UN-QNb" customClass="OrderSummaryViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VGd-O1-beP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,7 +285,7 @@
         <!--Orders View Controller-->
         <scene sceneID="S93-vH-1Si">
             <objects>
-                <viewController storyboardIdentifier="OrdersViewControllerStoryboard" id="Pbr-61-Ojs" customClass="OrdersViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrdersViewControllerStoryboard" id="Pbr-61-Ojs" customClass="OrdersViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LbT-Mk-KZN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,7 +318,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCustomCell" rowHeight="120" id="fLr-0Q-jvx" customClass="OrderTableViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCustomCell" rowHeight="120" id="fLr-0Q-jvx" customClass="OrderTableViewCell" customModule="Floria" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fLr-0Q-jvx" id="zLg-Qx-TO5">
@@ -436,7 +436,7 @@
         <!--Order View Controller-->
         <scene sceneID="6V8-j0-NeK">
             <objects>
-                <viewController storyboardIdentifier="OrderViewControllerStoryboard" modalPresentationStyle="fullScreen" id="Oqf-8A-FXb" customClass="OrderViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderViewControllerStoryboard" modalPresentationStyle="fullScreen" id="Oqf-8A-FXb" customClass="OrderViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4d-ZG-agf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,7 +474,7 @@
                                     <outlet property="dataSource" destination="Oqf-8A-FXb" id="dYe-67-RAz"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-rB-NMS" customClass="OrderStatusView" customModule="floriaConsumer" customModuleProvider="target">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-rB-NMS" customClass="OrderStatusView" customModule="Floria" customModuleProvider="target">
                                 <rect key="frame" x="33.666666666666657" y="44" width="308" height="44"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-pA-5q6">
@@ -520,7 +520,7 @@
         <!--Rating View Controller-->
         <scene sceneID="GOA-Vt-HUb">
             <objects>
-                <viewController storyboardIdentifier="rateVC" id="ita-Hw-CBh" customClass="RatingViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rateVC" id="ita-Hw-CBh" customClass="RatingViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aZR-SX-1Y9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

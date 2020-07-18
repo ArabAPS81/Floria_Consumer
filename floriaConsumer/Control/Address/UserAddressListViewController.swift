@@ -15,7 +15,7 @@ class UserAddressListViewController: UIViewController {
     
     static func newInstance() -> UserAddressListViewController {
         let storyboard = UIStoryboard.init(name: "Address", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "UserAddressListViewController") as! UserAddressListViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "UserAddressListViewController") as! UserAddressListViewController
         return vc
     }
     
