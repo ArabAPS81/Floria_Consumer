@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum UserGender:String {
+    case male,female
+}
+
 class RegisterationViewController: UIViewController {
     
     var checkTerms : Int!
@@ -20,6 +24,7 @@ class RegisterationViewController: UIViewController {
     @IBOutlet weak var emailErrorLable: UILabel!
     @IBOutlet weak var mobileContainer: UIView!
     @IBOutlet weak var mobileTF: UITextField!
+    @IBOutlet weak var birthDateTF: UITextField!
     @IBOutlet weak var mobileErrorLable: UILabel!
     @IBOutlet weak var passContainerView: UIView!
     @IBOutlet weak var passwordTF: UITextField!
@@ -30,9 +35,10 @@ class RegisterationViewController: UIViewController {
     @IBOutlet weak var termsBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var countryFlagImage: UIImageView!
+    @IBOutlet weak var countryCodeButton: UIButton!
     var phoneCode:String = "+2"
     var code: String = "EG"
-    
+    var selectedGender: UserGender = .male
     
     @IBAction func showPassTapped(_ sender: Any) {
         if (passwordTF.isSecureTextEntry == true){
@@ -100,7 +106,7 @@ class RegisterationViewController: UIViewController {
             }
             
             let service = AuthenticationService.init(delegate: self)
-            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms, countryCode: phoneCode, code: code)
+            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms, countryCode: phoneCode, code: code,birthDate: birthDateTF.text ?? "", gender: selectedGender.rawValue)
         }
         
     }
@@ -133,7 +139,7 @@ class RegisterationViewController: UIViewController {
         return true
     }
     
-    
+    let datePicker = UIDatePicker.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Registration"
@@ -141,7 +147,10 @@ class RegisterationViewController: UIViewController {
         nameErrorLable.isHidden = true
         emailErrorLable.isHidden = true
         mobileErrorLable.isHidden = true
-        
+        birthDateTF.inputView = datePicker
+        datePicker.datePickerMode = .date
+        datePicker.maximumDate = Date()
+        datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         nameTF.addTarget(self, action: #selector(handleNameChange), for: .editingDidEnd)
         emailTF.addTarget(self, action: #selector(handleEmailChange), for: .editingDidEnd)
         mobileTF.addTarget(self, action: #selector(handleMobileChange), for: .editingDidEnd)
@@ -155,6 +164,21 @@ class RegisterationViewController: UIViewController {
         registerBtn.layer.cornerRadius = 30
         registerBtn.clipsToBounds = true
     }
+    
+    @objc func dateChanged(_ sender: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.locale = Locale.init(identifier: "en")
+        let strDate = dateFormatter.string(from: datePicker.date)
+        birthDateTF.text = strDate
+    }
+    
+    @IBOutlet var genderBtns: [UIButton]!
+    @IBAction func genderSelected(_ sender: UIButton) {
+        genderBtns.forEach{$0.isSelected = false}
+           sender.isSelected = true
+        selectedGender = (sender.tag == 1) ? UserGender.male : UserGender.female
+       }
     
     @ objc func handleEmailChange(){
         guard let text = emailTF.text, !text.isEmpty else{ emailErrorLable.isHidden = false

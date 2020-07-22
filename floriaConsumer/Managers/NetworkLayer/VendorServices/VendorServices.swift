@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Alamofire
+import PKHUD
 
 
 struct  NearestVendorQueryModel {
@@ -29,7 +30,7 @@ class VendorServices {
     func getNearestVendors(model: NearestVendorQueryModel) {
         
         let baseUrl = (NetworkConstants.baseUrl + "nearest-providers?")
-        let parameters = "lat=\(model.location.latitude)&lng=\(model.location.longitude)"
+        let parameters = "lat=30.063049&lng=31.346661"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
@@ -58,6 +59,8 @@ class VendorServices {
                 JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
+                    }else{
+                        self.delegate?.didFailToReceiveDataWithError(error: error!)
                     }
                 }
             case .failure(let error):
@@ -87,7 +90,7 @@ class VendorServices {
     }
     
     func getVendorsDetails(vendorId: Int) {
-        
+        HUD.show(.progress)
         let baseUrl = NetworkConstants.baseUrl + "providers/\(vendorId)"
         guard let url = baseUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
@@ -97,10 +100,16 @@ class VendorServices {
                 JSONResponseDecoder.decodeFrom(value, returningModelType: VendorDetailsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
+                        HUD.flash(.success)
+                    }else{
+                        self.delegate?.didFailToReceiveDataWithError(error: error!)
+                        HUD.flash(.error)
+                        
                     }
                 }
             case .failure(let error):
                 self.delegate?.didFailToReceiveDataWithError(error: error)
+                HUD.flash(.error)
             }
         }
     }

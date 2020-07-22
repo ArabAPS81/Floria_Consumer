@@ -35,8 +35,8 @@ class PaymentViewController: UIViewController,WKUIDelegate{
     
     func responsePaymentFinish(_ response: PaymentResponse) {
         print(response)
-        if response.http_code == 201 || response.http_code == 200 {
-            showAlert("payment done is : \(response.data?.orderId ?? response.message!)")
+        if response.http_code == 201 || response.http_code == 200 || response.success! {
+            showAlert("payment done is")
         }else {
             showFailureAlert(response.error?.message?.body?.first)
         }
@@ -101,7 +101,8 @@ extension PaymentViewController: WKNavigationDelegate {
 }
 
 struct PaymentResponse: Codable {
-    let http_code: Int
+    let http_code: Int?
+    let success: Bool?
     let message: String?
     let error:PaymentResponseError?
     let data: PaymentOrder?

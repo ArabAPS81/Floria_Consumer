@@ -85,3 +85,11 @@ enum HMError: Error {
     case noInternetConnection
     case failToParseJson
 }
+
+struct FloriaError:Codable {
+    let message: ErrorMessage?
+    
+    struct ErrorMessage: Codable {
+        let body: [String]?
+    }
+}

@@ -44,7 +44,7 @@ class ProductTableViewCell: UITableViewCell {
         lblProduct.text = product.product?.name
         lblDescription.text = product.product?.productDescription
         rvRating.setRate(rate: product.product?.rate ?? 0)
-        lblQuantity.text = "\(product.qunatity)"
+        lblQuantity.text = "\(product.qunatity ?? 0)"
         lblPrice.text = "\(product.product?.price ?? 0)"
     }
 }

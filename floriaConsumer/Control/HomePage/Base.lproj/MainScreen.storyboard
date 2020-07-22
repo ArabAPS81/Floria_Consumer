@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kls-Vw-ydk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -400,7 +401,7 @@
                                     <action selector="showSideMenu:" destination="Fso-8p-WFu" id="SUE-1v-YWR"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="fU6-7c-D5F">
+                            <barButtonItem image="homesearchicon" id="fU6-7c-D5F">
                                 <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="T00-Nk-aK9" kind="show" id="DPU-LX-SH8"/>
@@ -504,8 +505,8 @@
         <image name="custombouqueticon" width="567" height="567"/>
         <image name="gerbicon" width="567" height="567"/>
         <image name="group5" width="375" height="166.5"/>
+        <image name="homesearchicon" width="20.5" height="20.5"/>
         <image name="logo" width="24.5" height="44"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="potscare" width="567" height="567"/>
         <image name="readymadeicon" width="567" height="567"/>
         <image name="shape3" width="18.5" height="20"/>

@@ -31,14 +31,14 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        phoneTF.keyboardType = .asciiCapableNumberPad
         setUpViewsShapes()
         self.title = "Login"
        // failureLable.isHidden = true
         phoneTF.addTarget(self, action: #selector(handlePhoneChange), for: .editingDidEnd)
         hideKeyboardWhenTappedAround()
-        
-        
+        countryFlagImage.image = UIImage.init(named: "Egypt.png")
+    
         
         Messaging.messaging().subscribe(toTopic: "general") { error in
           print("Subscribed to general topic")

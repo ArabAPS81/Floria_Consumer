@@ -10,8 +10,10 @@ import UIKit
 
 class SupportViewController: UIViewController {
     
+    @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var helpTV: UITextView!
+    var imageData = Data.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,35 @@ class SupportViewController: UIViewController {
     @IBAction func submittButtonTapped() {
         if validation() {
             let service = GeneralServices.init(delegate: self)
-            service.submittSupportMessage(helpTV.text, title: titleTF.text!)
+            service.submittSupportMessageWithFile(helpTV.text, title: titleTF.text!,image: imageData)
         }
+    }
+    
+    @IBAction func choosePhoto(_ sender: Any) {
+        let actionSheet = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction.init(title: NSLocalizedString("Camera", comment: ""), style: .default, handler: { (_) in
+            self.OpenCam()
+        }))
+        actionSheet.addAction(UIAlertAction.init(title: NSLocalizedString("PhotoLibrary", comment: ""), style: .default, handler: { (_) in
+            self.openLibrary()
+        }))
+        actionSheet.addAction(UIAlertAction.init(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true)
+    }
+    
+    func OpenCam(){
+        let imagePicker = UIImagePickerController.init()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true)
+    }
+    func openLibrary() {
+        let imagePicker = UIImagePickerController.init()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true)
     }
     
     func validation() -> Bool{
@@ -46,7 +75,7 @@ class SupportViewController: UIViewController {
     }
     
     func successAlert() {
-        let alert = UIAlertController.init(title: NSLocalizedString("sorry", comment: ""), message: NSLocalizedString("vendor not available", comment: ""), preferredStyle: .alert)
+        let alert = UIAlertController.init(title: nil, message: NSLocalizedString("Complaint Submitted succefully", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: {
             action in
             self.navigationController?.popViewController(animated: true)
@@ -68,4 +97,13 @@ extension SupportViewController: WebServiceDelegate {
     }
     
     
+}
+
+extension SupportViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.editedImage]as? UIImage
+        selectedImage.image = image
+        imageData = image?.jpegData(compressionQuality: 0.9) ?? Data()
+        picker.dismiss(animated: true)
+    }
 }

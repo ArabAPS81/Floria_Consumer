@@ -24,10 +24,10 @@
 "Ctj-KE-Xsm.placeholder" = "كلمة السر";
 
 /* Class = "UIButton"; normalTitle = "Not Registered Yet!"; ObjectID = "DLS-bp-ykX"; */
-"DLS-bp-ykX.normalTitle" = "ليس لديك حساب!";
+"DLS-bp-ykX.normalTitle" = "ليس لديك حساب؟";
 
 /* Class = "UIButton"; normalTitle = "Forget Password!"; ObjectID = "EKn-oj-ZN0"; */
-"EKn-oj-ZN0.normalTitle" = "نسيت كلمة المرور!";
+"EKn-oj-ZN0.normalTitle" = "نسيت كلمة المرور؟";
 
 /* Class = "UITextField"; placeholder = "Mobile number"; ObjectID = "H8A-Re-gJK"; */
 "H8A-Re-gJK.placeholder" = "رقم الهاتف";
@@ -48,7 +48,7 @@
 "ThJ-gj-mOo.text" = "";
 
 /* Class = "UIButton"; normalTitle = "Already have an account!"; ObjectID = "Tyr-OM-uYl"; */
-"Tyr-OM-uYl.normalTitle" = "لديك حساب بالفعل!";
+"Tyr-OM-uYl.normalTitle" = "لديك حساب بالفعل؟";
 
 /* Class = "UIButton"; normalTitle = "Resend  Code"; ObjectID = "Wjx-uq-iSg"; */
 "Wjx-uq-iSg.normalTitle" = "اعادة ارسال الكود";

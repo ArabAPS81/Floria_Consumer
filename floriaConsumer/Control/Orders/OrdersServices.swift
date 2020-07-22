@@ -78,6 +78,7 @@ struct Order: Codable {
     let requiredAt, notes: String?
     let shipping, subtotal, totalTax, delivery: Int
     let total: Int
+    let isPaid: Int?
     let service: Service
     let products: [ProductElement]?
     let carDecoration: [CarDecoration]?
@@ -90,6 +91,7 @@ struct Order: Codable {
         case notes, shipping, subtotal
         case totalTax = "total_tax"
         case delivery, total, service, products, carDecoration, potsCare, address
+        case isPaid = "is_paid"
     }
 }
 
@@ -112,7 +114,7 @@ struct Order: Codable {
 
 struct ProductElement: Codable {
     let product: Product?
-    let qunatity: Int
+    let qunatity: Int?
 }
 
 // MARK: - ProductProduct
@@ -257,7 +259,7 @@ struct RateModel : Codable {
         let id : Int?
         let orderId : String?
         let rating : String?
-        let userId : Int?
+        //let userId : Int?
 
 
         enum CodingKeys: String, CodingKey {
@@ -265,7 +267,7 @@ struct RateModel : Codable {
             case id = "id"
             case orderId = "order_id"
             case rating = "rating"
-            case userId = "user_id"
+           // case userId = "user_id"
         }
     }
 

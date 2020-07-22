@@ -12,7 +12,7 @@ class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var shadowedView: UIView!
     @IBOutlet weak var addressIcon: UIImageView!
-    
+    @IBOutlet weak var contactNameLabel: UILabel?
     @IBOutlet weak var buildingLabel: UILabel!
     @IBOutlet weak var phoneNum: UILabel!
     @IBOutlet weak var districtLabel: UILabel!
@@ -29,6 +29,7 @@ class AddressTableViewCell: UITableViewCell {
     
     func configure(address: AddressModel.Address) {
         addressNameLabel.text = address.name ?? ""
+        contactNameLabel?.text = address.contactName ?? ""
         buildingLabel.text = "\(address.buildingNumber ?? "")"
         phoneNum.text = address.mobile ?? ""
         districtLabel.text = address.district?.name ?? ""

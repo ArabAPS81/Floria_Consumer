@@ -35,13 +35,19 @@ class AddAddressViewController: UIViewController {
     var govPicker = UIPickerView()
     var distPicker = UIPickerView()
     
-    var govenorate: GovernorateModel.Governorate?
+    var govenorate: GovernorateModel.Governorate?{
+        didSet{
+            districtButton.isEnabled = true
+        }
+    }
     var district: GovernorateModel.Governorate.District?
     var govs: [GovernorateModel.Governorate] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = NSLocalizedString("Add Address", comment: "")
         setData()
+        districtButton.isEnabled = false
         let service = AddressService.init(delegate: self)
         service.getListOfGovs()
         govPicker.delegate = self

@@ -159,6 +159,9 @@ extension VendorsListViewController : WebServiceDelegate {
             presenter?.getVendorsList(serviceType: self.serviceType)
         }
     }
+    func didFailToReceiveDataWithError(error: Error) {
+        
+    }
     
     
 }

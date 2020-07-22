@@ -188,7 +188,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         if collectionView == SliderHome {
             let model = slidersList[indexPath.row]
             if model.modelType == "provider"{
-                let vc = VendorDetailsViewController.newInstance(vendorId: Int(model.modelId ?? "0") ?? 0)
+                let vc = VendorDetailsViewController.newInstance(vendorId: Int(model.modelId ?? 0) )
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else if collectionView == Products {
@@ -248,7 +248,7 @@ extension HomeViewController :MaterialShowcaseDelegate{
         showcase2.primaryText = "Custom Bouquet"
         showcase2.secondaryText = "Click here to collect custom bouquet flowers "
         showcase2.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase2.backgroundPromptColor = UIColor.darkGray
+        showcase2.backgroundPromptColor = UIColor.gray
         showcase2.isTapRecognizerForTargetView = true
         
         let showcase3 = MaterialShowcase()
@@ -256,7 +256,7 @@ extension HomeViewController :MaterialShowcaseDelegate{
         showcase3.primaryText = "Gerb"
         showcase3.secondaryText = "Click here select a Gerb"
         showcase3.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase3.backgroundPromptColor = UIColor.blue
+        showcase3.backgroundPromptColor = UIColor.gray
         showcase3.isTapRecognizerForTargetView = false
         
         let showcase4 = MaterialShowcase()
@@ -264,7 +264,7 @@ extension HomeViewController :MaterialShowcaseDelegate{
         showcase4.primaryText = "Car Decoration"
         showcase4.secondaryText = "Click here to decorate your car"
         showcase4.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase4.backgroundPromptColor = UIColor.blue
+        showcase4.backgroundPromptColor = UIColor.gray
         showcase4.isTapRecognizerForTargetView = false
         
         let showcase5 = MaterialShowcase()
@@ -272,9 +272,9 @@ extension HomeViewController :MaterialShowcaseDelegate{
         showcase5.primaryText = "Pots Care"
         showcase5.secondaryText = "Click here to demand pots care service"
         showcase5.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase5.backgroundPromptColor = UIColor.blue
+        showcase5.backgroundPromptColor = UIColor.gray
         showcase5.isTapRecognizerForTargetView = false
-
+        
         
         showcase1.delegate = self
         showcase2.delegate = self
@@ -283,8 +283,12 @@ extension HomeViewController :MaterialShowcaseDelegate{
         showcase5.delegate = self
         
         
+        showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5)
+        if let tutorialOff = UserDefaults.standard.bool(forKey: "ShowCasesOff") as? Bool, tutorialOff{
+            showCaseSequence.setKey(key: "ShowCasesKey")
+        }
+        showCaseSequence.start()
         
-        showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5).setKey(key: "for").start()
     }
     
     func showCaseDidDismiss(showcase: MaterialShowcase, didTapTarget: Bool) {

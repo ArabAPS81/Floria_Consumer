@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MaterialShowcase
 
 class SettingsViewController: UITableViewController {
     
+    @IBOutlet weak var tutorialSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         title = NSLocalizedString("settings", comment: "")
+        tutorialSwitch.isOn = !UserDefaults.standard.bool(forKey: "ShowCasesOff")
         // Do any additional setup after loading the view.
     }
     
@@ -22,8 +25,23 @@ class SettingsViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == IndexPath.init(row: 0, section: 0) {
             changeLanguage()
+        }else if indexPath == IndexPath.init(row: 1, section: 0){
+            
         }
     }
+    
+    @IBAction func tutorialTapped(_ sender: UISwitch) {
+        if sender.isOn{
+            let showCaseSequence = MaterialShowcaseSequence()
+            showCaseSequence.removeUserState(key: "ShowCasesKey")
+            UserDefaults.standard.set(false, forKey: "ShowCasesOff")
+        }else{
+            let showCaseSequence = MaterialShowcaseSequence()
+            showCaseSequence.setKey(key: "ShowCasesKey")
+            UserDefaults.standard.set(true, forKey: "ShowCasesOff")
+        }
+    }
+    
     
     func changeLanguage() {
         let alert = UIAlertController.init(title: NSLocalizedString("Change Language", comment: ""), message: nil, preferredStyle: .actionSheet)

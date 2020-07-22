@@ -105,7 +105,7 @@ class AuthenticationService {
     
     
     
-    func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int,countryCode: String,code:String) {
+    func register(name : String , email: String, phone : String , password : String , checkPrivecy : Int,countryCode: String,code:String, birthDate: String, gender: String) {
         let url = NetworkConstants.baseUrl + "register"
         let parameters = [
             "name" : name,
@@ -114,8 +114,10 @@ class AuthenticationService {
             "password" : password,
             "country_code":countryCode,
             "code":code,
-            "check_privacy" : checkPrivecy,
-            "device_id" : Defaults().getUniqueID(),
+            "gender": gender,
+            "birthday": birthDate,
+            "check_privacy": checkPrivecy,
+            "device_id": Defaults().getUniqueID(),
             
             ] as [String : Any]
         HUD.show(.progress)

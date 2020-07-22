@@ -9,17 +9,8 @@
 import Foundation
 import CoreLocation
 import Alamofire
+import PKHUD
 
-//name:46 ابن النفيس الدور الرابع
-//street_name:الهيثم
-//district_id:3
-//apartment_number:
-//building_number:
-//street_name:
-//mobile:
-//another_mobile:
-//postal_code:
-//notes:
 
 struct  SubmittAddressQueryModel: Codable {
     var name: String?
@@ -86,6 +77,7 @@ class AddressService {
     }
     
     func addAddress(address:SubmittAddressQueryModel) {
+        HUD.show(.progress)
         guard let baseUrl = (NetworkConstants.baseUrl + "addresses").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let jsonData = (try? JSONEncoder().encode(address)) ?? Data()
         let json = try? JSONSerialization.jsonObject(with: jsonData, options:[]) as? [String:Any]
@@ -95,10 +87,14 @@ class AddressService {
             case .success(let value):
                 JSONResponseDecoder.decodeFrom(value, returningModelType: AddAddressResponseModel.self) { (result, error) in
                     if let result = result {
+                        HUD.flash(.success)
                         self.delegate?.didRecieveData(data: result)
+                    }else {
+                        HUD.flash(.error)
                     }
                 }
             case .failure(let error):
+                HUD.flash(.error)
                 self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }

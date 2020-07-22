@@ -29,6 +29,7 @@ class FilterViewController: UIViewController {
         let service = AddressService.init(delegate: self)
         service.getListOfGovs()
         locationTF.delegate = self
+        locationTF.isEnabled = false
     }
     
     @IBAction func filterButtonTapped(_ sender: UIButton) {
@@ -44,6 +45,7 @@ extension FilterViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let data = data as? GovernorateModel {
             govsList = data.governorates ?? []
+            locationTF.isEnabled = true
         }
         
     }

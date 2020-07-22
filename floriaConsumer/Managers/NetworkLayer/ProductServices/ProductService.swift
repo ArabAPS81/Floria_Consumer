@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import Alamofire
 
+
 struct  FeaturedProductsQueryModel {
     var location: CLLocationCoordinate2D
 }
@@ -35,7 +36,7 @@ class ProductService {
     func getFeaturedProducts(model: FeaturedProductsQueryModel) {
         
         let baseUrl = (NetworkConstants.baseUrl + "nearest-popular-products?")
-        let parameters = "lat=\(model.location.latitude)&lng=\(model.location.longitude)"
+        let parameters = "lat=30.063049&lng=31.346661"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

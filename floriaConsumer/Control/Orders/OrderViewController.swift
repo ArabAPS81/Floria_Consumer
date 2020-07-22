@@ -15,6 +15,7 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var svStatus: OrderStatusView!
     @IBOutlet weak var tvOrder: UITableView!
     @IBOutlet weak var rateButton: UIButton!
+    @IBOutlet weak var payButton: UIButton!
     
     var order: Order?
     
@@ -26,6 +27,12 @@ class OrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if order?.isPaid == 1 {
+            payButton.isHidden = false
+        }else{
+            payButton.isHidden = true
+        }
         
         rateButton.isEnabled = (order?.status.id == 5)
         if order?.status.id == 5 {
@@ -49,15 +56,10 @@ class OrderViewController: UIViewController {
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func payFawry(_ sender: UIButton) {
+        let service = GeneralServices.init(delegate: self)
+        service.payOrder((order?.id)!, paymentNum: "")
+    }
 }
 
 extension OrderViewController: UITableViewDataSource {
@@ -139,5 +141,24 @@ extension OrderViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension OrderViewController: WebServiceDelegate {
+    
+    func didRecieveData(data: Codable) {
+        if let data = data as? ComplainModel{
+            if data.httpCode == 200{
+                alertWithMessage(data.message, title: nil)
+                payButton.isHidden = true
+            }else{
+                alertWithMessage(data.errors?.message?.body?.first ?? NSLocalizedString("error has occured", comment: ""), title: nil)
+            }
+            
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
     }
 }

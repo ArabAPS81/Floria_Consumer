@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MkK-tJ-S4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +20,7 @@
         <!--Vendors List View Controller-->
         <scene sceneID="BQv-LZ-GgE">
             <objects>
-                <viewController storyboardIdentifier="VendorsListViewController" id="MkK-tJ-S4Z" customClass="VendorsListViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VendorsListViewController" id="MkK-tJ-S4Z" customClass="VendorsListViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ll7-qj-lyM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +100,7 @@
         <!--Vendor Details View Controller-->
         <scene sceneID="JBf-B0-rn8">
             <objects>
-                <viewController storyboardIdentifier="VendorDetailsViewController" id="FqI-v5-SEQ" customClass="VendorDetailsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VendorDetailsViewController" id="FqI-v5-SEQ" customClass="VendorDetailsViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8SR-DO-bNw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +136,7 @@
                                                             <constraint firstItem="M8T-wB-HVz" firstAttribute="centerX" secondItem="8QC-Of-u3r" secondAttribute="centerX" id="z9N-s8-Ayb"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vendorAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-lB-1il">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-lB-1il">
                                                         <rect key="frame" x="6" y="6" width="88" height="88"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="nwt-lB-1il" secondAttribute="height" multiplier="1:1" id="eLK-hp-zmX"/>
@@ -144,7 +145,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UCR-X9-Hgl">
                                                         <rect key="frame" x="108" y="10" width="211" height="80"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-p2-E7j">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTp-p2-E7j">
                                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="14" id="RAq-Du-PUN"/>
@@ -153,7 +154,7 @@
                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31 Street 9, Mokattam, Cairo." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92a-56-3BS">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92a-56-3BS">
                                                                 <rect key="frame" x="0.0" y="14" width="211" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,7 +163,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTM-zt-0jA">
                                                                 <rect key="frame" x="0.0" y="69" width="211" height="11"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-3W-tdm" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-3W-tdm" customClass="RateView" customModule="Floria" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="11"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="55" id="nyv-t4-J8f"/>
@@ -307,7 +308,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="serviceCell" id="Ses-D5-n5X" customClass="ServicesCollectionViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="serviceCell" id="Ses-D5-n5X" customClass="ServicesCollectionViewCell" customModule="Floria" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tu4-Ic-WOC">
@@ -437,6 +438,5 @@
         <image name="shape954" width="20.5" height="20.5"/>
         <image name="sortingicon" width="20.5" height="19.5"/>
         <image name="unfavorite" width="20" height="18.5"/>
-        <image name="vendorAvatar" width="80" height="80"/>
     </resources>
 </document>

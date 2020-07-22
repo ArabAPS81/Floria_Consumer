@@ -40,6 +40,11 @@ class OrdersViewController: UIViewController {
         super.viewDidLoad()
         title = NSLocalizedString("orders", comment: "")
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         requestOrders()
     }
     
