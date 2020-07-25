@@ -39,7 +39,7 @@ class ConfirmationCodeViewController: UIViewController {
         chagePassBtn.isEnabled = false
         chagePassBtn.backgroundColor = .darkGray
         codeTF.addTarget(self, action: #selector(textChanged(_:)), for: UIControl.Event.editingChanged)
-        
+        codeTF.delegate = self
     }
     
     @objc func textChanged(_ sender: UITextField) {
@@ -119,6 +119,16 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
     }
     func didFailToReceiveDataWithError(error: Error) {
         
+    }
+}
+
+extension ConfirmationCodeViewController:UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = 4
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
     }
 }
 

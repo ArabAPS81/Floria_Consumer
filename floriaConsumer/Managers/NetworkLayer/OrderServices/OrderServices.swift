@@ -153,12 +153,12 @@ struct OrderSummaryResponceModel : Codable {
     
     struct Summary : Codable {
 
-        let delivery : Int?
-        let subtotal : Int?
-        let subTotalAfterDiscount: Int?
-        let total : Int?
-        let totalTax : Int?
-        let discount: Int?
+        let delivery : Double?
+        let subtotal : Double?
+        let subTotalAfterDiscount: Double?
+        let total : Double?
+        let totalTax : Double?
+        let discount: Double?
         enum CodingKeys: String, CodingKey {
             case delivery = "delivery"
             case subtotal = "subtotal"

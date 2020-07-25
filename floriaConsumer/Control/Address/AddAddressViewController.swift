@@ -67,7 +67,7 @@ class AddAddressViewController: UIViewController {
             address.phoneNum = contactPhoneTF.text
             let service = AddressService.init(delegate: self)
             if fromEdit{
-                service.editAddress(address: address, id: (self.address?.id!)!)
+                service.editAddress(address: address, id: (self.address?.id)!)
             }else {
                 service.addAddress(address: address)
             }

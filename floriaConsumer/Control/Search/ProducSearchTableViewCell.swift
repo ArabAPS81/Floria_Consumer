@@ -23,6 +23,9 @@ class ProducSearchTableViewCell: UITableViewCell {
     
     func configure(product: ProductsModel.Product?) {
         productNameLabel.text = product?.name
+        productdiscriptionLabel.text = product?.descriptionField ?? ""
+        vendorNameLabel.text = product?.provider?.name ?? ""
+        
         productImage.kf.setImage(with: URL.init(string: product?.image ?? ""))
         productPrice.text = "\(Int(product?.price ?? 0))LE"
         

@@ -76,8 +76,9 @@ struct Order: Codable {
     let provider: Provider
     let status: Status
     let requiredAt, notes: String?
-    let shipping, subtotal, totalTax, delivery: Int
-    let total: Int
+    let shipping: Int
+    let subtotal, totalTax, delivery: Double
+    let total: Double
     let isPaid: Int?
     let service: Service
     let products: [ProductElement]?

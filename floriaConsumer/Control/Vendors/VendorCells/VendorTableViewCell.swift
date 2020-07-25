@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialCards
 
 class VendorTableViewCell: UITableViewCell {
 
-   @IBOutlet weak var shadowedView: UIView!
+   @IBOutlet weak var shadowedView: MDCCard!
     
     static let rowHeight: CGFloat = 106
     static let reuseId = "VendorTableViewCell"
@@ -46,8 +47,11 @@ class VendorTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectedBackgroundView = UIView()
-        shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(addShadow(_:)), name: NSNotification.Name(rawValue: "addShadow"), object: nil)
+        //shadowedView.frame = CGRect.init(x: -100, y: -100, width: 0, height: 0)
+        //NotificationCenter.default.addObserver(self, selector: #selector(addShadow(_:)), name: NSNotification.Name(rawValue: "addShadow"), object: nil)
+        shadowedView.cornerRadius = 50
+        shadowedView.isUserInteractionEnabled = false
+        shadowedView.setShadowElevation(ShadowElevation.fabResting, for: .normal)
     }
     
     override func layoutSubviews() {

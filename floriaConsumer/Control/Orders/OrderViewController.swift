@@ -99,6 +99,7 @@ extension OrderViewController: UITableViewDataSource {
         cell.vendorAddressLabel.text = order!.provider.mobile
         cell.vendorImageView.imageFromUrl(url: order!.provider.image, placeholder: #imageLiteral(resourceName: "vendorAvatar"))
         cell.ratingView.setRate(rate: 0)
+        cell.favoriteButton.isHidden = true
         
         return cell
     }

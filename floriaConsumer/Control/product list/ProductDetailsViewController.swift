@@ -18,6 +18,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var extrasVIew: UIView!
     
     var product: ProductsModel.Product?
     var extras = [ProductPackingModel.ProductPacking]()
@@ -37,7 +38,7 @@ class ProductDetailsViewController: UIViewController {
         super.viewDidLoad()
         let textAttributes = [NSAttributedString.Key.foregroundColor:Constants.pincColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
+        extrasVIew.isHidden = extras.count == 0
         self.title = product?.name
         setupViews()
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)

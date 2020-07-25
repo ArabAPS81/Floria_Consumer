@@ -278,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="-13797.101449275364" y="-3338.1696428571427"/>
         </scene>
-        <!--Forget password-->
+        <!--Forget Password-->
         <scene sceneID="ehv-GZ-TC6">
             <objects>
                 <viewController id="0wb-35-2Z8" customClass="ForgetPassViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group17" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-jW-NOV">
-                                <rect key="frame" x="-153.5" y="64" width="682" height="194"/>
+                                <rect key="frame" x="17" y="64" width="341" height="194"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-5b-MGu">
                                 <rect key="frame" x="31" y="354.5" width="313" height="2"/>
@@ -361,7 +361,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bim-z5-73q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Forget password" id="2eO-bK-naF"/>
+                    <navigationItem key="navigationItem" title="Forget Password" id="2eO-bK-naF"/>
                     <connections>
                         <outlet property="countryFlagImage" destination="UlJ-j7-62D" id="x9U-ck-djt"/>
                         <outlet property="mobileTF" destination="H8A-Re-gJK" id="9FG-Y9-xDV"/>
@@ -372,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="-12874" y="-2501"/>
         </scene>
-        <!--Verification code-->
+        <!--Verification Code-->
         <scene sceneID="ctV-xr-Z75">
             <objects>
                 <viewController storyboardIdentifier="confirmCodeVC" id="gd2-S1-q83" customClass="ConfirmationCodeViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
@@ -381,7 +381,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group17" translatesAutoresizingMaskIntoConstraints="NO" id="3sI-eG-6X3">
-                                <rect key="frame" x="-153.5" y="20" width="682" height="216"/>
+                                <rect key="frame" x="17" y="20" width="341" height="216"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFI-6w-fj1">
                                 <rect key="frame" x="31" y="332.5" width="313" height="2"/>
@@ -479,7 +479,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PpZ-TJ-l4V"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Verification code" id="Xac-zN-9nX"/>
+                    <navigationItem key="navigationItem" title="Verification Code" id="Xac-zN-9nX"/>
                     <connections>
                         <outlet property="chagePassBtn" destination="eyp-q6-mfK" id="HTq-wM-EXU"/>
                         <outlet property="codeTF" destination="Nhs-xY-MiB" id="JsT-r2-6Hi"/>
@@ -1272,7 +1272,7 @@
         <image name="user-name" width="13.5" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nTV-Re-jqj"/>
+        <segue reference="cUn-Da-6f7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

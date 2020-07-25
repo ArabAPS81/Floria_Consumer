@@ -233,7 +233,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Governorate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jO-0o-Mx4">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="56.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="366" height="56.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -248,7 +248,7 @@
                                             <constraint firstItem="Qch-dC-HES" firstAttribute="top" secondItem="yvm-3E-UPb" secondAttribute="bottom" constant="8" id="clT-g2-hYv"/>
                                             <constraint firstAttribute="trailing" secondItem="7jO-0o-Mx4" secondAttribute="trailing" id="eMg-wH-GQf"/>
                                             <constraint firstItem="Qch-dC-HES" firstAttribute="top" secondItem="7jO-0o-Mx4" secondAttribute="bottom" id="imQ-sE-J1h"/>
-                                            <constraint firstItem="7jO-0o-Mx4" firstAttribute="leading" secondItem="Zej-8o-A8b" secondAttribute="leading" id="jgH-qg-HeQ"/>
+                                            <constraint firstItem="7jO-0o-Mx4" firstAttribute="leading" secondItem="Zej-8o-A8b" secondAttribute="leading" constant="8" id="jgH-qg-HeQ"/>
                                             <constraint firstItem="7jO-0o-Mx4" firstAttribute="top" secondItem="Zej-8o-A8b" secondAttribute="top" id="oXG-ds-Y1n"/>
                                         </constraints>
                                     </view>
@@ -269,7 +269,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="District" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-Kr-Pua">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="56.5"/>
+                                                <rect key="frame" x="8" y="0.0" width="366" height="56.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -278,7 +278,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="qVx-Kr-Pua" secondAttribute="trailing" id="7wB-dr-PaX"/>
                                             <constraint firstItem="Z26-Do-rHw" firstAttribute="top" secondItem="Esh-Ua-w6w" secondAttribute="top" constant="8" id="FD8-5J-D7g"/>
-                                            <constraint firstItem="qVx-Kr-Pua" firstAttribute="leading" secondItem="Esh-Ua-w6w" secondAttribute="leading" id="JXE-MJ-x0L"/>
+                                            <constraint firstItem="qVx-Kr-Pua" firstAttribute="leading" secondItem="Esh-Ua-w6w" secondAttribute="leading" constant="8" id="JXE-MJ-x0L"/>
                                             <constraint firstItem="gPO-TA-G1Z" firstAttribute="leading" secondItem="Esh-Ua-w6w" secondAttribute="leading" id="K2S-0E-SM9"/>
                                             <constraint firstItem="gPO-TA-G1Z" firstAttribute="top" secondItem="qVx-Kr-Pua" secondAttribute="bottom" id="bUE-D9-9XC"/>
                                             <constraint firstItem="qVx-Kr-Pua" firstAttribute="top" secondItem="Esh-Ua-w6w" secondAttribute="top" id="gn1-Xr-Txn"/>
@@ -474,7 +474,7 @@
                                     <constraint firstAttribute="width" constant="220" id="us2-Jo-o4k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <state key="normal" title="Add address">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -492,6 +492,7 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="MG4-nU-DL9">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="sfc-sK-4qa">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7nA-Rz-dim">
                                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
@@ -502,6 +503,11 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
+                                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QXl-5m-9tE">
+                                            <rect key="frame" x="124.5" y="7" width="165" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Add Address"/>
+                                        </button>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

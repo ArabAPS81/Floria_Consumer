@@ -77,7 +77,7 @@ extension UserAddressListViewController: UITableViewDataSource,UITableViewDelega
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("Delete", comment: "")) { action, index in
             let id = self.addressesList[indexPath.row].id
-            self.deleteAddress(id: id!)
+            self.deleteAddress(id: id)
         }
         delete.backgroundColor = .orange
 

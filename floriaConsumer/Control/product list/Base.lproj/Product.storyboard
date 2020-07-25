@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4aq-Js-Mrr">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
         <!--Product Details View Controller-->
         <scene sceneID="izi-hJ-1hE">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailsViewController" id="NbY-dP-Emq" customClass="ProductDetailsViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailsViewController" id="NbY-dP-Emq" customClass="ProductDetailsViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6y-Be-gEK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +38,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderHome" id="f8d-PB-UrZ" customClass="SliderHomeCollectionViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderHome" id="f8d-PB-UrZ" customClass="SliderHomeCollectionViewCell" customModule="Floria" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="-15.5" width="417" height="331.33333333333331"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -98,7 +99,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-mt-dUn">
                                                         <rect key="frame" x="292" y="0.0" width="75" height="83"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v87-IR-3gS" customClass="RateView" customModule="floriaConsumer" customModuleProvider="target">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v87-IR-3gS" customClass="RateView" customModule="Floria" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="hml-LG-4rS"/>
@@ -141,16 +142,37 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-sC-vnC">
                                                         <rect key="frame" x="10" y="0.0" width="282" height="83"/>
                                                         <subviews>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-xO-Ip9">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4b-GS-uuo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="282" height="19.5"/>
-                                                                <gestureRecognizers/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                                                <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="4th-1T-Aaw" appends="YES" id="OAS-US-M0C"/>
-                                                                </connections>
-                                                            </label>
+                                                                <subviews>
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Vendor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-xO-Ip9">
+                                                                        <rect key="frame" x="25" y="0.0" width="257" height="19.5"/>
+                                                                        <gestureRecognizers/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                        <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="4th-1T-Aaw" appends="YES" id="OAS-US-M0C"/>
+                                                                        </connections>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape952" translatesAutoresizingMaskIntoConstraints="NO" id="8q1-2H-EcI">
+                                                                        <rect key="frame" x="0.0" y="2" width="20" height="15.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="nVr-CG-kBw"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="tMV-xO-Ip9" firstAttribute="leading" secondItem="8q1-2H-EcI" secondAttribute="trailing" constant="5" id="D3Z-oU-NoC"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="tMV-xO-Ip9" secondAttribute="trailing" id="GzM-8y-Zn1"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="tMV-xO-Ip9" secondAttribute="bottom" id="XA8-c4-N37"/>
+                                                                    <constraint firstItem="8q1-2H-EcI" firstAttribute="top" secondItem="Z4b-GS-uuo" secondAttribute="top" constant="2" id="jji-KR-AcE"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="8q1-2H-EcI" secondAttribute="bottom" constant="2" id="lcy-yf-ZjP"/>
+                                                                    <constraint firstItem="8q1-2H-EcI" firstAttribute="leading" secondItem="Z4b-GS-uuo" secondAttribute="leading" id="qC7-NH-8iu"/>
+                                                                    <constraint firstItem="tMV-xO-Ip9" firstAttribute="top" secondItem="Z4b-GS-uuo" secondAttribute="top" id="yw1-lE-voz"/>
+                                                                </constraints>
+                                                            </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pr7-mJ-bcb">
                                                                 <rect key="frame" x="0.0" y="19.5" width="282" height="63.5"/>
                                                                 <string key="text">I had problems with the bounds of the collectionView passed into sizeForItemAtIndexPath not being correct sgsev erthb wv4y5 gw4y wv4y wg4y wb4y tryj rh yknu yku uk rj et rbnj nuk rnj</string>
@@ -378,6 +400,7 @@
                         <outlet property="amountLabel" destination="64D-rU-jQp" id="F0k-LJ-D9P"/>
                         <outlet property="descriptionLabel" destination="Pr7-mJ-bcb" id="BpP-Aq-DAB"/>
                         <outlet property="extrasCollectionView" destination="sBJ-2l-tiP" id="Vze-2k-HIr"/>
+                        <outlet property="extrasVIew" destination="DnB-Xq-SWF" id="nVb-6f-03D"/>
                         <outlet property="favoriteButton" destination="rQg-Ke-WfQ" id="p1h-6Z-hV1"/>
                         <outlet property="imageSliderCollectioView" destination="i12-GQ-Ol3" id="rGE-YY-NN2"/>
                         <outlet property="priceLabel" destination="sSF-Fs-6Iy" id="EEE-ih-6xb"/>
@@ -408,7 +431,7 @@
         <!--Viewimg-->
         <scene sceneID="b0Q-Ce-Dz2">
             <objects>
-                <viewController id="KuZ-FQ-SFf" customClass="viewimg" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KuZ-FQ-SFf" customClass="viewimg" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qyx-1K-KMn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,7 +477,7 @@
         <!--Product List View Controller-->
         <scene sceneID="ht4-Db-Y6d">
             <objects>
-                <viewController storyboardIdentifier="ProductListViewController" id="4aq-Js-Mrr" customClass="ProductListViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductListViewController" id="4aq-Js-Mrr" customClass="ProductListViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P0q-dG-RyE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,6 +583,7 @@
         <image name="favorite" width="26.5" height="24"/>
         <image name="minusIcon" width="20" height="20"/>
         <image name="plusIcon" width="20" height="20"/>
+        <image name="shape952" width="10" height="10"/>
         <image name="shape954" width="20.5" height="20.5"/>
         <image name="sortingicon" width="20.5" height="19.5"/>
         <image name="unfavorite" width="20" height="18.5"/>

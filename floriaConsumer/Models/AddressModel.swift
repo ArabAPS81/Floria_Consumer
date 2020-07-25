@@ -25,7 +25,7 @@ struct AddressModel : Codable {
         let apartmentNumber : String?
         let buildingNumber : String?
         let district : District?
-        let id : Int?
+        let id : Int
         let mobile : String?
         let name : String?
         let notes : String?

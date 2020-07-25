@@ -28,12 +28,12 @@ class OrderSummaryViewController: UIViewController {
         setUpViews()
     }
     func setUpViews() {
-        subTotalLabel.text = "\(summaryModel?.summary?.subtotal ?? 0)"
-        discountSubTotalLabel.text = "\(summaryModel?.summary?.subTotalAfterDiscount ?? 0)"
-        deliveryLabel.text = "\(summaryModel?.summary?.delivery ?? 0)"
-        totalLabel.text = "\(summaryModel?.summary?.total ?? 0)"
-        VatLabel.text = "\(summaryModel?.summary?.totalTax ?? 0)"
-        bankLabel.text = "\(summaryModel?.summary?.discount ?? 0)"
+        subTotalLabel.text = "\(Int(summaryModel?.summary?.subtotal ?? 0))"
+        discountSubTotalLabel.text = "\(Int(summaryModel?.summary?.subTotalAfterDiscount ?? 0))"
+        deliveryLabel.text = "\(Int(summaryModel?.summary?.delivery ?? 0))"
+        totalLabel.text = "\(Int(summaryModel?.summary?.total ?? 0))"
+        VatLabel.text = "\(Int(summaryModel?.summary?.totalTax ?? 0))"
+        bankLabel.text = "\(Int(summaryModel?.summary?.discount ?? 0))"
     }
     
     @IBAction func payButtonTapped(_ sender: UIButton) {
