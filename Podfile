@@ -6,7 +6,7 @@ target 'floriaConsumer' do
   use_frameworks!
 
   # Pods for floriaConsumer
-	pod 'Alamofire'
+	pod 'Alamofire', '~> 4.9.1'
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'SideMenu'
   pod 'XLPagerTabStrip'
