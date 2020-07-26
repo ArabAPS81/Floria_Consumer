@@ -63,8 +63,16 @@ final class LocalePickerViewController: UIViewController {
         /// true if search bar in tableView header
         $0.hidesNavigationBarDuringPresentation = true
         $0.searchBar.searchBarStyle = .minimal
-        $0.searchBar.searchTextField.textColor = .black
-        $0.searchBar.searchTextField.clearButtonMode = .whileEditing
+        if #available(iOS 13.0, *) {
+            $0.searchBar.searchTextField.textColor = .black
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 13.0, *) {
+            $0.searchBar.searchTextField.clearButtonMode = .whileEditing
+        } else {
+            // Fallback on earlier versions
+        }
         return $0
     }(UISearchController(searchResultsController: nil))
     
