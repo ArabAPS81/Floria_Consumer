@@ -148,7 +148,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-cV-yQx">
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.2791898544520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yzt-cV-yQx" secondAttribute="height" multiplier="1:1" id="73j-J4-biI"/>
                                                 </constraints>
@@ -478,12 +478,15 @@
                         <outletCollection property="sideMenuButtons" destination="l7A-SL-G6f" collectionClass="NSMutableArray" id="pvi-YJ-DBh"/>
                         <outletCollection property="sideMenuButtons" destination="oPC-p3-ofL" collectionClass="NSMutableArray" id="vUg-fN-be4"/>
                         <outletCollection property="sideMenuButtons" destination="xzS-Ah-CoY" collectionClass="NSMutableArray" id="GbP-xQ-Qj3"/>
+                        <outletCollection property="logedUserViews" destination="4uD-NW-L5v" collectionClass="NSMutableArray" id="zYC-1I-ixU"/>
+                        <outletCollection property="logedUserViews" destination="Sqq-Ql-aT1" collectionClass="NSMutableArray" id="IAf-v6-cKV"/>
+                        <outletCollection property="logedUserViews" destination="DI2-N9-tvP" collectionClass="NSMutableArray" id="bqF-zz-GzW"/>
                         <segue destination="Qng-0O-dl6" kind="show" identifier="Segue2Orders" id="Uww-uS-Atl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOU-AZ-hye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10694.202898550726" y="-1832.1428571428571"/>
+            <point key="canvasLocation" x="-10781" y="-1813"/>
         </scene>
         <!--OrdersViewControllerStoryboard-->
         <scene sceneID="fbO-l0-Kxm">

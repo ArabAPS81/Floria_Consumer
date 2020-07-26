@@ -19,6 +19,7 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var logout: UIButton!
     @IBOutlet weak var userView: UIView!
     @IBOutlet weak var userPhoneLabel: UILabel!
+    @IBOutlet var logedUserViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,11 @@ class SideMenuViewController: UIViewController {
         
         if Defaults().isUserLogged {
             logButton.setTitle(NSLocalizedString("Logout", comment: ""), for: .normal)
-            
+            logedUserViews.forEach {$0.isHidden = false}
             
         }else {
             logButton.setTitle(NSLocalizedString("Login", comment: ""), for: .normal)
+            logedUserViews.forEach {$0.isHidden = true}
         }
         
         for button in sideMenuButtons {
