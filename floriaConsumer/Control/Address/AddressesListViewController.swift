@@ -47,7 +47,7 @@ class AddressesListViewController: UIViewController {
     
     @IBAction func addAddressTapped(_ sender: Any) {
         if Defaults().isUserLogged {
-        self.performSegue(withIdentifier: "addAddress", sender: nil)
+            self.performSegue(withIdentifier: "addAddress", sender: nil)
         } else {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let nav = storyboard.instantiateInitialViewController() as! UINavigationController

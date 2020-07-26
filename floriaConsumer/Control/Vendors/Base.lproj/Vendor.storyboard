@@ -46,6 +46,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deF-1c-Xw6">
                                         <rect key="frame" x="377.5" y="0.0" width="20.5" height="44"/>
                                         <state key="normal" image="sortingicon"/>
+                                        <connections>
+                                            <action selector="order:" destination="MkK-tJ-S4Z" eventType="touchUpInside" id="DIj-Fw-qM3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

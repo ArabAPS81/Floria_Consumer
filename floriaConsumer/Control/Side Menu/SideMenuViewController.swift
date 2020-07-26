@@ -36,6 +36,8 @@ class SideMenuViewController: UIViewController {
         
         if Defaults().isUserLogged {
             logButton.setTitle(NSLocalizedString("Logout", comment: ""), for: .normal)
+            
+            
         }else {
             logButton.setTitle(NSLocalizedString("Login", comment: ""), for: .normal)
         }

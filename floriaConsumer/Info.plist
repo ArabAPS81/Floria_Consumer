@@ -18,6 +18,8 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>to attach Photo</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>UIMainStoryboardFile</key>
@@ -55,12 +57,12 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 				</dict>
 			</array>
 		</dict>
@@ -77,11 +79,9 @@
 	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
-	<key>NSCameraUsageDescription</key>
-	<string>to attach Photo</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>to attach Photo</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 </dict>
 </plist>

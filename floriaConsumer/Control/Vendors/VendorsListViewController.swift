@@ -56,6 +56,18 @@ class VendorsListViewController: UIViewController {
         view.backgroundView  = noDataLabel
     }
     
+    @IBAction func order(_ sender: UIButton) {
+        
+        if sender.isSelected {
+            vendorsList = vendorsList.sorted {$0.name!.lowercased() < $1.name!.lowercased()}
+        }else{
+            vendorsList = vendorsList.sorted {$0.name!.lowercased() > $1.name!.lowercased()}
+        }
+        tableView.reloadData()
+        sender.isSelected = !sender.isSelected
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? FilterViewController {
             vc.delegate = self
@@ -101,7 +113,26 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
             alertWith(vendor: vendorsList[indexPath.row])
         }
         
+        
+        
     }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let lastItem = (orders?.count)! - 1
+//        if indexPath.row == lastItem{
+//            loadMoreData()
+//        }
+//    }
+//    
+//    func loadMoreData(){
+//        if meta.currentPage < meta.lastPage {
+//            //tableView.reloadData()
+//            
+//            let service = OrdersServices.init(delegate: self)
+//
+//            service.getOrders(page: meta.currentPage + 1)
+//            
+//        }
+//    }
     
     func alertWith(vendor: VendorsModel.Vendor) {
         let alert = UIAlertController.init(title: NSLocalizedString("sorry", comment: ""), message: NSLocalizedString("vendor not available", comment: ""), preferredStyle: .alert)
