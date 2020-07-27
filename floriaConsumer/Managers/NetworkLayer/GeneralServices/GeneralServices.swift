@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import PKHUD
 
 
 class GeneralServices {
@@ -44,6 +45,7 @@ class GeneralServices {
     }
     
     func submittSupportMessageWithFile(_ content:String, title:String, image: Data) {
+        HUD.show(.progress)
         let url = NetworkConstants.baseUrl + "complaint"
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.upload(multipartFormData: { (MPFData) in
@@ -58,17 +60,26 @@ class GeneralServices {
                     case .success:
                         JSONResponseDecoder.decodeFrom(response.data!, returningModelType: ComplainModel.self) { (result, error) in
                             if error == nil {
-                                self.delegate?.didRecieveData(data: result!)
+                                if result?.errors == nil {
+                                    HUD.flash(.success)
+                                    self.delegate?.didRecieveData(data: result!)
+                                }else{
+                                    HUD.flash(.error)
+                                    self.delegate?.didRecieveData(data: result!)
+                                }
                             }else{
+                                HUD.flash(.error)
                                 self.delegate?.didFailToReceiveDataWithError(error: error!)
                             }
                         }
                     case .failure(let error):
+                        HUD.flash(.error)
                         self.delegate?.didFailToReceiveDataWithError(error: error)
                     }
                 }
                 
             case .failure(let error):
+                HUD.flash(.error)
                 self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }

@@ -167,7 +167,7 @@ class RegisterationViewController: UIViewController {
     
     @objc func dateChanged(_ sender: UIDatePicker){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale = Locale.init(identifier: "en")
         let strDate = dateFormatter.string(from: datePicker.date)
         birthDateTF.text = strDate
