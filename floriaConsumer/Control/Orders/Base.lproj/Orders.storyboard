@@ -443,8 +443,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-3c-eR6">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-3c-eR6">
+                                <rect key="frame" x="0.0" y="177" width="375" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YwG-MY-EHY" detailTextLabel="HNd-Ao-0f1" style="IBUITableViewCellStyleSubtitle" id="0Gr-wA-Sel">
@@ -477,37 +477,61 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-rB-NMS" customClass="OrderStatusView" customModule="Floria" customModuleProvider="target">
-                                <rect key="frame" x="33.666666666666657" y="44" width="308" height="44"/>
+                                <rect key="frame" x="33.666666666666657" y="133" width="308" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" placeholder="YES" id="iGs-oY-9DH"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-pA-5q6">
                                 <rect key="frame" x="75" y="708" width="225" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gWf-iA-Wqf">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="gWf-iA-Wqf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Rate">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="ita-Hw-CBh" kind="show" id="PTW-8F-EIm"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rip-Sc-7ul">
+                                <rect key="frame" x="37.666666666666657" y="88" width="300" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdR-ES-Eja">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.25240796232876711" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="PdR-ES-Eja" firstAttribute="leading" secondItem="rip-Sc-7ul" secondAttribute="leading" id="dMa-cf-Ygm"/>
+                                    <constraint firstItem="PdR-ES-Eja" firstAttribute="top" secondItem="rip-Sc-7ul" secondAttribute="top" id="gcQ-OP-6hD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PdR-ES-Eja" secondAttribute="trailing" id="kRH-oq-IwB"/>
+                                    <constraint firstAttribute="bottom" secondItem="PdR-ES-Eja" secondAttribute="bottom" id="lxA-8m-Lf0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rip-Sc-7ul" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="1Cp-Gq-A8W"/>
+                            <constraint firstItem="rip-Sc-7ul" firstAttribute="width" secondItem="B4d-ZG-agf" secondAttribute="width" multiplier="0.8" id="4Px-Mh-XDp"/>
                             <constraint firstItem="c58-07-vWM" firstAttribute="bottom" secondItem="Gh6-pA-5q6" secondAttribute="bottom" constant="20" id="7Md-gz-6aO"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="leading" secondItem="c58-07-vWM" secondAttribute="leading" id="JAU-3U-5J0"/>
+                            <constraint firstItem="6lk-rB-NMS" firstAttribute="top" secondItem="rip-Sc-7ul" secondAttribute="bottom" id="QId-PJ-2A4"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="top" secondItem="6lk-rB-NMS" secondAttribute="bottom" id="W3Q-jp-xJY"/>
                             <constraint firstItem="Gh6-pA-5q6" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="WGR-CC-gRK"/>
                             <constraint firstItem="Gh6-pA-5q6" firstAttribute="width" secondItem="B4d-ZG-agf" secondAttribute="width" multiplier="0.6" id="fQh-kq-bdH"/>
-                            <constraint firstItem="6lk-rB-NMS" firstAttribute="top" secondItem="c58-07-vWM" secondAttribute="top" id="iA1-6G-sOz"/>
+                            <constraint firstItem="rip-Sc-7ul" firstAttribute="top" secondItem="c58-07-vWM" secondAttribute="top" id="fZ3-qo-CLl"/>
+                            <constraint firstItem="6lk-rB-NMS" firstAttribute="top" secondItem="c58-07-vWM" secondAttribute="top" constant="45" id="iA1-6G-sOz"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="bottom" secondItem="c58-07-vWM" secondAttribute="bottom" id="iks-pj-NuE"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="trailing" secondItem="c58-07-vWM" secondAttribute="trailing" id="tSD-kS-abP"/>
                             <constraint firstItem="6lk-rB-NMS" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="vDH-Ef-lQw"/>
@@ -534,12 +558,13 @@
                         <outlet property="payButton" destination="a0g-me-Tk1" id="ztK-A3-8Fc"/>
                         <outlet property="rateButton" destination="Gh6-pA-5q6" id="t8n-5u-uwl"/>
                         <outlet property="svStatus" destination="6lk-rB-NMS" id="jHq-4k-hLV"/>
+                        <outlet property="totalAmontLabel" destination="PdR-ES-Eja" id="8IJ-OF-u4D"/>
                         <outlet property="tvOrder" destination="ffQ-3c-eR6" id="XcE-A7-xRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm9-1I-fcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.5999999999999" y="44.527736131934034"/>
+            <point key="canvasLocation" x="1797.5999999999999" y="44.334975369458128"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="GOA-Vt-HUb">

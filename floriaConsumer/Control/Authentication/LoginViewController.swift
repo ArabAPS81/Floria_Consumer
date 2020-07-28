@@ -60,12 +60,11 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func showPassTapped(_ sender: Any) {
+    @IBAction func showPassTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if (passTF.isSecureTextEntry == true){
             passTF.isSecureTextEntry = false
-            showPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
         }else{
-            showPassBtn.setImage(UIImage(named: "ShowPass"), for: .normal)
             passTF.isSecureTextEntry = true
         }
     }
@@ -95,12 +94,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func phoneCodeTapped(_ sender: UIButton) {
-        let alert = UIAlertController(style: .actionSheet, title: "Phone Codes")
+        let alert = UIAlertController(style: .actionSheet, title: NSLocalizedString("Phone Codes", comment: ""))
         alert.addLocalePicker(type: .phoneCode) { info in
             self.countryFlagImage.image = info?.flag
             sender.setTitle(info?.phoneCode, for: .normal)
         }
-        alert.addAction(title: "OK", style: .cancel)
+        alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
         self.present(alert, animated: true, completion: nil)
     }
     

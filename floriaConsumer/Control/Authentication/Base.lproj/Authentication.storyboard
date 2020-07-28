@@ -61,9 +61,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-bp-ykX">
-                                <rect key="frame" x="124.5" y="446" width="126" height="29"/>
+                                <rect key="frame" x="123.5" y="446" width="128" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Not Registered Yet!">
+                                <state key="normal" title="Not Registered Yet?">
                                     <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -902,7 +902,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fjN-uQ-LZM">
                                                                         <rect key="frame" x="0.0" y="0.0" width="56.5" height="30"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-FG-2oN">
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-FG-2oN">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="18.5" height="30"/>
                                                                                 <state key="normal" image="iconMaterialRadioButtonUnchecked"/>
                                                                                 <state key="selected" image="iconMaterialRadioButtonChecked"/>
@@ -967,7 +967,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmK-pU-NcT">
                                                                 <rect key="frame" x="280.5" y="0.0" width="34.5" height="49"/>
                                                                 <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" image="ShowPass"/>
+                                                                <state key="normal" image="HidePass"/>
+                                                                <state key="selected" image="ShowPass"/>
                                                                 <connections>
                                                                     <action selector="showPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="dAP-ax-MIA"/>
                                                                 </connections>
@@ -1020,7 +1021,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-4s-KVV">
                                                                 <rect key="frame" x="280.5" y="0.0" width="34.5" height="49"/>
                                                                 <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" image="ShowPass"/>
+                                                                <state key="normal" image="HidePass"/>
+                                                                <state key="selected" image="ShowPass"/>
                                                                 <connections>
                                                                     <action selector="showConfrirmPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="BWd-LF-vka"/>
                                                                 </connections>
@@ -1272,7 +1274,7 @@
         <image name="user-name" width="13.5" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cUn-Da-6f7"/>
+        <segue reference="nTV-Re-jqj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

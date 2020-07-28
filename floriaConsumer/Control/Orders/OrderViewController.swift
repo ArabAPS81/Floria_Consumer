@@ -16,6 +16,7 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var tvOrder: UITableView!
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var payButton: UIButton!
+    @IBOutlet weak var totalAmontLabel: UILabel!
     
     var order: Order?
     
@@ -27,7 +28,22 @@ class OrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        statusChanged(nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(statusChanged(_:)), name: NSNotification.Name(rawValue: "orderStatusChanged"), object: nil)
         
+        VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        PotsCareTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
+    }
+    
+    @objc func statusChanged(_ notification: NSNotification?) {
+        let service = OrdersServices.init(delegate: self)
+        service.getOrder(id: order!.id)
+    }
+    
+    func setUpData() {
         if order?.isPaid == 1 {
             payButton.isHidden = false
         }else{
@@ -41,19 +57,15 @@ class OrderViewController: UIViewController {
             rateButton.setTitleColor(.white, for: .normal)
         }
         
+        totalAmontLabel.text = NSLocalizedString("The total amount is", comment: "") + " " + String(Int(order!.total)) + " " + NSLocalizedString("EGP", comment: "")
+        
         title = "#\(order!.id)"
         
         if (order?.status.id ?? 1) > 4 {
-            svStatus.status = 0
+            svStatus.status = 7
         } else {
             svStatus.status = order!.status.id + 1
         }
-        
-        VendorTableViewCell.registerNIBinView(tableView: self.tvOrder)
-        ProductTableViewCell.registerNIBinView(tableView: self.tvOrder)
-        CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
-        PotsCareTableViewCell.registerNIBinView(tableView: self.tvOrder)
-        AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
     }
     
     @IBAction func payFawry(_ sender: UIButton) {
@@ -156,6 +168,9 @@ extension OrderViewController: WebServiceDelegate {
                 alertWithMessage(data.errors?.message?.body?.first ?? NSLocalizedString("error has occured", comment: ""), title: nil)
             }
             
+        }else if let data = data as? OrderModel {
+            order = data.order
+            setUpData()
         }
     }
     

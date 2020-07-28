@@ -34,6 +34,7 @@ class ConfirmationCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewsShapes()
+        self.title = NSLocalizedString("Verification Code", comment: "")
         resendBtn.isHidden = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         chagePassBtn.isEnabled = false

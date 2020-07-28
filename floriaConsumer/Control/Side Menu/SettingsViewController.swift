@@ -75,4 +75,21 @@ class SettingsViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func logout(_ sender: Any) {
+        if Defaults().isUserLogged {
+            Defaults.init().isUserLogged = false
+            Defaults().saveUserData(email: "", name: "", phone: "")
+            self.navigationController?.popViewController(animated: true)
+        }else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            nav.modalPresentationStyle = .fullScreen
+            let vc = nav.viewControllers.first as! LoginViewController
+            vc.event = {vc in
+                vc.dismiss(animated: true, completion: nil)
+            }
+            self.present(nav, animated: true, completion: nil)
+        }
+    }
+    
 }

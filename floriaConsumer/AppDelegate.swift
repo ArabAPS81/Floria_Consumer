@@ -138,6 +138,7 @@ extension AppDelegate: MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
       print("Received data message: \(remoteMessage.appData)")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "orderStatusChanged"), object: nil)
     }
 }
 

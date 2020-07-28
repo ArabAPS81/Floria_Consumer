@@ -44,12 +44,14 @@ class GeneralServices {
         
     }
     
-    func submittSupportMessageWithFile(_ content:String, title:String, image: Data) {
+    func submittSupportMessageWithFile(_ content:String, title:String, image: Data?) {
         HUD.show(.progress)
         let url = NetworkConstants.baseUrl + "complaint"
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.upload(multipartFormData: { (MPFData) in
-            MPFData.append(image, withName: "attachment",fileName: "file.png",mimeType: "image/png")
+            if let image = image {
+                MPFData.append(image, withName: "attachment",fileName: "file.png",mimeType: "image/png")
+            }
             MPFData.append(title.data(using: .utf8)!, withName: "title")
             MPFData.append(content.data(using: .utf8)!, withName: "content")
         }, to: url,method: .post, headers: headers) { (result) in

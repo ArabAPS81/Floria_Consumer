@@ -40,12 +40,11 @@ class RegisterationViewController: UIViewController {
     var code: String = "EG"
     var selectedGender: UserGender = .male
     
-    @IBAction func showPassTapped(_ sender: Any) {
+    @IBAction func showPassTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if (passwordTF.isSecureTextEntry == true){
             passwordTF.isSecureTextEntry = false
-            showPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
         }else{
-            showPassBtn.setImage(UIImage(named: "ShowPass"), for: .normal)
             passwordTF.isSecureTextEntry = true
         }
     }
@@ -55,12 +54,13 @@ class RegisterationViewController: UIViewController {
         self.navigationController?.pushViewController(signInVC, animated: true)
     }
     
-    @IBAction func showConfrirmPassTapped(_ sender: Any) {
+    @IBAction func showConfrirmPassTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         if (confirmPassTF.isSecureTextEntry == true){
             confirmPassTF.isSecureTextEntry = false
-            showConfirmPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
+            
         }else{
-            showConfirmPassBtn.setImage(UIImage(named: "ShowPass"), for: .normal)
+            
             confirmPassTF.isSecureTextEntry = true
         }
         
@@ -81,15 +81,15 @@ class RegisterationViewController: UIViewController {
         let termsVC = storyboard.instantiateViewController(withIdentifier: "termsVC") as! TermsViewController
         self.navigationController?.pushViewController(termsVC, animated: true)
     }
-    
+    var alert: UIAlertController!
     @IBAction func phoneCodeTapped(_ sender: UIButton) {
-        let alert = UIAlertController(style: .actionSheet, title: "Phone Codes")
+        alert = UIAlertController(style: .actionSheet, title: NSLocalizedString("Phone Codes", comment: ""))
         alert.addLocalePicker(type: .phoneCode) { info in
             self.countryFlagImage.image = info?.flag
             sender.setTitle(info?.phoneCode, for: .normal)
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
-        alert.show()
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func registerTapped(_ sender: Any) {

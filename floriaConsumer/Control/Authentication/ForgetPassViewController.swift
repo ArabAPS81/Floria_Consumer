@@ -13,7 +13,7 @@ class ForgetPassViewController: UIViewController {
      @IBOutlet weak var mobileTF: UITextField!
      @IBOutlet weak var sendCodeBtn: UIButton!
     @IBOutlet weak var countryFlagImage: UIImageView!
-    var phoneCode: String!
+    var phoneCode: String = "+2"
     
     override func viewDidLoad() {
        super.viewDidLoad()
@@ -31,7 +31,7 @@ class ForgetPassViewController: UIViewController {
             sender.setTitle(info?.phoneCode, for: .normal)
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
-        alert.show()
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func sendCodeTapped(_ sender: Any) {

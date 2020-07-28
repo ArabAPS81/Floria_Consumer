@@ -27,7 +27,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     func configure(product: ProductsModel.Product){
         productImage.kf.setImage(with: URL.init(string: product.image ?? ""))
         name.text = product.name
-        price.text = "\(product.price ?? 0.0)"
+        price.text = "\(Int(product.price ?? 0.0) )" + NSLocalizedString("EGP", comment: "")
         rate.setRate(rate: product.rate)
     }
     override func awakeFromNib() {

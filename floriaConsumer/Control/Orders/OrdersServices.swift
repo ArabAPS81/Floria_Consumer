@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import PKHUD
 
 class OrdersServices {
     weak var delegate: WebServiceDelegate?
@@ -36,6 +37,32 @@ class OrdersServices {
         }
     }
     
+    func getOrder(id:Int) {
+        let baseUrl = (NetworkConstants.baseUrl + "orders/\(id)")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        
+        
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        HUD.show(.progress)
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: OrderModel.self) { (result, error) in
+                    if result != nil {
+                        HUD.flash(.success)
+                        self.delegate?.didRecieveData(data: result)
+                    }else{
+                        HUD.flash(.error)
+                        self.delegate?.didFailToReceiveDataWithError(error: error!)
+                    }
+                }
+            case .failure(let error):
+                HUD.flash(.error)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
     func sendRate(orderId: Int, ratingV: Double,ratingP: Double, commentV: String,commentP: String) {
         let parameters = ["order_id" : orderId,
                           "product_rating" : ratingP,
@@ -53,6 +80,21 @@ class OrdersServices {
         }
     }
 }
+
+// MARK: - Order
+
+struct OrderModel: Codable {
+    let order: Order
+    let message: String
+    let httpCode: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case order = "data"
+        case message = "message"
+        case httpCode = "http_code"
+    }
+}
+
 
 // MARK: - Orders
 
