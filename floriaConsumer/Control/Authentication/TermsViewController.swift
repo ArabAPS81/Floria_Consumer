@@ -8,14 +8,27 @@
 
 import UIKit
 
-class TermsViewController: UIViewController {
+class TermsViewController: UIViewController,WebServiceDelegate {
+    
+    
     
     @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("terms and condition", comment: "")
-        label.text = NSLocalizedString("terms and condition content", comment: "")
+        label.text = ""
+        let service = GeneralServices.init(delegate: self)
+        service.getGeneralData()
+    }
+    
+    func didRecieveData(data: Codable) {
+        if let model = data as? GeneralModel{
+            label.text = model.data.termsAndConditions.first?.content ?? ""
+        }
+    }
+    
+    func didFailToReceiveDataWithError(error: Error) {
+        
     }
     
 

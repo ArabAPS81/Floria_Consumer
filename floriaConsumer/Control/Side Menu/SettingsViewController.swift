@@ -12,12 +12,22 @@ import MaterialShowcase
 class SettingsViewController: UITableViewController {
     
     @IBOutlet weak var tutorialSwitch: UISwitch!
+    @IBOutlet weak var logButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         title = NSLocalizedString("settings", comment: "")
         tutorialSwitch.isOn = !UserDefaults.standard.bool(forKey: "ShowCasesOff")
+        
+        
+        
+        
+        if Defaults().isUserLogged {
+            logButton.setTitle(NSLocalizedString("Logout", comment: ""), for: .normal)
+        }else {
+            logButton.setTitle(NSLocalizedString("Login", comment: ""), for: .normal)
+        }
         // Do any additional setup after loading the view.
     }
     

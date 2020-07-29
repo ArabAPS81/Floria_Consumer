@@ -101,11 +101,13 @@ class splashViewController: UIViewController,UICollectionViewDataSource,UICollec
         GetStartedButton.layer.cornerRadius = 20
         (CollectionViewOfSides.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
         
-        timer = Timer.init(timeInterval: 0.2, repeats: true) { (t) in
-            print(t.timeInterval)
-        }
-        timer.fire()
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        UserDefaults.standard.set(true, forKey: "firstTime")
         
+    }
+    
+    @objc func updateTimer(_ timer: Timer){
+        CollectionViewOfSides.scrollToItem(at: IndexPath.init(row: 0, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
     }
     
     @IBAction func StartedButton(_ sender: Any) {

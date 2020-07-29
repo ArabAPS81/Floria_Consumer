@@ -39,6 +39,7 @@ class RegisterationViewController: UIViewController {
     var phoneCode:String = "+2"
     var code: String = "EG"
     var selectedGender: UserGender = .male
+    var birthDateString: String = ""
     
     @IBAction func showPassTapped(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -167,10 +168,13 @@ class RegisterationViewController: UIViewController {
     
     @objc func dateChanged(_ sender: UIDatePicker){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.locale = Locale.init(identifier: "en")
-        let strDate = dateFormatter.string(from: datePicker.date)
+        var strDate = dateFormatter.string(from: datePicker.date)
         birthDateTF.text = strDate
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        birthDateString = dateFormatter.string(from: datePicker.date)
+        
     }
     
     @IBOutlet var genderBtns: [UIButton]!

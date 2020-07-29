@@ -96,7 +96,6 @@ class Defaults {
     
     func getIfFirstTime() -> Bool {
         if !UserDefaults.standard.bool(forKey: "firstTime") {
-            UserDefaults.standard.set(true, forKey: "firstTime")
             return true
         }else {
             return false

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
             window?.rootViewController = homeVC
         }else {
-            if Defaults().getIfFirstTime() || true {
+            if Defaults().getIfFirstTime() {
                 let storyboard = UIStoryboard(name: "Splash", bundle: nil)
                 let homeVC = storyboard.instantiateInitialViewController()
                 window?.rootViewController = homeVC

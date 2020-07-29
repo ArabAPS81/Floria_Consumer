@@ -651,6 +651,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="QR4-Uy-JPf"/>
                     <connections>
+                        <outlet property="logButton" destination="Q4D-Vi-ssz" id="Wfh-P5-Fb6"/>
                         <outlet property="tutorialSwitch" destination="2No-Im-mMI" id="nyV-4C-HSH"/>
                     </connections>
                 </tableViewController>
