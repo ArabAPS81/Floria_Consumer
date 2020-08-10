@@ -13,7 +13,7 @@ import PKHUD
 
 
 struct  NearestVendorQueryModel {
-    var location: CLLocationCoordinate2D
+    var location: CLLocationCoordinate2D?
 }
 struct FilterModel {
     var district:Int
@@ -50,7 +50,9 @@ class VendorServices {
     func getVendorsByService(service:ServiceType, model: NearestVendorQueryModel) {
         
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
-        let parameters = "lat=\(model.location.latitude)&lng=\(model.location.longitude)"
+        
+        let parameters = model.location == nil ? "lat=&lng=" : "lat=\(model.location!.latitude)&lng=\(model.location!.longitude)"
+        
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

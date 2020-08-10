@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -444,7 +445,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffQ-3c-eR6">
-                                <rect key="frame" x="0.0" y="177" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="197" width="375" height="581"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="YwG-MY-EHY" detailTextLabel="HNd-Ao-0f1" style="IBUITableViewCellStyleSubtitle" id="0Gr-wA-Sel">
@@ -477,7 +478,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-rB-NMS" customClass="OrderStatusView" customModule="Floria" customModuleProvider="target">
-                                <rect key="frame" x="33.666666666666657" y="133" width="308" height="44"/>
+                                <rect key="frame" x="59" y="133" width="256" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" placeholder="YES" id="iGs-oY-9DH"/>
                                 </constraints>
@@ -519,6 +520,35 @@
                                     <constraint firstAttribute="bottom" secondItem="PdR-ES-Eja" secondAttribute="bottom" id="lxA-8m-Lf0"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QVL-Zw-Fd7">
+                                <rect key="frame" x="37.666666666666657" y="177" width="300" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Placed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-xq-X3e">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Pocessing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vv-Kh-LYX">
+                                        <rect key="frame" x="77" y="0.0" width="69" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-e1-5Zv">
+                                        <rect key="frame" x="154" y="0.0" width="69" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oM-aI-TvV">
+                                        <rect key="frame" x="231" y="0.0" width="69" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -526,15 +556,19 @@
                             <constraint firstItem="rip-Sc-7ul" firstAttribute="width" secondItem="B4d-ZG-agf" secondAttribute="width" multiplier="0.8" id="4Px-Mh-XDp"/>
                             <constraint firstItem="c58-07-vWM" firstAttribute="bottom" secondItem="Gh6-pA-5q6" secondAttribute="bottom" constant="20" id="7Md-gz-6aO"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="leading" secondItem="c58-07-vWM" secondAttribute="leading" id="JAU-3U-5J0"/>
+                            <constraint firstItem="QVL-Zw-Fd7" firstAttribute="top" secondItem="6lk-rB-NMS" secondAttribute="bottom" id="Oy8-h2-wNp"/>
                             <constraint firstItem="6lk-rB-NMS" firstAttribute="top" secondItem="rip-Sc-7ul" secondAttribute="bottom" id="QId-PJ-2A4"/>
-                            <constraint firstItem="ffQ-3c-eR6" firstAttribute="top" secondItem="6lk-rB-NMS" secondAttribute="bottom" id="W3Q-jp-xJY"/>
+                            <constraint firstItem="ffQ-3c-eR6" firstAttribute="top" secondItem="6lk-rB-NMS" secondAttribute="bottom" constant="20" id="W3Q-jp-xJY"/>
                             <constraint firstItem="Gh6-pA-5q6" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="WGR-CC-gRK"/>
+                            <constraint firstItem="ffQ-3c-eR6" firstAttribute="top" secondItem="QVL-Zw-Fd7" secondAttribute="bottom" id="e2x-Eq-8Tx"/>
                             <constraint firstItem="Gh6-pA-5q6" firstAttribute="width" secondItem="B4d-ZG-agf" secondAttribute="width" multiplier="0.6" id="fQh-kq-bdH"/>
                             <constraint firstItem="rip-Sc-7ul" firstAttribute="top" secondItem="c58-07-vWM" secondAttribute="top" id="fZ3-qo-CLl"/>
                             <constraint firstItem="6lk-rB-NMS" firstAttribute="top" secondItem="c58-07-vWM" secondAttribute="top" constant="45" id="iA1-6G-sOz"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="bottom" secondItem="c58-07-vWM" secondAttribute="bottom" id="iks-pj-NuE"/>
+                            <constraint firstItem="QVL-Zw-Fd7" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="lFc-rf-B6q"/>
                             <constraint firstItem="ffQ-3c-eR6" firstAttribute="trailing" secondItem="c58-07-vWM" secondAttribute="trailing" id="tSD-kS-abP"/>
                             <constraint firstItem="6lk-rB-NMS" firstAttribute="centerX" secondItem="B4d-ZG-agf" secondAttribute="centerX" id="vDH-Ef-lQw"/>
+                            <constraint firstItem="QVL-Zw-Fd7" firstAttribute="width" secondItem="B4d-ZG-agf" secondAttribute="width" multiplier="0.8" id="xYe-AZ-dVb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c58-07-vWM"/>
                     </view>
@@ -555,6 +589,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="labelsStack" destination="QVL-Zw-Fd7" id="SPY-83-of5"/>
                         <outlet property="payButton" destination="a0g-me-Tk1" id="ztK-A3-8Fc"/>
                         <outlet property="rateButton" destination="Gh6-pA-5q6" id="t8n-5u-uwl"/>
                         <outlet property="svStatus" destination="6lk-rB-NMS" id="jHq-4k-hLV"/>

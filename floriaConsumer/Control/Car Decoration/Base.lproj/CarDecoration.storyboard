@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tW0-FR-INB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -302,14 +303,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-VX-FVh">
                                                 <rect key="frame" x="0.0" y="326" width="414" height="55"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5y-HC-iRQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5y-HC-iRQ">
                                                         <rect key="frame" x="87" y="0.0" width="240" height="54"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                                        <state key="normal" title="Color Name">
-                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="  Color Name" image="downArrow">
+                                                            <color key="titleColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="5Yd-9p-BWk" kind="presentation" modalPresentationStyle="pageSheet" id="gN4-ey-gyw"/>
+                                                            <segue destination="5Yd-9p-BWk" kind="presentation" modalPresentationStyle="currentContext" id="gN4-ey-gyw"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-IM-DN3">
@@ -721,11 +721,11 @@
             <objects>
                 <viewController modalPresentationStyle="pageSheet" id="5Yd-9p-BWk" customClass="ColorsPopupViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dtF-KY-S9q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-4o-YbI">
-                                <rect key="frame" x="0.0" y="387" width="414" height="421"/>
+                                <rect key="frame" x="0.0" y="414" width="414" height="448"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px8-YR-CUG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -737,7 +737,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LXs-Rk-4lY">
-                                        <rect key="frame" x="8" y="50" width="398" height="371"/>
+                                        <rect key="frame" x="8" y="50" width="398" height="398"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SX3-Tr-njb">
                                             <size key="itemSize" width="73" height="74"/>
@@ -801,7 +801,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="in6-0x-qbz">
-                                <rect key="frame" x="0.0" y="808" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -1442,6 +1442,7 @@
         <image name="car lite" width="1484" height="695"/>
         <image name="car super lauxe" width="1404" height="691"/>
         <image name="coupeicon" width="51.5" height="17.5"/>
+        <image name="downArrow" width="20" height="11.5"/>
         <image name="group33" width="87.5" height="87"/>
         <image name="hatchbackicon" width="52" height="18"/>
         <image name="sedanicon" width="51.5" height="16.5"/>

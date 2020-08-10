@@ -15,8 +15,10 @@ class VendorListPresenter {
     init(view: VendorsListView) {
         self.view = view
     }
+    private var serviceType: ServiceType?
     
     func getVendorsList(serviceType: ServiceType) {
+        self.serviceType = serviceType
         let service = VendorServices.init(delegate: self)
         let model = NearestVendorQueryModel.init(location: LocationManager.sharedManager.userCurrentCoordinate)
         service.getVendorsByService(service: serviceType, model: model)
@@ -29,7 +31,17 @@ class VendorListPresenter {
 
 extension VendorListPresenter: WebServiceDelegate {
     func didRecieveData(data: Codable) {
-        view?.didReceiveData(data: data)
+        if let model = data as? VendorsModel {
+            if model.vendors.count == 0 {
+                let service = VendorServices.init(delegate: self)
+                let getModel = NearestVendorQueryModel.init(location:nil)
+                service.getVendorsByService(service: serviceType!, model: getModel)
+            }else{
+                
+            }
+            view?.didReceiveData(data: data)
+        }
+        
     }
     
     func didFailToReceiveDataWithError(error: Error) {

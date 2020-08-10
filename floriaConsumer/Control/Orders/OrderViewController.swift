@@ -18,6 +18,11 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var totalAmontLabel: UILabel!
     
+    
+    
+    @IBOutlet weak var labelsStack: UIStackView!
+    
+    
     var order: Order?
     
     enum OrderDetails: Int {
@@ -65,6 +70,10 @@ class OrderViewController: UIViewController {
             svStatus.status = 7
         } else {
             svStatus.status = order!.status.id + 1
+        }
+        
+        for i in 0 ... labelsStack.arrangedSubviews.count - 1 {
+            (labelsStack.arrangedSubviews[i] as! UILabel).textColor = (order?.status.id)! > i ? #colorLiteral(red: 0.9692807794, green: 0, blue: 0.4361249506, alpha: 1) : #colorLiteral(red: 0.9660214782, green: 0.7838416696, blue: 0.1578825712, alpha: 1)
         }
     }
     

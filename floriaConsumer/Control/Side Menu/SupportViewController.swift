@@ -13,7 +13,7 @@ class SupportViewController: UIViewController {
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var helpTV: UITextView!
-    var imageData = Data.init()
+    var imageData: Data?
 
     override func viewDidLoad() {
         super.viewDidLoad()

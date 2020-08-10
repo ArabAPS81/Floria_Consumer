@@ -70,7 +70,7 @@
                                         <constraint firstAttribute="height" constant="34" id="qAf-At-qaD"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-3x-Za1">
                                     <rect key="frame" x="170" y="0.0" width="30" height="34"/>
@@ -78,7 +78,7 @@
                                         <constraint firstAttribute="width" constant="30" id="K6m-8V-eIW"/>
                                     </constraints>
                                     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <state key="normal" image="magnifyingglass" catalog="system"/>
+                                    <state key="normal" image="homesearchicon"/>
                                     <connections>
                                         <action selector="searchButtonTapped:" destination="Ulk-s6-DeV" eventType="touchUpInside" id="KST-6w-u9v"/>
                                     </connections>
@@ -438,7 +438,7 @@
     <resources>
         <image name="633107Poao80102-1" width="89" height="79"/>
         <image name="favorite" width="26.5" height="24"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="homesearchicon" width="20.5" height="20.5"/>
         <image name="shape952" width="10" height="10"/>
         <image name="vendorAvatar" width="80" height="80"/>
     </resources>

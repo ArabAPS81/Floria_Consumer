@@ -75,26 +75,24 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjr-Uy-TTN">
                                                     <rect key="frame" x="38" y="46" width="339" height="339"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketintroicon" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-Ul-JRN">
-                                                            <rect key="frame" x="35" y="35" width="269" height="269"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bikeintroicon2" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-Ul-JRN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="339"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <real key="value" value="114.5"/>
+                                                                    <real key="value" value="134.5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Fi-sG-acj">
-                                                            <rect key="frame" x="138.66666666666666" y="283" width="61.666666666666657" height="48"/>
+                                                            <rect key="frame" x="169.66666666666666" y="331" width="0.0" height="0.0"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+160" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRd-yN-8Nm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="28.666666666666668"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRd-yN-8Nm">
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                                                     <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="متجر" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCi-9E-XkO">
-                                                                    <rect key="frame" x="0.0" y="28.666666666666686" width="61.666666666666664" height="19.333333333333329"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCi-9E-XkO">
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                     <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -102,19 +100,19 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.77999250856164382" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="sjr-Uy-TTN" secondAttribute="height" multiplier="1:1" id="3zZ-PB-4SR"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Gfa-Ul-JRN" secondAttribute="bottom" constant="35" id="9KC-hq-ELm"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Gfa-Ul-JRN" secondAttribute="bottom" id="9KC-hq-ELm"/>
                                                         <constraint firstItem="1Fi-sG-acj" firstAttribute="centerX" secondItem="sjr-Uy-TTN" secondAttribute="centerX" id="AZd-sM-fPl"/>
-                                                        <constraint firstItem="Gfa-Ul-JRN" firstAttribute="top" secondItem="sjr-Uy-TTN" secondAttribute="top" constant="35" id="cm6-a2-QZp"/>
+                                                        <constraint firstItem="Gfa-Ul-JRN" firstAttribute="top" secondItem="sjr-Uy-TTN" secondAttribute="top" id="cm6-a2-QZp"/>
                                                         <constraint firstAttribute="bottom" secondItem="1Fi-sG-acj" secondAttribute="bottom" constant="8" id="jWk-Xf-PGF"/>
-                                                        <constraint firstItem="Gfa-Ul-JRN" firstAttribute="leading" secondItem="sjr-Uy-TTN" secondAttribute="leading" constant="35" id="kOa-em-jMa"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Gfa-Ul-JRN" secondAttribute="trailing" constant="35" id="rHB-ib-v1G"/>
+                                                        <constraint firstItem="Gfa-Ul-JRN" firstAttribute="leading" secondItem="sjr-Uy-TTN" secondAttribute="leading" id="kOa-em-jMa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Gfa-Ul-JRN" secondAttribute="trailing" id="rHB-ib-v1G"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <real key="value" value="149.5"/>
+                                                            <real key="value" value="169.5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -278,7 +276,7 @@ U2VuZCBmbG93ZXJzIHRvIHlvdXIgYmVsb3ZlZANvbmVzIHdoZXJldmVyIHRoZXkgYXJlA
         </scene>
     </scenes>
     <resources>
+        <image name="bikeintroicon2" width="329" height="329"/>
         <image name="logo" width="24.333333969116211" height="43.666667938232422"/>
-        <image name="marketintroicon" width="187.33332824707031" height="172.33332824707031"/>
     </resources>
 </document>

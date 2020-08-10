@@ -50,6 +50,14 @@ class HomeViewController: UIViewController {
           print("Subscribed to consumer topic")
         }
         
+        
+        
+    }
+    
+    func posttoken() {
+        let deviceId = NSUUID().uuidString
+        let service = AuthenticationService.init(delegate: self.presenter)
+        service.postDeviceToken(Messaging.messaging().fcmToken ?? "")
     }
     
     
@@ -284,7 +292,7 @@ extension HomeViewController :MaterialShowcaseDelegate{
         
         
         showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5)
-        if let tutorialOff = UserDefaults.standard.bool(forKey: "ShowCasesOff") as? Bool, tutorialOff{
+        if let tutorialOff = UserDefaults.standard.bool(forKey: "ShowCasesOff") as? Bool, !tutorialOff{
             showCaseSequence.setKey(key: "ShowCasesKey")
         }
         showCaseSequence.start()

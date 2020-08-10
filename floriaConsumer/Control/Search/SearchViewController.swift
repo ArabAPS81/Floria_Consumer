@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        searchTF.delegate = self
     }
     
     func setupViews() {
@@ -29,6 +30,10 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        search()
+    }
+    
+    func search() {
         guard let searchText = searchTF.text else {
             alertWithMessage(title: NSLocalizedString("search text can't be empty", comment: ""))
             return
@@ -52,8 +57,14 @@ extension SearchViewController: PagerTabStripDelegate {
         guard let vc = viewController.viewControllers[toIndex] as? SearchTableViewController else {return}
         searchVC = vc
     }
+    
+    
 }
 
 extension SearchViewController : UITextFieldDelegate {
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        search()
+        textField.resignFirstResponder()
+        return true
+    }
 }

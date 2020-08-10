@@ -12,6 +12,7 @@ import PKHUD
 class ConfirmationCodeViewController: UIViewController {
     
     var mobile : String!
+    var countryCode: String = "+2"
     var comingFromVC : String!
     var event: ((UIViewController)->())!
     
@@ -29,10 +30,11 @@ class ConfirmationCodeViewController: UIViewController {
     @IBOutlet weak var chagePassBtn: UIButton!
     
     var seconds = 60
-    var timer = Timer()
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timer = Timer()
         setUpViewsShapes()
         self.title = NSLocalizedString("Verification Code", comment: "")
         resendBtn.isHidden = true
@@ -69,8 +71,22 @@ class ConfirmationCodeViewController: UIViewController {
     }
     
     @IBAction func resendTapped(_ sender: Any) {
-        let service = AuthenticationService.init(delegate: self)
-        service.resend(mobile: mobile)
+        
+        if comingFromVC == "registration"{
+            let service = AuthenticationService.init(delegate: self)
+            service.resend(mobile: mobile)
+        }
+        else if comingFromVC == "forgetPass"{
+            let service = AuthenticationService.init(delegate: self)
+            service.forgetPass(phone: mobile, countryCode: countryCode)
+        }
+        
+        
+        
+        
+        
+        
+        timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         resendBtn.isHidden = true
         seconds = 60
@@ -103,15 +119,9 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
         if let data = data as? AuthenticationModel {
             if data.httpCode == 200 {
                 if data.user?.verified ?? false {
-                    Defaults.init().saveUserId(userId: data.user?.id ?? 0)
-                    Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
-                    Defaults().isUserLogged = true
-                    Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
-                    if (event != nil) {
-                        event(self)
-                    } else {
-                        self.performSegue(withIdentifier: "homeSegue", sender: nil)
-                    }
+                    let vc = NewPassViewController.newInstance(mobile: (data.user?.mobile)!)
+                    vc.user = data
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             }else if data.httpCode == 401{
                 

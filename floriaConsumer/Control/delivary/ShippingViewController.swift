@@ -150,8 +150,6 @@ extension ShippingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return 50
     }
-    
-    
 }
 
 extension ShippingViewController: WebServiceDelegate {
@@ -162,6 +160,7 @@ extension ShippingViewController: WebServiceDelegate {
                 HUD.flash(.success)
             }else {
                 HUD.flash(.error)
+                alertWithMessage(data.error?.message?.body?.first, title: nil)
             }
         }else {
             HUD.flash(.error)

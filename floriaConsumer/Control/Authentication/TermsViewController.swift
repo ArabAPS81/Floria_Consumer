@@ -16,6 +16,7 @@ class TermsViewController: UIViewController,WebServiceDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = NSLocalizedString("Terms & Conditions", comment: "")
         label.text = ""
         let service = GeneralServices.init(delegate: self)
         service.getGeneralData()

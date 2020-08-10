@@ -11,6 +11,7 @@ import UIKit
 class NewPassViewController: UIViewController {
     
     var mobile : String!
+    var user: AuthenticationModel!
     static func newInstance(mobile : String) -> NewPassViewController {
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let newPassVC = storyboard.instantiateViewController(withIdentifier: "newPassVC") as! NewPassViewController
@@ -31,9 +32,9 @@ class NewPassViewController: UIViewController {
     @IBAction func showPassTapped(_ sender: Any) {
         if (passwordTF.isSecureTextEntry == true){
             passwordTF.isSecureTextEntry = false
-            showPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
-        }else{
             showPassBtn.setImage(UIImage(named: "ShowPass"), for: .normal)
+        }else{
+            showPassBtn.setImage(UIImage(named: "HidePass"), for: .normal)
             passwordTF.isSecureTextEntry = true
         }
     }
@@ -63,7 +64,8 @@ class NewPassViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        self.title = NSLocalizedString("Reset Password", comment: "")
     }
     
 }
@@ -72,7 +74,11 @@ extension NewPassViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let model = data as? ResendModel{
             if model.httpCode == 200{
-                self.navigationController?.popToRootViewController(animated: true)
+                Defaults.init().saveUserId(userId: user.user?.id ?? 0)
+                Defaults.init().saveUserToken(token : user.user?.accessToken ?? "")
+                Defaults().saveUserData(email: user.user?.email, name: user.user?.name, phone: user.user?.mobile)
+                Defaults().isUserLogged = true
+                self.performSegue(withIdentifier: "homeSegue", sender: nil)
             }
         }
     }

@@ -14,6 +14,7 @@ class splashViewController: UIViewController,UICollectionViewDataSource,UICollec
     @IBOutlet var GetStartedButton: UIButton!
     @IBOutlet var CollectionViewOfPage: UICollectionView!
     @IBOutlet var CollectionViewOfSides: UICollectionView!
+    var currentIndex = 0
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -60,17 +61,17 @@ class splashViewController: UIViewController,UICollectionViewDataSource,UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SlidesCell", for: indexPath) as! IntroCell
         switch indexPath.row {
         case 0:
-            cell.imageView.image = UIImage.init(named: "bikeintroicon")
+            cell.imageView.image = UIImage.init(named: "bikeintroicon2")
             cell.descLabel.text = "Send flowers to your belovedones wherever they are"
             cell.enDescLabel.text = "أرسل الورد الى احبائك أينما كنت"
             cell.plusView.isHidden = true
         case 1:
-            cell.imageView.image = UIImage.init(named: "carintroicon")
+            cell.imageView.image = UIImage.init(named: "carintroicon2")
             cell.descLabel.text = "Decorate your Car with colorful flowers"
             cell.enDescLabel.text = "زيّن سيارتك بالورود الملونة"
             cell.plusView.isHidden = true
         case 2:
-            cell.imageView.image = UIImage.init(named: "marketintroicon")
+            cell.imageView.image = UIImage.init(named: "marketintroicon2")
             cell.descLabel.text = "More than 160 vendors across  Cairo and Giza"
             cell.enDescLabel.text = "أكثر من 160محل ومشتل في  القاهرة والجيزة "
             cell.plusView.isHidden = false
@@ -101,17 +102,23 @@ class splashViewController: UIViewController,UICollectionViewDataSource,UICollec
         GetStartedButton.layer.cornerRadius = 20
         (CollectionViewOfSides.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
         
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         UserDefaults.standard.set(true, forKey: "firstTime")
         
     }
     
     @objc func updateTimer(_ timer: Timer){
-        CollectionViewOfSides.scrollToItem(at: IndexPath.init(row: 0, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        
+        CollectionViewOfSides.scrollToItem(at: IndexPath.init(row:(currentIndex % 3) , section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        currentIndex += 1
     }
     
     @IBAction func StartedButton(_ sender: Any) {
         self.performSegue(withIdentifier: "nothere", sender: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer = nil
     }
 }
 

@@ -143,12 +143,14 @@ struct OrderSummaryResponceModel : Codable {
     let summary : Summary?
     let httpCode : Int?
     let message : String?
+    let error: FloriaError?
 
 
     enum CodingKeys: String, CodingKey {
         case summary = "data"
         case httpCode = "http_code"
         case message = "message"
+        case error
     }
     
     struct Summary : Codable {
@@ -176,11 +178,13 @@ struct OrderSubmittResponseModel : Codable {
     let responseModel : ResponseModel?
     let httpCode : Int?
     let message : String?
+    let error: FloriaError?
 
     enum CodingKeys: String, CodingKey {
         case responseModel = "data"
         case httpCode = "http_code"
         case message = "message"
+        case error
     }
     struct ResponseModel : Codable {
 

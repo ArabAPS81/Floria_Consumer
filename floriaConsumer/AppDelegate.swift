@@ -101,6 +101,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     // Print full message.
     print(userInfo)
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "orderStatusChanged"), object: nil)
+
 
     // Change this to your preferred presentation option
     completionHandler([])
@@ -132,9 +134,11 @@ extension AppDelegate: MessagingDelegate {
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
         let deviceId = NSUUID().uuidString
         let service = AuthenticationService.init(delegate: self)
-        service.postDeviceToken(fcmToken, deviceId: deviceId)
+        service.postDeviceToken(fcmToken)
         
     }
+    
+    
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
       print("Received data message: \(remoteMessage.appData)")

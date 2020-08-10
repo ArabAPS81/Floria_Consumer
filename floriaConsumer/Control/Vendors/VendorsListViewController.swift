@@ -30,7 +30,7 @@ class VendorsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         VendorTableViewCell.registerNIBinView(tableView: self.tableView)
-        self.navigationItem.title = ""
+        self.title = NSLocalizedString("Select Vendor", comment: "")
         tableView.separatorStyle = .none
         presenter = VendorListPresenter.init(view: self)
         presenter?.getVendorsList(serviceType: self.serviceType)

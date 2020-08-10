@@ -56,14 +56,13 @@
                                             <constraint firstAttribute="height" constant="46" id="DhM-hh-Q3n"/>
                                             <constraint firstAttribute="width" constant="46" id="Z9l-Ap-c6x"/>
                                         </constraints>
-                                        <state key="normal" image="group5-2"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-bp-ykX">
-                                <rect key="frame" x="123.5" y="446" width="128" height="29"/>
+                                <rect key="frame" x="121.5" y="446" width="132" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Not Registered Yet?">
+                                <state key="normal" title="Not Registered Yet ?">
                                     <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -508,15 +507,20 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-tM-w32">
-                                <rect key="frame" x="56.5" y="588" width="262.5" height="54"/>
+                                <rect key="frame" x="56.5" y="592" width="262.5" height="50"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="OuT-66-cOa"/>
+                                    <constraint firstAttribute="height" constant="50" id="OuT-66-cOa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveTapped:" destination="net-6V-mIH" eventType="touchUpInside" id="n3i-Kl-pgs"/>
                                 </connections>
@@ -541,7 +545,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m77-Qy-UH1">
                                         <rect key="frame" x="240" y="0.0" width="60" height="49"/>
                                         <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ShowPass"/>
+                                        <state key="normal" image="HidePass"/>
                                         <connections>
                                             <action selector="showPassTapped:" destination="net-6V-mIH" eventType="touchUpInside" id="C61-vr-kQr"/>
                                             <action selector="showPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="EdB-Ht-Jpm"/>
@@ -597,7 +601,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-f2-IDc">
                                         <rect key="frame" x="240" y="0.0" width="60" height="49"/>
                                         <color key="tintColor" red="0.95294117649999999" green="0.74509803919999995" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ShowPass"/>
+                                        <state key="normal" image="HidePass"/>
                                         <connections>
                                             <action selector="showConfrirmPassTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="GAE-pe-g6f"/>
                                             <action selector="showConfrirmPassTapped:" destination="net-6V-mIH" eventType="touchUpInside" id="PCz-gH-boE"/>
@@ -657,6 +661,7 @@
                         <outlet property="saveBtn" destination="KTH-tM-w32" id="rgk-fd-cDG"/>
                         <outlet property="showConfirmPassBtn" destination="aj7-f2-IDc" id="iXw-aJ-MnB"/>
                         <outlet property="showPassBtn" destination="m77-Qy-UH1" id="rpC-By-v60"/>
+                        <segue destination="dkA-Sb-bXd" kind="presentation" identifier="homeSegue" modalPresentationStyle="fullScreen" id="liS-Vh-1tp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYw-Pf-s0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1263,7 +1268,6 @@
         <image name="ShowPass" width="23" height="18.5"/>
         <image name="email" width="20" height="20"/>
         <image name="group17" width="60" height="106"/>
-        <image name="group5-2" width="46.5" height="46.5"/>
         <image name="iconMaterialRadioButtonChecked" width="18.5" height="18.5"/>
         <image name="iconMaterialRadioButtonUnchecked" width="18.5" height="18.5"/>
         <image name="icons8-calendar-48" width="48" height="48"/>
@@ -1273,7 +1277,7 @@
         <image name="user-name" width="13.5" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nTV-Re-jqj"/>
+        <segue reference="liS-Vh-1tp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

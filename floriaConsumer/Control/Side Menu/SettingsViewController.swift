@@ -18,7 +18,7 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         title = NSLocalizedString("settings", comment: "")
-        tutorialSwitch.isOn = !UserDefaults.standard.bool(forKey: "ShowCasesOff")
+        tutorialSwitch.isOn = UserDefaults.standard.bool(forKey: "ShowCasesOff")
         
         
         
@@ -41,7 +41,7 @@ class SettingsViewController: UITableViewController {
     }
     
     @IBAction func tutorialTapped(_ sender: UISwitch) {
-        if sender.isOn{
+        if !sender.isOn{
             let showCaseSequence = MaterialShowcaseSequence()
             showCaseSequence.removeUserState(key: "ShowCasesKey")
             UserDefaults.standard.set(false, forKey: "ShowCasesOff")
@@ -95,9 +95,9 @@ class SettingsViewController: UITableViewController {
             let nav = storyboard.instantiateInitialViewController() as! UINavigationController
             nav.modalPresentationStyle = .fullScreen
             let vc = nav.viewControllers.first as! LoginViewController
-            vc.event = {vc in
-                vc.dismiss(animated: true, completion: nil)
-            }
+//            vc.event = {vc in
+//                vc.dismiss(animated: true, completion: nil)
+//            }
             self.present(nav, animated: true, completion: nil)
         }
     }

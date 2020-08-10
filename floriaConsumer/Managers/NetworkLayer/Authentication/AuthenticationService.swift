@@ -18,7 +18,7 @@ class AuthenticationService {
     }
     
     //user-tokens
-    func postDeviceToken(_ token: String, deviceId: String) {
+    func postDeviceToken(_ token: String) {
         let url = NetworkConstants.baseUrl + "provider/provider-tokens"
         let parameters = ["token": token,
                           "device_id": Defaults().getUniqueID(),

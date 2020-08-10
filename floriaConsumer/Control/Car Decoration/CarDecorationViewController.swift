@@ -111,7 +111,7 @@ class CarDecorationViewController: UIViewController {
 extension CarDecorationViewController: ColorsViewDelegate {
     func didSelectColor(_ color: CarColor) {
         colorView.backgroundColor = UIColor.init(hexString: color.code)
-        colorNameLabel.setTitle(color.name, for: .normal)
+        colorNameLabel.setTitle("  \(color.name)", for: .normal)
         orderRequest.colorId = color.id
     }
 }

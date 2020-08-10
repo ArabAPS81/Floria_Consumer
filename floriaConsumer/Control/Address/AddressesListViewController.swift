@@ -23,7 +23,7 @@ class AddressesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("delivery", comment: "")
+        self.title = NSLocalizedString("delivery", comment: "")
         if Defaults().isUserLogged {
             
         } else {
@@ -37,6 +37,16 @@ class AddressesListViewController: UIViewController {
             self.present(nav, animated: true, completion: nil)
         }
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = NSLocalizedString("back", comment: "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = NSLocalizedString("delivery", comment: "")
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

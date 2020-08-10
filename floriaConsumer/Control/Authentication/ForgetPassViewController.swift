@@ -45,7 +45,7 @@ extension ForgetPassViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let model = data as? ForgetPassModel{
             if model.httpCode == 200{
-                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "forgetPass", mobile: model.data?.mobile ?? "")
+                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "forgetPass", mobile: String(model.data?.mobile.dropFirst(3) ?? ""))
                 self.navigationController?.pushViewController(vc, animated: true)
                 
             }
