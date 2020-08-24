@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Sub Total"; ObjectID = "00m-1O-Xu5"; */
+"00m-1O-Xu5.text" = "القيمة الفرعية";
+
+/* Class = "UILabel"; text = "VAT"; ObjectID = "7we-9R-WLx"; */
+"7we-9R-WLx.text" = "الضريبة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HHy-CU-wOT"; */
+"HHy-CU-wOT.text" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IfF-6Q-ZPB"; */
+"IfF-6Q-ZPB.text" = "";
+
+/* Class = "UILabel"; text = "Payment Details"; ObjectID = "XJ3-kb-XQq"; */
+"XJ3-kb-XQq.text" = "تفاصيل الدفع";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "Xkr-bD-5ii"; */
+"Xkr-bD-5ii.normalTitle" = "حسنا";
+
+/* Class = "UILabel"; text = "Delivery"; ObjectID = "fjh-3Y-rLf"; */
+"fjh-3Y-rLf.text" = "التوصيل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jbt-Hh-TYo"; */
+"jbt-Hh-TYo.text" = "";
+
+/* Class = "UILabel"; text = "Bank Services"; ObjectID = "mmW-6s-uhv"; */
+"mmW-6s-uhv.text" = "خدمات بنكية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pfM-df-VFb"; */
+"pfM-df-VFb.text" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sNh-hE-P7U"; */
+"sNh-hE-P7U.text" = "";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "uHA-3v-ofQ"; */
+"uHA-3v-ofQ.text" = "الاجمالي";

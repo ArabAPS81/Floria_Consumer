@@ -46,17 +46,10 @@
                                                     <constraint firstAttribute="width" secondItem="w56-lH-rJn" secondAttribute="height" multiplier="1:1" id="9aJ-is-emk"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fG-Nk-Mc1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can attach file here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fG-Nk-Mc1">
                                                 <rect key="frame" x="65" y="0.0" width="309" height="40"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="You can attach file here">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" metaFont="system" size="17"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tj-v8-vJD">
@@ -602,8 +595,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bye-po-NZb">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4D-Vi-ssz">
-                                                            <rect key="frame" x="20" y="0.0" width="394" height="44"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4D-Vi-ssz">
+                                                            <rect key="frame" x="20" y="0.0" width="374" height="44"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <state key="normal" title="Log Out">
                                                                 <color key="titleColor" red="0.88430017230000002" green="0.14954301710000001" blue="0.43422639369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -618,7 +611,7 @@
                                                     <constraints>
                                                         <constraint firstItem="Q4D-Vi-ssz" firstAttribute="top" secondItem="bye-po-NZb" secondAttribute="top" id="5pr-PB-VvF"/>
                                                         <constraint firstItem="Q4D-Vi-ssz" firstAttribute="leading" secondItem="bye-po-NZb" secondAttribute="leading" constant="20" id="7Sl-80-One"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Q4D-Vi-ssz" secondAttribute="trailing" id="Ywm-hl-QVV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Q4D-Vi-ssz" secondAttribute="trailing" constant="20" id="Ywm-hl-QVV"/>
                                                         <constraint firstAttribute="bottom" secondItem="Q4D-Vi-ssz" secondAttribute="bottom" id="qrS-Pk-C1V"/>
                                                     </constraints>
                                                 </view>

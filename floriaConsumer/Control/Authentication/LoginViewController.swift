@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import FirebaseMessaging
+import AuthenticationServices
 
 class LoginViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var showPassBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var countryFlagImage: UIImageView!
-    
+    var appleClient: Any?
     var phoneCode = "+2"
     
     static func newInstance() -> LoginViewController {
@@ -33,7 +34,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         phoneTF.keyboardType = .asciiCapableNumberPad
         setUpViewsShapes()
-        self.title = "Login"
+        self.title = NSLocalizedString("Sign In", comment: "")
        // failureLable.isHidden = true
         phoneTF.addTarget(self, action: #selector(handlePhoneChange), for: .editingDidEnd)
         hideKeyboardWhenTappedAround()
@@ -46,6 +47,11 @@ class LoginViewController: UIViewController {
         Messaging.messaging().subscribe(toTopic: "consumer") { error in
           print("Subscribed to consumer topic")
         }
+        
+        if #available(iOS 13.0, *) {
+            setupProviderLoginView()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +63,21 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         countryFlagImage.image = UIImage.init(named: "Egypt.png")
+    }
+    
+    @available(iOS 13.0, *)
+    func setupProviderLoginView() {
+        
+        
+      
+    }
+    
+    @IBAction private func takeSigningActionOnTap(_ sender: UIButton) {
+        
+        if #available(iOS 13.0, *) {
+            appleClient = AppleClient.init()
+            (appleClient as! AppleClient).SignInWithApple()
+        }
     }
     
     
@@ -101,6 +122,10 @@ class LoginViewController: UIViewController {
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func appleSignIn(_ sender: Any) {
     }
     
     
@@ -164,5 +189,56 @@ extension LoginViewController: WebServiceDelegate {
     
     
 }
+
+@available(iOS 13.0, *)
+class AppleClient:NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     
+    weak var window: UIWindow?
+    
+    
+    
+    
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return window ?? UIApplication.shared.keyWindow!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+            
+            // Create an account in your system.
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            if fullName != nil {
+                
+                
+            }
+        case _ as ASPasswordCredential:
+        
+            // Sign in using an existing iCloud Keychain credential.
+//            let username = passwordCredential.user
+//            let password = passwordCredential.password
+            break
+        default:
+            break
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    
+    func SignInWithApple() {
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            let request = appleIDProvider.createRequest()
+            request.requestedScopes = [.fullName, .email]
+            
+            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+            authorizationController.delegate = self
+            authorizationController.presentationContextProvider = self
+            authorizationController.performRequests()
+    }
+}
+
 

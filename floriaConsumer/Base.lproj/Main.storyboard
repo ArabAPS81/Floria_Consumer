@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4TW-J1-csa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QqP-6n-A6j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Splash View Controller-->
         <scene sceneID="6b2-AZ-6Sv">
             <objects>
-                <viewController storyboardIdentifier="GetStarted" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xgi-33-MM6" customClass="splashViewController" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GetStarted" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xgi-33-MM6" customClass="splashViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DML-IH-zrR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +74,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SlidesCell" id="EpX-H1-PXQ" customClass="SlidesGetStartedCollectionViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SlidesCell" id="EpX-H1-PXQ" customClass="SlidesGetStartedCollectionViewCell" customModule="Floria" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="321"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -118,7 +119,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageController" id="qYE-Hl-XuL" customClass="PageControllerCollectionViewCell" customModule="floriaConsumer" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageController" id="qYE-Hl-XuL" customClass="PageControllerCollectionViewCell" customModule="Floria" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -197,7 +198,7 @@
         <!--Signup-->
         <scene sceneID="ml0-ol-mSj">
             <objects>
-                <viewController id="L2g-Uu-EBa" customClass="signup" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L2g-Uu-EBa" customClass="signup" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nu4-Q6-kKE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,7 +445,7 @@
         <!--Check-->
         <scene sceneID="b5n-v6-waX">
             <objects>
-                <viewController id="o2O-bx-Zvx" customClass="check" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o2O-bx-Zvx" customClass="check" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HiH-ue-bJJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -637,7 +638,7 @@
         <!--Map-->
         <scene sceneID="OgM-Cd-UQP">
             <objects>
-                <viewController id="LCT-Lf-lyM" customClass="map" customModule="floriaConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LCT-Lf-lyM" customClass="map" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O98-af-Axl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -695,6 +696,47 @@
             </objects>
             <point key="canvasLocation" x="-16579.710144927536" y="-3335.4910714285711"/>
         </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="ppE-LH-jwv">
+            <objects>
+                <viewController id="QqP-6n-A6j" customClass="LaunchViewController" customModule="Floria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pT1-1H-CXH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="UUF-CG-Dfd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenleaves" translatesAutoresizingMaskIntoConstraints="NO" id="ctN-WV-MI9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenlogo" translatesAutoresizingMaskIntoConstraints="NO" id="S27-Rc-G2x">
+                                <rect key="frame" x="99" y="307" width="216" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="S27-Rc-G2x" secondAttribute="height" multiplier="196:255" id="nCb-bm-DrJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S27-Rc-G2x" firstAttribute="width" secondItem="UUF-CG-Dfd" secondAttribute="width" multiplier="0.522667" id="23g-nf-3OM"/>
+                            <constraint firstItem="WsQ-Ho-PtT" firstAttribute="trailing" secondItem="UUF-CG-Dfd" secondAttribute="trailing" id="2Hb-Ez-fmz"/>
+                            <constraint firstItem="UUF-CG-Dfd" firstAttribute="top" secondItem="pT1-1H-CXH" secondAttribute="top" id="2u3-2a-BSw"/>
+                            <constraint firstAttribute="bottom" secondItem="UUF-CG-Dfd" secondAttribute="bottom" id="36o-OS-m7C"/>
+                            <constraint firstItem="ctN-WV-MI9" firstAttribute="top" secondItem="pT1-1H-CXH" secondAttribute="top" id="7Qd-od-FmH"/>
+                            <constraint firstItem="S27-Rc-G2x" firstAttribute="centerY" secondItem="pT1-1H-CXH" secondAttribute="centerY" id="7rP-KC-oeN"/>
+                            <constraint firstItem="UUF-CG-Dfd" firstAttribute="leading" secondItem="WsQ-Ho-PtT" secondAttribute="leading" id="KG6-Mh-dID"/>
+                            <constraint firstItem="ctN-WV-MI9" firstAttribute="leading" secondItem="WsQ-Ho-PtT" secondAttribute="leading" id="rd5-ez-Mmx"/>
+                            <constraint firstItem="WsQ-Ho-PtT" firstAttribute="trailing" secondItem="ctN-WV-MI9" secondAttribute="trailing" id="wEg-io-YNN"/>
+                            <constraint firstItem="S27-Rc-G2x" firstAttribute="centerX" secondItem="pT1-1H-CXH" secondAttribute="centerX" id="zLB-A9-al4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WsQ-Ho-PtT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qE-n3-RKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Boket" width="16" height="16"/>
@@ -703,6 +745,9 @@
         <image name="eye.fill" catalog="system" width="64" height="38"/>
         <image name="flora" width="16" height="16"/>
         <image name="goforward" catalog="system" width="60" height="64"/>
+        <image name="launchScreenBackground" width="375" height="812"/>
+        <image name="launchScreenleaves" width="375" height="183"/>
+        <image name="launchScreenlogo" width="16" height="16"/>
         <image name="lock.fill" catalog="system" width="64" height="64"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="phone.fill" catalog="system" width="64" height="56"/>

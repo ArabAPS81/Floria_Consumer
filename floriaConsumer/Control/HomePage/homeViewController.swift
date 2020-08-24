@@ -10,6 +10,7 @@ import SideMenu
 import Alamofire
 import FirebaseMessaging
 import MaterialShowcase
+import FBSDKCoreKit
 
 protocol HomeView: class{
     func didReceiveData(data: Codable)
@@ -242,65 +243,90 @@ extension HomeViewController: HomeView {
 
 extension HomeViewController :MaterialShowcaseDelegate{
     func setShowCases() {
-        self.showCaseSequence = MaterialShowcaseSequence()
-        let showcase1 = MaterialShowcase()
-        showcase1.setTargetView(view: homeButtonsCollction[1])
-        showcase1.primaryText = "Ready Made Bouquet"
-        showcase1.secondaryText = "Click here to show ready made bouquet vendors"
-        showcase1.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase1.backgroundPromptColor = UIColor.gray
-        showcase1.isTapRecognizerForTargetView = true
-        
-        let showcase2 = MaterialShowcase()
-        showcase2.setTargetView(view: homeButtonsCollction[0])
-        showcase2.primaryText = "Custom Bouquet"
-        showcase2.secondaryText = "Click here to collect custom bouquet flowers "
-        showcase2.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase2.backgroundPromptColor = UIColor.gray
-        showcase2.isTapRecognizerForTargetView = true
-        
-        let showcase3 = MaterialShowcase()
-        showcase3.setTargetView(view: homeButtonsCollction[2])
-        showcase3.primaryText = "Gerb"
-        showcase3.secondaryText = "Click here select a Gerb"
-        showcase3.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase3.backgroundPromptColor = UIColor.gray
-        showcase3.isTapRecognizerForTargetView = false
-        
-        let showcase4 = MaterialShowcase()
-        showcase4.setTargetView(view: homeButtonsCollction[3])
-        showcase4.primaryText = "Car Decoration"
-        showcase4.secondaryText = "Click here to decorate your car"
-        showcase4.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase4.backgroundPromptColor = UIColor.gray
-        showcase4.isTapRecognizerForTargetView = false
-        
-        let showcase5 = MaterialShowcase()
-        showcase5.setTargetView(view: homeButtonsCollction[4])
-        showcase5.primaryText = "Pots Care"
-        showcase5.secondaryText = "Click here to demand pots care service"
-        showcase5.shouldSetTintColor = false // It should be set to false when button uses image.
-        showcase5.backgroundPromptColor = UIColor.gray
-        showcase5.isTapRecognizerForTargetView = false
-        
-        
-        showcase1.delegate = self
-        showcase2.delegate = self
-        showcase3.delegate = self
-        showcase4.delegate = self
-        showcase5.delegate = self
-        
-        
-        showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5)
-        if let tutorialOff = UserDefaults.standard.bool(forKey: "ShowCasesOff") as? Bool, !tutorialOff{
-            showCaseSequence.setKey(key: "ShowCasesKey")
+        DispatchQueue.main.async {
+            self.showCaseSequence = MaterialShowcaseSequence()
+            
+            let showcase1 = MaterialShowcase()
+            showcase1.setTargetView(view: self.homeButtonsCollction[1])
+            showcase1.primaryText = "Ready Made Bouquet"
+            showcase1.secondaryText = "Click here to show ready made bouquet vendors"
+            showcase1.shouldSetTintColor = false // It should be set to false when button uses image.
+            showcase1.backgroundPromptColor = UIColor.gray
+            showcase1.skipText = "Skip"
+            showcase1.skipTextColor = #colorLiteral(red: 0.9692807794, green: 0, blue: 0.4361249506, alpha: 1)
+            showcase1.isSkipButtonVisible = true
+            showcase1.skipButtonBackgroundColor = #colorLiteral(red: 0.9660214782, green: 0.7838416696, blue: 0.1578825712, alpha: 1)
+            showcase1.skipButtonBorderRadius = 5
+            showcase1.skipTextSize = 23.0
+            
+            showcase1.isTapRecognizerForTargetView = false
+            
+            let showcase2 = MaterialShowcase()
+            showcase2.setTargetView(view: self.homeButtonsCollction[0])
+            showcase2.primaryText = "Custom Bouquet"
+            showcase2.secondaryText = "Click here to collect custom bouquet flowers "
+            showcase2.shouldSetTintColor = false // It should be set to false when button uses image.
+            showcase2.backgroundPromptColor = UIColor.gray
+            showcase2.isTapRecognizerForTargetView = false
+            
+            showcase2.skipTextColor = #colorLiteral(red: 0.9692807794, green: 0, blue: 0.4361249506, alpha: 1)
+            showcase2.isSkipButtonVisible = true
+            showcase2.skipButtonBackgroundColor = #colorLiteral(red: 0.9660214782, green: 0.7838416696, blue: 0.1578825712, alpha: 1)
+            showcase2.skipButtonBorderRadius = 5
+            
+            let showcase3 = MaterialShowcase()
+            showcase3.setTargetView(view: self.homeButtonsCollction[2])
+            showcase3.primaryText = "Gerb"
+            showcase3.secondaryText = "Click here select a Gerb"
+            showcase3.shouldSetTintColor = false // It should be set to false when button uses image.
+            showcase3.backgroundPromptColor = UIColor.gray
+            showcase3.isTapRecognizerForTargetView = false
+            
+            let showcase4 = MaterialShowcase()
+            showcase4.setTargetView(view: self.homeButtonsCollction[3])
+            showcase4.primaryText = "Car Decoration"
+            showcase4.secondaryText = "Click here to decorate your car"
+            showcase4.shouldSetTintColor = false // It should be set to false when button uses image.
+            showcase4.backgroundPromptColor = UIColor.gray
+            showcase4.isTapRecognizerForTargetView = false
+            
+            let showcase5 = MaterialShowcase()
+            showcase5.setTargetView(view: self.homeButtonsCollction[4])
+            showcase5.primaryText = "Pots Care"
+            showcase5.secondaryText = "Click here to demand pots care service"
+            showcase5.shouldSetTintColor = false // It should be set to false when button uses image.
+            showcase5.backgroundPromptColor = UIColor.gray
+            showcase5.isTapRecognizerForTargetView = false
+            
+            
+            showcase1.delegate = self
+            showcase2.delegate = self
+            showcase3.delegate = self
+            showcase4.delegate = self
+            showcase5.delegate = self
+            
+            
+            self.showCaseSequence.temp(showcase1).temp(showcase2).temp(showcase3).temp(showcase4).temp(showcase5)
+            if let tutorialOff = UserDefaults.standard.bool(forKey: "ShowCasesOff") as? Bool, !tutorialOff{
+                self.showCaseSequence.setKey(key: "ShowCasesKey")
+            }
+            self.showCaseSequence.start()
         }
-        showCaseSequence.start()
+        
         
     }
     
     func showCaseDidDismiss(showcase: MaterialShowcase, didTapTarget: Bool) {
         showCaseSequence.showCaseWillDismis()
+    }
+    
+    func showCaseSkipped(showcase: MaterialShowcase) {
+        showCaseSequence.showcaseArray.removeAll()
+        showcase.completeShowcase()
+        
+     
+        
+        
     }
     
 }

@@ -30,13 +30,14 @@ class SubmittOrderQueryModel: Codable {
     var potSizeId: Int?
     var numOfPots: Int?
     var code: String?
+    var notes: String?
     
     enum CodingKeys: String, CodingKey {
         case products
         case packings
         case extras
         case shipping
-        case code
+        case code,notes
         case paymentTypeId = "payment_type_id"
         case addressId = "address_id"
         case serviceId = "service_id"
@@ -93,10 +94,10 @@ class OrderServices {
             print(error.localizedDescription)
         }
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: OrderSummaryResponceModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(response.data!, returningModelType: OrderSummaryResponceModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }else {
@@ -108,6 +109,28 @@ class OrderServices {
             }
         }
     }
+    
+    func cancelOrder(merchantRefNum: Int) {
+        let url = (NetworkConstants.baseUrl + "fawry/cancel")
+        let params: [String:Any] = ["merchantRefNum": merchantRefNum]
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+            switch response.result {
+            case .success(let value):
+                JSONResponseDecoder.decodeFrom(value, returningModelType: ComplainModel.self) { (result, error) in
+                    if let result = result {
+                        self.delegate?.didRecieveData(data: result)
+                    }else {
+                        self.delegate?.didFailToReceiveDataWithError(error: error!)
+                    }
+                }
+            case .failure(let error):
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
+    
     
     func submitOrder(order: SubmittOrderQueryModel) {
         

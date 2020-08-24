@@ -87,6 +87,8 @@ class RegisterationViewController: UIViewController {
         alert = UIAlertController(style: .actionSheet, title: NSLocalizedString("Phone Codes", comment: ""))
         alert.addLocalePicker(type: .phoneCode) { info in
             self.countryFlagImage.image = info?.flag
+            self.phoneCode = info?.phoneCode ?? "+2"
+            self.code = info?.code ?? "EG"
             sender.setTitle(info?.phoneCode, for: .normal)
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
@@ -107,7 +109,7 @@ class RegisterationViewController: UIViewController {
             }
             
             let service = AuthenticationService.init(delegate: self)
-            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms, countryCode: phoneCode, code: code,birthDate: birthDateTF.text ?? "", gender: selectedGender.rawValue)
+            service.register(name: name, email: email, phone: mobile, password: password, checkPrivecy: checkTerms, countryCode: phoneCode, code: code,birthDate: birthDateString, gender: selectedGender.rawValue)
         }
         
     }
@@ -143,7 +145,7 @@ class RegisterationViewController: UIViewController {
     let datePicker = UIDatePicker.init()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Registration"
+        self.title = NSLocalizedString("Sign Up", comment: "")
         setUpViewsShapes()
         nameErrorLable.isHidden = true
         emailErrorLable.isHidden = true
@@ -155,6 +157,13 @@ class RegisterationViewController: UIViewController {
         nameTF.addTarget(self, action: #selector(handleNameChange), for: .editingDidEnd)
         emailTF.addTarget(self, action: #selector(handleEmailChange), for: .editingDidEnd)
         mobileTF.addTarget(self, action: #selector(handleMobileChange), for: .editingDidEnd)
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.init(identifier: "en")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        birthDateString = dateFormatter.string(from: Date())
+        
     }
     func setUpViewsShapes(){
         termsBtn.layer.cornerRadius = 5

@@ -17,7 +17,9 @@ target 'floriaConsumer' do
   pod 'Kingfisher'
   pod 'ReachabilitySwift'
   pod 'Cosmos'
-  pod 'MaterialShowcase'
+  pod 'MaterialShowcase', :git => 'https://github.com/congnguyen91/material-showcase-ios.git'
   pod "Popover"
+  #pod 'FBSDKCoreKit'
+  pod 'FBSDKCoreKit/Swift'
 
 end

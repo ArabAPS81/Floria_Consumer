@@ -65,6 +65,10 @@ class AddAddressViewController: UIViewController {
             address.name = addressTitleTF.text
             address.districtId = district?.id
             address.phoneNum = contactPhoneTF.text
+            address.buildingNumber = buildingNumTF.text
+            address.contactName = contactNameTF.text
+            address.notes = notesTF.text
+            
             let service = AddressService.init(delegate: self)
             if fromEdit{
                 service.editAddress(address: address, id: (self.address?.id)!)

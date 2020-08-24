@@ -70,6 +70,7 @@ class ShippingViewController: UIViewController {
         let serv = OrderServices.init(delegate: self)
         if validation() {
             orderRequest.code = nil
+            orderRequest.notes = notesTF.text
             serv.getOrderSummary(order: orderRequest)
             HUD.show(.progress)
         }
@@ -160,7 +161,12 @@ extension ShippingViewController: WebServiceDelegate {
                 HUD.flash(.success)
             }else {
                 HUD.flash(.error)
-                alertWithMessage(data.error?.message?.body?.first, title: nil)
+                if let msg =  data.error?.message?.body?.first {
+                    alertWithMessage(msg, title: nil)
+                } else if let msg =  data.error?.message?.packings?.first {
+                    alertWithMessage(msg, title: nil)
+                }
+                
             }
         }else {
             HUD.flash(.error)

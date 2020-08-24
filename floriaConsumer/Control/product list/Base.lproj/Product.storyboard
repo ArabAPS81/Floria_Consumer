@@ -23,13 +23,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="660"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xX-OF-ELs">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="382"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i12-GQ-Ol3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="i12-GQ-Ol3" secondAttribute="height" multiplier="375:300" id="e1r-tc-E6B"/>
+                                                            <constraint firstAttribute="width" secondItem="i12-GQ-Ol3" secondAttribute="height" multiplier="300:300" id="e1r-tc-E6B"/>
                                                         </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QeB-dP-kJD">
                                                             <size key="itemSize" width="417" height="331.33333333333331"/>
@@ -39,7 +39,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderHome" id="f8d-PB-UrZ" customClass="SliderHomeCollectionViewCell" customModule="Floria" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="-15.5" width="417" height="331.33333333333331"/>
+                                                                <rect key="frame" x="0.0" y="22" width="417" height="331.33333333333331"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="417" height="331.33333333333331"/>
@@ -94,7 +94,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-1f-Pgc">
-                                                <rect key="frame" x="0.0" y="315" width="375" height="83"/>
+                                                <rect key="frame" x="0.0" y="390" width="375" height="83"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-mt-dUn">
                                                         <rect key="frame" x="292" y="0.0" width="75" height="83"/>
@@ -195,7 +195,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y9-tv-ddy">
-                                                <rect key="frame" x="0.0" y="406" width="375" height="70"/>
+                                                <rect key="frame" x="0.0" y="481" width="375" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-5D-Kuq">
                                                         <rect key="frame" x="110.5" y="1" width="44" height="44"/>
@@ -257,7 +257,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-Xq-SWF">
-                                                <rect key="frame" x="0.0" y="476" width="375" height="35"/>
+                                                <rect key="frame" x="0.0" y="551" width="375" height="35"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0M-Hq-oAK">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
@@ -315,7 +315,7 @@
                                                 </constraints>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-2l-tiP">
-                                                <rect key="frame" x="0.0" y="511" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="586" width="375" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="yMo-aR-ib9"/>

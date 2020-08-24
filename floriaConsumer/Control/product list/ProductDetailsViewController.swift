@@ -119,7 +119,7 @@ extension ProductDetailsViewController: UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == imageSliderCollectioView {
             let iphone8SizeWidth: CGFloat = 375
-            let iphone8Height: CGFloat = 300
+            let iphone8Height: CGFloat = 375
             let iphone8Width: CGFloat = 375
             let scale: CGFloat = UIScreen.main.bounds.width / iphone8SizeWidth
             let size = CGSize.init(width: iphone8Width * scale, height: iphone8Height * scale)
@@ -170,6 +170,7 @@ extension ProductDetailsViewController: WebServiceDelegate {
             extrasCollectionView.reloadData()
         }
         if let data = data as? FavoriteResponse {
+            alertWithMessage(data.message, title: nil)
             favoriteButton.isSelected = data.data?.isFavorited ?? false
         }
     }

@@ -98,7 +98,8 @@ extension ProductListViewController: ProductsListView {
                 setPlaceHolderLabel(collectionView: collectionView)
             }
             collectionView.reloadData()
-        }else if data is FavoriteResponse {
+        }else if let model = data as? FavoriteResponse {
+            alertWithMessage(model.message, title: nil)
             presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)
         }
     }

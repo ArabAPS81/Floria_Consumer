@@ -13,6 +13,7 @@ class PaymentViewController: UIViewController,WKUIDelegate{
     
     var webView: WKWebView!
     var urlString: String!
+    var orderId: Int!
     
     
     override func loadView() {
@@ -31,6 +32,16 @@ class PaymentViewController: UIViewController,WKUIDelegate{
         let url = URL.init(string: urlString)!
         let request = URLRequest.init(url: url)
         webView.load(request)
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: NSLocalizedString("back", comment: ""), style: UIBarButtonItem.Style.plain, target: self, action: #selector(back(_:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
+    
+    @objc func back(_ sender: Any) {
+        let service = OrderServices.init(delegate: self)
+        service.cancelOrder(merchantRefNum: orderId)
+        navigationController?.popViewController(animated: true)
     }
     
     func responsePaymentFinish(_ response: PaymentResponse) {
@@ -38,7 +49,7 @@ class PaymentViewController: UIViewController,WKUIDelegate{
         if response.http_code == 201 || response.http_code == 200 || response.success! {
             showAlert("payment done is")
         }else {
-            showFailureAlert(response.error?.message?.body?.first)
+            showFailureAlert(response.message)
         }
         
     }
@@ -98,6 +109,14 @@ extension PaymentViewController: WKNavigationDelegate {
         let jscript = "var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);"
         webView.evaluateJavaScript(jscript)
     }
+}
+
+extension PaymentViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    
 }
 
 struct PaymentResponse: Codable {

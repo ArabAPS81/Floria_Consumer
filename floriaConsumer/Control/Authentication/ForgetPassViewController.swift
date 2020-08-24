@@ -46,6 +46,7 @@ extension ForgetPassViewController: WebServiceDelegate {
         if let model = data as? ForgetPassModel{
             if model.httpCode == 200{
                 let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "forgetPass", mobile: String(model.data?.mobile.dropFirst(3) ?? ""))
+                vc.countryCode = String((model.data?.mobile.prefix(3)) ?? "002")
                 self.navigationController?.pushViewController(vc, animated: true)
                 
             }

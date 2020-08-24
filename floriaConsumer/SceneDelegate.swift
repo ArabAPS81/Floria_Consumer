@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import FBSDKCoreKit
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -19,24 +20,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).let userId = Defaults.init().getUserId()
-        if Defaults.init().isUserLogged{
-            let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
-            let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
-            window?.rootViewController = homeVC
-        }else {
-            if Defaults().getIfFirstTime() {
-                let storyboard = UIStoryboard(name: "Splash", bundle: nil)
-                let homeVC = storyboard.instantiateInitialViewController()
-                window?.rootViewController = homeVC
-            } else {
-                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-                let homeVC = storyboard.instantiateInitialViewController()
-                window?.rootViewController = homeVC
-            }
-        }
-        IQKeyboardManager.shared.enable = true
         
+        
+        IQKeyboardManager.shared.enable = true
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+
+        ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            open: url,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+        )
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

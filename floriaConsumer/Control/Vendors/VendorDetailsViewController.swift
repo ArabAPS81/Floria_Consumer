@@ -149,6 +149,7 @@ extension VendorDetailsViewController: VendorDetailsView{
             recentProductCollectionView.reloadData()
         }
         if let data = data as? FavoriteResponse {
+            alertWithMessage(data.message, title: nil)
             favoriteButton.isSelected = data.data?.isFavorited ?? false
         }
         

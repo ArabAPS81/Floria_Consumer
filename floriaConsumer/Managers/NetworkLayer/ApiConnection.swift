@@ -91,5 +91,6 @@ struct FloriaError:Codable {
     
     struct ErrorMessage: Codable {
         let body: [String]?
+        let packings: [String]?
     }
 }

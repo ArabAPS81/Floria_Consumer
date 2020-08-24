@@ -127,13 +127,14 @@ struct Order: Codable {
     let carDecoration: [CarDecoration]?
     let potsCare: [PotCare]?
     let address: [AddressModel.Address]?
+    let payment_type_id: Int?
     
     enum CodingKeys: String, CodingKey {
         case id, provider, status
         case requiredAt = "required_at"
         case notes, shipping, subtotal
         case totalTax = "total_tax"
-        case delivery, total, service, products, carDecoration, potsCare, address
+        case delivery, total, service, products, carDecoration, potsCare, address,payment_type_id
         case isPaid = "is_paid"
     }
 }

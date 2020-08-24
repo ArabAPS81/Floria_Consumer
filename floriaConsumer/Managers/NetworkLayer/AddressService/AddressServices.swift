@@ -17,9 +17,15 @@ struct  SubmittAddressQueryModel: Codable {
     var streetName: String?
     var districtId: Int?
     var phoneNum: String?
+    var apartmentNumber: String?
+    var buildingNumber: String?
+    var contactName: String?
     var notes: String?
     
     enum CodingKeys: String, CodingKey {
+        case apartmentNumber = "apartment_number"
+        case buildingNumber = "building_number"
+        case contactName = "contact_name"
         case districtId = "district_id"
         case phoneNum = "mobile"
         case name = "name"

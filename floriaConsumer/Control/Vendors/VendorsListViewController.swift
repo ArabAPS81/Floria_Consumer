@@ -187,6 +187,7 @@ extension VendorsListViewController: VendorsListView {
 extension VendorsListViewController : WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let model = data as? FavoriteResponse {
+            alertWithMessage(model.message, title: nil)
             presenter?.getVendorsList(serviceType: self.serviceType)
         }
     }

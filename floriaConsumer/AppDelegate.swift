@@ -10,6 +10,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import Firebase
 import UserNotifications
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,27 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        ApplicationDelegate.shared.application(
+                   application,
+                   didFinishLaunchingWithOptions: launchOptions
+               )
+        
         // Override point for customization after application launch.
         LocationManager.sharedManager.initializeLocationManager()
-        if Defaults.init().isUserLogged{
-            let storyboard = UIStoryboard(name: "MainScreen", bundle: nil)
-            let homeVC = storyboard.instantiateViewController(withIdentifier: "homeNav") as! HomeNav
-            window?.rootViewController = homeVC
-        }else {
-            if Defaults().getIfFirstTime() {
-                let storyboard = UIStoryboard(name: "Splash", bundle: nil)
-                let homeVC = storyboard.instantiateInitialViewController()
-                window?.rootViewController = homeVC
-            } else {
-                let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-                let homeVC = storyboard.instantiateInitialViewController()
-                window?.rootViewController = homeVC
-            }
-        }
+        
+        
         IQKeyboardManager.shared.enable = true
         setUpFirbaseNotification(application: application)
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
+
     }
     
     func setUpFirbaseNotification(application: UIApplication) {

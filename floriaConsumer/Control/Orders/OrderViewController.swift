@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Popover
 
 class OrderViewController: UIViewController {
     
@@ -41,6 +42,8 @@ class OrderViewController: UIViewController {
         CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
         PotsCareTableViewCell.registerNIBinView(tableView: self.tvOrder)
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
+        payButton.isHidden = true
+        
     }
     
     @objc func statusChanged(_ notification: NSNotification?) {
@@ -49,7 +52,7 @@ class OrderViewController: UIViewController {
     }
     
     func setUpData() {
-        if order?.isPaid == 1 {
+        if order?.isPaid == 1 && order?.payment_type_id == 1 {
             payButton.isHidden = false
         }else{
             payButton.isHidden = true
@@ -76,6 +79,23 @@ class OrderViewController: UIViewController {
             (labelsStack.arrangedSubviews[i] as! UILabel).textColor = (order?.status.id)! > i ? #colorLiteral(red: 0.9692807794, green: 0, blue: 0.4361249506, alpha: 1) : #colorLiteral(red: 0.9660214782, green: 0.7838416696, blue: 0.1578825712, alpha: 1)
         }
     }
+    
+    @IBAction func showRecipt(_ sender: UIButton) {
+        let subView = ReciptView.newInstance(order: order!)
+        
+        let options = [
+            .type(.auto),
+          .cornerRadius(5),
+          .animationIn(0.3),
+          .blackOverlayColor(UIColor.init(white: 100/255, alpha: 0.3))//,
+          //.arrowSize(CGSize.zero)
+          ] as [PopoverOption]
+        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        
+        popover.showAsDialog(subView, inView: self.view)
+    }
+    
+    
     
     @IBAction func payFawry(_ sender: UIButton) {
         let service = GeneralServices.init(delegate: self)
