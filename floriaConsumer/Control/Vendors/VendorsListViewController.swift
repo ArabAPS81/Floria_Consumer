@@ -26,6 +26,7 @@ class VendorsListViewController: UIViewController {
     var serviceType: ServiceType!
     var vendorsList = [VendorsModel.Vendor]()
     var presenter: VendorListPresenter?
+    var meta: Meta?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class VendorsListViewController: UIViewController {
         self.title = NSLocalizedString("Select Vendor", comment: "")
         tableView.separatorStyle = .none
         presenter = VendorListPresenter.init(view: self)
-        presenter?.getVendorsList(serviceType: self.serviceType)
+        presenter?.getVendorsList(serviceType: self.serviceType,page: 1)
         tableView.startLoading()
         
     }
@@ -116,23 +117,21 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
         
         
     }
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let lastItem = (orders?.count)! - 1
-//        if indexPath.row == lastItem{
-//            loadMoreData()
-//        }
-//    }
-//    
-//    func loadMoreData(){
-//        if meta.currentPage < meta.lastPage {
-//            //tableView.reloadData()
-//            
-//            let service = OrdersServices.init(delegate: self)
-//
-//            service.getOrders(page: meta.currentPage + 1)
-//            
-//        }
-//    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastItem = vendorsList.count - 1
+        if indexPath.row == lastItem{
+            loadMoreData()
+        }
+    }
+    
+    func loadMoreData(){
+        if meta!.currentPage < meta!.lastPage {
+            //tableView.reloadData()
+            
+            presenter?.getVendorsList(serviceType: serviceType,page: meta!.currentPage + 1)
+            
+        }
+    }
     
     func alertWith(vendor: VendorsModel.Vendor) {
         let alert = UIAlertController.init(title: NSLocalizedString("sorry", comment: ""), message: NSLocalizedString("vendor not available", comment: ""), preferredStyle: .alert)
@@ -165,7 +164,15 @@ extension VendorsListViewController: FilterDelegate {
 extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? VendorsModel {
-            vendorsList = data.vendors ?? []
+            meta = data.meta
+            
+            if data.meta?.currentPage != 1{
+                vendorsList.append(contentsOf: data.vendors ?? [])
+            }else{
+                vendorsList = data.vendors ?? []
+            }
+            
+            
             tableView.reloadData()
             if vendorsList.count == 0 {
                 tableView.stopLoading("")
@@ -188,7 +195,7 @@ extension VendorsListViewController : WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let model = data as? FavoriteResponse {
             alertWithMessage(model.message, title: nil)
-            presenter?.getVendorsList(serviceType: self.serviceType)
+            presenter?.getVendorsList(serviceType: self.serviceType,page: meta?.currentPage ?? 1)
         }
     }
     func didFailToReceiveDataWithError(error: Error) {

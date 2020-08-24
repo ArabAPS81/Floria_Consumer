@@ -17,10 +17,10 @@ class VendorListPresenter {
     }
     private var serviceType: ServiceType?
     
-    func getVendorsList(serviceType: ServiceType) {
+    func getVendorsList(serviceType: ServiceType,page:Int) {
         self.serviceType = serviceType
         let service = VendorServices.init(delegate: self)
-        let model = NearestVendorQueryModel.init(location: LocationManager.sharedManager.userCurrentCoordinate)
+        let model = NearestVendorQueryModel.init(location: LocationManager.sharedManager.userCurrentCoordinate, page: page)
         service.getVendorsByService(service: serviceType, model: model)
     }
     func getVendorsList(serviceType: ServiceType, andFilter model: FilterModel) {

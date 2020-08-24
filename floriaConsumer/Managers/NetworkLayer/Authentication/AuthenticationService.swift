@@ -63,18 +63,25 @@ class AuthenticationService {
         let parameters = [
             "verification_code" : code
         ] as [String : Any]
-        
+        HUD.show(.progress)
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):
                 print(value)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
+                if data.error == nil{
+                    HUD.flash(.success)
+                    
+                }else{
+                    HUD.flash(.error)
+                }
                 self.delegate?.didRecieveData(data: data)
                 break
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                HUD.flash(.error)
                 self.delegate?.didFailToReceiveDataWithError(error: error)
             }
         }
@@ -151,7 +158,11 @@ class AuthenticationService {
             case .success(let value):
                 print(value)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
-                HUD.flash(.success)
+                if data.error == nil{
+                    HUD.flash(.success)
+                }else{
+                    HUD.flash(.error)
+                }
                 self.delegate?.didRecieveData(data: data)
                 break
                 

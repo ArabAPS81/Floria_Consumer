@@ -14,6 +14,7 @@ import PKHUD
 
 struct  NearestVendorQueryModel {
     var location: CLLocationCoordinate2D?
+    var page:Int?
 }
 struct FilterModel {
     var district:Int
@@ -51,7 +52,7 @@ class VendorServices {
         
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
         
-        let parameters = model.location == nil ? "lat=&lng=" : "lat=\(model.location!.latitude)&lng=\(model.location!.longitude)"
+        let parameters = model.location == nil ? "lat=&lng=" : "lat=\(model.location!.latitude)&lng=\(model.location!.longitude)&page=\(model.page!)"
         
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()

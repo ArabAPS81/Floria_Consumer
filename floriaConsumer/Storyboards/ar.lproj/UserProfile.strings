@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "0ER-LF-BjZ"; */
+"0ER-LF-BjZ.placeholder" = "البريد الالكتروني";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "3cS-Zp-5FL"; */
+"3cS-Zp-5FL.placeholder" = "الاسم";
+
+/* Class = "UIButton"; normalTitle = "Delivery Addresses"; ObjectID = "9az-SF-iOE"; */
+"9az-SF-iOE.normalTitle" = "أماكن التوصيل";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "HlN-5Q-q6o"; */
+"HlN-5Q-q6o.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "KAw-o9-YVV"; */
+"KAw-o9-YVV.text" = "الاسم";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Z2q-44-zkK"; */
+"Z2q-44-zkK.text" = "البريد الالكتروني";

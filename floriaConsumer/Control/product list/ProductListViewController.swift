@@ -29,13 +29,14 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     var productListType = ServiceType.readyMade
     var presenter: ProductsListPresenter?
     var vendorId: Int!
+    var meta: Meta?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         HomeProductCollectionViewCell.registerNIBinView(collection: collectionView)
         presenter = ProductsListPresenter.init(view: self)
-        presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)
+        presenter?.getVendorProducts(vendorId: vendorId, forService: productListType, page: 1)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -80,6 +81,24 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let lastItem = productsList.count - 1
+        if indexPath.row == lastItem{
+            loadMoreData()
+        }
+    }
+    
+    func loadMoreData(){
+        if meta!.currentPage < meta!.lastPage {
+            //tableView.reloadData()
+            
+            presenter?.getVendorProducts(vendorId: vendorId, forService: productListType,page: meta!.currentPage + 1)
+            
+        }
+    }
+    
+    
+    
     func setPlaceHolderLabel(collectionView: UICollectionView){
         let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
         noDataLabel.text          = "No data available"
@@ -93,14 +112,22 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
 extension ProductListViewController: ProductsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? ProductsModel {
-            productsList = data.products!
+            
+            self.meta = data.meta
+            if meta?.currentPage != 1 {
+                productsList.append(contentsOf: data.products ?? [])
+            }else{
+                productsList = data.products ?? []
+            }
+            
+            
             if productsList.count == 0 {
                 setPlaceHolderLabel(collectionView: collectionView)
             }
             collectionView.reloadData()
         }else if let model = data as? FavoriteResponse {
             alertWithMessage(model.message, title: nil)
-            presenter?.getVendorProducts(vendorId: vendorId, forService: productListType)
+            presenter?.getVendorProducts(vendorId: vendorId, forService: productListType, page: 1)
         }
     }
     

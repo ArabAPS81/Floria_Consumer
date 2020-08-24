@@ -26,9 +26,9 @@ class CustomBouquetPresenter {
         return productsList[indexPath.row]
     }
     
-    func getVendorProducts(vendorId: Int, forService serviceType: ServiceType) {
+    func getVendorProducts(vendorId: Int, forService serviceType: ServiceType,page:Int) {
         let service = ProductService.init(delegate: self)
-        service.getProductsForVendor(vendorId, forService: serviceType)
+        service.getProductsForVendor(vendorId, forService: serviceType,page: page)
     }
     
     func submittOrder() {

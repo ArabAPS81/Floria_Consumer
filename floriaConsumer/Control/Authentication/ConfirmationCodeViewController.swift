@@ -43,6 +43,9 @@ class ConfirmationCodeViewController: UIViewController {
         chagePassBtn.backgroundColor = .darkGray
         codeTF.addTarget(self, action: #selector(textChanged(_:)), for: UIControl.Event.editingChanged)
         codeTF.delegate = self
+        if #available(iOS 12.0, *) {
+            self.codeTF.textContentType = .oneTimeCode
+        }
     }
     
     @objc func textChanged(_ sender: UITextField) {
@@ -61,17 +64,19 @@ class ConfirmationCodeViewController: UIViewController {
             return}
         if comingFromVC == "registration"{
             let service = AuthenticationService.init(delegate: self)
+            
             service.confirmNewUser(code: code)
         }
         else if comingFromVC == "forgetPass"{
             let service = AuthenticationService.init(delegate: self)
+            
             service.confirmUser(mobile: mobile, code: code)
         }
         
     }
     
     @IBAction func resendTapped(_ sender: Any) {
-        
+        codeTF.text = ""
         if comingFromVC == "registration"{
             let service = AuthenticationService.init(delegate: self)
             service.resend(mobile: mobile)
@@ -105,7 +110,7 @@ class ConfirmationCodeViewController: UIViewController {
     @objc func UpdateTimer(){
         if seconds != 0 {
             seconds -= 1
-            timerLable.text = "00:\(seconds)"
+            timerLable.text = "00:\(NSString.init(format: "%0d", seconds))"
         }else{
             timerLable.text = "00:00"
             resendBtn.isHidden = false

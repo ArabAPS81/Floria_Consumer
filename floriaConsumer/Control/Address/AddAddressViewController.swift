@@ -92,6 +92,10 @@ class AddAddressViewController: UIViewController {
             self.district?.name = address?.district?.name
             self.districtButton.text = district?.name
             contactPhoneTF.text = address?.mobile
+            contactNameTF.text = address?.contactName
+            buildingNumTF.text = address?.buildingNumber
+            notesTF.text = address?.notes
+            
         }
     }
     
@@ -161,8 +165,8 @@ extension AddAddressViewController: UIPickerViewDelegate, UIPickerViewDataSource
             districtButton.text = nil
         }
         else {
-            district = govenorate?.districts?[row]
-            districtButton.text = govenorate?.districts?[row].name
+            district = govenorate?.districts?[safe: row]
+            districtButton.text = govenorate?.districts?[safe: row]?.name
         }
     }
     

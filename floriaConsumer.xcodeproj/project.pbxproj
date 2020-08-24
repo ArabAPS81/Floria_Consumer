@@ -73,7 +73,6 @@
 		D61E866423952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D61E866223952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib */; };
 		D6203518238A962400336D0B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203517238A962400336D0B /* Splash.storyboard */; };
 		D620351E238A99DA00336D0B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620351D238A99DA00336D0B /* Payment.storyboard */; };
-		D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203525238A9AB000336D0B /* UserProfile.storyboard */; };
 		D6203528238A9AD900336D0B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6203527238A9AD900336D0B /* Settings.storyboard */; };
 		D620352C238A9B0000336D0B /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352B238A9B0000336D0B /* Favorites.storyboard */; };
 		D620352E238A9B1300336D0B /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D620352D238A9B1300336D0B /* Notifications.storyboard */; };
@@ -142,6 +141,7 @@
 		D6CFA56F23A8E9610008CACB /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CFA56E23A8E9610008CACB /* AddressModel.swift */; };
 		D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */; };
 		D6D2B69A23D476EB00817EB0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */; };
+		D6D4390124F4206900AC3A6F /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D4390324F4206900AC3A6F /* UserProfile.storyboard */; };
 		D6E0978223CB40E200704020 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978423CB40E200704020 /* SideMenu.storyboard */; };
 		D6E0978723CB414000704020 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978923CB414000704020 /* Address.storyboard */; };
 		D6E0978C23CB416B00704020 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978E23CB416B00704020 /* Filter.storyboard */; };
@@ -252,7 +252,6 @@
 		D61E866223952AEB00CC0287 /* CustomBouquetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBouquetCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6203517238A962400336D0B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		D620351D238A99DA00336D0B /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
-		D6203525238A9AB000336D0B /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		D6203527238A9AD900336D0B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		D620352B238A9B0000336D0B /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		D620352D238A9B1300336D0B /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
@@ -326,6 +325,8 @@
 		D6CFA56E23A8E9610008CACB /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D6D4390224F4206900AC3A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfile.storyboard; sourceTree = "<group>"; };
+		D6D4390524F4206E00AC3A6F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UserProfile.strings; sourceTree = "<group>"; };
 		D6E0978023CB40B400704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		D6E0978123CB40B500704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D6E0978523CB40E600704020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
@@ -957,7 +958,7 @@
 			isa = PBXGroup;
 			children = (
 				D6203517238A962400336D0B /* Splash.storyboard */,
-				D6203525238A9AB000336D0B /* UserProfile.storyboard */,
+				D6D4390324F4206900AC3A6F /* UserProfile.storyboard */,
 				D6203527238A9AD900336D0B /* Settings.storyboard */,
 				D620352B238A9B0000336D0B /* Favorites.storyboard */,
 				D620352D238A9B1300336D0B /* Notifications.storyboard */,
@@ -1083,7 +1084,7 @@
 				D6E097AA23CB41E100704020 /* MainScreen.storyboard in Resources */,
 				D6E0979123CB418100704020 /* Orders.storyboard in Resources */,
 				D6E097B423CB420500704020 /* Vendor.storyboard in Resources */,
-				D6203526238A9AB000336D0B /* UserProfile.storyboard in Resources */,
+				D6D4390124F4206900AC3A6F /* UserProfile.storyboard in Resources */,
 				D6E0979B23CB41A800704020 /* PotsCare.storyboard in Resources */,
 				D6E097A523CB41D100704020 /* Product.storyboard in Resources */,
 				D652F84123A7C5B800E7EED8 /* TipView.xib in Resources */,
@@ -1324,6 +1325,15 @@
 				D68AD53E24E3CD9900DDD267 /* ar */,
 			);
 			name = ReciptView.xib;
+			sourceTree = "<group>";
+		};
+		D6D4390324F4206900AC3A6F /* UserProfile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6D4390224F4206900AC3A6F /* Base */,
+				D6D4390524F4206E00AC3A6F /* ar */,
+			);
+			name = UserProfile.storyboard;
 			sourceTree = "<group>";
 		};
 		D6E0978423CB40E200704020 /* SideMenu.storyboard */ = {
@@ -1651,7 +1661,7 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -1676,7 +1686,7 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				INFOPLIST_FILE = floriaConsumer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;

@@ -72,9 +72,9 @@ class ProductService {
         }
     }
     
-    func getProductsForVendor(_ vendorId: Int, forService service: ServiceType) {
+    func getProductsForVendor(_ vendorId: Int, forService service: ServiceType,page: Int) {
         
-        let baseUrl = (NetworkConstants.baseUrl + "services/" + "\(service.serviceId())" + "/providers/" + "\(vendorId)" + "/products")
+        let baseUrl = (NetworkConstants.baseUrl + "services/" + "\(service.serviceId())" + "/providers/" + "\(vendorId)" + "/products?page=\(page)")
         guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

@@ -12,10 +12,12 @@ struct VendorsModel: Codable {
 
     let vendors : [Vendor]!
     let httpCode : Int?
+    let meta:Meta?
 
     enum CodingKeys: String, CodingKey {
         case vendors = "data"
         case httpCode = "http_code"
+        case meta
     }
     
     struct Vendor: Codable {

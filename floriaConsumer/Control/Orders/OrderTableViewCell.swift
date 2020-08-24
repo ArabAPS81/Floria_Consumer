@@ -43,7 +43,7 @@ class OrderTableViewCell: UITableViewCell {
         //self.ivAvatar.imageFromUrl(url: order.service.image, placeholder: #imageLiteral(resourceName: "pro"))
         self.lblOrderNumber.text = "#\(order.id)"
         self.lblOrderDate.text = order.requiredAt
-        self.lblOrderPrice.text = ("\(order.total) EGP")
+        self.lblOrderPrice.text = ("\(Int(order.total)) EGP")
         self.lblOrderStatus.text = order.status.name
         switch order.service.id {
         case 1:

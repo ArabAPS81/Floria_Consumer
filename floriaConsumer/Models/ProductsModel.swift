@@ -12,10 +12,12 @@ struct ProductsModel : Codable {
 
     let products : [Product]?
     let httpCode : Int?
+    let meta: Meta
 
     enum CodingKeys: String, CodingKey {
         case products = "data"
         case httpCode = "http_code"
+        case meta
     }
     struct Product : Codable {
 

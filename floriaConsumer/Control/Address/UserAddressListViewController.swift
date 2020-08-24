@@ -83,7 +83,8 @@ extension UserAddressListViewController: UITableViewDataSource,UITableViewDelega
 
         let edit = UITableViewRowAction(style: .normal, title: NSLocalizedString("Edit", comment: "")) { action, index in
             let vc = AddAddressViewController.newInstance(fromEdit: true, address: self.addressesList[indexPath.row])
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         }
         edit.backgroundColor = .lightGray
         

@@ -31,7 +31,7 @@ class CustomBouquetViewController: UIViewController {
         CustomBouquetCollectionViewCell.registerNIBinView(collection: collectionView)
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 8
         presenter = CustomBouquetPresenter.init(view: self)
-        presenter.getVendorProducts(vendorId: vendorID, forService: self.serviceType)
+        presenter.getVendorProducts(vendorId: vendorID, forService: self.serviceType, page: 1)
         orderRequest.products = []
         
     }
