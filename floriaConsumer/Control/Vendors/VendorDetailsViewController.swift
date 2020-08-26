@@ -21,6 +21,7 @@ class VendorDetailsViewController: UIViewController{
         return vc
     }
     
+    var meta: Meta?
     var presenter: VendorDetailsPresenter!
     var vendorProducts = [ProductsModel.Product]()
     var vendorId: Int!
@@ -72,7 +73,7 @@ class VendorDetailsViewController: UIViewController{
         servicesCollectionView.dataSource = serviceCollectionDataSource
         favoriteButton.isSelected = vendor.isFavorited
         let id = vendor.id
-        presenter?.getVendorProducts(vendorId: id!)
+        presenter?.getVendorProducts(vendorId: id!, page: 1)
         picofvendor.imageFromUrl(url: vendor.image, placeholder: nil)
     }
     
@@ -123,6 +124,21 @@ extension VendorDetailsViewController : UICollectionViewDelegate , UICollectionV
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let lastItem = vendorProducts.count - 1
+        if indexPath.row == lastItem {
+            loadMoreData()
+        }
+    }
+    
+    func loadMoreData(){
+        if meta!.currentPage < meta!.lastPage {
+            let id = vendor.id!
+            presenter?.getVendorProducts(vendorId: id, page: meta!.currentPage + 1)
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         //self.performSegue(withIdentifier: "prouduct", sender: nil)
     }
@@ -144,8 +160,14 @@ extension VendorDetailsViewController: VendorDetailsView{
             }
         }
         if let data = data as? ProductsModel {
-            vendorProducts = data.products!
-            print(vendorProducts)
+            self.meta = data.meta
+            if meta?.currentPage != 1 {
+                vendorProducts.append(contentsOf: data.products ?? [])
+            }else{
+                vendorProducts = data.products ?? []
+            }
+
+            
             recentProductCollectionView.reloadData()
         }
         if let data = data as? FavoriteResponse {

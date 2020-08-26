@@ -28,6 +28,15 @@ class PakingViewController: UIViewController {
         orderRequest.packings = []
     }
     
+    @IBAction func showAddresses(_ sender: Any) {
+        if !orderRequest.packings.isEmpty {
+        self.performSegue(withIdentifier: "delivery", sender: nil)
+        }else {
+            alertWithMessage(NSLocalizedString("You have to choose a packing", comment: ""), title: nil)
+        }
+    }
+    
+    
 
 }
 

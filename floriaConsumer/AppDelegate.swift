@@ -107,6 +107,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     print(userInfo)
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "orderStatusChanged"), object: nil)
 
+    if let type = userInfo["type"] as? String, (type == "fawry" || type == "order") {
+        if let orderIdString = userInfo["order_id"] as? String,let orderId = Int(orderIdString) {
+            
+            let service = OrdersServices.init(delegate: self)
+            service.getOrder(id: orderId)
+        }
+        
+    }
 
     // Change this to your preferred presentation option
     completionHandler([])
@@ -139,10 +147,7 @@ extension AppDelegate: MessagingDelegate {
         let deviceId = NSUUID().uuidString
         let service = AuthenticationService.init(delegate: self)
         service.postDeviceToken(fcmToken)
-        
     }
-    
-    
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
       print("Received data message: \(remoteMessage.appData)")
@@ -152,7 +157,13 @@ extension AppDelegate: MessagingDelegate {
 
 extension AppDelegate: WebServiceDelegate {
     func didRecieveData(data: Codable) {
-        
+        if let topVC = UIApplication.topViewController(),let order = data as? OrderModel {
+            
+            let sb = UIStoryboard.init(name: "Orders", bundle: nil)
+            let orderVC = sb.instantiateViewController(withIdentifier: "OrderViewControllerStoryboard") as! OrderViewController
+            orderVC.order = order.order
+            topVC.navigationController?.pushViewController(orderVC, animated: true)
+        }
     }
     
     func didFailToReceiveDataWithError(error: Error) {
@@ -162,3 +173,19 @@ extension AppDelegate: WebServiceDelegate {
     
 }
 
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}

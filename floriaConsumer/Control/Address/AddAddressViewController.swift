@@ -169,8 +169,6 @@ extension AddAddressViewController: UIPickerViewDelegate, UIPickerViewDataSource
             districtButton.text = govenorate?.districts?[safe: row]?.name
         }
     }
-    
-    
 }
 
 extension AddAddressViewController: WebServiceDelegate {
@@ -180,7 +178,7 @@ extension AddAddressViewController: WebServiceDelegate {
                 self.dismiss(animated: true, completion: nil)
                 alertWithMessage(title: "Succesfully added")
             }else {
-                alertWithMessage(title: "error has occured")
+                alertWithMessage(title: data.error?.message?.body?.first)
             }
         }
         if let data = data as? GovernorateModel {

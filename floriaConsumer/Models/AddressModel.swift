@@ -64,7 +64,7 @@ struct AddressModel : Codable {
 
 struct AddAddressResponseModel : Codable {
 
-    let error : Errors?
+    let error : FloriaError?
     let httpCode : Int?
     let address: AddressModel.Address?
 
