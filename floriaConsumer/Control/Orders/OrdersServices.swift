@@ -44,10 +44,10 @@ class OrdersServices {
         
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         HUD.show(.progress)
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: OrderModel.self) { (result, error) in
+                JSONResponseDecoder.decodeFrom(response.data!, returningModelType: OrderModel.self) { (result, error) in
                     if result != nil {
                         HUD.flash(.success)
                         self.delegate?.didRecieveData(data: result)

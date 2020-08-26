@@ -174,6 +174,24 @@ class AuthenticationService {
         }
     }
     
+    func logout() {
+        let url = NetworkConstants.baseUrl + "logout"
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        Alamofire.request(url, method: .get, headers: headers).responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let data = try! JSONDecoder().decode(ResendModel.self, from: response.data!)
+                self.delegate?.didRecieveData(data: data)
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.delegate?.didFailToReceiveDataWithError(error: error)
+            }
+        }
+    }
+    
     
     func resend(mobile : String) {
         let url = NetworkConstants.baseUrl + "resend/\(mobile)"
@@ -199,7 +217,7 @@ class AuthenticationService {
         
         let params: [String:String] = ["mobile": phoneNumber,
                                        "password":password,
-                                       "country_code": "+2"]
+                                       "country_code": countryCode]
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         HUD.show(.progress)
         Alamofire.request(url, method: .post, parameters: params, headers: headers).responseJSON{ (response) in

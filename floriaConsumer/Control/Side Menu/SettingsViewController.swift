@@ -87,6 +87,9 @@ class SettingsViewController: UITableViewController {
     
     @IBAction func logout(_ sender: Any) {
         if Defaults().isUserLogged {
+            
+            let service = AuthenticationService.init(delegate: self)
+            service.logout()
             Defaults.init().isUserLogged = false
             Defaults().saveUserData(email: "", name: "", phone: "")
             self.navigationController?.popViewController(animated: true)
@@ -101,5 +104,12 @@ class SettingsViewController: UITableViewController {
             self.present(nav, animated: true, completion: nil)
         }
     }
+    
+}
+extension SettingsViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
     
 }

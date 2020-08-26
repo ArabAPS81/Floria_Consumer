@@ -226,7 +226,7 @@ class RegisterationViewController: UIViewController {
             print("Valid Text")
             mobileErrorLable.isHidden = true
         }else if !text.isEmpty{
-            mobileErrorLable.text = "Not A Valid Mobile"
+            mobileErrorLable.text = NSLocalizedString("Enter avalid mobile number", comment: "")
             mobileErrorLable.isHidden = false
         }
     }

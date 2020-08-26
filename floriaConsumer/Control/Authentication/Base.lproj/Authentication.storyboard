@@ -812,7 +812,7 @@
                                                         <rect key="frame" x="0.0" y="120" width="315" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXl-a2-e50">
-                                                                <rect key="frame" x="63" y="0.0" width="252" height="50"/>
+                                                                <rect key="frame" x="79" y="0.0" width="236" height="50"/>
                                                                 <color key="textColor" red="0.8862745098" green="0.0" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
@@ -834,7 +834,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4U-K7-V99">
-                                                                <rect key="frame" x="28.5" y="0.0" width="34.5" height="49"/>
+                                                                <rect key="frame" x="28.5" y="0.0" width="50.5" height="49"/>
                                                                 <state key="normal" title="+2"/>
                                                                 <connections>
                                                                     <action selector="phoneCodeTapped:" destination="hfz-2z-MSe" eventType="touchUpInside" id="KUp-8b-9Od"/>
@@ -851,7 +851,7 @@
                                                             <constraint firstAttribute="bottom" secondItem="AXl-a2-e50" secondAttribute="bottom" id="Caw-bg-oyd"/>
                                                             <constraint firstAttribute="bottom" secondItem="V6j-ys-5ld" secondAttribute="bottom" id="Cgu-Df-z9L"/>
                                                             <constraint firstItem="AXl-a2-e50" firstAttribute="centerY" secondItem="Mvo-ZA-X5s" secondAttribute="centerY" id="GPx-aq-akw"/>
-                                                            <constraint firstItem="AXl-a2-e50" firstAttribute="width" secondItem="Mvo-ZA-X5s" secondAttribute="width" multiplier="4/5" id="J91-fe-Hfm"/>
+                                                            <constraint firstItem="AXl-a2-e50" firstAttribute="width" secondItem="Mvo-ZA-X5s" secondAttribute="width" multiplier="0.75" id="J91-fe-Hfm"/>
                                                             <constraint firstItem="FtT-9o-mOb" firstAttribute="top" secondItem="Mvo-ZA-X5s" secondAttribute="top" id="NOc-aA-jzF"/>
                                                             <constraint firstItem="AXl-a2-e50" firstAttribute="leading" secondItem="A4U-K7-V99" secondAttribute="trailing" id="QdS-Lz-KpE"/>
                                                             <constraint firstAttribute="trailing" secondItem="V6j-ys-5ld" secondAttribute="trailing" id="TDe-Ke-6ZN"/>

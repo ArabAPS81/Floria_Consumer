@@ -76,6 +76,10 @@ class SideMenuViewController: UIViewController {
     
     @IBAction func out(_ sender: Any) {
         if Defaults().isUserLogged {
+            
+            let service = AuthenticationService.init(delegate: self)
+            service.logout()
+            
             Defaults.init().isUserLogged = false
             Defaults().saveUserData(email: "", name: "", phone: "")
             self.dismiss(animated: true)
@@ -95,5 +99,13 @@ class SideMenuViewController: UIViewController {
         //print("😉 onOrdersClick")
         performSegue(withIdentifier: "Segue2Orders", sender: self)
     }
+}
+
+extension SideMenuViewController: WebServiceDelegate {
+    func didRecieveData(data: Codable) {
+        
+    }
+    
+    
 }
 

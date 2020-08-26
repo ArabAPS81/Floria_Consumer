@@ -6,7 +6,7 @@
 "2eO-bK-naF.title" = "Forget password";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "4A9-5s-pYD"; */
-"4A9-5s-pYD.placeholder" = "Email";
+"4A9-5s-pYD.placeholder" = "البريد الالكتروني";
 
 /* Class = "UILabel"; text = "00 : 00"; ObjectID = "ATz-zk-86A"; */
 "ATz-zk-86A.text" = "00 : 00";
@@ -85,12 +85,17 @@
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "w3h-80-wdb"; */
 "w3h-80-wdb.placeholder" = "كلمة السر";
+"BoJ-7P-JAs.placeholder" = "تاريخ الميلاد";
 
 /* Class = "UIButton"; normalTitle = " "; ObjectID = "xIU-Ph-p26"; */
 "xIU-Ph-p26.normalTitle" = " ";
 
+"9uO-Y4-p2U.normalTitle" = "ذكر";
+"oav-ZI-wQ5.normalTitle" = "أنثى";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "xms-h3-zi5"; */
 "xms-h3-zi5.text" = "";
+"7Sa-Az-gwc.text" = "اختر الجنس (اختياري)";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "yM2-Ut-bTU"; */
 "yM2-Ut-bTU.text" = "";

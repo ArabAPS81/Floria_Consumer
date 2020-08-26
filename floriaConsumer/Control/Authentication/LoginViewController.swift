@@ -91,9 +91,6 @@ class LoginViewController: UIViewController {
     }
     @IBAction func signin(_ sender: Any) {
         
-
-        
-        
         if validation() {
             let Phone = phoneTF.text!
             let password = passTF.text!
@@ -118,6 +115,7 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(style: .actionSheet, title: NSLocalizedString("Phone Codes", comment: ""))
         alert.addLocalePicker(type: .phoneCode) { info in
             self.countryFlagImage.image = info?.flag
+            self.phoneCode = info?.phoneCode ?? "+2"
             sender.setTitle(info?.phoneCode, for: .normal)
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
@@ -146,7 +144,7 @@ class LoginViewController: UIViewController {
         guard let text = phoneTF.text else{return}
         if text.isValid(.phone){
             print("Valid Text")
-            //failureLable.isHidden = true
+            failureLable.text = ""
         }else{
             failureLable.text = NSLocalizedString("Enter avalid mobile number", comment: "")
            // failureLable.isHidden = false
@@ -178,7 +176,7 @@ extension LoginViewController: WebServiceDelegate {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }else if data.httpCode == 401{
-                failureLable.text = "Your phone or password maybe wrong"
+                
             }
         }
     }

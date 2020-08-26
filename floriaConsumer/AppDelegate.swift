@@ -90,20 +90,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
 
-  // Receive displayed notifications for iOS 10 devices.
+  
   func userNotificationCenter(_ center: UNUserNotificationCenter,
                               willPresent notification: UNNotification,
     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
     let userInfo = notification.request.content.userInfo
-
-    // With swizzling disabled you must let Messaging know about the message, for Analytics
-    // Messaging.messaging().appDidReceiveMessage(userInfo)
-    // Print message ID.
     if let messageID = userInfo[gcmMessageIDKey] {
       print("Message ID: \(messageID)")
     }
-
-    // Print full message.
     print(userInfo)
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "orderStatusChanged"), object: nil)
 
@@ -128,9 +122,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     if let messageID = userInfo[gcmMessageIDKey] {
       print("Message ID: \(messageID)")
     }
-
-    // Print full message.
     print(userInfo)
+    
+    if let type = userInfo["type"] as? String, (type == "fawry" || type == "order") {
+        if let orderIdString = userInfo["order_id"] as? String,let orderId = Int(orderIdString) {
+            
+            let service = OrdersServices.init(delegate: self)
+            service.getOrder(id: orderId)
+        }
+        
+    }
 
     completionHandler()
   }
@@ -144,7 +145,7 @@ extension AppDelegate: MessagingDelegate {
         print("Firebase registration token: \(fcmToken)")
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-        let deviceId = NSUUID().uuidString
+        _ = NSUUID().uuidString
         let service = AuthenticationService.init(delegate: self)
         service.postDeviceToken(fcmToken)
     }

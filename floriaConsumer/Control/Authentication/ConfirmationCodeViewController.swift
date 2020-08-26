@@ -121,7 +121,7 @@ class ConfirmationCodeViewController: UIViewController {
 
 extension ConfirmationCodeViewController : WebServiceDelegate{
     func didRecieveData(data: Codable) {
-        if let data = data as? AuthenticationModel {
+        if let data = data as? AuthenticationModel, comingFromVC == "forgetPass" {
             if data.httpCode == 200 {
                 if data.user?.verified ?? false {
                     let vc = NewPassViewController.newInstance(mobile: (data.user?.mobile)!)
