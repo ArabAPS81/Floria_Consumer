@@ -115,11 +115,8 @@ class RegisterationViewController: UIViewController {
     }
     
     func validation() -> Bool {
-        if !(nameTF.text?.isValid(.name) ?? false) {
-            alertWithMessage(title: "Name is not valid")
-            return false
-        }
-        if !(emailTF.text?.isValid(.email) ?? false) {
+        
+        if !(emailTF.text?.trimmed.isValid(.email) ?? false) {
             alertWithMessage(title: "email is not valid")
             return false
         }
@@ -154,10 +151,6 @@ class RegisterationViewController: UIViewController {
         datePicker.datePickerMode = .date
         datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
-        nameTF.addTarget(self, action: #selector(handleNameChange), for: .editingDidEnd)
-        emailTF.addTarget(self, action: #selector(handleEmailChange), for: .editingDidEnd)
-        mobileTF.addTarget(self, action: #selector(handleMobileChange), for: .editingDidEnd)
-        
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.init(identifier: "en")
@@ -193,43 +186,6 @@ class RegisterationViewController: UIViewController {
         selectedGender = (sender.tag == 1) ? UserGender.male : UserGender.female
        }
     
-    @ objc func handleEmailChange(){
-        guard let text = emailTF.text, !text.isEmpty else{ emailErrorLable.isHidden = false
-            emailErrorLable.text = "This field is required"
-            return}
-        if text.isValid(.email){
-            print("Valid Text")
-            emailErrorLable.isHidden = true
-        }else if !text.isEmpty{
-            emailErrorLable.text = "Not A Valid Email"
-            emailErrorLable.isHidden = false
-        }
-    }
-    
-    @ objc func handleNameChange(){
-        guard let text = nameTF.text , !text.isEmpty else{  nameErrorLable.isHidden = false
-            nameErrorLable.text = "This field is required"
-            return}
-        if text.isValid(.name){
-            nameErrorLable.isHidden = true
-        }else if !text.isEmpty{
-            nameErrorLable.text = "Not A Valid Name"
-            nameErrorLable.isHidden = false
-        }
-    }
-    
-    @ objc func handleMobileChange(){
-        guard let text = mobileTF.text else{mobileErrorLable.isHidden = false
-            mobileErrorLable.text = "This field is required"
-            return}
-        if text.isValid(.phone){
-            print("Valid Text")
-            mobileErrorLable.isHidden = true
-        }else if !text.isEmpty{
-            mobileErrorLable.text = NSLocalizedString("Enter avalid mobile number", comment: "")
-            mobileErrorLable.isHidden = false
-        }
-    }
 }
 
 extension RegisterationViewController : WebServiceDelegate{
@@ -244,6 +200,10 @@ extension RegisterationViewController : WebServiceDelegate{
                 if let message = model.error?.message?.email?.first {
                     alertWithMessage(title: message)
                 }else if let message = model.error?.message?.mobile?.first {
+                    alertWithMessage(title: message)
+                }else if let message = model.error?.message?.name?.first {
+                    alertWithMessage(title: message)
+                }else if let message = model.error?.message?.body?.first {
                     alertWithMessage(title: message)
                 }
             }

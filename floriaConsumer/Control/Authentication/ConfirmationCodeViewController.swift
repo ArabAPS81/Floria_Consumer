@@ -121,12 +121,22 @@ class ConfirmationCodeViewController: UIViewController {
 
 extension ConfirmationCodeViewController : WebServiceDelegate{
     func didRecieveData(data: Codable) {
-        if let data = data as? AuthenticationModel, comingFromVC == "forgetPass" {
-            if data.httpCode == 200 {
+        if let data = data as? AuthenticationModel {
+            if data.httpCode == 200 && comingFromVC == "forgetPass" {
                 if data.user?.verified ?? false {
                     let vc = NewPassViewController.newInstance(mobile: (data.user?.mobile)!)
                     vc.user = data
                     self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }else if data.httpCode == 200 && comingFromVC == "registration"{
+                Defaults.init().saveUserId(userId: data.user?.id ?? 0)
+                Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                Defaults().isUserLogged = true
+                Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
+                if (event != nil) {
+                    event(self)
+                } else {
+                    self.performSegue(withIdentifier: "homeSegue", sender: nil)
                 }
             }else if data.httpCode == 401{
                 
@@ -136,6 +146,13 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
     func didFailToReceiveDataWithError(error: Error) {
         
     }
+    
+    func didRegister(model:AuthenticationModel) {
+        
+    }
+    
+    
+    
 }
 
 extension ConfirmationCodeViewController:UITextFieldDelegate {
