@@ -22,6 +22,7 @@ class FavoriteServices {
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         ApiConnection.request(.post, url: baseUrl, parameters: parameters, headers: headers, model: FavoriteResponse.self, completion: { (result) in
             self.delegate?.didRecieveData(data: result)
+            
         }) { (error) in
             self.delegate?.didFailToReceiveDataWithError(error: error)
         }

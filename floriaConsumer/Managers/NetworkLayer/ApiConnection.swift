@@ -93,5 +93,23 @@ struct FloriaError:Codable {
         let body: [String]?
         let packings: [String]?
         let mobile : [String]?
+        let apartmentNumber : [String]?
+        let buildingNumber : [String]?
+        let district : [String]?
+        let name : [String]?
+        let notes : [String]?
+        let streetName : [String]?
+        let contactName: [String]?
+        
+        enum CodingKeys: String, CodingKey {
+            case apartmentNumber = "apartment_number"
+            case buildingNumber = "building_number"
+            case district,packings,body
+            case mobile = "mobile"
+            case name = "name"
+            case notes = "notes"
+            case streetName = "street_name"
+            case contactName = "contact_name"
+        }
     }
 }

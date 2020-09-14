@@ -43,6 +43,7 @@ class ProductDetailsViewController: UIViewController {
         setupViews()
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
+        FloriaAppEvents.logViewContentEvent(contentID: "\(product?.id ?? 0)", contentType: product?.service?.name ?? "", currency: "EGP", valueToSum: product?.price ?? 0)
     }
     
     func setupViews() {
@@ -61,6 +62,7 @@ class ProductDetailsViewController: UIViewController {
             service.setProductUnFavorite(self.product!.id!)
         }else {
             service.setProductFavorite(self.product!.id!)
+            FloriaAppEvents.logAddToWishlistEvent(contentID: "\(product?.id ?? 0)", contentType: product?.service?.name ?? "", currency: "EGP", valueToSum: product?.price ?? 0)
         }
     }
     
@@ -78,6 +80,7 @@ class ProductDetailsViewController: UIViewController {
     
     @IBAction func checkOutButtonTapped(_ sender: Any) {
             performSegue(withIdentifier: "checkOutSegue", sender: sender)
+        FloriaAppEvents.logInitiateCheckoutEvent(contentID: "\(product?.id ?? 0)", contentType: product?.service?.name ?? "", currency: "EGP", valueToSum: product?.price ?? 0)
        
     }
     

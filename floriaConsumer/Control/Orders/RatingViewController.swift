@@ -48,6 +48,8 @@ class RatingViewController: UIViewController {
             let commentV = commentVendorTF.text?.trimmed ?? ""
             let service = OrdersServices.init(delegate: self)
             service.sendRate(orderId: orderId, ratingV: rateVendorView.rating, ratingP: rateProductView.rating, commentV: commentV, commentP: commentP)
+            FloriaAppEvents.logRateEvent(contentType: "Product", maxRatingValue: 5, ratingGiven: rateProductView.rating)
+            FloriaAppEvents.logRateEvent(contentType: "Provider", maxRatingValue: 5, ratingGiven: rateVendorView.rating)
         }
     }
     

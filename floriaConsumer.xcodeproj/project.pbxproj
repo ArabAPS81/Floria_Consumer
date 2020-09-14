@@ -87,6 +87,7 @@
 		D634760B239D324F008EB755 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D634760A239D324F008EB755 /* LocationManager.swift */; };
 		D635C25323ADF69200A0DC73 /* OrderServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635C25223ADF69200A0DC73 /* OrderServices.swift */; };
 		D635C25523AE001F00A0DC73 /* WebServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635C25423AE001F00A0DC73 /* WebServiceDelegate.swift */; };
+		D6370E5D250649CA00804C49 /* FloriaAppEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6370E5C250649CA00804C49 /* FloriaAppEvents.swift */; };
 		D638CE8B241E1D5C00829ACF /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638CE8A241E1D5C00829ACF /* RatingViewController.swift */; };
 		D638CE8D241E74B900829ACF /* VendorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638CE8C241E74B900829ACF /* VendorDetailsViewController.swift */; };
 		D638E2602393B040001A840C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */; };
@@ -142,6 +143,7 @@
 		D6D0973923B35ABD0094ACE6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0973823B35ABD0094ACE6 /* UIColorExtension.swift */; };
 		D6D2B69A23D476EB00817EB0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */; };
 		D6D4390124F4206900AC3A6F /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D4390324F4206900AC3A6F /* UserProfile.storyboard */; };
+		D6D6CDCB250F9636007CEFD8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D6CDC9250F9572007CEFD8 /* Info.plist */; };
 		D6E0978223CB40E200704020 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978423CB40E200704020 /* SideMenu.storyboard */; };
 		D6E0978723CB414000704020 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978923CB414000704020 /* Address.storyboard */; };
 		D6E0978C23CB416B00704020 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E0978E23CB416B00704020 /* Filter.storyboard */; };
@@ -189,7 +191,6 @@
 		0406517223530CB30039566C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0406517523530CB30039566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0406517A23530CB60039566C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0406517C23530CB60039566C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041514692357EB4200797A33 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		04157CFF237EF01100F772BE /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
 		042E2317235A699300FD4CD1 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 		D634760A239D324F008EB755 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D635C25223ADF69200A0DC73 /* OrderServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServices.swift; sourceTree = "<group>"; };
 		D635C25423AE001F00A0DC73 /* WebServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceDelegate.swift; sourceTree = "<group>"; };
+		D6370E5C250649CA00804C49 /* FloriaAppEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloriaAppEvents.swift; sourceTree = "<group>"; };
 		D638CE8A241E1D5C00829ACF /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		D638CE8C241E74B900829ACF /* VendorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailsViewController.swift; sourceTree = "<group>"; };
 		D638E25E2393B040001A840C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		D6D2B69923D476EB00817EB0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D6D4390224F4206900AC3A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfile.storyboard; sourceTree = "<group>"; };
 		D6D4390524F4206E00AC3A6F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UserProfile.strings; sourceTree = "<group>"; };
+		D6D6CDC8250F9572007CEFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		D6E0978023CB40B400704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		D6E0978123CB40B500704020 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D6E0978523CB40E600704020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
@@ -441,7 +444,7 @@
 				0444939A235C8BBD00650DFD /* Assets.xcassets */,
 				0406517923530CB60039566C /* LaunchScreen.storyboard */,
 				D6B31650248BE67A00912736 /* GoogleService-Info.plist */,
-				0406517C23530CB60039566C /* Info.plist */,
+				D6D6CDC9250F9572007CEFD8 /* Info.plist */,
 			);
 			path = floriaConsumer;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				9C9B039523B8C1AE00AD6EE4 /* UserDefults.swift */,
+				D6370E5C250649CA00804C49 /* FloriaAppEvents.swift */,
 				D6347609239D2B20008EB755 /* LocationManager */,
 				D63475FB239D22D2008EB755 /* NetworkLayer */,
 			);
@@ -1088,6 +1092,7 @@
 				D6E0979B23CB41A800704020 /* PotsCare.storyboard in Resources */,
 				D6E097A523CB41D100704020 /* Product.storyboard in Resources */,
 				D652F84123A7C5B800E7EED8 /* TipView.xib in Resources */,
+				D6D6CDCB250F9636007CEFD8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,6 +1153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9B039823B8C92300AD6EE4 /* AuthenticationModel.swift in Sources */,
+				D6370E5D250649CA00804C49 /* FloriaAppEvents.swift in Sources */,
 				D60B915B2397E51B002669B0 /* ColorsTableViewCell.swift in Sources */,
 				045B4A552381845400CCC257 /* ProductCollectionViewCell2.swift in Sources */,
 				0406517323530CB30039566C /* ViewController.swift in Sources */,
@@ -1334,6 +1340,14 @@
 				D6D4390524F4206E00AC3A6F /* ar */,
 			);
 			name = UserProfile.storyboard;
+			sourceTree = "<group>";
+		};
+		D6D6CDC9250F9572007CEFD8 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6D6CDC8250F9572007CEFD8 /* Base */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 		D6E0978423CB40E200704020 /* SideMenu.storyboard */ = {
@@ -1661,15 +1675,15 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
-				INFOPLIST_FILE = floriaConsumer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				INFOPLIST_FILE = "$(SRCROOT)/floriaConsumerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1686,15 +1700,15 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
-				INFOPLIST_FILE = floriaConsumer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				INFOPLIST_FILE = "$(SRCROOT)/floriaConsumerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arabaps.floria;
 				PRODUCT_NAME = Floria;
 				PROVISIONING_PROFILE_SPECIFIER = "";

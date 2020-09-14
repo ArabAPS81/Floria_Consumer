@@ -42,17 +42,23 @@ class AuthenticationService {
     func forgetPass(phone : String,countryCode: String) {
         let url = NetworkConstants.baseUrl + "forget-password"
         let parameters = ["mobile": phone,"country_code": countryCode]
-        
+        HUD.show(.progress)
         let headers = WebServiceConfigure.getHeadersForUnauthenticatedState()
         Alamofire.request(url, method: .post, parameters: parameters, headers: headers).responseJSON{ (response) in
             switch response.result {
             case .success(let value):
                 print(value)
                 let data = try! JSONDecoder().decode(ForgetPassModel.self, from: response.data!)
+                if data.httpCode == 200 || data.httpCode == 201 {
+                    HUD.flash(.success)
+                }else{
+                    HUD.flash(.error)
+                }
                 self.delegate?.didRecieveData(data: data)
                 break
                 
             case .failure(let error):
+                HUD.flash(.error)
                 print(error.localizedDescription)
             }
         }
@@ -224,7 +230,7 @@ class AuthenticationService {
             switch response.result {
             case .success(let value):
                 print(value)
-                HUD.flash(.success)
+                HUD.hide(animated: true)
                 let data = try! JSONDecoder().decode(AuthenticationModel.self, from: response.data!)
                 self.delegate?.didRecieveData(data: data)
                 break

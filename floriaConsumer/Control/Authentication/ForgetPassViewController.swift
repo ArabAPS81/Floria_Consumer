@@ -28,6 +28,7 @@ class ForgetPassViewController: UIViewController {
         let alert = UIAlertController(style: .actionSheet, title: "Phone Codes")
         alert.addLocalePicker(type: .phoneCode) { info in
             self.countryFlagImage.image = info?.flag
+            self.phoneCode = info?.phoneCode ?? "+2"
             sender.setTitle(info?.phoneCode, for: .normal)
         }
         alert.addAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
@@ -45,8 +46,8 @@ extension ForgetPassViewController: WebServiceDelegate {
     func didRecieveData(data: Codable) {
         if let model = data as? ForgetPassModel{
             if model.httpCode == 200{
-                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "forgetPass", mobile: String(model.data?.mobile.dropFirst(3) ?? ""))
-                vc.countryCode = String((model.data?.mobile.prefix(3)) ?? "002")
+                let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "forgetPass", mobile: String(mobileTF.text?.trimmed ?? ""))
+                vc.countryCode = phoneCode
                 self.navigationController?.pushViewController(vc, animated: true)
                 
             }

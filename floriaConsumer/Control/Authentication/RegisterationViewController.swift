@@ -101,8 +101,8 @@ class RegisterationViewController: UIViewController {
             guard let name = nameTF.text?.trimmed , !name.isEmpty else {return}
             guard let email = emailTF.text?.trimmed , !email.isEmpty else {return}
             guard let mobile = mobileTF.text?.trimmed , !mobile.isEmpty else {return}
-            guard let password = passwordTF.text?.trimmed , !password.isEmpty else {return}
-            guard let confirmPass = confirmPassTF.text?.trimmed , !confirmPass.isEmpty else {return}
+            guard let password = passwordTF.text , !password.isEmpty else {return}
+            guard let confirmPass = confirmPassTF.text , !confirmPass.isEmpty else {return}
             guard password == confirmPass else {
                 alertWithMessage("Passwords dont match")
                 return
@@ -124,7 +124,7 @@ class RegisterationViewController: UIViewController {
             alertWithMessage(title: "Password must be 8 or more charachters")
             return false
         }
-        if !(mobileTF.text?.isValid(.phone) ?? false) || phoneCode == nil {
+        if !(mobileTF.text?.trimmed.isValid(.phone) ?? false) || phoneCode == nil {
             alertWithMessage(title: "Phone number is not valid")
             return false
         }
@@ -195,6 +195,7 @@ extension RegisterationViewController : WebServiceDelegate{
             if model.httpCode == 201{
                 Defaults.init().saveAuthenToken(authenToken : model.user?.accessToken ?? "")
                 let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: model.user?.mobile ?? "")
+                FloriaAppEvents.logCompleteRegistrationEvent()
                 self.navigationController?.pushViewController(vc, animated: true)
             }else if model.httpCode == 422 {
                 if let message = model.error?.message?.email?.first {

@@ -48,6 +48,7 @@ class PaymentViewController: UIViewController,WKUIDelegate{
         print(response)
         if response.http_code == 201 || response.http_code == 200 || response.success! {
             showAlert("payment done is")
+            FloriaAppEvents.logAddPaymentInfoEvent()
         }else {
             showFailureAlert(response.message)
         }

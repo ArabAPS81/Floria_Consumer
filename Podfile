@@ -12,6 +12,7 @@ target 'floriaConsumer' do
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
   pod 'PKHUD'
   pod 'MaterialComponents/Cards'
   pod 'Kingfisher'
@@ -21,5 +22,6 @@ target 'floriaConsumer' do
   pod "Popover"
   #pod 'FBSDKCoreKit'
   pod 'FBSDKCoreKit/Swift'
+  pod 'Firebase/DynamicLinks'
 
 end

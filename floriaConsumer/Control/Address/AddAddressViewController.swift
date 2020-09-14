@@ -22,6 +22,8 @@ class AddAddressViewController: UIViewController {
     var fromEdit: Bool = false
     var address:AddressModel.Address?
     
+    @IBOutlet weak var govView: UIView!
+    @IBOutlet weak var distView: UIView!
     @IBOutlet weak var addressTitleTF: UITextField!
     @IBOutlet weak var streetNameTF: UITextField!
     @IBOutlet weak var buildingNumTF: UITextField!
@@ -34,6 +36,9 @@ class AddAddressViewController: UIViewController {
     
     var govPicker = UIPickerView()
     var distPicker = UIPickerView()
+    
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var titlebutton: UIButton!
     
     var govenorate: GovernorateModel.Governorate?{
         didSet{
@@ -56,6 +61,7 @@ class AddAddressViewController: UIViewController {
         distPicker.dataSource = self
         governorateNameButton.inputView = govPicker
         districtButton.inputView = distPicker
+        contactPhoneTF.keyboardType = .asciiCapableNumberPad
     }
     
     @IBAction func addAddressTapped(_ sender: UIButton) {
@@ -95,7 +101,10 @@ class AddAddressViewController: UIViewController {
             contactNameTF.text = address?.contactName
             buildingNumTF.text = address?.buildingNumber
             notesTF.text = address?.notes
-            
+            govView.isHidden = true
+            distView.isHidden = true
+            titlebutton.setTitle(NSLocalizedString("Edit Address", comment: ""), for: .normal)
+            saveButton.setTitle(NSLocalizedString("Save", comment: ""), for: .normal)
         }
     }
     
@@ -178,7 +187,22 @@ extension AddAddressViewController: WebServiceDelegate {
                 self.dismiss(animated: true, completion: nil)
                 alertWithMessage(title: "Succesfully added")
             }else {
-                alertWithMessage(title: data.error?.message?.body?.first)
+                if let message = data.error?.message?.body?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.streetName?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.name?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.apartmentNumber?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.buildingNumber?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.mobile?.first {
+                    alertWithMessage(title: message)
+                }else if let message = data.error?.message?.contactName?.first {
+                    alertWithMessage(title: message)
+                }
+                
             }
         }
         if let data = data as? GovernorateModel {

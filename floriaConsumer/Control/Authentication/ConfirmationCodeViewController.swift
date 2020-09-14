@@ -142,6 +142,9 @@ extension ConfirmationCodeViewController : WebServiceDelegate{
                 
             }
         }
+        if let data = data as? ComplainModel,data.httpCode == 200 {
+            alertWithMessage(data.message)
+        }
     }
     func didFailToReceiveDataWithError(error: Error) {
         

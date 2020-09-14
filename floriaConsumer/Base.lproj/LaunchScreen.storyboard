@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenleaves" translatesAutoresizingMaskIntoConstraints="NO" id="wsw-MP-jxK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenlogo" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-hz-9YK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-hz-9YK">
                                 <rect key="frame" x="99" y="307" width="216" height="282"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GlZ-hz-9YK" secondAttribute="height" multiplier="196:255" id="Bca-BG-QYR"/>
@@ -52,6 +53,6 @@
     <resources>
         <image name="launchScreenBackground" width="375" height="812"/>
         <image name="launchScreenleaves" width="375" height="183"/>
-        <image name="launchScreenlogo" width="218.5" height="290.5"/>
+        <image name="portrait" width="60.5" height="116.5"/>
     </resources>
 </document>

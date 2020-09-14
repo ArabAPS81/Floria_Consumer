@@ -95,11 +95,14 @@ extension AddressesListViewController: WebServiceDelegate {
         if let data = data as? AddressModel {
             addressesList = data.addresses ?? []
             table.stopLoading()
+            if addressesList.count == 0 {
+                table.stopLoading(NSLocalizedString("No addresses found, Add new Address", comment: ""))
+            }
             table.reloadData()
         }
     }
     
     func didFailToReceiveDataWithError(error: Error) {
-        table.stopLoading("No data available")
+        table.stopLoading(NSLocalizedString("No addresses found, Add new Address", comment: ""))
     }
 }

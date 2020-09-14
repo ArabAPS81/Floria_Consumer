@@ -50,13 +50,9 @@ class HomeViewController: UIViewController {
         Messaging.messaging().subscribe(toTopic: "consumer") { error in
           print("Subscribed to consumer topic")
         }
-        
-        
-        
     }
     
     func posttoken() {
-        let deviceId = NSUUID().uuidString
         let service = AuthenticationService.init(delegate: self.presenter)
         service.postDeviceToken(Messaging.messaging().fcmToken ?? "")
     }

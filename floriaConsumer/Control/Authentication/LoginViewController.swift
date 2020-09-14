@@ -168,7 +168,7 @@ extension LoginViewController: WebServiceDelegate {
                     }
                 }else{
                     Defaults.init().saveUserId(userId: data.user?.id ?? 0)
-                    Defaults.init().saveUserToken(token : data.user?.accessToken ?? "")
+                    Defaults.init().saveAuthenToken(authenToken: data.user?.accessToken ?? "")
                     Defaults().isUserLogged = false
                     Defaults().saveUserData(email: data.user?.email, name: data.user?.name, phone: data.user?.mobile)
                     let vc = ConfirmationCodeViewController.newInstance(comingFromVC: "registration", mobile: data.user!.mobile!)
@@ -176,7 +176,13 @@ extension LoginViewController: WebServiceDelegate {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }else if data.httpCode == 401{
-                
+                if let msg = data.error?.message?.body?.first {
+                    alertWithMessage(msg)
+                }else if let msg = data.error?.message?.mobile?.first {
+                    alertWithMessage(msg)
+                }else if let msg = data.error?.message?.email?.first {
+                    alertWithMessage(msg)
+                }
             }
         }
     }

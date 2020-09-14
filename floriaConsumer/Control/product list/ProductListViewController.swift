@@ -63,6 +63,8 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         cell.cofigure(product: productsList[indexPath.row])
         cell.setFavorite = { id ,fav in 
             self.setProductFavorite(fav, id: id)
+            let product = self.productsList[indexPath.row]
+            FloriaAppEvents.logAddToWishlistEvent(contentID: "\(product.id ?? 0)", contentType: product.service?.name ?? "", currency: "EGP", valueToSum: product.price ?? 0)
         }
         return cell 
     }

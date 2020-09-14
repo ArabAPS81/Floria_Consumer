@@ -143,6 +143,9 @@ extension VendorDetailsViewController : UICollectionViewDelegate , UICollectionV
         //self.performSegue(withIdentifier: "prouduct", sender: nil)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if vendorProducts[indexPath.row].service?.id == 2 {
+            return
+        }
         if vendor.isOnline ?? false {
             let vc = ProductDetailsViewController.newInstance(product: vendorProducts[indexPath.row])
             self.navigationController?.pushViewController(vc, animated: true)

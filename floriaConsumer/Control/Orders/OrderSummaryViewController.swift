@@ -40,6 +40,7 @@ class OrderSummaryViewController: UIViewController {
         let order = orderRequest
         let service = OrderServices.init(delegate: self)
         service.submitOrder(order: order)
+        FloriaAppEvents.logPurchaseEvent(contentID: "\(order.products.first?.id ?? 0)", contentType: "\(order.serviceId ?? 0)", currency: "EGP", valueToSum: summaryModel?.summary?.total ?? 0)
         
     }
     
