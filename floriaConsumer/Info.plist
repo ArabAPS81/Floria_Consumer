@@ -21,6 +21,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.arabaps.floria</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>floria</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb618550172411633</string>
@@ -33,6 +41,8 @@
 	<string>618550172411633</string>
 	<key>FacebookDisplayName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -41,7 +51,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>to attach Photo</string>
+	<string>To attach the image of the product if it is defective</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -49,7 +59,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) Wants to use Your location to suggest nearest products and providers for you</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>to attach Photo</string>
+	<string>To attach the image of the product if it is defective</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

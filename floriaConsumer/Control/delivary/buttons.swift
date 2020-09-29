@@ -39,7 +39,19 @@ class buttons: UIViewController {
         performSegue(withIdentifier: "addresses", sender: nil)
     }
     @IBAction func vendor(_ sender: Any) {
-        orderRequest.shipping = 3
-        performSegue(withIdentifier: "shiping", sender: nil)
+        if Defaults().isUserLogged {
+            orderRequest.shipping = 3
+            performSegue(withIdentifier: "shiping", sender: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+            nav.modalPresentationStyle = .fullScreen
+            let vc = nav.viewControllers.first as! LoginViewController
+            vc.event = {vc in
+                vc.dismiss(animated: true, completion: nil)
+            }
+            self.present(nav, animated: true, completion: nil)
+        }
+        
     }
 }
