@@ -78,7 +78,7 @@ class OrderServices {
     
     weak var delegate: WebServiceDelegate?
     
-    init(delegate: WebServiceDelegate) {
+    init(delegate: WebServiceDelegate?) {
         self.delegate = delegate
     }
     
@@ -157,6 +157,34 @@ class OrderServices {
             case .failure(let error):
                 self.delegate?.didFailToReceiveDataWithError(error: error)
             }
+        }
+    }
+    
+    func submitOrderSuccess(orderId: Int) {
+        
+        let baseUrl = (NetworkConstants.baseUrlV2 + "fawry/success")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let params: [String:Any] = ["order_id":orderId]
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        
+        ApiConnection.request(.post, url: url,parameters:params, headers:headers, model: PaymentResponse.self, completion: { (result) in
+            self.delegate?.didRecieveData(data: result)
+        }) { (error) in
+            self.delegate?.didFailToReceiveDataWithError(error: error)
+        }
+    }
+    
+    func submitOrderFailure(orderId: Int) {
+        
+        let baseUrl = (NetworkConstants.baseUrlV2 + "fawry/success")
+        guard let url = (baseUrl).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let params: [String:Any] = ["order_id":orderId]
+        let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
+        
+        ApiConnection.request(.post, url: url,parameters:params, headers:headers, model: PaymentResponse.self, completion: { (result) in
+            self.delegate?.didRecieveData(data: result)
+        }) { (error) in
+            self.delegate?.didFailToReceiveDataWithError(error: error)
         }
     }
 }

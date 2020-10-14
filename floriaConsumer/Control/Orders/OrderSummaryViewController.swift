@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import MyFawryPlugin
 
 class OrderSummaryViewController: UIViewController {
     
@@ -37,11 +38,65 @@ class OrderSummaryViewController: UIViewController {
     }
     
     @IBAction func payButtonTapped(_ sender: UIButton) {
+        sender.isUserInteractionEnabled = false
         let order = orderRequest
         let service = OrderServices.init(delegate: self)
         service.submitOrder(order: order)
         FloriaAppEvents.logPurchaseEvent(contentID: "\(order.products.first?.id ?? 0)", contentType: "\(order.serviceId ?? 0)", currency: "EGP", valueToSum: summaryModel?.summary?.total ?? 0)
         
+    }
+    
+    func fawryPay(orderId: Int,totalPrice: Double){
+        
+        let FawryPlugin = Fawry.sharedInstance
+        
+        let user = Defaults().getUser()
+        FawryPlugin?.customerEmailAddress = user.email ?? "asd@dfg.hgf"
+        FawryPlugin?.customerMobileNumber = user.phone ?? "01100407481"
+        FawryPlugin?.skipCustomerInput = true
+        
+        var itemsList: [Item]!
+        itemsList = [Item]()
+        itemsList.append(Item.init(productSKU: "\(orderId)", productDescription: "", quantity: 1, price: Double(summaryModel?.summary?.total ?? 0)))
+        /*===   Payment  ===*/
+        FawryPlugin?.initialize(
+            serverURL: "https://atfawry.fawrystaging.com",
+            styleParam: nil,
+            merchantIDParam: "1tSa6uxz2nT3xBYWrQq7lA==",
+            merchantRefNum: "\(orderId)",
+            languageParam: NSLocale.current.languageCode!,
+            GUIDParam: "#@DDFFEEER",
+            customeParameterParam: nil,
+            currancyParam: .EGP,
+            items: itemsList,
+            paymentMethodType: .All)
+        
+        
+        
+        FawryPlugin?.showSDK(onViewController: self) { [weak self] (transactionID, statusCode) in
+            let service = OrderServices.init(delegate: self)
+            if transactionID != nil && statusCode == .TransactionCompleted {
+                let ordersVC = OrdersViewController.newInstance()
+                let home = self?.navigationController?.viewControllers.first
+                self?.navigationController?.setViewControllers([home!,ordersVC], animated: true)
+                service.submitOrderSuccess(orderId: orderId)
+            }else if statusCode == .UserCancledWithoutReason {
+                self?.alertWithMessage(NSLocalizedString("Sorry , Order can'be be Completed as payment is not confirmed", comment: "")) {
+                    self?.navigationController?.popToRootViewController(animated: true)
+                }
+            }else {
+                self?.alertWithMessage(NSLocalizedString("Sorry , Order can'be be Completed as payment is not confirmed", comment: "")) {
+                    self?.navigationController?.popToRootViewController(animated: true)
+                }            }
+            
+            FawryPlugin?.dispose()
+        }
+    }
+    
+    func navToOrdersVC() {
+        let ordersVC = OrdersViewController.newInstance()
+        let home = self.navigationController!.viewControllers.first!
+        self.navigationController?.setViewControllers([home,ordersVC], animated: true)
     }
     
     func showAlert(_ message: String?) {
@@ -51,12 +106,6 @@ class OrderSummaryViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
         
-    }
-    
-    func navToOrdersVC() {
-        let ordersVC = OrdersViewController.newInstance()
-        let home = self.navigationController!.viewControllers.first!
-        self.navigationController?.setViewControllers([home,ordersVC], animated: true)
     }
     
     @IBAction func addPromoButtonTapped(_ sender: Any) {
@@ -84,7 +133,7 @@ extension OrderSummaryViewController: WebServiceDelegate {
         if let data = data as? OrderSubmittResponseModel {
             if data.httpCode == 201 {
                 if let urlString = data.responseModel?.paymentUrl {
-                    showWebView(urlString: urlString,orderId: (data.responseModel?.id)!)
+                    fawryPay(orderId: (data.responseModel?.id)!, totalPrice: (summaryModel?.summary?.total)!)
                 }else {
                     showAlert("\(data.message ?? "") \(data.responseModel?.id ?? 0)")
                 }
@@ -100,6 +149,8 @@ extension OrderSummaryViewController: WebServiceDelegate {
                 setUpViews()
             }
         }
+        
+        
     }
     
     func didFailToReceiveDataWithError(error: Error) {

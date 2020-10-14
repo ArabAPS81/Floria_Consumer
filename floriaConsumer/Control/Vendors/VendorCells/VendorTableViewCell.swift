@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+import Kingfisher
 
 class VendorTableViewCell: UITableViewCell {
 
@@ -32,7 +33,10 @@ class VendorTableViewCell: UITableViewCell {
     func cofigure(vendor: VendorsModel.Vendor) {
         vendorNameLabel.text = vendor.name
         vendorAddressLabel.text = vendor.address ?? vendor.district?.name
-        vendorImageView.imageFromUrl(url: vendor.image, placeholder: nil)
+        if let url = URL.init(string: vendor.image ?? "") {
+            vendorImageView.kf.setImage(with: url)
+        }
+        
         ratingView.setRate(rate: vendor.rate)
         favoriteButton.isSelected = vendor.isFavorited
         vendorId = vendor.id

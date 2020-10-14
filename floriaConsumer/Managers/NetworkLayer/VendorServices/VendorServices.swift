@@ -52,14 +52,15 @@ class VendorServices {
         
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
         
-        let parameters = model.location == nil ? "lat=&lng=" : "lat=\(model.location!.latitude)&lng=\(model.location!.longitude)&page=\(model.page!)"
+        let parameters = model.location == nil ? "lat=&lng=&page=\(model.page!)" : "lat=\(model.location!.latitude)&lng=\(model.location!.longitude)&page=\(model.page!)"
         
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
-        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in
+        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                JSONResponseDecoder.decodeFrom(value, returningModelType: VendorsModel.self) { (result, error) in
+                print(value)
+                JSONResponseDecoder.decodeFrom(response.data!, returningModelType: VendorsModel.self) { (result, error) in
                     if let result = result {
                         self.delegate?.didRecieveData(data: result)
                     }else{
@@ -72,10 +73,10 @@ class VendorServices {
         }
     }
     
-    func getVendorsByService(service:ServiceType, andFilter model: FilterModel) {
+    func getVendorsByService(service:ServiceType, andFilter model: FilterModel, page: Int) {
         
         let baseUrl = (NetworkConstants.baseUrl + "services/" + service.serviceId() + "/providers?")
-        let parameters = "district_id=\(model.district)"
+        let parameters = "district_id=\(model.district)&page=\(page)"
         guard let url = (baseUrl + parameters).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding.default, headers: headers).responseData { (response) in

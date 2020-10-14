@@ -20,12 +20,12 @@ class VendorListPresenter {
     func getVendorsList(serviceType: ServiceType,page:Int) {
         self.serviceType = serviceType
         let service = VendorServices.init(delegate: self)
-        let model = NearestVendorQueryModel.init(location: LocationManager.sharedManager.userCurrentCoordinate, page: page)
+        let model = NearestVendorQueryModel.init(location:nil, page: page)
         service.getVendorsByService(service: serviceType, model: model)
     }
-    func getVendorsList(serviceType: ServiceType, andFilter model: FilterModel) {
+    func getVendorsList(serviceType: ServiceType, andFilter model: FilterModel, page:Int) {
         let service = VendorServices.init(delegate: self)
-        service.getVendorsByService(service: serviceType,andFilter: model)
+        service.getVendorsByService(service: serviceType,andFilter: model, page: page)
     }
 }
 

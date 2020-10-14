@@ -54,6 +54,7 @@ class GeneralServices {
         
     }
     
+    
     func submittSupportMessageWithFile(_ content:String, title:String, image: Data?) {
         HUD.show(.progress)
         let url = NetworkConstants.baseUrl + "complaint"

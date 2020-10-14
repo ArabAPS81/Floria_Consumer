@@ -14,5 +14,6 @@ class NetworkConstants {
     //static let mainDomain = "https://floria.floria-app.com"
     static let mainDomain = "https://staging.floria-app.com"
     static let baseUrl = mainDomain + "/api/v1/"
+    static let baseUrlV2 = mainDomain + "/api/v2/"
     static let sfv = ""
 }

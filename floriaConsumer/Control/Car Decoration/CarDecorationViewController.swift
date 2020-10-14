@@ -70,7 +70,7 @@ class CarDecorationViewController: UIViewController {
           .blackOverlayColor(.clear)//,
           //.arrowSize(CGSize.zero)
           ] as [PopoverOption]
-        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        let popover = Popover2(options: options, showHandler: nil, dismissHandler: nil)
         popover.show(subView, fromView: sender)
         
         

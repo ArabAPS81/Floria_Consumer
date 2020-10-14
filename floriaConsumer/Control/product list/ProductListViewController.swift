@@ -103,7 +103,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     func setPlaceHolderLabel(collectionView: UICollectionView){
         let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width, height: collectionView.bounds.size.height))
-        noDataLabel.text          = "No data available"
+        noDataLabel.text          = NSLocalizedString("No data available", comment: "")
         noDataLabel.textColor     = UIColor.black
         noDataLabel.textAlignment = .center
         collectionView.backgroundView  = noDataLabel

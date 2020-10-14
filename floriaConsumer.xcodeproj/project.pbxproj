@@ -66,6 +66,8 @@
 		D612EB1E23CC66E7005360FC /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612EB1D23CC66E7005360FC /* PaymentViewController.swift */; };
 		D618A796239E5BF400C61AEB /* PotsCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A795239E5BF400C61AEB /* PotsCareViewController.swift */; };
 		D618A798239E5C0A00C61AEB /* PotsCareReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */; };
+		D6196D0C2523224F00615B50 /* MyFawryPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6196D0A2523217C00615B50 /* MyFawryPlugin.framework */; };
+		D6196D0D2523225000615B50 /* MyFawryPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6196D0A2523217C00615B50 /* MyFawryPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D61E70F223B0DFA4007C252F /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */; };
 		D61E865C23950B4900CC0287 /* locationcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B0B72393B19E00D4206E /* locationcell.swift */; };
 		D61E865F23952A4A00CC0287 /* CustomBouquetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */; };
@@ -182,6 +184,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D6196D0E2523225000615B50 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6196D0D2523225000615B50 /* MyFawryPlugin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0403F490235533EE001327EF /* nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav.swift; sourceTree = "<group>"; };
 		0406516B23530CB30039566C /* Floria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Floria.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +262,7 @@
 		D612EB1D23CC66E7005360FC /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		D618A795239E5BF400C61AEB /* PotsCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareViewController.swift; sourceTree = "<group>"; };
 		D618A797239E5C0A00C61AEB /* PotsCareReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotsCareReviewViewController.swift; sourceTree = "<group>"; };
+		D6196D0A2523217C00615B50 /* MyFawryPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyFawryPlugin.framework; sourceTree = "<group>"; };
 		D61E70F123B0DFA4007C252F /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
 		D61E865E23952A4A00CC0287 /* CustomBouquetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetViewController.swift; sourceTree = "<group>"; };
 		D61E866123952AEB00CC0287 /* CustomBouquetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBouquetCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -388,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B487E761BCA11B845DFE66A1 /* Pods_floriaConsumer.framework in Frameworks */,
+				D6196D0C2523224F00615B50 /* MyFawryPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +565,7 @@
 		636806513242FDB1EBDCCC22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6196D0A2523217C00615B50 /* MyFawryPlugin.framework */,
 				90CA21B5307CF1803F07EC41 /* Pods_floriaConsumer.framework */,
 			);
 			name = Frameworks;
@@ -981,6 +1000,7 @@
 				0406516823530CB30039566C /* Frameworks */,
 				0406516923530CB30039566C /* Resources */,
 				879C37E87C639BDAFE69112C /* [CP] Embed Pods Frameworks */,
+				D6196D0E2523225000615B50 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1665,10 +1685,14 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/floriaConsumer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1690,10 +1714,14 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/floriaConsumer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

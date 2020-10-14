@@ -16,9 +16,11 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var svStatus: OrderStatusView!
     @IBOutlet weak var tvOrder: UITableView!
     @IBOutlet weak var rateButton: UIButton!
-    @IBOutlet weak var payButton: UIButton!
+    //@IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var totalAmontLabel: UILabel!
     
+    @IBOutlet weak var paymentIcon: UIImageView!
+    @IBOutlet weak var paymentStatus: UILabel!
     
     
     @IBOutlet weak var labelsStack: UIStackView!
@@ -42,7 +44,7 @@ class OrderViewController: UIViewController {
         CarDecorationTableViewCell.registerNIBinView(tableView: self.tvOrder)
         PotsCareTableViewCell.registerNIBinView(tableView: self.tvOrder)
         AddressTableViewCell.registerNIBinView(tableView: self.tvOrder)
-        payButton.isHidden = true
+       // payButton.isHidden = true
         
     }
     
@@ -53,9 +55,9 @@ class OrderViewController: UIViewController {
     
     func setUpData() {
         if order?.isPaid == 1 && order?.payment_type_id == 1 {
-            payButton.isHidden = false
+          //  payButton.isHidden = false
         }else{
-            payButton.isHidden = true
+          //  payButton.isHidden = true
         }
         
         rateButton.isEnabled = (order?.status.id == 5)
@@ -90,7 +92,7 @@ class OrderViewController: UIViewController {
           .blackOverlayColor(UIColor.init(white: 100/255, alpha: 0.3))//,
           //.arrowSize(CGSize.zero)
           ] as [PopoverOption]
-        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        let popover = Popover2(options: options, showHandler: nil, dismissHandler: nil)
         
         popover.showAsDialog(subView, inView: self.view)
     }
@@ -192,7 +194,7 @@ extension OrderViewController: WebServiceDelegate {
         if let data = data as? ComplainModel{
             if data.httpCode == 200{
                 alertWithMessage(data.message, title: nil)
-                payButton.isHidden = true
+            //    payButton.isHidden = true
             }else{
                 alertWithMessage(data.errors?.message?.body?.first ?? NSLocalizedString("error has occured", comment: ""), title: nil)
             }

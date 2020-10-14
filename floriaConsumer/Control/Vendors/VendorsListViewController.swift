@@ -27,6 +27,7 @@ class VendorsListViewController: UIViewController {
     var vendorsList = [VendorsModel.Vendor]()
     var presenter: VendorListPresenter?
     var meta: Meta?
+    var filterModel: FilterModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,7 @@ class VendorsListViewController: UIViewController {
     
     func setPlaceHolderLabel(view: UITableView){
         let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
-        noDataLabel.text          = "No data available"
+        noDataLabel.text          = NSLocalizedString("No data available", comment: "")
         noDataLabel.textColor     = UIColor.black
         noDataLabel.textAlignment = .center
         view.backgroundView  = noDataLabel
@@ -126,9 +127,14 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func loadMoreData(){
         if meta!.currentPage < meta!.lastPage {
-            //tableView.reloadData()
+            if (filterModel != nil) {
+                presenter?.getVendorsList(serviceType: self.serviceType, andFilter: filterModel!, page: meta!.currentPage + 1)
+                print("🎉🎉")
+            }else{
+                presenter?.getVendorsList(serviceType: serviceType,page: meta!.currentPage + 1)
+                print("🎉")
+            }
             
-            presenter?.getVendorsList(serviceType: serviceType,page: meta!.currentPage + 1)
             
         }
     }
@@ -150,12 +156,13 @@ extension VendorsListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 106
     }
+    
 }
 
 extension VendorsListViewController: FilterDelegate {
     func didSelectCity(_ city: Int) {
-        let filterModel = FilterModel.init(district: city)
-        presenter?.getVendorsList(serviceType: self.serviceType, andFilter: filterModel)
+        filterModel = FilterModel.init(district: city)
+        presenter?.getVendorsList(serviceType: self.serviceType, andFilter: filterModel!, page: 1)
     }
     
     
@@ -165,7 +172,7 @@ extension VendorsListViewController: VendorsListView {
     func didReceiveData(data: Codable) {
         if let data = data as? VendorsModel {
             meta = data.meta
-            
+            print("🌷")
             if data.meta?.currentPage != 1{
                 vendorsList.append(contentsOf: data.vendors ?? [])
             }else{
@@ -187,7 +194,7 @@ extension VendorsListViewController: VendorsListView {
     }
     
     func didFailToReceiveData(error: Error) {
-        tableView.stopLoading("No data available")
+        tableView.stopLoading(NSLocalizedString("No data available", comment: ""))
     }
     
 }

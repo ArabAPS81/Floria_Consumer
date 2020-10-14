@@ -8,7 +8,7 @@ target 'floriaConsumer' do
   # Pods for floriaConsumer
 	pod 'Alamofire', '~> 4.9.1'
 	pod 'SwiftyJSON', '~> 4.0'
-	pod 'SideMenu'
+	pod 'SideMenu', '~> 6.4.7'
   pod 'XLPagerTabStrip'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Messaging'

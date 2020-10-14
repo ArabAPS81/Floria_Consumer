@@ -147,12 +147,12 @@ extension SearchTableViewController: WebServiceDelegate {
         if let model = data as? ProductsModel {
             productList = model.products ?? []
             tableView.reloadData()
-            tableView.stopLoading((productList.count == 0) ? "no data available" : "")
+            tableView.stopLoading((productList.count == 0) ? NSLocalizedString("No data available", comment: "") : "")
         }
         if let model = data as? VendorsModel {
             vendorList = model.vendors ?? []
             tableView.reloadData()
-            tableView.stopLoading((vendorList.count == 0) ? "no data available" : "")
+            tableView.stopLoading((vendorList.count == 0) ? NSLocalizedString("No data available", comment: "") : "")
         }
     }
     
