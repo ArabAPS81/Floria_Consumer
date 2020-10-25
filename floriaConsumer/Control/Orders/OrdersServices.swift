@@ -70,7 +70,7 @@ class OrdersServices {
                           "product_comment" : commentP,
                           "provider_comment" : commentV] as [String : Any]
         
-        let url = NetworkConstants.baseUrl + "rating"
+        let url = NetworkConstants.baseUrl + "ratings"
         let headers = WebServiceConfigure.getHeadersForAuthenticatedState()
         
         ApiConnection.request(.post, url: url, parameters: parameters, headers: headers, showProgress: true, model: RateModel.self, completion: { (result) in
@@ -128,6 +128,7 @@ struct Order: Codable {
     let potsCare: [PotCare]?
     let address: [AddressModel.Address]?
     let payment_type_id: Int?
+    let paymentMethod: String?
     
     enum CodingKeys: String, CodingKey {
         case id, provider, status
@@ -136,6 +137,7 @@ struct Order: Codable {
         case totalTax = "total_tax"
         case delivery, total, service, products, carDecoration, potsCare, address,payment_type_id
         case isPaid = "is_paid"
+        case paymentMethod = "payment_method"
     }
 }
 
@@ -287,13 +289,13 @@ struct Meta: Codable {
 
 struct RateModel : Codable {
 
-    let data : Rate?
+    //let data : Rate?
     let httpCode : Int?
     let message : String?
 
 
     enum CodingKeys: String, CodingKey {
-        case data
+        //case data
         case httpCode = "http_code"
         case message = "message"
     }

@@ -1685,7 +1685,7 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1714,7 +1714,7 @@
 				CODE_SIGN_ENTITLEMENTS = floriaConsumer/floriaConsumer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = KF8R54N6UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

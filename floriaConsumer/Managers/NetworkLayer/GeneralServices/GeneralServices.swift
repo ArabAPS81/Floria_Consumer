@@ -164,7 +164,7 @@ struct GeneralModel: Codable {
         let id: Int
         let name, decorationTypeDescription: String
         let image: String
-        let price: Int
+        let price: Int?
 
         enum CodingKeys: String, CodingKey {
             case id, name

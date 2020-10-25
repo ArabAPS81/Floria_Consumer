@@ -26,6 +26,14 @@ class SupportViewController: UIViewController {
         helpTV.layer.cornerRadius = 5
         helpTV.layer.borderWidth = 0.5
         helpTV.layer.borderColor = Constants.pincColor.cgColor
+        
+        helpTV.delegate = self
+        helpTV.text = NSLocalizedString("Write a message..", comment: "")
+        helpTV.textColor = .gray
+    }
+    
+    @IBAction func openWhatsApp(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://wa.me/+201062028485")!)
     }
     
     @IBAction func submittButtonTapped() {
@@ -105,5 +113,21 @@ extension SupportViewController: UIImagePickerControllerDelegate,UINavigationCon
         selectedImage.image = image
         imageData = image?.jpegData(compressionQuality: 0.9) ?? Data()
         picker.dismiss(animated: true)
+    }
+}
+
+extension SupportViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .gray {
+            textView.text = ""
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty{
+            textView.textColor = .gray
+            textView.text = NSLocalizedString("Write a message..", comment: "")
+        }
     }
 }

@@ -18,6 +18,8 @@ class ForgetPassViewController: UIViewController {
     override func viewDidLoad() {
        super.viewDidLoad()
        setUpViewsShape()
+        
+        self.title = NSLocalizedString("Forget Password", comment: "")
     }
     
     func setUpViewsShape() {

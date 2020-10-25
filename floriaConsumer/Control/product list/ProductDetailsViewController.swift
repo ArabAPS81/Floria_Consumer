@@ -26,7 +26,7 @@ class ProductDetailsViewController: UIViewController {
     var idofpro = ""
     var  x = 1
     
-    static func newInstance(product: ProductsModel.Product) -> ProductDetailsViewController {
+    static func newInstance(product: ProductsModel.Product?) -> ProductDetailsViewController {
         let storyboard = UIStoryboard.init(name: "Product", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
         vc.product = product
@@ -44,6 +44,10 @@ class ProductDetailsViewController: UIViewController {
         ExtrasCollectionViewCell.registerNIBinView(collection: extrasCollectionView)
         (imageSliderCollectioView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = 0
         FloriaAppEvents.logViewContentEvent(contentID: "\(product?.id ?? 0)", contentType: product?.service?.name ?? "", currency: "EGP", valueToSum: product?.price ?? 0)
+    }
+    
+    func getProductDetails(id : Int) {
+        
     }
     
     func setupViews() {

@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import SkyFloatingLabelTextField
 
 class ConfirmationCodeViewController: UIViewController {
     
@@ -110,7 +111,7 @@ class ConfirmationCodeViewController: UIViewController {
     @objc func UpdateTimer(){
         if seconds != 0 {
             seconds -= 1
-            timerLable.text = "00:\(NSString.init(format: "%0d", seconds))"
+            timerLable.text = "00:\(NSString.init(format: "%02d", seconds))"
         }else{
             timerLable.text = "00:00"
             resendBtn.isHidden = false
@@ -166,6 +167,34 @@ extension ConfirmationCodeViewController:UITextFieldDelegate {
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
     }
+}
+
+@IBDesignable
+class LimitedTextField: SkyFloatingLabelTextField,UITextFieldDelegate {
+    private var limitation: Int?
+    @IBInspectable
+    public var limitOfChar: Int {
+        set{self.limitation = newValue}
+        get{return limitation ?? 10000}
+    }
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        self.selectedLineColor = .clear
+        self.lineColor = .clear
+        self.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength = self.limitation ?? 10000
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
+    
+    
 }
 
 

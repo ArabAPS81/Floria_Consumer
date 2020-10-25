@@ -47,8 +47,17 @@ class UserAddressListViewController: UIViewController {
     }
     
     func deleteAddress(id: Int) {
-        let service = AddressService.init(delegate: self)
-        service.deleteAddress(id: id)
+        
+        let alert = UIAlertController.init(title: nil, message: NSLocalizedString("Are you sure you want to delete Address?", comment: ""), preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("yes", comment: ""), style: .destructive, handler: { _ in
+            let service = AddressService.init(delegate: self)
+            service.deleteAddress(id: id)
+        }))
+        
+        self.present(alert, animated: true)
+        
     }
     
 }

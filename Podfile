@@ -23,5 +23,6 @@ target 'floriaConsumer' do
   #pod 'FBSDKCoreKit'
   pod 'FBSDKCoreKit/Swift'
   pod 'Firebase/DynamicLinks'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
 end

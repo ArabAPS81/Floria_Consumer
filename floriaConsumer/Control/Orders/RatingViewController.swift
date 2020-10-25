@@ -12,7 +12,7 @@ import Cosmos
 class RatingViewController: UIViewController {
     
     var rate : Double?
-    var orderId : Int = 698
+    var orderId: Int?
     
     static func newInstance(orderID : Int) -> RatingViewController {
         let storyboard = UIStoryboard(name: "Complaints", bundle: nil)
@@ -47,7 +47,7 @@ class RatingViewController: UIViewController {
             let commentP = commentProductTF.text?.trimmed ?? ""
             let commentV = commentVendorTF.text?.trimmed ?? ""
             let service = OrdersServices.init(delegate: self)
-            service.sendRate(orderId: orderId, ratingV: rateVendorView.rating, ratingP: rateProductView.rating, commentV: commentV, commentP: commentP)
+            service.sendRate(orderId: orderId!, ratingV: rateVendorView.rating, ratingP: rateProductView.rating, commentV: commentV, commentP: commentP)
             FloriaAppEvents.logRateEvent(contentType: "Product", maxRatingValue: 5, ratingGiven: rateProductView.rating)
             FloriaAppEvents.logRateEvent(contentType: "Provider", maxRatingValue: 5, ratingGiven: rateVendorView.rating)
         }

@@ -54,10 +54,30 @@ class OrderViewController: UIViewController {
     }
     
     func setUpData() {
-        if order?.isPaid == 1 && order?.payment_type_id == 1 {
-          //  payButton.isHidden = false
-        }else{
-          //  payButton.isHidden = true
+        if order?.isPaid == 1 && order?.payment_type_id == 1 {  // FAWRY WAIT
+            paymentIcon.image = #imageLiteral(resourceName: "fawryPayEnglishLogo1")
+            paymentStatus.text = NSLocalizedString("PENDING PAID", comment: "")
+        }else if order?.isPaid == 3 && order?.payment_type_id == 1{ // DONE CARD
+            paymentIcon.image = #imageLiteral(resourceName: "363_Visa_Credit_Card_logo-512")
+            paymentStatus.text = NSLocalizedString("PAID SUCCESSFULLY", comment: "")
+        }else if order?.isPaid == 2 && order?.payment_type_id == 1{// FAIL
+            
+            switch order?.paymentMethod {
+            case "CARD":
+                paymentIcon.image = #imageLiteral(resourceName: "363_Visa_Credit_Card_logo-512")
+            case "PAYATFAWRY":
+                paymentIcon.image = #imageLiteral(resourceName: "fawryPayEnglishLogo1")
+            default:
+                paymentIcon.image = #imageLiteral(resourceName: "group16")
+            }
+            
+            
+            paymentIcon.image = order?.paymentMethod == "PAYATFAWRY" ? #imageLiteral(resourceName: "fawryPayEnglishLogo1") : #imageLiteral(resourceName: "group16")
+            paymentStatus.text = NSLocalizedString("PAYMENT FAILD", comment: "")
+            
+        }else if order?.isPaid == 1 && order?.payment_type_id == 2{// COD
+            paymentIcon.image = #imageLiteral(resourceName: "Buy")
+            paymentStatus.text = NSLocalizedString("PENDING PAID", comment: "")
         }
         
         rateButton.isEnabled = (order?.status.id == 5)
@@ -82,11 +102,17 @@ class OrderViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? RatingViewController {
+            vc.orderId = order?.id ?? 0
+        }
+    }
+    
     @IBAction func showRecipt(_ sender: UIButton) {
         let subView = ReciptView.newInstance(order: order!)
         
         let options = [
-            .type(.auto),
+            .type(.down),
           .cornerRadius(5),
           .animationIn(0.3),
           .blackOverlayColor(UIColor.init(white: 100/255, alpha: 0.3))//,

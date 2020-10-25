@@ -17,20 +17,20 @@ class RegisterationViewController: UIViewController {
     var checkTerms : Int!
     
     @IBOutlet weak var nameContainerView: UIView!
-    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var nameTF: LimitedTextField!
     @IBOutlet weak var nameErrorLable: UILabel!
     @IBOutlet weak var emailContainerView: UIView!
-    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var emailTF: LimitedTextField!
     @IBOutlet weak var emailErrorLable: UILabel!
     @IBOutlet weak var mobileContainer: UIView!
-    @IBOutlet weak var mobileTF: UITextField!
+    @IBOutlet weak var mobileTF: LimitedTextField!
     @IBOutlet weak var birthDateTF: UITextField!
     @IBOutlet weak var mobileErrorLable: UILabel!
     @IBOutlet weak var passContainerView: UIView!
-    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var passwordTF: LimitedTextField!
     @IBOutlet weak var showPassBtn: UIButton!
     @IBOutlet weak var confirmPassContainer: UIView!
-    @IBOutlet weak var confirmPassTF: UITextField!
+    @IBOutlet weak var confirmPassTF: LimitedTextField!
     @IBOutlet weak var showConfirmPassBtn: UIButton!
     @IBOutlet weak var termsBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
@@ -40,6 +40,30 @@ class RegisterationViewController: UIViewController {
     var code: String = "EG"
     var selectedGender: UserGender = .male
     var birthDateString: String = ""
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = NSLocalizedString("Sign Up", comment: "")
+        setUpViewsShapes()
+        nameErrorLable.isHidden = true
+        emailErrorLable.isHidden = true
+        mobileErrorLable.isHidden = true
+        birthDateTF.inputView = datePicker
+        datePicker.datePickerMode = .date
+        datePicker.maximumDate = Date()
+        datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.init(identifier: "en")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        birthDateString = dateFormatter.string(from: Date())
+        
+        
+        
+       // nameTF.limitation = 7
+        
+    }
     
     @IBAction func showPassTapped(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -140,24 +164,7 @@ class RegisterationViewController: UIViewController {
     }
     
     let datePicker = UIDatePicker.init()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = NSLocalizedString("Sign Up", comment: "")
-        setUpViewsShapes()
-        nameErrorLable.isHidden = true
-        emailErrorLable.isHidden = true
-        mobileErrorLable.isHidden = true
-        birthDateTF.inputView = datePicker
-        datePicker.datePickerMode = .date
-        datePicker.maximumDate = Date()
-        datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale.init(identifier: "en")
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        birthDateString = dateFormatter.string(from: Date())
-        
-    }
+    
     func setUpViewsShapes(){
         termsBtn.layer.cornerRadius = 5
         termsBtn.clipsToBounds = true
